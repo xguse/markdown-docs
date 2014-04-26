@@ -1,0 +1,325 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[a4paper]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Markx}\label{markx}
+
+\subsection{Help}\label{help}
+
+Last update: 26 Feb 2013
+
+\href{https://github.com/yoavram/markx}{Markx} is a Markdown editor
+specifically designed for academic and scientific authoring. It
+highlights several advantages of Markdown (plain-text, multiple format
+conversion, easy version control) while still supplying the basic
+features which are a must for academic publications (citations, math
+rendering, layouts).
+
+\subsubsection{Writing Markdown}\label{writing-markdown}
+
+\href{http://daringfireball.net/projects/markdown/}{Markdown} is a
+markup language.
+
+Markdown is very easy to learn and there are many online tutorials, just
+use Google.
+
+\paragraph{Markdown Flavor}\label{markdown-flavor}
+
+You should use \textbf{Pandoc-flavored Markdown} as both converters
+(\href{http://johnmacfarlane.net/pandoc}{Pandoc} and
+\href{http://www.docverter.com/}{Docverter} use that). The HTML preview
+on the right is processed using
+\href{http://code.google.com/p/pagedown/}{PageDown}, so there could be
+some thing it doesn't process like Pandoc does (found something? open an
+\href{https://github.com/yoavram/markx/issues}{issue}).
+
+\paragraph{Math}\label{math}
+
+You can use $LaTeX$. Just write it between \texttt{\$}s or
+\texttt{\textbackslash{}\textbackslash{}(} and
+\texttt{\textbackslash{}\textbackslash{})} for inline equations and
+\texttt{\$\$}s or \texttt{\textbackslash{}\textbackslash{}{[}} and
+\texttt{\textbackslash{}\textbackslash{}{]}} for display mode:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Inline mode $e=mc^2$
+\item
+  Display mode:
+  \[\frac{df(x)}{dt}=lim_{x \to 0}{\frac{f(x+h)-f(x)}{h}}\]
+\end{itemize}
+
+\paragraph{Citations}\label{citations}
+
+To start working with citations in Markx you need to click the
+\emph{Load a Bibliography file} from the \emph{Citations} menu. The file
+should be in \href{http://www.bibtex.org/}{BibTeX} format - if you don't
+have one than Markx doesn't support your citation format yet, but you
+might be able to convert a different format to BibTeX using online
+tools. If you use Mendeley it is easy to set it up to
+\href{http://blog.mendeley.com/tipstricks/howto-use-mendeley-to-create-citations-using-latex-and-bibtex/}{sync
+to a BibTeX file}. If you do not load a \texttt{.bib} file you will not
+be able to use the citations features of Markx.
+
+To insert a citation, find the citation key - usually the last name of
+the first author, with a capital initial, and the year of publication,
+without spaces. If the \texttt{.bib} file has more than one publication
+with that key they are post-fixed with lowercase letters. Then add the
+citation key to the editor, wrapped by \texttt{{[}@} and \texttt{{]}}.
+For example: \texttt{{[}@Drake1991{]}}. Markx doesn't currently preview
+the citation keys in the previewed text, but it does:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  create a bibliography at the bottom of the preview text
+\item
+  allows you to download a \texttt{.bib} file corresponding to the
+  citation keys in the Markdown text via the \emph{Download} menu
+\item
+  send the bibliography to
+  \href{http://johnmacfarlane.net/pandoc}{Pandoc} for conversion
+  (\href{http://www.docverter.com/}{Docverter} does not support
+  citations)
+\end{enumerate}
+
+You must click the \emph{Update Citations} button in the
+\emph{Citations} menu after adding, removing or changing citation keys,
+as they will not be updated in real-time (this will be changed in the
+near future).
+
+\subsubsection{Toolbar}\label{toolbar}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Use the \emph{GitHub} button to \textbf{sign-in to
+  \href{https://github.com/}{GitHub}} (see more details below).
+\item
+  Use the \emph{Screen} button to change between \textbf{editor},
+  \textbf{preview} and \textbf{dual} modes.
+\item
+  Use the \emph{Books} menu to \textbf{parse citation keys} such as
+  {[}@Drake1991{]}, to load a bibliography file, to see the loaded
+  bibliography and the references you are citing.
+\item
+  Use the \emph{Download} menu to \textbf{download and convert} the
+  Markdown text to various formats or to download a
+  \href{http://daringfireball.net/projects/markdown/}{Markdown} of the
+  text or a \href{http://www.bibtex.org/}{BibTeX} file of the citations
+  referenced in the text.
+\item
+  Click on \textbf{P} or \textbf{D} to \textbf{change the Markdown
+  converter} between \href{http://johnmacfarlane.net/pandoc}{Pandoc} and
+  \href{http://www.docverter.com/}{Docverter}.
+\end{enumerate}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Pandoc: must be installed on local machine when working locally, can't
+  process image URLs, slow conversion to PDF on Windows, requires
+  \emph{pdflatex} to convert to PDF on local machine.
+\item
+  Docverter: must be connected to the internet to be used, doesn't
+  process citation keys and bibliography.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Click the \emph{Code} button to get change the \textbf{code
+  highlighting styles}. Example code above.
+\item
+  The grey boxes with the numbers display the \textbf{word and character
+  counts}.
+\end{enumerate}
+
+\subsubsection{GitHub Integration}\label{github-integration}
+
+\textbf{Your \href{https://github.com/}{GitHub} username and password
+are never sent to the Markx server}. They are sent by JavaScript to
+directly to the GitHub API server using
+\href{https://github.com/michael/github}{Github.js}. Your credentials
+are not saved in cookies and are removed from the browser memory as soon
+as the sign in is complete. You can also sign out of GitHub by clicking
+the \emph{sign out} button. If you would like to check the security of
+this feature please view the \texttt{signinToGithub} function in
+\href{https://github.com/yoavram/markx/blob/master/static/js/markx.js}{markx.js}
+and open an \href{https://github.com/yoavram/markx/issues}{issue} if you
+find any problems.
+
+After you sign in to GitHub you can use the GitHub toolbar to:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Click the \emph{GitHub} button - this doesn't do anything right now.
+\item
+  Click the \emph{Reload} button o reload the repositories.
+\item
+  \textbf{Choose a repository} that you can pull from and push to (you
+  are owner or collaborator)
+\item
+  Click the first \emph{folder} button to load the \textbf{branch list}
+\item
+  \textbf{Choose a branch} if the selected repository
+\item
+  Click the second \emph{folder} button to \textbf{load the files list}
+\item
+  \textbf{Choose a file} in the selected branch
+\item
+  Click the \emph{download} button to \textbf{pull the file} to the
+  editor. The current contents will be deleted without saving them.
+\item
+  Click the \emph{upload} button to \textbf{push the editor contents} to
+  the selected file. This will create a new \emph{commit} on the
+  repository. You must \textbf{fill a commit message} before pushing.
+  Commit messages should be \textasciitilde{}50 characters and briefly
+  explain the reason for this commit. After the push is finalized you
+  will get a success or failure message. If you have citations, Markx
+  will offer to push a bibliography file as well.
+\item
+  Click the \emph{new} button to \textbf{create and push} a new empty
+  file. If you don't fill the commit message Markx fill create adefault
+  message for you. After the push is finalized you will get a success or
+  failure message and the files list will be updated.
+\item
+  Click the \emph{sign out} button in the general toolbar to
+  \textbf{sign out of GitHub}.
+\end{enumerate}
+
+\subsubsection{Support}\label{support}
+
+The best way to get support is to open an
+\href{https://github.com/yoavram/markx/issues}{issue}. If you can't open
+issue because you don't have a \href{https://github.com/}{GitHub} user,
+just get one, they are free.
+
+\subsubsection{Install locally}\label{install-locally}
+
+If the hosted app at \url{http://markx.herokuapp.com} doesn't work for
+you (which is possible as it is still rough around the edges) you can
+install Markx locally:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Install Python 2.7.x (may work with other versions of python)
+\item
+  If you know about \texttt{virtualenv}, you can use the bundled
+  \texttt{requirements.txt} file
+\item
+  Otherwise, install the requirements globally with
+  \texttt{pip install flask requests}
+\item
+  Optionally, install \href{http://johnmacfarlane.net/pandoc}{Pandoc}
+\item
+  Run Markx with \texttt{python server.py}
+\item
+  Open your browser at \url{http://localhost:5000}
+\end{enumerate}
+
+\subsubsection{Contribution}\label{contribution}
+
+We would love for you to contribute to Markx. The project code is hosted
+in \href{https://github.com/yoavram/markx}{GitHub}. Fork the project or
+open an \href{https://github.com/yoavram/markx/issues}{issue} so we can
+talk on how we can collaborate.
+
+The server side is written in Python with the
+\href{http://flask.pocoo.org/}{Flask} web framework (Ruby and Node
+equivalents are Sinatra and Express) and
+\href{http://python-requests.org/}{requests} for connecting to
+\href{http://www.docverter.com/}{Docverter}. The two Markdown converters
+are \href{http://johnmacfarlane.net/pandoc}{Pandoc} and
+\href{http://www.docverter.com/}{Docverter}, which is a cloud-based
+Pandoc.
+
+The client side is written with HTML+CSS+JS, using the JavaScript
+libraries:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{http://blog.getbootstrap.com/}{Twitter Bootstrap} and
+  {[}jQuery{]} for the UI
+\item
+  \href{http://code.google.com/p/pagedown/}{PageDown} as the Markdown
+  real-time HTML converter
+\item
+  \href{http://codemirror.net/}{CodeMirror} as the Markdown editor
+\item
+  \href{https://github.com/michael/github}{Github.js} for the GitHub API
+\item
+  \href{http://sourceforge.net/projects/jsbibtex/}{Javascript BibTeX
+  Parser} processing citation keys and bibliography files
+\item
+  \href{http://code.google.com/p/google-code-prettify/}{Google Code
+  Prettifier} for code highlighting
+\item
+  \href{http://mathjax.org/}{MathJax} for math rendering
+\end{enumerate}
+
+\subsection{References}\label{references}
+
+The references header is \textbf{your} job,
+\href{http://johnmacfarlane.net/pandoc}{Pandoc} will only create a
+citation list, without a header. However, it will always put it at the
+end of the output file (at least via Markx) so you can just put a
+\emph{References} header at the end of your file.
+
+\end{document}
