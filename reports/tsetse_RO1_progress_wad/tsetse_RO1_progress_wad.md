@@ -2,7 +2,7 @@
 title: Tsetse R01 Progress Report
 subtitle: Sampling and Databasing
 author: Robert Opiro, Augustine Dunn
-date: October 14, 2014
+date: 2014-10-30
 documentclass: report
 classoption: letterpaper
 toc: 1
@@ -36,16 +36,16 @@ All of this information needs to remain tied to all specimens, materials, and _d
 
 We are designing and implementing a custom database and web application to manage, track, and facilitate analysis of the thousands of specimen tubes associated with this project that will be generated and exist already.
 The system consists of a web-based user interface, two SQL-based relational databases, and a layer of custom python functions that connect the two.
-The web-based interface uses the popular open-source [Bootstrap](http://getbootstrap.com/) web interface components.
-One SQL database will act as the official storage system for the specimen data; while the second will manage checkout requests by our researchers and then update the main storage database upon validation.
-The custom python code is based on the open-source [Flask](https://github.com/mitsuhiko/flask) web-microframework and extensions.
-This code manages the two databases based on requests made by users through the web-interface.
+The web-based interface uses the open-source [Bootstrap](http://getbootstrap.com/) web interface components.
+One SQL database will act as the official storage system for the specimen data, while the second will manage checkout requests by our researchers and update the main storage database upon validation.
+The custom python code is based on the open-source [Flask](https://github.com/mitsuhiko/flask) web-microframework.
+This code manages the two databases according to requests made through the web-interface.
 It also manages user registration and permissions along with site-security.
 Finally, it will also allow us to easily design and run complex analyses with the specimen data encoded in the main database.
 
 
 
-# Sampling {#Sampling}
+# Collections Overview 
 ## Study sites
 The surveys were done in the districts of Kole, Oyam, Nwoya, Amuru, Adjumani, Moyo and Arua in northern/Northwest Uganda. Additional information on tsetse population distribution was obtained from the District Entomology Offices of the relevant districts. 
 
@@ -60,7 +60,7 @@ Trapped flies were identified, sexed, counted, recorded and transported to a fie
 Live flies were dissected and examined microscopically to determine the presence/absence of trypanosomes in the midguts/salivary glands.
 The midguts, fly carcass, reproductive parts, and heads were then preserved in parafilm-sealed and labeled cryo-tubes in either 90% ethanol or RNA-preservation solution for further molecular studies.
 
-# Results #
+# Collection Results Summary #
 
 ## Kole District (`2014-03-22 to 2014-03-30`)
 Five villages were surveyed (Olepo [OLE], Mwanya [MWA], Akayo-debe [AKA], Aputu-Lwaa [APU], and Ocala [OCA]) with a total of 40 traps.
