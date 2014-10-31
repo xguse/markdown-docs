@@ -30,7 +30,7 @@ fontfamily: bookman
 
 # Specimen database # 
 
-Each fly collected has a multitude of data associated with it.
+A multitude of data is associated with each fly collected.
 The type of information includes the list of tissues collected, the collection date, village name and location, sex, species, trap number, infection status, notes on human activity surrounding the trap, and more.
 All of this information needs to remain tied to all specimens, materials, and _data_ derived from these as the project goes forward.
 
@@ -45,46 +45,36 @@ Finally, it will also allow us to easily design and run complex analyses with th
 
 
 
-# Collections Overview 
-## Study sites
+# Collections Overview #
+## Study sites ##
 The surveys were done in the districts of Kole, Oyam, Nwoya, Amuru, Adjumani, Moyo and Arua in northern/Northwest Uganda. Additional information on tsetse population distribution was obtained from the District Entomology Offices of the relevant districts. 
 
-## Data collection
+## Data collection ##
 Trapping for tsetse flies were carried out using biconicals traps [@ChallierAandLaveissiere1973].
 The coordinates for each trap site were taken using a hand-held GPS.
 Vegetation types and human activities at the trapping sites were also recorded.
 Each village is at least 5km apart; a single village is taken to be a trapping site (with a number of traps deployed in each).
 
-## Dissection and examination
+## Dissection and examination ##
 Trapped flies were identified, sexed, counted, recorded and transported to a field dissection site.
 Live flies were dissected and examined microscopically to determine the presence/absence of trypanosomes in the midguts/salivary glands.
 The midguts, fly carcass, reproductive parts, and heads were then preserved in parafilm-sealed and labeled cryo-tubes in either 90% ethanol or RNA-preservation solution for further molecular studies.
 
 # Collection Results Summary #
 
-## Kole District (`2014-03-22 to 2014-03-30`)
+## Kole District (`2014-03-22 to 2014-03-30`) ##
 Five villages were surveyed (Olepo [OLE], Mwanya [MWA], Akayo-debe [AKA], Aputu-Lwaa [APU], and Ocala [OCA]) with a total of 40 traps.
 1227 _Gff_ were captured (564 M and 663 F) and yielded five infected individuals (1.2% estimated infection rate).
 
 
-## Oyam District (`2014-05-17 to 2014-05-22`)
+## Oyam District (`2014-05-17 to 2014-05-22`) ##
 Nine villages were surveyed (Ocala [OCA], Odworo [OD], Alege [ALE], Acankoma [ACA], Oguk [OGU], Agoba B [AG], Abok[ABO], Ocol [OCL] and Opuyu [OPU]) with 32 traps.
 715 _Gff_ were captured (298 M and 417 F) and yielded 10 infected individuals (3.0% estimated infection rate).
 
 
-## Oyam and Kole Districts (`2014-07-14 to 2014-07-21`)
+## Oyam and Kole Districts (`2014-07-14 to 2014-07-21`) ##
 This survey targeted sites that produced infected flies from the previous surveys.
-The field team deployed 27 traps across four villages that were divided between the two districts: 
-
-__Oyam:__
-
-- Ocala [OCA]
-- Odworo [OD]
-- Acankoma [ACA]
-
-__Kole:__
-
-- Akayodebe [AKA]
+The field team deployed 27 traps across four villages that were divided between the two districts: __Oyam:__ (Ocala [OCA], Odworo [OD], Acankoma [ACA]) and __Kole:__ (Akayodebe [AKA]).
 
 1198 _Gff_ were captured (432 M and 766 F) and yielded 27 infected individuals (4.38% estimated infection rate).
 
@@ -114,10 +104,33 @@ Five villages were surveyed (Ori [ORI], Orubakulem [ORB], Lea [LEA], Cefo [CE],a
 Seven villages were surveyed (Gangu [GAN], Aliodri [ALI], Jaiko [JIA], Duku [DUK], Wende [WEN], Aina [AIN], and Orivu [ORV]) with 34 traps.
 681 _Gff_ were captured (287 M and 394 F) and yielded three infected individuals (0.87% estimated infection rate).
 
+
+## Kitgum, Lamwo, and Pader Districts (`2014-10-06 to 2014-10-19`) ##
+In the three districts combined, 534 _Gff_ were captured (193 M and 341 F).
+59 traps were deployed across 14 villiages.
+330 flies were dissected and 5 were found to be infected (1.52% combined estimated infection rate)
+
+### Kitgum ###
+Four villages were surveyed (Kitgum town council [KTC],  Liba [LIB],  Bola [BOL],  Tumangu [TUM]) with 18 traps.
+281 _Gff_ were captured (120 M and 161 F), and 173 dissected.
+Four infected individuals were detected (2.31% estimated infection rate).
+
+### Lamwo ###
+Four villages were surveyed (Lagwel [LAG],  Ngomoromo [NGO],  Pawor [PAW],  Lakwala [LAK]) with 15 traps.
+101 _Gff_ were captured (37 M and 64 F), and 48 dissected.
+Zero infected individuals were detected.
+
+### Pader ###
+Six villages were surveyed (Alim [ALI],  Chua [CHU],  Kilak [KIL],  Aswa Bridge [ASW],  Omido [OMI],  Atanga Mission [ATM]) with 26 traps.
+152 _Gff_ were captured (39 M and 113 F), and 109 dissected.
+One infected individual was detected (0.92% estimated infection rate).
+
+
 <!--
 ## XXX District (`2014-XX-XX to 2014-XX-XX`) ##
 XXXX villages were surveyed (XXXX) with XXX traps.
-XXX _Gff_ were captured (XXX M and XXX F) and yielded XX infected individuals (XXX% estimated infection rate).
+XXX _Gff_ were captured (XXX M and XXX F), and XXX dissected.
+XX infected individuals were detected (XXX% estimated infection rate).
 -->
 
 <!--
