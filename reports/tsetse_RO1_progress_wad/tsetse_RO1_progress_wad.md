@@ -47,7 +47,7 @@ Finally, it will also allow us to easily design and run complex analyses with th
 
 # Collections Overview #
 ## Study sites ##
-The surveys were done in the districts of Kole, Oyam, Nwoya, Amuru, Adjumani, Moyo and Arua in northern/Northwest Uganda. Additional information on tsetse population distribution was obtained from the District Entomology Offices of the relevant districts. 
+The surveys were done in the Ugandan districts of Kole, Oyam, Nwoya, Amuru, Adjumani, Moyo, Arua, Kitgum, Lamwo, and Pader. Additional information on tsetse population distribution was obtained from the District Entomology Offices of the relevant districts. 
 
 ## Data collection ##
 Trapping for tsetse flies were carried out using biconicals traps [@ChallierAandLaveissiere1973].
