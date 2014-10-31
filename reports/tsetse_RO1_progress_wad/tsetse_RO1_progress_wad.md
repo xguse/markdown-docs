@@ -5,6 +5,7 @@ author: Robert Opiro, Augustine Dunn
 date: 2014-10-30
 documentclass: report
 classoption: letterpaper
+geometry: margin=1in
 toc: 1
 graphics: 1
 bibliography: tsetse_RO1_progress_wad.bib
@@ -124,6 +125,24 @@ Zero infected individuals were detected.
 Six villages were surveyed (Alim [ALI],  Chua [CHU],  Kilak [KIL],  Aswa Bridge [ASW],  Omido [OMI],  Atanga Mission [ATM]) with 26 traps.
 152 _Gff_ were captured (39 M and 113 F), and 109 dissected.
 One infected individual was detected (0.92% estimated infection rate).
+
+
+|	District	|	Collection End Date	|	Villages	|	Traps	|	Flies Collected	|	Males	|	Females	|	Flies Dissected	|	Flies Infected	|
+|	:----------:	|	:----------:	|	:----------:	|	:----------:	|	:----------:	|	:----------:	|	:----------:	|	:----------:	|	:----------:	|
+|	Kole	|	2014-03-30	|	5	|	40	|	1227	|	564	|	663	|	428	|	5	|
+|	Oyam	|	2014-05-22	|	9	|	32	|	715	|	298	|	417	|	336	|	10	|
+|	Kole & Oyam	|	2014-07-21	|	4	|	27	|	1198	|	432	|	766	|	617	|	27	|
+|	Nwoya	|	2014-07-26	|	2	|	20	|	728	|	291	|	437	|	252	|	3	|
+|	Amuru	|	2014-07-29	|	2	|	18	|	243	|	67	|	176	|	140	|	0	|
+|	Adjumani	|	2014-08-02	|	3	|	20	|	182	|	60	|	122	|	120	|	0	|
+|	Moyo	|	2014-06-20	|	5	|	32	|	164	|	63	|	101	|	106	|	0	|
+|	Arua	|	2014-06-26	|	7	|	34	|	681	|	287	|	394	|	346	|	3	|
+|	Kitgum	|	2014-10-19	|	4	|	18	|	281	|	120	|	161	|	173	|	4	|
+|	Lamwo	|	2014-10-19	|	4	|	15	|	101	|	37	|	64	|	48	|	0	|
+|	Pader	|	2014-10-19	|	6	|	26	|	152	|	39	|	113	|	109	|	1	|
+
+
+
 
 
 <!--
