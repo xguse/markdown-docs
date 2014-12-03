@@ -66,4 +66,4 @@ docx:	clean $(DOCX)
 
 
 clean:
-	rm -f *.html *.pdf *.tex *.doc*
+	rm -f *.html *.pdf *.tex
