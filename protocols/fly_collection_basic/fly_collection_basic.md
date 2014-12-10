@@ -3,7 +3,7 @@ title: Core Tsetse Collection Protocol
 subtitle: For basic needs
 author: Gus Dunn
 date: Tue Dec  2 20:17:36 EST 2014
-documentclass: scrrpt
+documentclass: scrreprt
 classoption: letterpaper
 geometry: margin=1in
 toc: 1
@@ -68,16 +68,37 @@ The fly processing is handled in an assembly-line format with stations responsib
 
 
 ### Removal from trap ###
-The first station is responsible for removing the flies from the cage of the current trap and recording the initial information for this fly in the field collection sheet [^contact_richard] 
-The
+The first station is responsible for removing the flies from the cage of the current trap and recording the initial information for this fly in the field collection sheet^[To obtain the sheets that we used in the field you will need to contact Richard Echodu,  but the excel file templates we sent should give an idea of what is included.]
+This information includes (but may not be limited to):
+
+- trap number
+- the fly number
+- sex
+- hunger stage and or wing fray
+- collection date
+- town name/ID symbol
+
+Generally this station incapacitates the fly by cracking its head or some other way of killing the fly without causing too much physical destruction to the fly.
+Finally, this station places the fly on a microscope slide with a frosted labeling end, writes the number corresponding to this fly in the field sheet on the slide, and lines the slide up in front of the __Dissection__ station.
+
+### Label maker ###
+This station does not strictly "follow" the assembly-line but is more of a concurrent station with the __Removal from trap__ station.
+The __Label maker__ station writes the relevant information for each fly as it is being removed from the trap and incapacitated in preparation for dissection.
+The information is recorded in pencil on a pad of small labels that will be placed on each tube that contains part of the fly with the corresponding number (Figure [](#fig:label-pad)).
+
+<div id="fig:label-pad">
+![Labels typical of what is used at the __Label maker__ station.\label{fig:label-pad}](figures/label_pad.jpg)
+
+
+[The voyage to the moon](#fig:label-pad).
+</div>
+
 
 ### Dissection ###
 
 ### Visual trypanosome inspection ###
 
 ### Dissection ###
-
-[^contact_richard]: To obtain the sheets that we used in the field you will need to contact Richard Echodu.
 
 ----
 
