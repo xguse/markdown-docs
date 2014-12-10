@@ -41,6 +41,9 @@ HTML=$(SRC:.md=.html)
 TEX=$(SRC:.md=.tex)
 DOCX=$(SRC:.md=.docx)
 
+## Set up the extensions to load for pandoc common to all invocations
+PAN_EXTENTIONS=""
+
 
 all:	$(PDFS) $(HTML) $(TEX) $(DOCX)
 

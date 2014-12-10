@@ -12,6 +12,7 @@ graphics: 1
 #css: CSS.css
 tags: protocol, SOP, tsetse, collection
 fontfamily: bookman
+read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
 ...
 
 
@@ -62,6 +63,21 @@ General Purpose
 
 ## Procedures ##
 
+The fly processing is handled in an assembly-line format with stations responsible for specific parts of the task.
+
+
+
+### Removal from trap ###
+The first station is responsible for removing the flies from the cage of the current trap and recording the initial information for this fly in the field collection sheet [^contact_richard] 
+The
+
+### Dissection ###
+
+### Visual trypanosome inspection ###
+
+### Dissection ###
+
+[^contact_richard]: To obtain the sheets that we used in the field you will need to contact Richard Echodu.
 
 ----
 
