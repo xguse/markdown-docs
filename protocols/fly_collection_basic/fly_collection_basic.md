@@ -3,7 +3,7 @@ title: Core Tsetse Collection Protocol
 subtitle: For basic needs
 author: Gus Dunn
 date: Tue Dec  2 20:17:36 EST 2014
-documentclass: scrreprt
+documentclass: report
 classoption: letterpaper
 geometry: margin=1in
 toc: 1
@@ -14,6 +14,7 @@ tags: protocol, SOP, tsetse, collection
 fontfamily: bookman
 read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
 ...
+
 
 
 # Deploying Traps #
@@ -84,14 +85,11 @@ Finally, this station places the fly on a microscope slide with a frosted labeli
 ### Label maker ###
 This station does not strictly "follow" the assembly-line but is more of a concurrent station with the __Removal from trap__ station.
 The __Label maker__ station writes the relevant information for each fly as it is being removed from the trap and incapacitated in preparation for dissection.
-The information is recorded in pencil on a pad of small labels that will be placed on each tube that contains part of the fly with the corresponding number (Figure [](#fig:label-pad)).
-
-<div id="fig:label-pad">
-![Labels typical of what is used at the __Label maker__ station.\label{fig:label-pad}](figures/label_pad.jpg)
+The information is recorded in pencil on a pad of small labels that will be placed on each tube that contains part of the fly with the corresponding number (Figure XX).
 
 
-[The voyage to the moon](#fig:label-pad).
-</div>
+![Labels typical of what is used at the __Label maker__ station.](figures/label_pad.jpg)
+
 
 
 ### Dissection ###
