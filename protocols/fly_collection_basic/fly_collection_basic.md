@@ -18,6 +18,8 @@ fontfamily: bookman
 # Deploying Traps #
 
 ## Materials ##
+- gum boots
+
 ### Per Trap ###
 - 1 metal rod
 - 1 biconical fabric trap
@@ -42,7 +44,7 @@ General Purpose
 :	carries what is needed. Some combination of trap materials as needed including trap cones, collection cages/nets, grease, rubber bands.
 
 ## Procedures ##
-- As the team travels in the deployment area condusive sites are identified.
+- As the team travels in the deployment area conducive sites are identified.
 - The __Record Keeper__ places the date and trap number into the collection cage; records the trap's GPS coordinates __in DECIMAL DEGREES__ format to 5 decimal places; and makes notes about the type of surrounding habitat as well as human activity in sight of the trap.
 - The site is cleared by the __Panga__ and the rod is driven into the ground deep enough to provide robust "staying power".
 - The fabric cone is sliped onto the rod and the bottom is secured with a rubber band.
