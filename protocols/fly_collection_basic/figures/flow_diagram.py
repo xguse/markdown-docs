@@ -1,12 +1,73 @@
+import pydot as pd
 
-import pydot
- 
-graph = pydot.Dot(graph_type='digraph')
+cwd = "/home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/figures/"
 
-
-
+graph = pd.Dot(graph_type='digraph')
 
 
+# define nodes
+class StationNode(pd.Node):
+    """
+    Sets common attribs for station type nodes.
+    """
+    my_style = dict(style="filled", fillcolor="red", shape='rect')
+
+    def __init__(self, name='', obj_dict=None, **attrs):
+        self.my_style.update(attrs)
+        super(StationNode, self).__init__(name=name, obj_dict=obj_dict, **self.my_style)
+
+
+class ProductNode(pd.Node):
+    """
+    Sets common attribs for station type nodes.
+    """
+    my_style = dict(style="filled", fillcolor="green", shape='rect')
+
+    def __init__(self, name='', obj_dict=None, **attrs):
+        self.my_style.update(attrs)
+        super(ProductNode, self).__init__(name=name, obj_dict=obj_dict, **self.my_style)
+
+
+# Stations
+trap_extraction = StationNode(name="Trap Extraction")
+labeling = StationNode(name="Labeling")
+dissection = StationNode(name="Dissection")
+infection_detection = StationNode("Infection detection")
+packaging = StationNode("Packaging")
+
+# Products
+trap_cages = ProductNode("Trap cages")
+field_record = ProductNode("Field record sheet data")
+slide_fly = ProductNode("Numbered slide + fly")
+tenerals = ProductNode("Tenerals M+F")
+dead_males = ProductNode("Dead Males")
+dead_females = ProductNode("Dead Females")
+tube_labels = ProductNode("Tube Labels")
+slide_fly_tissues = ProductNode("Numbered slide + fly + tissues")
+slide_fly_tissues_status = ProductNode("Numbered slide + fly + tissues")
+infection_status = ProductNode("Infection status")
+empty_tubes = ProductNode("Empty tubes")
+packaged_tissues = ProductNode("Packaged tissues")
+
+
+# Add Nodes to graph
+graph.add_node(trap_extraction)
+graph.add_node(labeling)
+graph.add_node(dissection)
+graph.add_node(infection_detection)
+graph.add_node(packaging)
+graph.add_node(trap_cages)
+graph.add_node(field_record)
+graph.add_node(slide_fly)
+graph.add_node(tenerals)
+graph.add_node(dead_males)
+graph.add_node(dead_females)
+graph.add_node(tube_labels)
+graph.add_node(slide_fly_tissues)
+graph.add_node(slide_fly_tissues_status)
+graph.add_node(infection_status)
+graph.add_node(empty_tubes)
+graph.add_node(packaged_tissues)
 
 
 
@@ -15,36 +76,37 @@ graph = pydot.Dot(graph_type='digraph')
 
 
 
-# creating nodes is as simple as creating edges!
-node_a = pydot.Node("Node A", style="filled", fillcolor="red")
-# but... what are all those extra stuff after "Node A"?
-# well, these arguments define how the node is going to look on the graph,
-# you can find a full reference here:
-# http://www.graphviz.org/doc/info/attrs.html
-# which in turn is part of the full docs in
-# http://www.graphviz.org/Documentation.php
- 
-# neat, huh? Let us create the rest of the nodes!
-node_b = pydot.Node("Node B", style="filled", fillcolor="green")
-node_c = pydot.Node("Node C", style="filled", fillcolor="#0000ff")
-node_d = pydot.Node("Node D", style="filled", fillcolor="#976856")
- 
-#ok, now we add the nodes to the graph
-graph.add_node(node_a)
-graph.add_node(node_b)
-graph.add_node(node_c)
-graph.add_node(node_d)
- 
-# and finally we create the edges
-# to keep it short, I'll be adding the edge automatically to the graph instead
-# of keeping a reference to it in a variable
-graph.add_edge(pydot.Edge(node_a, node_b))
-graph.add_edge(pydot.Edge(node_b, node_c))
-graph.add_edge(pydot.Edge(node_c, node_d))
-# but, let's make this last edge special, yes?
-graph.add_edge(pydot.Edge(node_d, node_a, label="and back we go again", labelfontcolor="#009933", fontsize="10.0", color="blue"))
- 
+# edges
+graph.add_edge(pd.Edge(trap_cages, trap_extraction))
+graph.add_edge(pd.Edge(trap_extraction, field_record))
+graph.add_edge(pd.Edge(trap_extraction, slide_fly))
+graph.add_edge(pd.Edge(trap_extraction, tenerals))
+graph.add_edge(pd.Edge(trap_extraction, dead_males))
+graph.add_edge(pd.Edge(trap_extraction, dead_females))
+
+graph.add_edge(pd.Edge(field_record, labeling))
+graph.add_edge(pd.Edge(slide_fly, dissection))
+graph.add_edge(pd.Edge(tenerals, packaging, label="at the end"))
+graph.add_edge(pd.Edge(dead_males, packaging, label="at the end"))
+graph.add_edge(pd.Edge(dead_females, packaging, label="at the end"))
+
+graph.add_edge(pd.Edge(labeling, tube_labels))
+
+graph.add_edge(pd.Edge(tube_labels, packaging))
+
+
+graph.add_edge(pd.Edge(dissection, slide_fly_tissues))
+
+graph.add_edge(pd.Edge(slide_fly_tissues, infection_detection))
+
+graph.add_edge(pd.Edge(infection_detection, slide_fly_tissues_status))
+graph.add_edge(pd.Edge(infection_detection, infection_status))
+
+graph.add_edge(pd.Edge(infection_status, packaging))
+graph.add_edge(pd.Edge(empty_tubes, packaging))
+graph.add_edge(pd.Edge(slide_fly_tissues_status, packaging))
+
+graph.add_edge(pd.Edge(packaging, packaged_tissues))
+
 # and we are done
-graph.write_png('example2_graph.png')
- 
-# this is too good to be true!
+graph.write_png(cwd + 'example2_graph.png')
