@@ -54,18 +54,18 @@ docx:	clean $(DOCX)
 
 
 %.html:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -s -S --filter $(PANDOC_INTERNAL_REFS) --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -s -S  --filter $(PANDOC_CITEPROC) -o $@ $<
 
 %.tex:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S --latex-engine=pdflatex --filter $(PANDOC_INTERNAL_REFS) --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S --latex-engine=pdflatex  --filter $(PANDOC_CITEPROC) -o $@ $<
 
 
 %.pdf:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --latex-engine=pdflatex --filter $(PANDOC_INTERNAL_REFS) --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --latex-engine=pdflatex  --filter $(PANDOC_CITEPROC) -o $@ $<
 
 
 %.docx:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w docx -s -S  --filter $(PANDOC_INTERNAL_REFS) --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w docx -s -S   --filter $(PANDOC_CITEPROC) -o $@ $<
 
 
 clean:
