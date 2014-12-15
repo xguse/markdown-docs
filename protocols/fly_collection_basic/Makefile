@@ -42,7 +42,9 @@ TEX=$(SRC:.md=.tex)
 DOCX=$(SRC:.md=.docx)
 
 ## Set up the extensions to load for pandoc common to all invocations
-PAN_EXTENTIONS=""
+PAN_OPTS=--chapters --number-sections
+PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
+PAN_FILTERS=--filter $(PANDOC_CITEPROC)
 
 
 all:	$(PDFS) $(HTML) $(TEX) $(DOCX)
@@ -54,18 +56,18 @@ docx:	clean $(DOCX)
 
 
 %.html:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -s -S  --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w html -s -S  $(PAN_FILTERS) -o $@ $<
 
 %.tex:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S --latex-engine=pdflatex  --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w latex -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
 
 
 %.pdf:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --latex-engine=pdflatex  --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
 
 
 %.docx:	%.md
-	$(PANDOC) -r markdown+simple_tables+table_captions+yaml_metadata_block -w docx -s -S   --filter $(PANDOC_CITEPROC) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w docx -s -S   $(PAN_FILTERS) -o $@ $<
 
 
 clean:

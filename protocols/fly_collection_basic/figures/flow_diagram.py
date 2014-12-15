@@ -2,7 +2,12 @@ import pydot as pd
 
 cwd = "/home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/figures/"
 
-graph = pd.Dot(graph_type='digraph')
+collection_protocol = pd.Dot(graph_type='digraph', clusterrank='true', pad='.2')
+
+
+after_live_flies = pd.Cluster('after_lives', style='filled',
+                              fillcolor="#B2E9A2", fontsize='11', fontname="DroidSans-Bold.ttf bold",
+                              labelloc='b')
 
 
 # define nodes
@@ -10,7 +15,7 @@ class StationNode(pd.Node):
     """
     Sets common attribs for station type nodes.
     """
-    my_style = dict(style="filled", fillcolor="red", shape='rect')
+    my_style = dict(style="filled, bold", fillcolor="grey", shape='box', fontsize='18')
 
     def __init__(self, name='', obj_dict=None, **attrs):
         self.my_style.update(attrs)
@@ -21,7 +26,7 @@ class ProductNode(pd.Node):
     """
     Sets common attribs for station type nodes.
     """
-    my_style = dict(style="filled", fillcolor="green", shape='rect')
+    my_style = dict(fillcolor="white", shape='box', fontname="DroidSans-Bold.ttf", fontsize='13', style='rounded, filled')
 
     def __init__(self, name='', obj_dict=None, **attrs):
         self.my_style.update(attrs)
@@ -34,79 +39,92 @@ labeling = StationNode(name="Labeling")
 dissection = StationNode(name="Dissection")
 infection_detection = StationNode("Infection detection")
 packaging = StationNode("Packaging")
+sealing = StationNode("Tube sealing")
 
 # Products
 trap_cages = ProductNode("Trap cages")
-field_record = ProductNode("Field record sheet data")
+field_record = ProductNode("Field record data")
 slide_fly = ProductNode("Numbered slide + fly")
 tenerals = ProductNode("Tenerals M+F")
 dead_males = ProductNode("Dead Males")
 dead_females = ProductNode("Dead Females")
 tube_labels = ProductNode("Tube Labels")
 slide_fly_tissues = ProductNode("Numbered slide + fly + tissues")
-slide_fly_tissues_status = ProductNode("Numbered slide + fly + tissues")
 infection_status = ProductNode("Infection status")
 empty_tubes = ProductNode("Empty tubes")
 packaged_tissues = ProductNode("Packaged tissues")
+sealed_tubes = ProductNode("Sealed tubes")
 
 
-# Add Nodes to graph
-graph.add_node(trap_extraction)
-graph.add_node(labeling)
-graph.add_node(dissection)
-graph.add_node(infection_detection)
-graph.add_node(packaging)
-graph.add_node(trap_cages)
-graph.add_node(field_record)
-graph.add_node(slide_fly)
-graph.add_node(tenerals)
-graph.add_node(dead_males)
-graph.add_node(dead_females)
-graph.add_node(tube_labels)
-graph.add_node(slide_fly_tissues)
-graph.add_node(slide_fly_tissues_status)
-graph.add_node(infection_status)
-graph.add_node(empty_tubes)
-graph.add_node(packaged_tissues)
+# Add Nodes to collection_protocol
+# trap_label = pd.Subgraph('', rank='same')
+# trap_label.add_node(trap_extraction)
+# trap_label.add_node(labeling)
+# collection_protocol.add_subgraph(trap_label)
+
+collection_protocol.add_node(trap_extraction)
+collection_protocol.add_node(labeling)
+collection_protocol.add_node(trap_extraction)
+collection_protocol.add_node(labeling)
+collection_protocol.add_node(dissection)
+collection_protocol.add_node(infection_detection)
+collection_protocol.add_node(packaging)
+collection_protocol.add_node(trap_cages)
+collection_protocol.add_node(field_record)
+collection_protocol.add_node(slide_fly)
+collection_protocol.add_node(tube_labels)
+collection_protocol.add_node(slide_fly_tissues)
+collection_protocol.add_node(infection_status)
+collection_protocol.add_node(empty_tubes)
+collection_protocol.add_node(packaged_tissues)
+collection_protocol.add_node(sealing)
+collection_protocol.add_node(sealed_tubes)
 
 
-
-
+after_live_flies.add_node(tenerals)
+after_live_flies.add_node(dead_males)
+after_live_flies.add_node(dead_females)
+collection_protocol.add_subgraph(after_live_flies)
 
 
 
 
 # edges
-graph.add_edge(pd.Edge(trap_cages, trap_extraction))
-graph.add_edge(pd.Edge(trap_extraction, field_record))
-graph.add_edge(pd.Edge(trap_extraction, slide_fly))
-graph.add_edge(pd.Edge(trap_extraction, tenerals))
-graph.add_edge(pd.Edge(trap_extraction, dead_males))
-graph.add_edge(pd.Edge(trap_extraction, dead_females))
+collection_protocol.add_edge(pd.Edge(trap_cages, trap_extraction))
+collection_protocol.add_edge(pd.Edge(trap_extraction, field_record))
+collection_protocol.add_edge(pd.Edge(trap_extraction, slide_fly, penwidth="3"))
+collection_protocol.add_edge(pd.Edge(trap_extraction, tenerals))
+collection_protocol.add_edge(pd.Edge(trap_extraction, dead_males))
+collection_protocol.add_edge(pd.Edge(trap_extraction, dead_females))
 
-graph.add_edge(pd.Edge(field_record, labeling))
-graph.add_edge(pd.Edge(slide_fly, dissection))
-graph.add_edge(pd.Edge(tenerals, packaging, label="at the end"))
-graph.add_edge(pd.Edge(dead_males, packaging, label="at the end"))
-graph.add_edge(pd.Edge(dead_females, packaging, label="at the end"))
+collection_protocol.add_edge(pd.Edge(field_record, labeling))
+collection_protocol.add_edge(pd.Edge(slide_fly, dissection, penwidth="3"))
+collection_protocol.add_edge(pd.Edge(tenerals, packaging))
+collection_protocol.add_edge(pd.Edge(dead_males, packaging))
+collection_protocol.add_edge(pd.Edge(dead_females, packaging))
 
-graph.add_edge(pd.Edge(labeling, tube_labels))
+collection_protocol.add_edge(pd.Edge(labeling, tube_labels))
 
-graph.add_edge(pd.Edge(tube_labels, packaging))
+collection_protocol.add_edge(pd.Edge(tube_labels, packaging))
 
 
-graph.add_edge(pd.Edge(dissection, slide_fly_tissues))
+collection_protocol.add_edge(pd.Edge(dissection, slide_fly_tissues, penwidth="3"))
 
-graph.add_edge(pd.Edge(slide_fly_tissues, infection_detection))
+collection_protocol.add_edge(pd.Edge(slide_fly_tissues, infection_detection, penwidth="3"))
 
-graph.add_edge(pd.Edge(infection_detection, slide_fly_tissues_status))
-graph.add_edge(pd.Edge(infection_detection, infection_status))
+collection_protocol.add_edge(pd.Edge(infection_detection, slide_fly_tissues, penwidth="3"))
+collection_protocol.add_edge(pd.Edge(infection_detection, infection_status))
 
-graph.add_edge(pd.Edge(infection_status, packaging))
-graph.add_edge(pd.Edge(empty_tubes, packaging))
-graph.add_edge(pd.Edge(slide_fly_tissues_status, packaging))
+collection_protocol.add_edge(pd.Edge(infection_status, packaging))
+collection_protocol.add_edge(pd.Edge(infection_status, labeling))
+collection_protocol.add_edge(pd.Edge(empty_tubes, packaging))
+collection_protocol.add_edge(pd.Edge(slide_fly_tissues, packaging, penwidth="3"))
 
-graph.add_edge(pd.Edge(packaging, packaged_tissues))
+collection_protocol.add_edge(pd.Edge(packaging, packaged_tissues, penwidth="3"))
+
+collection_protocol.add_edge(pd.Edge(packaged_tissues, sealing, penwidth="3"))
+
+collection_protocol.add_edge(pd.Edge(sealing, sealed_tubes, penwidth="3"))
 
 # and we are done
-graph.write_png(cwd + 'example2_graph.png')
+collection_protocol.write_png(cwd + 'fly_processing_flow.png')
