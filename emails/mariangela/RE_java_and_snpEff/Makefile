@@ -13,6 +13,16 @@
 ## 	in your working directory. Make sure you do not have files in these
 ##	formats that you want to keep!
 
+
+
+##########################################
+#
+# RE_java_and_snpEff
+#
+##########################################
+
+
+
 ## Personal Macros
 
 PANDOC=$(HOME)/.cabal/bin/pandoc
@@ -42,7 +52,7 @@ TEX=$(SRC:.md=.tex)
 DOCX=$(SRC:.md=.docx)
 
 ## Set up the extensions to load for pandoc common to all invocations
-PAN_OPTS=--chapters --number-sections
+PAN_OPTS=
 PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
 PAN_FILTERS=--filter $(PANDOC_CITEPROC)
 

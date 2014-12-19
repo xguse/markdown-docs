@@ -2,7 +2,7 @@ import pydot as pd
 
 cwd = "/home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/figures/"
 
-collection_protocol = pd.Dot(graph_type='digraph', clusterrank='true', pad='.2')
+collection_protocol = pd.Dot(graph_type='digraph', clusterrank='true', size='7.4', ratio="compress")
 
 
 after_live_flies = pd.Cluster('after_lives', style='filled',
@@ -15,7 +15,7 @@ class StationNode(pd.Node):
     """
     Sets common attribs for station type nodes.
     """
-    my_style = dict(style="filled, bold", fillcolor="grey", shape='box', fontsize='18')
+    my_style = dict(style="filled, bold", fillcolor="grey", shape='box', fontsize='16')
 
     def __init__(self, name='', obj_dict=None, **attrs):
         self.my_style.update(attrs)
@@ -26,7 +26,8 @@ class ProductNode(pd.Node):
     """
     Sets common attribs for station type nodes.
     """
-    my_style = dict(fillcolor="white", shape='box', fontname="DroidSans-Bold.ttf", fontsize='13', style='rounded, filled')
+    my_style = dict(fillcolor="white", shape='box', fontname="DroidSans-Bold.ttf", fontsize='11',
+                    style='rounded, filled')
 
     def __init__(self, name='', obj_dict=None, **attrs):
         self.my_style.update(attrs)
@@ -128,3 +129,5 @@ collection_protocol.add_edge(pd.Edge(sealing, sealed_tubes, penwidth="3"))
 
 # and we are done
 collection_protocol.write_png(cwd + 'fly_processing_flow.png')
+collection_protocol.write_dot(cwd + 'fly_processing_flow.dot')
+collection_protocol.write_pdf(cwd + 'fly_processing_flow.pdf')
