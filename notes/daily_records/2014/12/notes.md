@@ -101,3 +101,16 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 ### Next: ###
 
 - Collect the resulting analysis files into single repository.
+
+##########################################
+
+# 2014-12-23 (Tuesday) #
+
+## Meeting with Dan ##
+
+- [markdown-docs/notes/meetings/dan-2014-12-23/dan-2014-12-23.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/dan-2014-12-23/dan-2014-12-23.md)
+
+## Argot2 batch size reduction: ##
+
+- see 2014-12-22
+- [2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb)
