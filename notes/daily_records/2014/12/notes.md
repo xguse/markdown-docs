@@ -62,3 +62,42 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 - split `blastp` and `hmmer` outputs by protein (~3000 per group)
 
 ##########################################
+
+# 2014-12-22 (Monday) #
+
+## Argot2 batch size reduction: ##
+
+- see 2014-12-21
+- finished splitting
+- files were zipped
+- file pairs were submitted to Argot2
+
+### Files: ###
+
+```
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.0.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.1.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.2.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.3.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.4.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.5.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.6.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.7.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.8.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.9.hmmscan.zip
+
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.0.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.1.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.2.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.3.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.4.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.5.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.6.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.7.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.8.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.9.blastp.zip
+```
+
+### Next: ###
+
+- Collect the resulting analysis files into single repository.
