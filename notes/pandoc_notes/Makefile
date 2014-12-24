@@ -42,7 +42,7 @@ TEX=$(SRC:.md=.tex)
 DOCX=$(SRC:.md=.docx)
 
 ## Set up the extensions to load for pandoc common to all invocations
-PAN_OPTS=--number-sections --highlight-style pygments
+PAN_OPTS=--number-sections --highlight-style zenburn
 PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
 PAN_FILTERS=--filter $(PANDOC_CITEPROC)
 

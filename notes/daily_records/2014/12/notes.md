@@ -114,3 +114,55 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 
 - see 2014-12-22
 - [2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb)
+
+
+##########################################
+
+# 2014-12-24 (Wednesday) #
+
+## Argot batch size reduction ##
+
+- see 2014-12-23
+
+### Storing in `Python`-friendly format (`pandas.HDFStore`) ###
+
+- had to install `pytables`
+- test work well and data is stored
+- documentation: [2014-12-24_store_argot2_functional_annotation_db_GfusI1.1_prerelease_as_HDF5.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2014-12-24_store_argot2_functional_annotation_db_GfusI1.1_prerelease_as_HDF5.ipynb)
+
+### File location ###
+
+```
+louise/data/genomes/glossina_fuscipes/annotations/ \
+functional/GfusI1.1_pre/argot2_out/argot_functional_annotations_ts150.h5
+```
+
+### PROJECT COMPLETED ###
+
+"Argot batch size reduction" project is now considered completed.
+
+
+## Installing `PyTables` ##
+
+__First attempt  failed due to cryptic or at _least_ slightly misleading error about `numpy` and `numexpr`:__
+
+
+~~~~~~~~ {.bash}
+$ pip install git+https://github.com/PyTables/PyTables.git@v.3.1.1#egg=tables
+~~~~~~~~~~~~~~~~~~~
+
+__Tried installing `numexpr` directly with:__
+
+~~~~~~~~ {.bash}
+$ pip install numexpr
+~~~~~~~~~~~~~~~~~~~
+
+__Tried `PyTables` again:__
+
+~~~~~~~~ {.bash}
+$ pip install git+https://github.com/PyTables/PyTables.git@v.3.1.1#egg=tables
+~~~~~~~~~~~~~~~~~~~
+
+## P: Functional Annotations of genes near SNPs of interest ##
+
+- Project start.
