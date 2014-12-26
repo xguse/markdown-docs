@@ -30,7 +30,7 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 - cant run ipython notebook bc of py279 from py278 issues.
 - must reinstall most/all python dependencies. 
 
-##########################################
+------------------------------------------
 
 # 2014-12-21 #
 
@@ -61,7 +61,7 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 
 - split `blastp` and `hmmer` outputs by protein (~3000 per group)
 
-##########################################
+------------------------------------------
 
 # 2014-12-22 (Monday) #
 
@@ -102,7 +102,7 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 
 - Collect the resulting analysis files into single repository.
 
-##########################################
+------------------------------------------
 
 # 2014-12-23 (Tuesday) #
 
@@ -116,7 +116,7 @@ tags = [python, pip, virtualenvwrapper, py279, admin]
 - [2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb)
 
 
-##########################################
+------------------------------------------
 
 # 2014-12-24 (Wednesday) #
 
@@ -163,6 +163,22 @@ __Tried `PyTables` again:__
 $ pip install git+https://github.com/PyTables/PyTables.git@v.3.1.1#egg=tables
 ~~~~~~~~~~~~~~~~~~~
 
-## P: Functional Annotations of genes near SNPs of interest ##
+
+## T: Functional Annotations of genes near SNPs of interest ##
 
 - Project start.
+
+
+------------------------------------------
+
+
+# 2014-12-26 (Friday) #
+
+## T: Functional Annotations of genes near SNPs of interest ##
+
+- `[_]` write code to create table of functional annotation info, given gene-names and annotation database.
+    - `[_]` draft in ipython notebook
+    - `[_]` copy to `spartan`
+- `[_]` write methods for the functional annotation paper section
+
+
