@@ -15,6 +15,19 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 ...
 
 
+# Convert VCF files to PLINK format #
+
+- [http://vcftools.sourceforge.net/documentation.html#plink](http://vcftools.sourceforge.net/documentation.html#plink)
+
+From the link above:
+
+>VCFtools can convert VCF files into formats convenient for use in other programs. One such example is the ability to convert into PLINK format. The following function will output the variants in .ped and .map files.
+
+~~~~~~~~ {.bash}
+    vcftools --vcf input_data.vcf --plink --chr 1 --out output_in_plink
+~~~~~~~~~~~~~~~~~~~
+
+
 # Imputation #
 
 - Nature Reviews Genetics 11, 499-511 (July 2010): [Box 1 | How genotype imputation works](http://www.nature.com/nrg/journal/v11/n7/box/nrg2796_BX1.html)
