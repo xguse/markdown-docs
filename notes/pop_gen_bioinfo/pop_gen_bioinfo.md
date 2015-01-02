@@ -8,7 +8,9 @@ geometry: margin=1in
 toc: 1
 graphics: 1
 tags: [bioinformatics, popgen, notes]
-fontfamily: fourier
+header-includes: 
+ - \usepackage[T1]{fontenc}
+ - \usepackage{lxfonts}
 read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
 ...
 
@@ -41,20 +43,24 @@ tags = [VCF, phased, ]
 
 imputation
 
-~   in genetics, imputation refers to the statistical inference of unobserved genotypes. _It is achieved by using known haplotypes in a population_, for instance from the HapMap or the 1000 Genomes Project in humans, thereby allowing to test initially-untyped genetic variants for association with a trait of interest. Genotype imputation hence helps tremendously in narrowing-down the location of probably causal variants in genome-wide association studies. [Wikipedia](http://en.wikipedia.org/wiki/Imputation_(genetics))   
+~   $\mapsto$ in genetics, imputation refers to the statistical inference of unobserved genotypes. _It is achieved by using known haplotypes in a population_, for instance from the HapMap or the 1000 Genomes Project in humans, thereby allowing to test initially-untyped genetic variants for association with a trait of interest. Genotype imputation hence helps tremendously in narrowing-down the location of probably causal variants in genome-wide association studies. [Wikipedia](http://en.wikipedia.org/wiki/Imputation_(genetics))   
 
 
 haplotype
 
-~   a collection of specific alleles (particular DNA sequences) in a cluster of tightly-linked genes on a chromosome that are likely to be inherited together. _Put in simple words, haplotype is the group of genes that a progeny inherits from one parent._ [Wikipedia](link_addresshttp://en.wikipedia.org/wiki/Haplotype)
+~   $\mapsto$ a collection of specific alleles (particular DNA sequences) in a cluster of tightly-linked genes on a chromosome that are likely to be inherited together. _Put in simple words, haplotype is the group of genes that a progeny inherits from one parent._ [Wikipedia](link_addresshttp://en.wikipedia.org/wiki/Haplotype)
 
-~   A second meaning of the term is a set of single-nucleotide polymorphisms (SNPs) on a single chromatid of a chromosome pair that are associated statistically. It is thought that these associations, and the identification of a few alleles of a haplotype sequence, can unambiguously identify all other polymorphic sites in its region. [Wikipedia](link_addresshttp://en.wikipedia.org/wiki/Haplotype)
+~   $\mapsto$ A second meaning of the term is a set of single-nucleotide polymorphisms (SNPs) on a single chromatid of a chromosome pair that are associated statistically. It is thought that these associations, and the identification of a few alleles of a haplotype sequence, can unambiguously identify all other polymorphic sites in its region. [Wikipedia](link_addresshttp://en.wikipedia.org/wiki/Haplotype)
 
-~   haplotype is a contraction for haploid genotypes. [Wikipedia](link_addresshttp://en.wikipedia.org/wiki/Haplotype)
+~   $\mapsto$ haplotype is a contraction for haploid genotypes. [Wikipedia](link_addresshttp://en.wikipedia.org/wiki/Haplotype)
 
 linkage disequilibrium
 
-~   the occurrence of some combinations of alleles or genetic markers in a population more often or less often than would be expected from a random formation of haplotypes from alleles based on their frequencies. It is a second order phenomenon derived from linkage, which is the presence of two or more loci on a chromosome with limited recombination between them. The amount of linkage disequilibrium depends on the difference between observed allelic frequencies and those expected from a homogenous, randomly distributed model. Populations where combinations of alleles or genotypes can be found in the expected proportions are said to be in linkage equilibrium. [Wikipedia](http://en.wikipedia.org/wiki/Linkage_disequilibrium)
+~   $\mapsto$ the occurrence of some combinations of alleles or genetic markers in a population more often or less often than would be expected from a random formation of haplotypes from alleles based on their frequencies. It is a second order phenomenon derived from linkage, which is the presence of two or more loci on a chromosome with limited recombination between them. The amount of linkage disequilibrium depends on the difference between observed allelic frequencies and those expected from a homogenous, randomly distributed model. Populations where combinations of alleles or genotypes can be found in the expected proportions are said to be in linkage equilibrium. [Wikipedia](http://en.wikipedia.org/wiki/Linkage_disequilibrium)
 
 
+linkage group
 
+~   $\mapsto$ in genetics, all of the genes on a single chromosome. They are inherited as a group; that is, during cell division they act and move as a unit rather than independently. The existence of linkage groups is the reason some traits do not comply with Mendel’s law of independent assortment (recombination of genes and the traits they control); _i.e._, the principle applies only if genes are located on different chromosomes. Variation in the gene composition of a chromosome can occur when a chromosome breaks, and the sections join with the partner chromosome if it has broken in the same places. This exchange of genes between chromosomes, called crossing over, usually occurs during meiosis, when the total number of chromosomes is halved. [Encyclopedia Britannica](http://www.britannica.com/EBchecked/topic/342478/linkage-group)
+
+~   $\mapsto$ A pair or set of genes on a chromosome that tend to be transmitted together. [American Heritage® Dictionary of the English Language ](http://www.thefreedictionary.com/linkage+group)

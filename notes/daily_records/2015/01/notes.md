@@ -1,5 +1,7 @@
 ---
-title: January, 2015
+title: Daily Records
+subtitle: Caccone PostDoc
+date: January, 2015
 author: Gus Dunn
 documentclass: scrartcl
 classoption: letterpaper
@@ -31,3 +33,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 ## Writing Methods ##
 
+- `[X]` Functional Annotations
+    - done-ish at 2015-01-02 08:58
+- `[_]` Linkage
+    - STILL NEED TO DO THIS ANALYSIS...

@@ -42,9 +42,10 @@ TEX=$(SRC:.md=.tex)
 DOCX=$(SRC:.md=.docx)
 
 ## Set up the extensions to load for pandoc common to all invocations
-PAN_OPTS=--number-sections --highlight-style pygments
+PAN_OPTS=--number-sections --highlight-style pygments 
 PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
 PAN_FILTERS=--filter $(PANDOC_CITEPROC)
+PAN_LATEX_ENGINE=--latex-engine=xelatex
 
 
 all:	$(PDFS) $(HTML) $(TEX) $(DOCX)
@@ -59,11 +60,11 @@ docx:	clean $(DOCX)
 	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w html -s -S  $(PAN_FILTERS) -o $@ $<
 
 %.tex:	%.md
-	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w latex -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w latex -s -S $(PAN_LATEX_ENGINE)  $(PAN_FILTERS) -o $@ $<
 
 
 %.pdf:	%.md
-	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -s -S $(PAN_LATEX_ENGINE)  $(PAN_FILTERS) -o $@ $<
 
 
 %.docx:	%.md

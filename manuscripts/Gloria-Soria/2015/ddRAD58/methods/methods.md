@@ -19,35 +19,34 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 ## Sequences Used ##
 
-### _Glossina fuscipes fuscipes_ ###
-
+___Glossina fuscipes fuscipes:___
 All putative peptides annotated for _G. f. fuscipes_ in the GfusI1.1 gene-build were obtained from [VectorBase](link_address) __{{CITE_ME}}__.
 
-### Other ###
 
+___Other:___
 The sequences used to compare the _G. f. fuscipes_ peptides against well known/annotated sequences were obtained from UNIPROT __{{CITE_ME}}__ (`blastp`) and PFAM __{{CITE_ME}}__ (`hmmscan`) as required by [ARGOT2](link_address) __{{CITE_ME}}__.
 
 
-## Argot2 ##
+## Argot2 Analysis ##
 
-The `blastp` and `hmmscan` results submitted to ARGOT2 were obtained by performing local searches on the _G. f. fuscipes_ peptides against the UNIPROT peptide database (obtained on 2014-09-08) and a protein-domain database consisting of the hidden Markov models (HMM)combined from the Pfam-A and Pfam-B model databases (obtained on 2014-09-08), respectively.
+The `blastp` and `hmmscan` results submitted to ARGOT2 were obtained by performing local searches on the _G. f. fuscipes_ peptides against the UNIPROT peptide database (obtained on 2014-09-08) and the hidden Markov models (HMM) of the combined protein-domain sets om the Pfam databases (Pfam-A and Pfam-B: obtained on 2014-09-08), respectively.
 Settings used were as dictated by the ARGOT2 site and summarized here.
 
 For `blastp`: 
 
 ~~~~~~~~ {.bash}
-
-blastp -outfmt "6 qseqid sseqid evalue " -query GFUSI1_1_PEPTIDES -db UNIPROT_PEPTIDES -out OUTPUT_FILE
-
+blastp -outfmt "6 qseqid sseqid evalue " -query GFUSI1_1_PEPTIDES \
+    -db UNIPROT_PEPTIDES -out OUTPUT_FILE
 ~~~~~~~~~~~~~~~~~~~
 
-For `hmmscan`
+For `hmmscan`:
 
 ~~~~~~~~ {.bash}
-
-hmmscan --tblout OUTPUT_FILE  $your_sequences
-
+hmmscan --tblout OUTPUT_FILE PFAMA_AND_PFAMB_DOMAINS GFUSI1_1_PEPTIDES
 ~~~~~~~~~~~~~~~~~~~
+
+The `blastp` and `hmmscan` results were split into 10 groups (roughly 2330 peptides per group) and uploaded to ARGOT2 servers for analysis.
+The functional annotations were then downloaded and joined back together.
 
 # Linkage Analysis #
 

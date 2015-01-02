@@ -1,6 +1,7 @@
 ---
-title: October, 2014
-author: Gus Dunn
+title: Daily Records
+subtitle: Caccone PostDoc
+date: October, 2014
 documentclass: scrartcl
 classoption: letterpaper
 geometry: margin=1in

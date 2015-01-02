@@ -1,6 +1,7 @@
 ---
-title: December, 2014
-author: Gus Dunn
+title: Daily Records
+subtitle: Caccone PostDoc
+date: December, 2014
 documentclass: scrartcl
 classoption: letterpaper
 toc: 1
