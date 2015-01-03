@@ -59,11 +59,11 @@ docx:	clean $(DOCX)
 	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w html -s -S  $(PAN_FILTERS) -o $@ $<
 
 %.tex:	%.md
-	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w latex -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -w latex --parse-raw -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
 
 
 %.pdf:	%.md
-	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
+	$(PANDOC) $(PAN_OPTS) -r $(PAN_EXTENTIONS) --parse-raw -s -S --latex-engine=pdflatex  $(PAN_FILTERS) -o $@ $<
 
 
 %.docx:	%.md

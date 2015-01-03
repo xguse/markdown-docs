@@ -9,6 +9,7 @@ toc: 1
 graphics: 1
 tags: daily notes, ddRAD, argot2, 
 header-includes: 
+ - \usepackage{bbding}
  - \usepackage[T1]{fontenc}
  - \usepackage{lxfonts}
 read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
@@ -31,11 +32,13 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 - `[_]` write methods for the functional annotation paper section -->
 
 
+------------------------------------------
+
 # 2015-01-02 (Friday) #
 
 ## Writing Methods ##
 
-- `[X]` Functional Annotations
+- `[x]` Functional Annotations
     - done-ish at 2015-01-02 08:58
 - `[_]` Linkage
     - __STILL NEED TO DO THIS ANALYSIS...__
@@ -47,11 +50,11 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 ### PLINK ###
 
 - [v1.90 user manual: LD section ](https://www.cog-genomics.org/plink2/ld)
-- `[X]` create the files needed from the master VCF file (tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf)
+- `[x]` create the files needed from the master VCF file (tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf)
     - looks like `plink` now reads VCF (`v1.90`): will try this first.
-- `[X]` split data into smaller pieces to parallelize the `plink` analysis.
+- `[x]` split data into smaller pieces to parallelize the `plink` analysis.
     - looks like the `--parallel` flag will allow `plink` to take care of this.
-- `[X]` start run(s) on `louise`.
+- `[x]` start run(s) on `louise`.
 - `[_]` _try running a `--blocks` PLINK analysis for haplotype blocks to see if its useful?_
 
 __plink commands run and kept:__
@@ -75,10 +78,37 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-ext
 
 ### Plot PLINK results ###
 
-- `[X]` create `ipython` notebook file
+- `[x]` create `ipython` notebook file
     - [YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb)
 - `[_]` write code to plot 
 
 ## TODO for Gisella ##
 
 - `[_]` re-read grant bit about bioinformatics and think about how to use Hongyu Zhao.
+
+
+
+------------------------------------------
+
+# 2015-01-03 (Saturday) #
+
+## Linkage Analysis ##
+
+### Plot PLINK results ###
+
+- `[x]`  __WHAT__ should be plotted?
+    - `[x]`  what _exactly is_ the $r$ value telling us?
+        - `[x]`  does it already take into account the distance?
+            - according to [Wikipedia ](http://en.wikipedia.org/wiki/Linkage_disequilibrium#Definition), $r$ is simply the correlation coefficient between pairs of loci:
+            $$r=\frac{D}{\sqrt{p_1p_2q_1q_2}}$$
+    - It seems like plotting $\frac{r}{l_{a} - l_{b}}$ where($r$ divided by distance) __is__ warranted where:
+        - $l_{a}$ is location of SNP$_{a}$
+        - $l_{b}$ is location of SNP$_{b}$
+
+- `[_]` write code to plot
+
+#### Questions for Andrea ####
+
+- Some MAFs are zero which causes the LD ($r$) to fail. [link](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb#LD-as-r-for-Scaffold0:)
+
+
