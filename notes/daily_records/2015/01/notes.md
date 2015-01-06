@@ -154,8 +154,19 @@ After filtering, kept 53 out of 53 Individuals
 Outputting VCF file...
 After filtering, kept 73297 out of a possible 153650 Sites
 Run Time = 21.00 seconds
-
 ~~~~~~~~~~~~~~~~~~~
+
+### PLINK - rerun ###
+
+~~~~~~~~ {.bash}
+plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+--allow-extra-chr \
+--r gz with-freqs dprime \
+--out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r_none_freqs_dprime
+~~~~~~~~~~~~~~~~~~~
+
+
+
 
 ## Recover dead positives ##
 
@@ -163,3 +174,28 @@ Run Time = 21.00 seconds
 
 - Prepped for dissections and pre-filled the worksheets
 - but we are out of the 1.5 ml tubes that I bought for this and I will have to go get some more tomorrow morning.
+
+
+
+------------------------------------------
+
+# 2015-01-06 (Tuesday) #
+
+## Linkage Analysis ##
+
+- emailed Dan about looking over the results.
+- Should probably run them by Jeff if he has time too.
+
+### Plot PLINK results ###
+
+- cleaned up a few things
+- added residual plots following the regplots
+
+## Recover dead positives ##
+
+- need to meet with Kirsten (emailed her to schedule a time)
+    - subject: _Short meeting to talk about the dead positives screen?_
+
+### Dissections ###
+
+- getting more tubes
