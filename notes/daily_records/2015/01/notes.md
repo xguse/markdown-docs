@@ -101,7 +101,7 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-ext
         - `[x]`  does it already take into account the distance?
             - according to [Wikipedia ](http://en.wikipedia.org/wiki/Linkage_disequilibrium#Definition), $r$ is simply the correlation coefficient between pairs of loci:
             $$r=\frac{D}{\sqrt{p_1p_2q_1q_2}}$$
-    - It seems like plotting $\frac{r}{l_{a} - l_{b}}$ where($r$ divided by distance) __is__ warranted where:
+    - It seems like plotting $\frac{r}{l_{a} - l_{b}}$ ($r$ divided by distance) __is__ warranted where:
         - $l_{a}$ is location of SNP$_{a}$
         - $l_{b}$ is location of SNP$_{b}$
 
@@ -112,3 +112,54 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-ext
 - Some MAFs are zero which causes the LD ($r$) to fail. [link](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb#LD-as-r-for-Scaffold0:)
 
 
+
+------------------------------------------
+
+# 2015-01-05 (Monday) #
+
+## Linkage Analysis ##
+
+### Plot PLINK results ###
+
+- met with Andrea after showing her what I had and specifically the MAF = 0 for about half the `scaffold0` comparisons.
+    - __(see meeting notes for more details)__
+
+
+### Re-Filter original VCF ###
+
+- the incorrect (`--min-allele`/`--max-allele`) filter was used to generate: `tsetseFINAL_14Oct2014_f2_53.recode.vcf`
+- the correct filter is `--maf`.
+- I am doing it myself with MAF = 0.05 (see below).
+- __retained only 47.7% sites__
+- __I will be re-running my PLINK LD analysis just in case.__
+
+~~~~~~~~ {.bash}
+wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ vcftools \
+    --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf \
+    --maf 0.05 \
+    --out tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05 \
+    --recode
+
+VCFtools - v0.1.12b
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+    --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf
+    --maf 0.05
+    --out tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05
+    --recode
+
+After filtering, kept 53 out of 53 Individuals
+Outputting VCF file...
+After filtering, kept 73297 out of a possible 153650 Sites
+Run Time = 21.00 seconds
+
+~~~~~~~~~~~~~~~~~~~
+
+## Recover dead positives ##
+
+### Dissections ###
+
+- Prepped for dissections and pre-filled the worksheets
+- but we are out of the 1.5 ml tubes that I bought for this and I will have to go get some more tomorrow morning.
