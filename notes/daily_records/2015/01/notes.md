@@ -17,19 +17,6 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 
 
-<!-- 
-
-------------------------------------------
-
-
-# 2014-12-26 (Friday) #
-
-## T: Functional Annotations of genes near SNPs of interest ##
-
-- `[_]` write code to create table of functional annotation info, given gene-names and annotation database.
-    - `[_]` draft in ipython notebook
-    - `[_]` copy to `spartan`
-- `[_]` write methods for the functional annotation paper section -->
 
 
 ------------------------------------------
@@ -40,7 +27,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 - `[x]` Functional Annotations
     - done-ish at 2015-01-02 08:58
-- `[_]` Linkage
+- `[ ]` Linkage
     - __STILL NEED TO DO THIS ANALYSIS...__
 
 ## Linkage Analysis ##
@@ -55,7 +42,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 - `[x]` split data into smaller pieces to parallelize the `plink` analysis.
     - looks like the `--parallel` flag will allow `plink` to take care of this.
 - `[x]` start run(s) on `louise`.
-- `[_]` _try running a `--blocks` PLINK analysis for haplotype blocks to see if its useful?_
+- `[ ]` _try running a `--blocks` PLINK analysis for haplotype blocks to see if its useful?_
 
 __plink commands run and kept:__
 
@@ -80,11 +67,11 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-ext
 
 - `[x]` create `ipython` notebook file
     - [YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb)
-- `[_]` write code to plot 
+- `[ ]` write code to plot 
 
 ## TODO for Gisella ##
 
-- `[_]` re-read grant bit about bioinformatics and think about how to use Hongyu Zhao.
+- `[ ]` re-read grant bit about bioinformatics and think about how to use Hongyu Zhao.
 
 
 
@@ -105,7 +92,7 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-ext
         - $l_{a}$ is location of SNP$_{a}$
         - $l_{b}$ is location of SNP$_{b}$
 
-- `[_]` write code to plot
+- `[ ]` write code to plot
 
 #### Questions for Andrea ####
 
@@ -186,6 +173,92 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 - emailed Dan about looking over the results.
 - Should probably run them by Jeff if he has time too.
 
+### PLINK `--make-bed` ###
+
+~~~~~~~~ 
+wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+> --allow-extra-chr \
+> --maf 0.05 \
+> --make-bed \
+> --out tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink
+
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.log.
+48251 MB RAM detected; reserving 24125 MB for main workspace.
+--vcf: 73k variants complete.
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.bed
++
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.bim
++
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.fam
+written.
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+0 variants removed due to MAF threshold(s) (--maf/--max-maf).
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.bed +
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.bim +
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.fam ...
+done.
+
+~~~~~~~~~~~~~~~~~~~
+
+### PLINK `--blocks` ###
+
+- running with `--blocks` option to look at estimated haplotype blocks
+
+~~~~~~~~ 
+wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+> --allow-extra-chr \
+> --blocks no-pheno-req no-small-max-span \
+> --out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan
+
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.log.
+48251 MB RAM detected; reserving 24125 MB for main workspace.
+--vcf: 73k variants complete.
+
+...
+
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\ 
+    /ld/blocks_nophenoreq_nosmallmaxspan.nosex
+.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--blocks: 8040 haploblocks written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.blocks
+.
+Extra block details written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.blocks.det
+.
+Longest span: 199.985kb.
+
+~~~~~~~~~~~~~~~~~~~
+
+
 ### Plot PLINK results ###
 
 - cleaned up a few things
@@ -194,8 +267,80 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 ## Recover dead positives ##
 
 - need to meet with Kirsten (emailed her to schedule a time)
-    - subject: _Short meeting to talk about the dead positives screen?_
+    - subject: "_Short meeting to talk about the dead positives screen?_"
 
 ### Dissections ###
 
-- getting more tubes
+- getting more:
+    - tubes
+    - PBS
+    - Pens
+
+- need to get receipt(s) from Kirsten regarding the dissection dish order
+    - emailed with subject: "_did you ever send me the receipt(s) for the stuff you ordered for the dissections over the internet?_"
+
+## Bonizzoni _et al_: Insecticide Resistance ##
+
+- I am SUPER late on this!
+
+
+------------------------------------------
+
+# 2015-01-07 (Wednesday) #
+
+
+## Bonizzoni _et al_: Insecticide Resistance ##
+
+__Status:__ COMPLETE
+
+- finished reviewing the main text
+- emailed it to her
+- will not be going over the legends or figs 
+
+
+## Meeting with Serap Aksoy ##
+
+__Time:__ 10:00 AM to 11:30AM
+
+### Discussed ###
+
+- how to log Iowa tsetse samples
+- student to do much f the logging after a spreadsheet is devised
+- location of the other RNA midguts
+    - she said she thought they didnt get any but then thought she remembered that Brian tried extracting RNA from at least a few infected midguts with no success.
+    - \*\*She said she needs the carcasses of the infected flies too which I did not remember (__I need to bring this up with Gisella bc this is a major reduction of our expected infected material...__).
+        - _this doesn't really make sense anyway since i dont think we preserved the bodies for RNA._
+- having me send an ad or two for a postdoc position for her lab to my friends
+
+### Action items ###
+
+__Status:__ IN PROGRESS
+
+- `[x]` create simple excel sheet to track Iowa samples
+    - `[x]` email sheet to Brian and Serap 
+        - subject: _Spreadsheet to record Iowa sample materials_
+    - __NOTE:__ sheet is a google sheet named [Iowa_tsetse_material_inventory](https://docs.google.com/spreadsheets/d/1SeoKnRQ0djB1xjyVGQy-NikNFTzQ-wL-hXCwUZAoNqw/edit?usp=sharing)
+- `[x]` locate extra RNA midguts in our freezers
+    - `[x]` email Aksoy, Brian, Michelle to schedule pickup
+        - subject: _Many more midguts and heads for RNA_
+- `[ ]` send feelers and ads to friends about postdoc position in her lab
+- `[ ]` contact Gisella about Serap wanting the carcasses...
+
+
+
+## Meeting with Andrea ##
+
+
+### Discussed ###
+
+- problem re-running the figure generation R script
+- couldn't open the PNG writer bc no X11 on the cluster and `ssh -Y` wasn't working even though it did last time...
+- I added some code to the R script to specify `png(type="cairo")
+- waiting to hear the outcome
+    - _program ran but output was not what was expected: many more graphs than last time_
+    - I expect user error
+
+
+## Recover dead positives ##
+
+- Meeting with Kirstin tomorrow at 1 or 2 PM
