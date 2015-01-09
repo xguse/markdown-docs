@@ -258,11 +258,12 @@ Longest span: 199.985kb.
 
 ~~~~~~~~~~~~~~~~~~~
 
-
 ### Plot PLINK results ###
 
 - cleaned up a few things
 - added residual plots following the regplots
+
+
 
 ## Recover dead positives ##
 
@@ -279,6 +280,8 @@ Longest span: 199.985kb.
 - need to get receipt(s) from Kirsten regarding the dissection dish order
     - emailed with subject: "_did you ever send me the receipt(s) for the stuff you ordered for the dissections over the internet?_"
 
+
+
 ## Bonizzoni _et al_: Insecticide Resistance ##
 
 - I am SUPER late on this!
@@ -288,7 +291,6 @@ Longest span: 199.985kb.
 
 # 2015-01-07 (Wednesday) #
 
-
 ## Bonizzoni _et al_: Insecticide Resistance ##
 
 __Status:__ COMPLETE
@@ -296,6 +298,8 @@ __Status:__ COMPLETE
 - finished reviewing the main text
 - emailed it to her
 - will not be going over the legends or figs 
+
+
 
 
 ## Meeting with Serap Aksoy ##
@@ -311,6 +315,7 @@ __Time:__ 10:00 AM to 11:30AM
     - \*\*She said she needs the carcasses of the infected flies too which I did not remember (__I need to bring this up with Gisella bc this is a major reduction of our expected infected material...__).
         - _this doesn't really make sense anyway since i dont think we preserved the bodies for RNA._
 - having me send an ad or two for a postdoc position for her lab to my friends
+
 
 ### Action items ###
 
@@ -328,8 +333,9 @@ __Status:__ IN PROGRESS
 
 
 
-## Meeting with Andrea ##
 
+
+## Meeting with Andrea ##
 
 ### Discussed ###
 
@@ -344,3 +350,74 @@ __Status:__ IN PROGRESS
 ## Recover dead positives ##
 
 - Meeting with Kirstin tomorrow at 1 or 2 PM
+
+
+------------------------------------------
+
+# 2015-01-08 (Thursday) #
+
+## Admin stuff ##
+
+### Serap's postdoc advertisement ###
+
+- posted to facebook
+
+
+### Lab meetings ###
+
+- email from Jeff:
+    - subject: _lab meetings_
+    - body:
+
+      >Gus,  
+
+      >Any lab meetings set up?  We should grab Aris and Yiota who might give a joint one.  Then also the new Anthropology guy, Eduardo Fernandez-Duque.
+
+      >Jeff
+
+- doodle poll:
+    - [link](http://doodle.com/hc4r8gdi6wnse425) sent to `pc_labs`
+    - not certain if Maggie is on that list yet
+    - emailed Carol for her email in case not
+        - She __WAS__ on the list when I sent the link
+        - Carol replied with current list: recorded below
+
+### Current `pc_labs` list ###
+
+~~~~~~~~ {.bash}
+#separator-CACCONE#
+adalgisa.caccone@yale.edu
+carol.mariani@yale.edu
+danielle.edwards@yale.edu
+nphavill@fs.fed.us
+jrichardson@providence.edu
+giovanna.carpi@yale.edu
+katharine.walter@yale.edu
+gus.dunn@yale.edu
+
+#separator-POWELL#
+jeffrey.powell@yale.edu
+kirstin.dion@yale.edu
+andrea.gloria-soria@yale.edu
+b.evans@yale.edu
+joshua.richardson@yale.edu
+
+#separator-TEMP-ROTATION-UNDERGRAD#
+christian.hernandez@yale.edu
+elaine.guevara@yale.edu
+andres.valdivieso@yale.edu
+mkcorley@gmail.com
+alexis.halyard@yale.edu
+pkotsakiozi@hotmail.com
+aristeidis.parmakelis@yale.edu
+~~~~~~~~~~~~~~~~~~~
+
+
+
+## Recover dead positives ##
+
+### Meeting with Kirstin ###
+
+- see: [Kirsten-2015-01-08.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/Kirsten-2015-01-08/Kirsten-2015-01-08.md)
+- sent above for confirmation or amendment to Kirstin
+    - 
