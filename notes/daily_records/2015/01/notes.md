@@ -66,7 +66,8 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-ext
 ### Plot PLINK results ###
 
 - `[x]` create `ipython` notebook file
-    - [YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb](http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb)
+    - [YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb](http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb)
+    - [2015-01-13]: [YALE/ddrad58/2015-01-05_Plot_PLINK_results.ipynb](http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-01-05_Plot_PLINK_results.ipynb)
 - `[ ]` write code to plot 
 
 ## TODO for Gisella ##
@@ -420,4 +421,116 @@ aristeidis.parmakelis@yale.edu
 
 - see: [Kirsten-2015-01-08.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/Kirsten-2015-01-08/Kirsten-2015-01-08.md)
 - sent above for confirmation or amendment to Kirstin
-    - 
+    - She approves
+
+------------------------------------------
+
+# 2015-01-09 (Friday) #
+
+## Sarah Licensing Exam ##
+
+- I was taking care of the kids all morning
+
+## New project brainstorming ##
+
+
+## PLINK: Fst ##
+
+- defining population ID file for:
+    - `tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf`
+    - `tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf.popdef`
+
+~~~~~~~~
+plink --bfile tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink \
+--allow-extra-chr \
+--within tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf.popdef \
+--fst \
+--out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/fst/out
+~~~~~~~~~~~~~~~~~~~
+
+- This keeps giving me errors:
+
+~~~~~~~~ 
+Warning: No samples named in --within file remain in the current analysis.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+Error: --fst requires at least two nonempty clusters.
+
+~~~~~~~~~~~~~~~~~~~
+
+------------------------------------------
+
+# 2015-01-10 (Saturday) #
+
+## PLINK: Fst ##
+
+- Still getting errors
+- looks like its bc there is no sex info attached to the samples
+- looking for other was to do this stuff: found EggLib-py
+
+
+## Install EggLib ##
+
+- installation needs `bio++`
+- see tomorrow
+
+
+## Install `Bio++` (`bpp`) ##
+
+- install script ([bpp-setup.sh](http://biopp.univ-montp2.fr/Download/bpp-setup.sh)) obtained from [bio++ website](http://biopp.univ-montp2.fr/wiki/index.php/Installation).
+    - altered install script to fit system (`louise`) and renamed [install_bpp_2.2.0.sh](/home/gus/remote_mounts/louise/scripts/installs/install_bpp_2.2.0.sh).
+- see tomorrow
+
+
+------------------------------------------
+
+# 2015-01-11 (Sunday) #
+
+## Install EggLib ##
+
+- finished `bio++`install
+- installing other things (actually may just module-ize versions already installed on `louise`:
+    - `[x]` gsl (already installed)
+    - `[x]` clustalw (linked to `louise/~MAIN_APPS/clustalw/clustalw-2.0.12-linux-i686-libcppstatic`)
+    - `[x]` muscle 
+    - `[x]` paml
+    - `[x]` phyml
+    - `[x]` primer3
+    - `[x]` phylip
+
+
+## Install `Bio++` (`bpp`) ##
+
+- had to ammend the install script to include the `bpp` install location in `$PATH` so it can use itself to install/build parts of itself
+- as far as I can tell the only things that fail to install now are the GUI-based stuff that needs Qt.  As I am using this on th cluster I dont need/want these so I am going to proceed as if this succeeded.
+
+
+------------------------------------------
+
+# 2015-01-12 (Monday) #
+
+## Install EggLib ##
+
+- finished installing external helper programs:
+    - clustalw
+    - phylip
+- made a `modules` file for the whole group: `egglib_helpers`
+
+## Install `Bio++` (`bpp`) ##
+
+- forgot to write a `modules` file for this.
+- doing it now
+
+
+
+------------------------------------------
+
+# 2015-01-13 (Tuesday) #
+
+## Recover dead positives ##
+
+- Dissecting
