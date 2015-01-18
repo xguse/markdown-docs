@@ -608,9 +608,9 @@ __Body:__
 - `[` `]` collecting all village-to-symbol maps that I have to [meta_data.ods](file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv)
 
 
-## `spartan` dev: GPS stuff ##
+### `spartan` dev: GPS stuff ###
 
--   
+- pycharm and ipython 
 
 ## Phone for Dan ##
 
@@ -624,3 +624,21 @@ I emailed Dan the following:
 >She would like you to call her back at your earliest convenience (432-1326).
 >
 >Gus
+
+
+
+------------------------------------------
+
+# 2015-01-18 (Sunday) #
+
+# Sarah is sick #
+
+- short day: 10am to 1:45pm
+
+## Updating maps: current trap locations ##
+
+- ipython: [2015-01-16_convert_fall2014_trap_gps_village_names.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/maps_stuff/2015-01-16_convert_fall2014_trap_gps_village_names.ipynb)
+
+### `spartan` dev: GPS stuff ###
+
+- working on teaching `GPSCoordTree` how to get mean coordinates
