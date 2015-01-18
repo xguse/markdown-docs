@@ -631,7 +631,7 @@ I emailed Dan the following:
 
 # 2015-01-18 (Sunday) #
 
-# Sarah is sick #
+## Sarah is sick ##
 
 - short day: 10am to 1:45pm
 
