@@ -533,4 +533,94 @@ Error: --fst requires at least two nonempty clusters.
 
 ## Recover dead positives ##
 
-- Dissecting
+- meeting
+- see meeting notes [gisella_kirsten_2015-01-14.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_kirsten_2015-01-14/gisella_kirsten_2015-01-14.md)
+
+## Maps stuff ##
+
+- Need to update our Northern Uganda map with the latest Village location data
+- `Spartan.utils.maps.gps`
+    - coding the functions to take all trap GPS coords for a village and return one GPS coord set for each that represents the central tendency for simplified plotting
+
+## TsetseSampleDB ##
+
+- adding names/village codes to the list of village-to-code map ([village_id_map.csv](file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv))
+
+## Helping Aris ##
+
+- getting `mpirun mrbayes` to run on `grace`
+- took ~ 1 hour.
+
+
+------------------------------------------
+
+
+# 2015-01-15 (Thursday) #
+
+## Science Fair ##
+
+- 8 to 12:30
+
+## Meeting about Kenya Tsetse ##
+
+Members:
+
+- Gisella
+- Serap
+- Michelle
+- Brian
+- Gus
+
+Notes (bad bc they were taken with my phone):
+
+- Gpd samples
+- DNA samples
+- What column data will be needed for this Gpd Kenya collection
+- Re-circulate collection template excel and protocol etc
+
+
+------------------------------------------
+
+
+# 2015-01-16 (Friday) #
+
+## Collection Spreadsheet review ##
+
+- point is to make sure we can use this for the Kenya "simpler" 
+- after speaking with Gisella, I am going to add a few of the "simpler" column heading to the normal collection spreadsheet and write a bunch of notes explaining that not everything needs to be filled in for everything.
+- collection spreadsheet: [Example_collection_template_kenya.xls](file:///home/gus/Dropbox/uganda data/collection_sheet_templates/Example_collection_template_kenya.xls)
+    - __status:__ finished
+- summary spreadsheet:  [Example_summary_template_kenya.xls](file:///home/gus/Dropbox/uganda data/collection_sheet_templates/Example_summary_template_kenya.xls)
+    - __status:__ in progress
+
+### Email explanation ###
+
+__Subject:__ 
+
+
+__Body:__ 
+
+
+## Updating maps: current trap locations ##
+
+- created new spreadsheet:[collection_meta_data/meta_data.ods](file:///home/gus/Dropbox/uganda data/collection_meta_data/meta_data.ods) to store current state of stuff like the village-to-symbol map, etc.
+- `[` `]` collecting trap GPS data to file: [TsetseCheckout/data/village_id_map.csv](file://CREATE_ME)
+- `[` `]` collecting all village-to-symbol maps that I have to [meta_data.ods](file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv)
+
+
+## `spartan` dev: GPS stuff ##
+
+-   
+
+## Phone for Dan ##
+
+I emailed Dan the following:
+
+>__Subject:__ Phone call for you
+>
+>__Body:__ Just fielded a call for you from Karan(Karen?) Peart from the Yale
+>Public affairs and communications office.
+>
+>She would like you to call her back at your earliest convenience (432-1326).
+>
+>Gus
