@@ -642,3 +642,37 @@ I emailed Dan the following:
 ### `spartan` dev: GPS stuff ###
 
 - working on teaching `GPSCoordTree` how to get mean coordinates
+
+
+
+------------------------------------------
+
+# 2015-01-19 (Monday) #
+
+## Andrea: quick chat ##
+
+- wants to re-run the ddRAD pipeline since I(we) found some issues with at least one of the command line runs' options.
+- I agree
+- `[` `]` \#todo: I am installing [Stacks 1.24](http://creskolab.uoregon.edu/stacks/) for her on `louise` and trying to set up the web-based analysis part
+- should not change TOO much about the results and will end up being MUCH more replicatable due to the use of publicly accessible data from vectorbase.
+- we can continue to work with the current data until the new set is done and just adjust the work to accommodate the new stuff at the end. 
+
+## Updating maps: current trap locations ##
+
+### `spartan` dev: GPS stuff ###
+
+- working on teaching `GPSCoordTree` how to get mean coordinates
+
+## Install Stacks ##
+
+- [installation guide](http://creskolab.uoregon.edu/stacks/manual/#install)
+
+
+## Collection Spreadsheet review ##
+
+- adding explanation text to the [fly_collection_basic.md](file:///home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md) document.
+
+- __STATUS:__ 
+    - having issues getting validation and drop-down lists to carry over into "empty" rows
+    - plan to fix it by copying a template row into like 1000 rows
+    - still need to execute the above tomorrow bc computer is acting a fool and I have to go home to sick Sarah and Liam.

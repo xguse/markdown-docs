@@ -43,7 +43,7 @@ DOCX=$(SRC:.md=.docx)
 
 ## Set up the extensions to load for pandoc common to all invocations
 PAN_OPTS=--chapters --number-sections
-PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
+PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block+fancy_lists
 PAN_FILTERS=--filter $(PANDOC_CITEPROC)
 
 

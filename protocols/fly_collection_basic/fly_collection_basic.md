@@ -350,3 +350,112 @@ _Remarks:_
 ----
 
 
+# Appendices #
+
+## Collection Documentation Files ##
+
+### Collection Data Spreadsheet ###
+
+#### Purpose: ####
+
+- Provides an electronic version of the data recorded for each fly during the field collection efforts.
+- Allows data to easily shared with collaborators.
+- Allows data to be imported into computer-based sample tracking database in an automated fashion.
+
+#### Column descriptions: ####
+
+Below are the definitions for the type and format of data recorded in each column of this file type.
+Fields denoted with an asterisk are required.
+The rest are technically optional but are still _very_ important to include if you have the information.
+
+
+A.  __Village\*:__
+	- Please list an appropriate name for the location common to a set of
+traps.  This should be a village name or something at a similar level of
+resolution.
+
+A.  __Trap_No\*:__
+	- A number or other ID specific to a single trap.
+
+A.  __Date\*:__
+	- Date should be formatted as `YYYY-MM-DD` to avoid ambiguity and ensure correct computer sorting.
+
+A.  __Species\*:__
+	- Use either the full species name of the fly or the first letter of each word.  Examples: _Glossina fuscipes fuscipes_ or Gff.
+
+A.  __Sex\*:__
+	- Use the letter __M__ or __F__ for male or female, respectively.
+
+A.  __Teneral\*:__
+	- Use the codes __T__ or __NT__ for teneral or non-teneral, respectively.
+
+A.  __Dead\*:__
+	- Use the letter __D__ or __L__ if the fly was dead or alive, respectively, at the time that the trap contents were being processed.
+
+A.  __Fly_Number\*:__
+	- A unique number assigned to each fly collected during a collection trip.
+
+A.  __Hunger_stage:__
+	- Hunger stage as defined in:
+
+		1. Jackson, C. H. N. The Causes and Implications of Hunger in Tsetse-flies. Bull. Entomol. Res. 24, 443–482 (1933).
+		2. Leak, S. G. A. Tsetse biology and ecology: their role in the epidemiology and control of trypanosomosis. (ILRI (aka ILCA and ILRAD), 1999).
+
+	- Value range: 1 to 4
+	- If not collected: enter "NA".
+
+A.  __Wing_fray:__
+	- If this measure is appropriate and you normally record it, you can place it here; if not, enter "NA".
+
+A.  __prob:__
+	- If this tissue (proboscis) was checked for trypanosome infection, enter "0" for negative and "1" for positive results, "NA" otherwise.
+
+A.  __midgut:__
+	- If this tissue (midgut) was checked for trypanosome infection, enter "0" for negative and "1" for positive results, "NA" otherwise.
+
+A.  __sal_gland:__
+	- If this tissue (salivay gland) was checked for trypanosome infection, enter "0" for negative and "1" for positive results, "NA" otherwise.
+
+A.  __Kept_in:__
+	- Please list the solution that the sample is stored in.
+
+A.  __Comment:__
+	- Any comments that you think should be recorded about this sample.
+
+A.  __Tube_or_box:__ 
+	- Is this a box of existing samples of DNA or other extracted materials?
+Then choose "box".
+		Otherwise, choose "tube".
+
+A.  __Tissue:__
+	- When the sample is a material like DNA that has been derived from a
+part of or a whole fly, please list the tissue that was used to extract
+the DNA.  A list of common tissues has been provided for your
+convenience, but non-listed values are allowed.
+
+		- carcass
+		- head
+		- antennae
+		- midgut
+		- proventriculus
+		- midgut + proventriculus
+		- salivary glands
+		- reproductive parts
+		- legs
+		- whole
+
+A.  __Method_of_prep:__
+	- If the sample is DNA or another derived material, please include a brief comment about what method/kit was used to generate the material.
+
+
+
+### Collection Summary Spreadsheet ###
+
+#### Purpose: ####
+
+- test
+- test
+
+#### Column descriptions: ####
+
+- test
