@@ -50,6 +50,10 @@ The functional annotations were then downloaded and joined back together.
 
 # Linkage Analysis #
 
+## Source of SNPs ##
+
+SNPs were obtained 
+
 
 # Bib #
 

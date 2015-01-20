@@ -155,7 +155,6 @@ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 
 
 
-
 ## Recover dead positives ##
 
 ### Dissections ###
@@ -676,3 +675,29 @@ I emailed Dan the following:
     - having issues getting validation and drop-down lists to carry over into "empty" rows
     - plan to fix it by copying a template row into like 1000 rows
     - still need to execute the above tomorrow bc computer is acting a fool and I have to go home to sick Sarah and Liam.
+
+
+
+------------------------------------------
+
+# 2015-01-20 (Tuesday) #
+
+## Sarah still sick ##
+
+- stayed home to help with particularly crazy morning
+
+
+## Meeting with Gisella and Andrea: ddRAD paper ##
+
+- Met at 10:30 AM
+- summarized in [gisella_andrea_2015-01-20.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_andrea_2015-01-20/gisella_andrea_2015-01-20.md).
+
+## ddRAD todos ##
+
+- `[in progress]` read Mark's tryp paper for the LD stuff
+- `[¤]` email Mark to have a short sit-down to go over my results and ask about his work
+
+
+## Install Stacks ##
+
+- [installation guide](http://creskolab.uoregon.edu/stacks/manual/#install)

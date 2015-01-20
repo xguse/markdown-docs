@@ -1,1 +1,0 @@
-/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/2015/01/notes.md
