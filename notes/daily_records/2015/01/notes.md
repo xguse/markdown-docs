@@ -701,3 +701,82 @@ I emailed Dan the following:
 ## Install Stacks ##
 
 - [installation guide](http://creskolab.uoregon.edu/stacks/manual/#install)
+
+### Prerequisites ###
+
+__Visualization:__
+
+- `[ ]` DB2 Pear Module: [http://pear.php.net/package/MDB2/](http://pear.php.net/package/MDB2/)
+- `[ ]` MDB2 MySQL driver: [http://pear.php.net/package/MDB2_Driver_mysql/](http://pear.php.net/package/MDB2_Driver_mysql/)
+- `[ ]` PHP
+- `[ ]` MySQL
+- `[ ]` Perl DBI module installed with the MySQL driver [CPAN/dist/DBD-mysql/](http://search.cpan.org/dist/DBD-mysql/)
+
+__Spreadsheet export:__
+
+- `[ ]` Perl module:  [`Spreadsheet::WriteExcel`](http://search.cpan.org/~jmcnamara/Spreadsheet-WriteExcel-2.37/)
+
+__Performance improvement:__
+
+- `[X]` `samtools` for reading BAM files (already installed)
+- `[ ]` Google’s `SparseHash` class to lower memory usage [http://code.google.com/p/sparsehash/](http://code.google.com/p/sparsehash/)
+
+### Stacks ###
+
+__INSTALLATION PROBLEMS NOTES:__ 
+
+- Having issues getting the samtools includes and libs configured for the `./configure` command.
+- plan to build on `jupiter` using the ARCH ABS and copy the include/lib directories to `louise`
+
+
+__download location:__ 
+
+- status: _`in progress`_
+
+- downloaded [stacks-1.24.tar.gz](http://creskolab.uoregon.edu/stacks/source/stacks-1.24.tar.gz) to `gus@louise/src`.
+
+
+__install script:__ 
+
+- status: _`in progress`_
+
+- [`gus@louise/scripts/installs/install_XXXX`](file:///home/gus/remote_mounts/louise/scripts/installs/install_XXXXXXX)
+
+__module file:__ 
+
+- status: _`in progress`_
+
+- [`gus@louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/XXXXX/XXXXX`](/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/XXXXX/XXXXX)
+
+__software root:__ 
+
+- status: _`in progress`_
+
+- [`gus@louise/home/gus/remote_mounts/louise/.local/easybuild/software/XXXXX/XXXXX`](/home/gus/remote_mounts/louise/.local/easybuild/software/XXXXX/XXXXX)
+
+
+## Install `SparseHash` ##
+
+__download location:__ 
+
+- status: _`complete`_
+
+- downloaded [sparsehash-2.0.2.tar.gz](https://sparsehash.googlecode.com/files/sparsehash-2.0.2.tar.gz) to `gus@louise/src`.
+
+__install script:__ 
+
+- status: _`written and run`_
+
+- [`gus@louise/scripts/installs/install_sparsehash_2.0.2.sh`](file:///home/gus/remote_mounts/louise/scripts/installs/install_sparsehash_2.0.2.sh)
+
+__module file:__ 
+
+- status: _`complete but not tested`_
+
+- [`gus@louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/sparsehash/2.0.2`](/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/sparsehash/2.0.2)
+
+__software root:__ 
+
+- status: _`installed`_
+
+- [`gus@louise/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2`](/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2)
