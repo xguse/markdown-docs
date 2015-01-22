@@ -2,7 +2,7 @@
 title: Tsetse Collection Protocol
 subtitle: Core Procedures
 author: Gus Dunn
-date: v0.1.1
+date: v0.2.1
 documentclass: scrreprt
 classoption: letterpaper
 geometry: margin=1in
@@ -358,14 +358,14 @@ _Remarks:_
 
 #### Purpose: ####
 
-- Provides an electronic version of the data recorded for each fly during the field collection efforts.
+- Provides an electronic version of the data recorded for each __fly__ during the field collection efforts.
 - Allows data to easily shared with collaborators.
 - Allows data to be imported into computer-based sample tracking database in an automated fashion.
 
 #### Column descriptions: ####
 
 Below are the definitions for the type and format of data recorded in each column of this file type.
-Fields denoted with an asterisk are required.
+Fields denoted with an asterisk are required if the data exist.
 The rest are technically optional but are still _very_ important to include if you have the information.
 
 
@@ -378,7 +378,8 @@ A.  __Trap_No\*:__
 	- A number or other ID specific to a single trap.
 
 A.  __Date\*:__
-	- Date should be formatted as `YYYY-MM-DD` to avoid ambiguity and ensure correct computer sorting.
+	- The date these flies were collected from the trap.
+	- The date should be formatted as `YYYY-MM-DD` to avoid ambiguity and ensure correct computer sorting.
 
 A.  __Species\*:__
 	- Use either the full species name of the fly or the first letter of each word.  Examples: _Glossina fuscipes fuscipes_ or Gff.
@@ -453,9 +454,91 @@ A.  __Method_of_prep:__
 
 #### Purpose: ####
 
-- test
-- test
+- Provides an electronic version of the data recorded for each __trap__ during the field collection efforts.
+- Allows data to easily shared with collaborators.
+- Allows data to be imported into computer-based sample tracking database in an automated fashion.
 
 #### Column descriptions: ####
 
-- test
+Below are the definitions for the type and format of data recorded in each column of this file type.
+Fields denoted with an asterisk are required if the data exist.
+The rest are technically optional but are still _very_ important to include if you have the information.
+
+
+
+A.  __District:__
+	- District or similar level of administrative hierarchy.
+
+
+A.  __County:__
+	- County or similar level of administrative hierarchy.
+
+
+A.  __Subcounty:__
+	- Subcounty or similar level of administrative hierarchy.
+
+
+A.  __Parish:__
+	- Parish or similar level of administrative hierarchy.
+
+
+A.  __Village\*:__
+	- Village or similar level of administrative hierarchy.
+
+
+A.  __Trap_No\*:__
+	- A number or other ID specific to a single trap.
+
+A.  __Latitude\*:__
+	- Latitude GPS coordinates for the trap __in DECIMAL DEGREES__ format to 5 decimal places.
+
+
+A.  __Longitude\*:__
+	- Longitude GPS coordinates for the trap __in DECIMAL DEGREES__ format to 5 decimal places.
+
+
+A.  __Elevation_in_m\*:__
+	- Elevation at the trap's location in meters (m).
+
+A.  __Human_Activity:__
+	- A short (10 words or less if possible) description of the type of human activity within sight of the trap's location.
+	- farm plots, livestock, home, road, etc.
+
+
+A.  __Vegtype:__
+	- A short classification of the type of vegetation around the trap location.
+	- riverine, savannah, etc.
+
+
+A.  __Deploy_date\*:__
+	- The date this trap was deployed.
+	- The date should be formatted as `YYYY-MM-DD` to avoid ambiguity and ensure correct computer sorting.
+
+
+A.  __Harvest_date\*:__
+	- The date this trap was removed.
+	- The date should be formatted as `YYYY-MM-DD` to avoid ambiguity and ensure correct computer sorting.
+
+
+A.  __Male\*:__
+	- the number of males collected from this trap.
+
+
+A.  __Female\*:__
+	- the number of feales collected from this trap.
+
+
+A.  __Total\*:__
+	- the number of flies total collected from this trap.
+
+
+A.  __FTD:__
+	- (__F__)lies per (__T__)rap per (__D__)ay
+	- Mean number of flies caught in this trap per day.
+	- Divide '__Total__' number by the number of days the trap was deployed.
+
+
+A.  __Other_info:__
+	- Other information pertaining to a trap that you feel would be useful.
+
+
