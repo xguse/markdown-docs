@@ -780,3 +780,217 @@ __software root:__
 - status: _`installed`_
 
 - [`gus@louise/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2`](/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2)
+
+
+
+------------------------------------------
+
+# 2015-01-21 (Wednesday) #
+
+## Family still VERY sick ##
+
+- stayed home with Liam while Sarah took Clementine and herself to the doctor
+- got to work at 12:30
+- had to go home so Sarah could sleep bc Clem was not letting her
+- went home at 1:30
+- came back at 3:30
+- home again at 6:00
+- work again at 8:30
+
+## Manual install of Samtools/htslib ##
+
+### `htslib` (built with Arch ABS on `jupiter`) ###
+
+ABANDONING THIS METHOD FOR NOW.
+TOO MANY PROBLEMS WITH INTEGRATING CERTAIN `INCLUDE` AND `LIB` DIRECTRIES WHEN COMPILING ACCROSS DEPENDENCIES.
+TRYING `EASYBUILD` AND ITS _TOOLCHAIN_ PARADIGM FOR NOW.
+
+__ABS build:__
+
+~~~~~~~~
+cd /home/gus/remote_mounts/louise/src/ABS/
+tar -xf htslib.tar.gz
+cd htslib
+makepkg
+~~~~~~~~~~~~~~~~~~~
+
+__Install script:__
+
+- [`gus@louise/scripts/installs/install_htslib_1.1.sh`](file:///home/gus/remote_mounts/louise/scripts/installs/install_htslib_1.1.sh)
+
+
+## EasyBuild installs ##
+
+### EasyBuild 1.16.1 ###
+
+__Install script:__
+
+- [`gus@louise/scripts/installs/install_easybuild_1.16.1.sh`](file:///home/gus/remote_mounts/louise/scripts/installs/install_easybuild_1.16.1.sh)
+
+
+### Install `samtools-1.1` ###
+
+~~~~~~~~ {.bash}
+wd238 at compute-21-15 in ~ (py278) 
+$ md load EasyBuild/1.16.1
+
+wd238 at compute-21-15 in ~ (py278) 
+$ eb SAMtools-1.1-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+
+...
+
+~~~~~~~~~~~~~~~~~~~
+
+- this will be installing the whole toolchain and all `samtools` dependencies so it was executed in a `screen`.
+- I am going home to sleep while this works `[2015-01-21 21:33]`.
+- emailing Andrea first to let her know its not gonna be ready when I told her.
+
+__STATUS: `[2015-01-22 07:52]`__
+
+- Build seems to have __SUCCEEDED__
+
+
+------------------------------------------
+
+# 2015-01-22 (Thursday) #
+
+## EasyBuild installs ##
+
+### Install `GSL-1.16` ###
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278) 
+$ eb GSL-1.16-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__ 
+
+~~~~~~~~ {.shell}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/GSL/1.16-goolf-1.4.10-no-OFED/\
+    easybuild/easybuild-GSL-1.16-20150122.075231.log
+== Build succeeded for 1 out of 1
+~~~~~~~~~~~~~~~~~~~
+
+### Install `sparsehash-2.0.2` ###
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278)
+eb google-sparsehash-2.0.2-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__ 
+
+~~~~~~~~ {.shell}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/google-sparsehash/ \
+    2.0.2-goolf-1.4.10-no-OFED/easybuild/ \
+    easybuild-google-sparsehash-2.0.2-20150122.080547.log
+== Build succeeded for 1 out of 1
+~~~~~~~~~~~~~~~~~~~
+
+### Install `Stacks-1.03` ###
+
+__NOTE:__ this is not for use per se but to generate the `config` and `module` files so that I can modify them for the latest version of `Stacks` and install _THAT_ version.
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278) 
+$ eb Stacks-1.03-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__
+
+~~~~~~~~ {.shell}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/Stacks/ \
+    1.03-goolf-1.4.10-no-OFED/easybuild/ \
+    easybuild-Stacks-1.03-20150122.081337.log
+== Build succeeded for 1 out of 1
+~~~~~~~~~~~~~~~~~~~
+
+
+### Install `Stacks-1.24` ###
+
+__easyconfig file:__
+
+- altered the one generated when building `Stacks-1.03`
+    - [gus@louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb](file:///home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb)
+- [gus@louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb](file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb)
+
+#### Attempt 01 ####
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278)
+eb Stacks-1.24-goolf-1.4.10-no-OFED.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__ FAILED
+
+- couldn't find `Stacks-1.24-goolf-1.4.10-no-OFED.eb`
+- basically expected.
+
+
+
+#### Attempt 02 ####
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278)
+eb $HOME/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb \
+    --try-toolchain=goolf,1.4.10-no-OFED --robot
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__ FAILED
+
+- error log: [gus@louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log](file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log)
+- looks like it cant find `sparsehash` for the linking
+- will add `samtools` and `sparsehash` to the `easyconfig` file as dependencies and or build dependencies.
+
+#### Attempt 03 ####
+
+- added the below to the `easyconfig` file:
+    - `builddependencies = [('SAMtools', '1.1'), ('google-sparsehash', '2.0.2')]`
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278)
+eb $HOME/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb \
+    --try-toolchain=goolf,1.4.10-no-OFED --robot
+
+== temporary log file in case of crash /tmp/easybuild-0T7khn/easybuild-O8eCl9.log
+ERROR: EasyBuild crashed with an error \
+    (at easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/\
+    easybuild_framework-1.16.1-py2.7.egg/easybuild/tools/robot.py:232 in \
+    resolve_dependencies): Irresolvable dependencies encountered: \
+    SAMtools/1.1-goolf-1.4.10-no-OFED, google-sparsehash/2.0.2-goolf-1.4.10-no-OFED
+
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__ FAILED
+
+- error log: [gus@louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log](file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log)
+
+
+
+### Install `zlib-1.2.8` ###
+
+__NOTE:__ this is because things seem to need it when building `stacks-1.24`?
+
+~~~~~~~~ {.shell}
+wd238 at compute-21-15 in ~ (py278) 
+$ eb zlib-1.2.8-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+~~~~~~~~~~~~~~~~~~~
+
+__STATUS:__ SUCCESSFUL
+
+~~~~~~~~ {.shell}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/zlib/\
+    1.2.8-goolf-1.4.10-no-OFED/easybuild/\
+    easybuild-zlib-1.2.8-20150122.115448.log
+== Build succeeded for 1 out of 1
+~~~~~~~~~~~~~~~~~~~
+
+
