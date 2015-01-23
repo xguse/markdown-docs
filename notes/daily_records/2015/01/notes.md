@@ -854,6 +854,15 @@ __STATUS: `[2015-01-22 07:52]`__
 
 # 2015-01-22 (Thursday) #
 
+## Collection documentation files ##
+
+- fixed/kludged the collection template to keep cell-notes and verification by including "dummy" entries up to 500.
+    - collection template: [Example_collection_template_kenya.xlsx](file:///home/gus/Dropbox/uganda data/collection_sheet_templates/Example_collection_template_kenya.xlsx)
+    - summary template: [Example_summary_template_kenya.xlsx](file:///home/gus/Dropbox/uganda data/collection_sheet_templates/Example_summary_template_kenya.xlsx)
+- amended and committed v0.2.1 of [fly_collection_basic.md](file:///home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md) to the repo with custom message:
+
+    >"protocols/fly_collection_basic/fly_collection_basic.md commited at version: v0.2.1"
+
 ## EasyBuild installs ##
 
 ### Install `GSL-1.16` ###
@@ -972,10 +981,19 @@ __STATUS:__ FAILED
 - error log: [gus@louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log](file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log)
 
 
+#### IRC session with author/devs ####
+
+- one problem was that I dont need to keep using `--try-toolchain=goolf,1.4.10-no-OFED` since the local easyconfig (`Stacks-1.24-goolf-1.4.10-no-OFED.eb`) being passed to `eb` already defines the toolchain.
+- the build still fails however 
+
 
 ### Install `zlib-1.2.8` ###
 
-__NOTE:__ this is because things seem to need it when building `stacks-1.24`?
+__NOTE:__ 
+
+- this is because things seem to need it when building `stacks-1.24`?
+- doesn't seem like this was the case?
+
 
 ~~~~~~~~ {.shell}
 wd238 at compute-21-15 in ~ (py278) 
@@ -993,4 +1011,29 @@ __STATUS:__ SUCCESSFUL
 == Build succeeded for 1 out of 1
 ~~~~~~~~~~~~~~~~~~~
 
+
+
+
+------------------------------------------
+
+
+# 2015-01-23 (Friday) #
+
+## Meeting with Alexis ##
+
+- 10:00 to 12:20
+- talked about overall project and helped her come up with stuff to talk about for 2 minutes next Tuesday.
+- Gisella was supposed to be here but double booked the time so will meet with Alexis individually.
+- Gave Alexis my email and asked her to email me so that i would get hers
+- so far [17:00] has not emailed me.
+
+## EasyBuild installs ##
+
+- forked and cloned [easybuild-easyconfigs](https://github.com/xguse/easybuild-easyconfigs) git repo
+
+
+
+## Doc appointment ##
+
+- left desk around 14:00 and got back around 15:20 
 
