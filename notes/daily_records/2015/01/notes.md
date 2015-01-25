@@ -1037,3 +1037,24 @@ __STATUS:__ SUCCESSFUL
 
 - left desk around 14:00 and got back around 15:20 
 
+
+
+------------------------------------------
+
+# 2015-01-24 (Saturday) #
+
+## Sarah sprained/broke? her ankle ##
+
+
+- Sarah slipped while trying to shovel snow (?! WHY ?!)
+- had to go back home soon after arrival
+
+
+
+------------------------------------------
+
+# 2015-01-25 (Sunday) #
+
+## EasyBuild installs ##
+
+- 
