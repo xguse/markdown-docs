@@ -1091,3 +1091,66 @@ __STATUS:__ SUCCESSFUL
 
 - __TO TRY TOMORROW:__
     - 'clone' environment from one of the "test_reports" in [failure_logs](file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/) and try to run `./configure; make; make install;` manually.
+
+
+
+------------------------------------------
+
+# 2015-01-26 (Monday) #
+
+## Carl Zimmer Writing Workshop ##
+
+- 10:00 to 12:00
+- Notes made in notebook to be transfered here when I have time (blizzard approaching)
+
+
+
+------------------------------------------
+
+# 2015-01-27 (Tuesday) #
+
+## SNOW-pocalypse ##
+
+- was told to stay home by Yale
+- came in by mistake but left soon after realizing
+
+
+
+------------------------------------------
+
+# 2015-01-28 (Wednesday) #
+
+## EasyBuild installs ##
+
+### Stacks ###
+
+#### Stacks no BAM ####
+
+- testing to make sure it works
+- abandoning this bc we decided that we dont need to run this step over right now
+
+#### Stacks yes BAM ####
+
+- still not building correctly
+
+## tmux ##
+
+- starting point [easyconfig](https://github.com/fgeorgatos/easybuild.experimental/blob/539bd104d158c9f41b45d60115f6bf1b7155e11e/contrib/pkgsrc/20141219/t/tmux-1.9a-goolf-1.4.10.eb)
+- abandoning this for now
+- simply not crucial
+
+
+## ddRAD stuff ##
+
+- `[X]` email Mark about Tryp LD analysis in his paper
+    - `[X]` follow up with him on this "Re: Short meeting to chat about genomic scale LD analysis?"
+- `[ ]` read Tryp paper for same
+- `[X]` install latest `Stacks` version on `louise` and make runable by Andrea
+- `[X]` return `hapFLK` script to original code and copy altered version to new name
+    - `[X]` let Andrea know (_acknowledged_)
+- `[ ]` Generate descriptive statistics and figures of the LD results as a whole rather than by contig where possible
+
+
+
+
+
