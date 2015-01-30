@@ -1144,13 +1144,79 @@ __STATUS:__ SUCCESSFUL
 
 - `[X]` email Mark about Tryp LD analysis in his paper
     - `[X]` follow up with him on this "Re: Short meeting to chat about genomic scale LD analysis?"
-- `[ ]` read Tryp paper for same
+- `[X]` read Tryp paper for same
 - `[X]` install latest `Stacks` version on `louise` and make runable by Andrea
 - `[X]` return `hapFLK` script to original code and copy altered version to new name
     - `[X]` let Andrea know (_acknowledged_)
-- `[ ]` Generate descriptive statistics and figures of the LD results as a whole rather than by contig where possible
+- `[ip]` Generate descriptive statistics and figures of the LD results as a whole rather than by contig where possible
 
 
 
+------------------------------------------
 
+# 2015-01-29 (Thursday) #
+
+## ddRAD stuff ##
+
+- `[ip]` Generate descriptive statistics and figures of the LD results as a whole rather than by contig where possible
+- [2015-01-28_Plot_PLINK_results_cumulative.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-01-28_Plot_PLINK_results_cumulative.ipynb)
+
+## Robert's stuff ##
+
+- `[-ip-]` Pick out 26 flies (13 M, 13 F) from each area we want to look at for Robert's work in March
+    - sent first set to Kirstin and Alexis
+        - 13 M/13 F from Oyam/Kole trip in 2014-07 (see Table \ref{2015-01-29T1})
+- `[ ]` make sure we have an updated map with all the villages from _Spring and Summer 2014_
+- `[X]` Meet with Gisella to pick out which locations Robert's data will come from while looking at the updated map.
+    - `[ ]` she told me to pick the areas and give her a table/report on which and why. The issues to consider are:
+        - wide representation of population areas in the North
+        - allows temporal comparisons as well
+
+| Collection Date | Species          | Sex | Teneral |  Village | Fly |
+|:---------------:|:----------------:|:---:|:-------:|:--------:|:---:|
+| 2014-07-15      | _G. f. fuscipes_ | F   | NT      |  OD      | 017 |
+| 2014-07-15      | _G. f. fuscipes_ | F   | NT      | OCA      | 031 |
+| 2014-07-15      | _G. f. fuscipes_ | F   | NT      | OCA      | 039 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | AKA      | 045 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | AKA      | 052 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | AKA      | 056 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | AKA      | 062 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | AKA      | 068 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | OCA      | 092 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | OCA      | 100 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      | ACA      | 120 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      |  OD      | 137 |
+| 2014-07-16      | _G. f. fuscipes_ | F   | NT      |  OD      | 149 |
+| 2014-07-15      | _G. f. fuscipes_ | M   | NT      |  OD      | 020 |
+| 2014-07-15      | _G. f. fuscipes_ | M   | NT      | OCA      | 022 |
+| 2014-07-15      | _G. f. fuscipes_ | M   | NT      | OCA      | 025 |
+| 2014-07-15      | _G. f. fuscipes_ | M   | NT      | OCA      | 026 |
+| 2014-07-15      | _G. f. fuscipes_ | M   | NT      | OCA      | 035 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | AKA      | 049 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | AKA      | 063 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | OCA      | 095 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | ACA      | 116 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | ACA      | 125 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | ACA      | 129 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      | OCA      | 146 |
+| 2014-07-16      | _G. f. fuscipes_ | M   | NT      |  OD      | 155 |
+
+Table: Samples given to Alexis for DNA extraction from a single leg. \label{2015-01-29T1}
+
+
+## Rob H Jobs ##
+
+### Iowa samples ###
+
+- `[X]` catalog the boxes that we got here at __ESC__.
+- `[X]` email Gisella about getting Rob over to __EPH__ to start on their samples.
+
+### _G. f. fuscipes_ samples 2014 ###
+
+- `[X]` organize boxes of _carcass_ and _midgut_ samples from 2014-03 to 2014-08 in Gisella freezer by month.
+- `[-ip-]` standardize the collection spreadsheets to prepare for automated import to `TsetseSampleDB`.
+
+
+
+## Update Uganda sample location map ##
 
