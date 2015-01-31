@@ -1225,18 +1225,6 @@ Table: Samples given to Alexis for DNA extraction from a single leg. \label{2015
 - `[-ip-]` teaching `GPSCoordTree` how to get mean coordinates
     - `[X]` make `GPSCoord` hashable
     - `[-ip-]` fix `GPSCoordTree._add_levels()`: getting an empty list somewhere o something that is causing a `None` to be returned. 
-
-from spartan.utils.maps import gps
-gps.GPSCoord('UWA',"1","1")
-x = gps.GPSCoord('UWA',"1","1")
-y = gps.GPSCoord('UWA',"1","2")
-z = gps.GPSCoord('UWA',"1","2")
-x is y
-x == y
-z is y
-z == y
-set([x,y,z])
-z == y
-z.location = 1
-z == y
-set([x,y,z])
+- still not fixed but trying a new tactic
+    - converting `GPSCoordTree` to use autovivification trick with an extra key at each node that holds links to all `gps_objs` found below it.
+    - see [2014-12-26_functional_annotation_table_generator.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2014-12-26_functional_annotation_table_generator.ipynb) for example of autovivfication method.
