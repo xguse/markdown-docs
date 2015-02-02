@@ -1227,4 +1227,16 @@ Table: Samples given to Alexis for DNA extraction from a single leg. \label{2015
     - `[-ip-]` fix `GPSCoordTree._add_levels()`: getting an empty list somewhere o something that is causing a `None` to be returned. 
 - still not fixed but trying a new tactic
     - converting `GPSCoordTree` to use autovivification trick with an extra key at each node that holds links to all `gps_objs` found below it.
-    - see [2014-12-26_functional_annotation_table_generator.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2014-12-26_functional_annotation_table_generator.ipynb) for example of autovivfication method.
+    - see [2014-12-26_functional_annotation_table_generator.ipynb](http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2014-12-26_functional_annotation_table_generator.ipynb) for example of autovivfication method.
+
+
+
+------------------------------------------
+
+# 2015-02-01 (Sunday) #
+
+## Updating maps: current trap locations ##
+
+### `spartan` dev: GPS stuff ###
+
+- writing autovivification version of `GPSCoordTree._grow_branch`.
