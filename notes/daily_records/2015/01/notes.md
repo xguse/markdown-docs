@@ -1240,3 +1240,31 @@ Table: Samples given to Alexis for DNA extraction from a single leg. \label{2015
 ### `spartan` dev: GPS stuff ###
 
 - writing autovivification version of `GPSCoordTree._grow_branch`.
+
+
+
+------------------------------------------
+
+# 2015-02-02 (Monday) #
+
+## Updating maps: current trap locations ##
+
+### `spartan` dev: GPS stuff ###
+
+- testing ([test_utils_maps_gps.py](file:///home/gus/Dropbox/repos/git/spartan/src/spartan/tests/test_utils_maps_gps.py)):
+    - `[x]` `GPSCoordTree._grow_branch`
+    - `[x]` `GPSCoordTree._get_subtree`
+    - `[x]` `GPSCoordTree.mean`
+
+## Creating Uganda Data Repo ##
+
+- __local location:__ 
+
+    [/home/gus/Dropbox/uganda_data/data_repos/field_data](file:///home/gus/Dropbox/uganda_data/data_repos/field_data)
+- __github address:__ [https://github.com/CacconeLabYale/field_data.git](https://github.com/CacconeLabYale/field_data.git)
+
+------------------------------------------
+
+# 2015-02-03 (Tuesday) #
+
+## Updating maps: current trap locations ##

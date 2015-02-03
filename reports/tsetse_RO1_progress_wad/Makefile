@@ -17,7 +17,7 @@
 
 PANDOC=$(HOME)/.cabal/bin/pandoc
 PANDOC_CITEPROC=$(HOME)/.cabal/bin/pandoc-citeproc
-PANDOC_INTERNAL_REFS=$(VIRTUAL_ENV)/bin/internal-references
+PANDOC_INTERNAL_REFS=$(HOME)/.virtualenvs/py279/bin/internal-references
 
 
 ## Markdown extension (e.g. md, markdown, mdown).
