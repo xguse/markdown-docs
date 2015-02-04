@@ -1263,8 +1263,20 @@ Table: Samples given to Alexis for DNA extraction from a single leg. \label{2015
     [/home/gus/Dropbox/uganda_data/data_repos/field_data](file:///home/gus/Dropbox/uganda_data/data_repos/field_data)
 - __github address:__ [https://github.com/CacconeLabYale/field_data.git](https://github.com/CacconeLabYale/field_data.git)
 
+
+
+
+
 ------------------------------------------
 
 # 2015-02-03 (Tuesday) #
 
 ## Updating maps: current trap locations ##
+
+- established comprehensive lists of village-ID-map and trap GPS locations for Uganda:
+    - __village-ID-map:__
+        
+        [field_data/locations/names/uganda_village_id_map.csv](file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/names/uganda_village_id_map.csv)
+    - __trap GPS coords:__
+
+        [field_data/locations/gps/traps/uganda_traps_gps.csv](file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/gps/traps/uganda_traps_gps.csv)
