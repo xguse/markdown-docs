@@ -82,6 +82,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 - `[x]` create git repo for this paper
 - `[ ]` begin development of the MAD idea
 - `[ ]` install LDna and R-studio
+- `[ ]` Located space to move the EPH _G. pallidipes_ samples here to ESC with Rob
 
 
 
@@ -114,7 +115,4 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 - github page:  
     [https://github.com/CacconeLabYale/gloria_soria_ddRAD_2015.git](https://github.com/CacconeLabYale/gloria_soria_ddRAD_2015.git)
-
-
-
 
