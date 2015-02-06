@@ -244,4 +244,18 @@ $ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 
 
 
+------------------------------------------
+
+# 2015-02-06 (Friday) #
+
+## Header ##
+
+## MAD idea ##
+
+### Development ###
+
+- LOTS of progress at ipython notebook: [ddrad58/2015-02-05_MAD_idea.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-02-05_MAD_idea.ipynb)
+
+- See notes about plotting median and MAD with bootstrapped CIs near the bottom of above (commit dd7fe5da5733406edeaab6ce3c25b523b94552f2)
+
 
