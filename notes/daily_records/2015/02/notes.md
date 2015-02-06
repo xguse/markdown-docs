@@ -248,8 +248,6 @@ $ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 
 # 2015-02-06 (Friday) #
 
-## Header ##
-
 ## MAD idea ##
 
 ### Development ###
