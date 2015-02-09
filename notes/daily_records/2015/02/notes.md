@@ -264,19 +264,50 @@ $ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 
 __Goals:__
 
-- ☐ this
-
-
-- `[ ]` Zimmer Workshop
+- `[x]` Zimmer Workshop
 - `[x]` Start Professional Development notebook
-- `[ ]` Find out how to process health reimbursement
+- `[x]` Find out how to process health reimbursement
+    - `[ ]` Get them ready for mailing
+        - `[x]` form
+        - `[ ]` receipts
+    - `[X]` Assemble list of information I need from Sarah and send it to her
 - `[ ]` Progress on MAD idea
 - `[ ]` Generate strategy for the week
-- `[ ]` Sketch out abstract for Keynote meeting
+- `[ ]` Sketch out abstract for Keystone? meeting
 - `[ ]` find out if there is data available on tsetse control by area in Uganda
     - chemicals sold
     - etc
 
+
+## Health reimbursement  ##
+
+- [http://yalehealth.yale.edu/claims](http://yalehealth.yale.edu/claims)
+- Supplemental Claim form: [http://yalehealth.yale.edu/sites/default/files/supplemental_claims_form.pdf](http://yalehealth.yale.edu/sites/default/files/supplemental_claims_form.pdf)
+- pharmacy claim form: [http://yalehealth.yale.edu/sites/default/files/pharmacy_claim_form_restat_catamaran.pdf](http://yalehealth.yale.edu/sites/default/files/pharmacy_claim_form_restat_catamaran.pdf)
+
+### Instructions for pharmacy process ###
+
+- from website above
+
+>Include copies of prescription receipts showing the following information:
+>
+>- Pharmacy Name, Address & Phone Number 
+>- Patient Name 
+>- Prescription Number 
+>- Prescription Fill Date 
+>- Drug Name, Strength and NDC Code
+>- Drug Quantity & Days supply 
+>- Drug Cost 
+>- Amount Paid 
+>
+>Please mail the Prescription Drug Claim Form and receipts to:
+>
+>Restat  
+>Patient Reimbursement  
+>11900 W. Lake Park Drive  
+>Milwaukee, WI 53224  
+>
+>Claims are honored for one year from the date of service. If you haven't received a response to a claim within 60 days of filing, contact the Claims Department. You may call sooner to inquire if the claim has been received and is in process.
 
 
 ## MAD idea ##
