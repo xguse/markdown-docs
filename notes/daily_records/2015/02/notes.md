@@ -257,3 +257,11 @@ $ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
 - See notes about plotting median and MAD with bootstrapped CIs near the bottom of above (commit dd7fe5da5733406edeaab6ce3c25b523b94552f2)
 
 
+
+# Carl Zimmer Workshop 
+
+
+
+
+
+
