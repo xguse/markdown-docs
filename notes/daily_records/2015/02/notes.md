@@ -350,7 +350,9 @@ __Goals:__
 
 ### Development ###
 
-- yesterday:
+- _yesterday:_
     - bootstrap confidence intervals are functional
     - modified z-score is functional
     - used ggplot to provide nice figure showing rough progression of z-scored $r^2$ through distance between snps
+
+- 

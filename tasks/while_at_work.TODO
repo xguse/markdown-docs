@@ -1,23 +1,25 @@
 
 MAD idea:
     Dev:
-        ☐ implement non-overlapping bins of ~10bp @today @started(15-02-12 11:19)
-        ☐ ggplot save function needed 
+        ☐ implement non-overlapping bins of ~10bp @today @started(15-02-12 11:19) @toggle(15-02-12 17:13)
+        ☐ ggplot save function needed @low
 
 
-Rob work:
-    Gus:
-        ☐ use pandas to get Gisella something more like what she said she wanted today 
 
-    Rob:
-        ☐ 
-    Both:
-            ☐ transcribe meeting notes @today @high
+G. pallidipes:
+        Gus:
+            ☐ use pandas to get Gisella something more like what she said she wanted @started(15-02-12 16:02) @toggle(15-02-12 16:44)
+        Rob:
+            ☐ 
+        Both:
+                
 
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ start ipython page @started(15-02-12 16:02)  @done (15-02-12 16:44) @lasted(0:42) @project(G. pallidipes / Gus)
+ ✔ transcribe meeting notes @today @high @started(15-02-12 15:02) @done (15-02-12 16:00) @lasted(0:58) @project(G. pallidipes / Gus)
  ✔ write snp ID collector based on z-score value @today @started(15-02-12 11:19) @done (15-02-12 11:54) @lasted(0:35) @project(MAD idea / Dev)
   this is actually already present due to the use of pandas dataframes
  ✔ Find something for rob to do today @today  @done (15-02-12 14:46) @project(Rob work / Gus)
