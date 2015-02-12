@@ -1,7 +1,7 @@
 ---
-title: SUBJECT OF MEETING
-author: GusD, 
-date: INSERT DATE
+title: _G. pallidipes_ sample database summary and extractions
+author: GusD, GisellaC, RobH
+date: 2015-02-12 (Thursday)
 documentclass: scrartcl
 classoption: letterpaper
 geometry: margin=1in
@@ -14,8 +14,3 @@ header-includes:
 read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
 ...
 
-
-# Overview of Discussed #
-
-
-# Current/future plans #

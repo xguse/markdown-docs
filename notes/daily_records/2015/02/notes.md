@@ -350,8 +350,7 @@ __Goals:__
 
 ### Development ###
 
-Health Claim: @fam
-  ☐ re-complete form in inkscape
-    ☐ get Catherine's member ID number @due(15-02-14 10:09) 
-  ☐ send package
-
+- yesterday:
+    - bootstrap confidence intervals are functional
+    - modified z-score is functional
+    - used ggplot to provide nice figure showing rough progression of z-scored $r^2$ through distance between snps
