@@ -310,8 +310,48 @@ __Goals:__
 >Claims are honored for one year from the date of service. If you haven't received a response to a claim within 60 days of filing, contact the Claims Department. You may call sooner to inquire if the claim has been received and is in process.
 
 
+
+------------------------------------------
+
+# 2015-02-10 (Tuesday) #
+
+__Goals:__
+
+
+- `[ ]` Get pharm claim ready for mailing
+    - `[x]` form
+    - `[ ]` receipts
+- `[ ]` Progress on MAD idea
+- `[ ]` Generate strategy for the week
+- `[ ]` Sketch out abstract for Keystone? meeting
+- `[ ]` find out if there is data available on tsetse control by area in Uganda
+    - chemicals sold
+    - etc
+- `[ ]` figure out how to download zimmer files
+
+
+## Health reimbursement  ##
+
+- printed form
+
+## Met with Postdoc applicant (Christina) ##
+
+- had lunch 
+
+------------------------------------------
+
+# 2015-02-12 (Thursday) #
+
+## Health reimbursement  ##
+
+- Need Catherine's member ID
+
 ## MAD idea ##
 
 ### Development ###
 
- - 
+Health Claim: @fam
+  ☐ re-complete form in inkscape
+    ☐ get Catherine's member ID number @due(15-02-14 10:09) 
+  ☐ send package
+
