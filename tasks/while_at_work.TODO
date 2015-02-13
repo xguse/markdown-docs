@@ -1,16 +1,15 @@
 
+
 MAD idea:
     Dev:
-        ☐ implement non-overlapping bins of ~10bp @today @started(15-02-12 11:19) @toggle(15-02-12 17:13)
+        ☐ implement printing/saving snp-pairs that pass the z-filter @today
         ☐ ggplot save function needed @low
 
 
 
 G. pallidipes:
         Gus:
-            ☐ use pandas to get Gisella something more like what she said she wanted @started(15-02-12 16:02) @toggle(15-02-12 16:44)
         Rob:
-            ☐ 
         Both:
                 
 
@@ -18,10 +17,24 @@ G. pallidipes:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ implement non-overlapping bins of ~10bp @today @started(15-02-12 11:19) @toggle(15-02-12 17:13) @toggle(15-02-13 14:06) @toggle(15-02-13 14:22) @toggle(15-02-13 14:45) @done (15-02-13 17:08) @lasted(8:33) @project(MAD idea / Dev)
+  completed functions to
+  ~ update df with `distance_bin` and `mad_z`
+  ~ plot mad_z by bins
+ ✔ record notes @sitrep @started(15-02-13 14:25) @done (15-02-13 14:37) @lasted(0:12) @project(G. pallidipes / Gus)
+  ~ primers
+  ~ leg extractions
+  ~ summary tables
+ ✘ spreadsheet: lab source as column not separate tables @today @cancelled (15-02-13 14:06) @project(G. pallidipes / Rob)
+ ✔ use pandas to get Gisella something more like what she said she wanted @started(15-02-12 16:02) @toggle(15-02-12 16:44) @toggle(15-02-13 08:23) @today @done (15-02-13 14:05) @lasted(6:24) @project(G. pallidipes / Gus)
+ ✔ test item @done (15-02-13 08:22) @project(G. pallidipes)
+  @started(15-02-13 08:22)
+  @toggle(15-02-13 08:22)
+  @toggle(15-02-13 08:22)
  ✔ start ipython page @started(15-02-12 16:02)  @done (15-02-12 16:44) @lasted(0:42) @project(G. pallidipes / Gus)
  ✔ transcribe meeting notes @today @high @started(15-02-12 15:02) @done (15-02-12 16:00) @lasted(0:58) @project(G. pallidipes / Gus)
+ ✔ meet with Gisella @due(15-02-12 14:00) @today @done (15-02-12 14:47) @project(Rob work / Both)
+ ✔ Find something for rob to do today @today  @done (15-02-12 14:46) @project(Rob work / Gus)
  ✔ write snp ID collector based on z-score value @today @started(15-02-12 11:19) @done (15-02-12 11:54) @lasted(0:35) @project(MAD idea / Dev)
   this is actually already present due to the use of pandas dataframes
- ✔ Find something for rob to do today @today  @done (15-02-12 14:46) @project(Rob work / Gus)
  ✔ debrief on progress so far @today @done (15-02-12 11:04) @project(Rob work / Both)
- ✔ meet with Gisella @due(15-02-12 14:00) @today @done (15-02-12 14:47) @project(Rob work / Both)

@@ -355,4 +355,52 @@ __Goals:__
     - modified z-score is functional
     - used ggplot to provide nice figure showing rough progression of z-scored $r^2$ through distance between snps
 
-- 
+
+------------------------------------------
+
+# 2015-02-13 (Friday) #
+
+## _G. pallidipes_ Sample catalog ##
+
+
+### Summary table ###
+
+- data types:
+    - location
+    - symbols when present (_I assume you mean location symbol?_)
+    - number of individuals
+    - date range
+    - is tissue?
+    - is extraction?
+    - analysis status
+- will be done in `python` for increased flexibility by __[Gus]__
+
+- notebook file: [2015-02-12_sample_catalog_summary.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/pallidipes_kenya/2015-02-12_sample_catalog_summary.ipynb)
+
+- Showed output to Gisella and she signed off on it after asking whether I could accommodate GEO COORDS when we get them.
+
+- __STATUS:__ __[completed]__
+
+### Primers etc ###
+
+- RobH reports that he and KirstinD found many primers etc that were either designed for _G. pallidipes_ or shown to work with it in the past.
+- testing on the primers will begin next week.
+
+### Leg extractions ###
+
+- Rob did Xymogen extractions on 5 legs
+- NanoDrop indicates absorption at 260 but peaks look weird
+    - probably bc the kit leaves EVERYTHING still in solution
+    - `[ ]` RobH  will check with KirstinD about her extraction traces on _G. f. fuscipes_ legs
+
+
+
+## MAD idea ##
+
+### Development ###
+
+- __[completed]__ functions to
+    - update df with `distance_bin` and `mad_z`
+    - plot mad_z by bins
+- to do:
+    - implement printing/saving snp-pairs that pass the z-filter @today
