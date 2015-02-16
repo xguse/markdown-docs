@@ -399,8 +399,20 @@ __Goals:__
 
 ### Development ###
 
-- __[completed]__ functions to
+- __[completed]:__ functions to
     - update df with `distance_bin` and `mad_z`
     - plot mad_z by bins
-- to do:
-    - implement printing/saving snp-pairs that pass the z-filter @today
+- __[to do]:__
+    - implement printing/saving snp-pairs that pass the z-filter 
+
+
+
+------------------------------------------
+
+# 2015-02-14 (Saturday) #
+
+## MAD idea ##
+
+### Development ###
+
+- implement printing/saving snp-pairs that pass the z-filter 

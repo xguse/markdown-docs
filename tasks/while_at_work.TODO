@@ -2,7 +2,8 @@
 
 MAD idea:
     Dev:
-        ☐ implement printing/saving snp-pairs that pass the z-filter @today
+        ☐ implement printing/saving snp-pairs that pass the z-filter @soon @started(15-02-14 13:59) @toggle(15-02-14 15:59) 
+        ☐ implement FDR functions @soon
         ☐ ggplot save function needed @low
 
 
@@ -13,7 +14,9 @@ G. pallidipes:
         Both:
                 
 
-
+_G. f. fuscipes:
+    ☐ ipython to get pivot table for infected flies @today
+    ☐ add PCR detected fly statuses to main DB @soon
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
