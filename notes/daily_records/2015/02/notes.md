@@ -416,3 +416,29 @@ __Goals:__
 ### Development ###
 
 - implement printing/saving snp-pairs that pass the z-filter 
+
+
+
+------------------------------------------
+
+# 2015-02-16 (Monday) #
+
+## _G. f. fuscipes_: infection summaries ##
+
+- ipython to get pivot table for infected flies
+    - file: [2015-02-16_g_f_fuscipes_pandas_import.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb)
+        - file of dumped pandas table of collection records for 2014 in hdf5 format: 
+- add PCR detected fly statuses to main DB @soon
+
+
+## _G. pallidipes_: MicroSat extraction pilot ##
+
+- RobH spoke with KirstinD about strange NanoDrop traces:
+    - KirstinD: hers looked the same, just used 260/280 values as presented
+    - likely explanation is that the extraction kit is EXTREMELY dirty by design so the spec peaks are shifted around
+- RobH is beginning PCRs with ITS primers (same that KirstinD is using on the _G. f. fuscipes_) today.
+- RobH is researching location names on the SerapA tubes (n ~ 6) bc GisellaC is not convinced the sheet SerapA included makes since.
+    - RobH will google first
+    - GusD will get GIS admin layers to search if google fails
+
+

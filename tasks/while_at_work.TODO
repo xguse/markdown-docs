@@ -8,18 +8,26 @@ MAD idea:
 
 
 
-G. pallidipes:
+_G. pallidipes_:
         Gus:
         Rob:
+            ☐ running PCR tests with ITS for extractions @started(15-02-16 11:46) @ip
+            ☐ RobH is researching location names on the SerapA tubes @started(15-02-16 11:47) @ip
         Both:
                 
 
-_G. f. fuscipes:
-    ☐ ipython to get pivot table for infected flies @today
+_G. f. fuscipes_:
+    ☐ ipython to get pivot table for infected flies @high @ip @started(15-02-16 10:51) 
     ☐ add PCR detected fly statuses to main DB @soon
+    ☐ convert Kitgum-lamwo-pader xl files to be used with pandas @high @ip @started(15-02-16 11:49) @NOW
+
+General Data:
+
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ update location conversion file with Kitgum-lamwo-pader codes @high @started(15-02-16 11:38) @done (15-02-16 11:47) @lasted(0:09) @project(General Data)
+  seems to be done already
  ✔ implement non-overlapping bins of ~10bp @today @started(15-02-12 11:19) @toggle(15-02-12 17:13) @toggle(15-02-13 14:06) @toggle(15-02-13 14:22) @toggle(15-02-13 14:45) @done (15-02-13 17:08) @lasted(8:33) @project(MAD idea / Dev)
   completed functions to
   ~ update df with `distance_bin` and `mad_z`
