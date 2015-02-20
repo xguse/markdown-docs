@@ -30,11 +30,11 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 - research carers (6 months)
     - research orgs about job roles
-    - attend carer rekated events
+    - attend carer related events
     - ask for advice
 
 - engage in professional development (12 months)
-    - id skills ythat need worjk
+    - ID skills that need work
     - courses 
     - etc
 
@@ -86,6 +86,79 @@ _Decreasing order of preference:_
 
 
 # How to talk about yourself: Successful interviewing strategies #
+
+- tell me about yourself:
+    - one the only times you should write it all out
+
+- looking for flaws:
+    - no examples here...
+    - tell truth
+    - strengths lead to weaknesses
+    - they have probably figured this out
+    - keep it short 
+    - use strength to explain weakness
+        - "bc i am so flexible i have trouble managing time...."
+    - include how you are over coming it
+
+
+- why are you leaving academia:
+    - spend time on the negative of academia or _the POSITIVE of industry_
+    - talk about the things you are going toward
+
+## During the interview ##
+
+- what you say is very little of what you are communicating
+
+__GIVE EXAMPLES FOR EVERY QUESTION__
+
+- embed all answers in examples from your experience
+
+- positive focus:
+    - dont be overly cautious about your skills _when speaking to non-academics_
+        - i am confident that in a couple hours i would be able to get up to speed on
+- voice quality:
+    - volume, tone enunciation and speed
+    - nervous yields more of what you do naturally
+- avoid fillers:
+    - uh... like... umm...
+- dont worry about silence:
+    - take a bit to organize yourself
+- avoid slang and informal language:
+    - follow your interviewers lead (to an extent)
+    - be polished version of self and interviewer
+- relax:
+    - dont sound too over rehearsed
+    - canyt fake confidence but you SHOULD BE CONFIDENT
+
+## non verbal communication ##
+
+- physical appearance:
+    - trying to look like something you're not can cause issues too
+    - dont test out new non-YOU dress
+- eye contact:
+    - thumb: when listening look at them, maybe look around while YOU are talking
+- hand shake:
+    - firm 
+    - __DRY__
+- seated posture:
+    - thumb: sit back with back against "back"
+
+## adapt to interview ##
+
+- pay attention to the first impression that they take from you
+- interviewer focus:
+    - prevention vs promotion
+- attention to:
+    - lips compressed (worried)
+    - neck rub (uncomfortable)
+    - eye rub (resistance)
+    - shoulder raise (uncertainty)
+- how are you making them feel:
+- __LISTEN__
+
+## Power poses ##
+
+- look it up...
 
 
 
