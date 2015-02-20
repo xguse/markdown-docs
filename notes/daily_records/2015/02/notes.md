@@ -442,3 +442,14 @@ __Goals:__
     - GusD will get GIS admin layers to search if google fails
 
 
+
+------------------------------------------
+
+# 2015-02-17 (Tuesday) #
+
+## meeting ##
+
+- escarpment Nguruman:
+    - GisellaC try to get samples from exreams and in the mioddle
+- `[ ]` GusD send most recent version of protocol to BrianW
+- 
