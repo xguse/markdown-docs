@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/gus/Documents/ToDos"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}

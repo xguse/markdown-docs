@@ -442,3 +442,11 @@ __Goals:__
     - GusD will get GIS admin layers to search if google fails
 
 
+- [v0.2.1.2-1.tar.gz](https://github.com/xguse/blacktie/archive/v0.2.1.2-1.tar.gz)
+
+
+
+------------------------------------------
+
+# 2015-02-19 (Thursday) #
+
