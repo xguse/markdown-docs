@@ -484,5 +484,34 @@ __GOALS:__
 ### Converting dates to YYYY-MM-DD ###
 
 - [2014_spring_summer_from_rob.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_spring_summer_from_rob.xlsx)
-- [2014_fall_for_pandas.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_fall_for_pandas.xlsx)
+    - added new function to `TsetseCheckout`:  
+    [TsetseCheckout/data/utils.py:convert_brit_dates_to_yyyy_mm_dd(string)](file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/utils.py)
+    - added new cell magic to ipython to send variable to clipboard:  
+    [clip_magic.py](https://gist.github.com/xguse/a01780ef22cfad8adaf9)
+    - used new function and the cell magic to copy, change, then paste back into spreadsheet.
 
+- [2014_fall_for_pandas.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_fall_for_pandas.xlsx)
+    - dates already fine
+
+
+### Adding Village names to the spring/summer excel file ###
+
+
+
+
+
+- created python hack to use the summary sheet info to generate the Village rows  
+[YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/traps_to_villages.py](/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/traps_to_villages.py)
+    - summary sheets:  
+    [2014_full_surveyreport_20140820/summary survey data.xlsx](file:///home/gus/Dropbox/uganda_data/2014_Collection_Sheets_Spring-Summer/2014_full_surveyreport_20140820/summary\ survey\ data.xlsx) 
+
+#### ALERT: errors detected in fly name code combinations ####
+
+- during this process i detected instances where the fly number code combinations (`OLW-14 038`) were __NOT__ correct!
+- the following IDs illustrate this:
+    - `OLO-14 033` is Olobo
+    - `OLO-14 034` is Olobo
+    - `OLW-14 035` is Olwi
+    - `OLW-14 036` is Olwi
+    - `OLW-14 037` is Olobo
+    - `OLW-14 038` is Olobo
