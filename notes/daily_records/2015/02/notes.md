@@ -444,7 +444,28 @@ __Goals:__
 
 - [v0.2.1.2-1.tar.gz](https://github.com/xguse/blacktie/archive/v0.2.1.2-1.tar.gz)
 
+------------------------------------------
 
+# 2015-02-17 (Tuesday) #
+
+## meeting ##
+
+- escarpment Nguruman:
+    - GisellaC try to get samples from exreams and in the mioddle
+- `[ ]` GusD send most recent version of protocol to BrianW
+
+
+# 2015-02-18 (Wednesday) #
+
+# _G. pallidipes_ status update meeting #
+
+- GusD
+- RobH
+- KirstinD
+
+- extracytions not working for a while with KirstinD
+- touble shooting
+- KirstinD moving forweard with extractions now
 
 ------------------------------------------
 
