@@ -428,7 +428,7 @@ __Goals:__
 - ipython to get pivot table for infected flies
     - file: [2015-02-16_g_f_fuscipes_pandas_import.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb)
         - file of dumped pandas table of collection records for 2014 in hdf5 format: 
-- add PCR detected fly statuses to main DB @soon
+- add PCR detected fly statuses to main DB 
 
 
 ## _G. pallidipes_: MicroSat extraction pilot ##
@@ -451,23 +451,38 @@ __Goals:__
 ## meeting ##
 
 - escarpment Nguruman:
-    - GisellaC try to get samples from exreams and in the mioddle
+    - GisellaC try to get samples from extremes and in the middle
 - `[ ]` GusD send most recent version of protocol to BrianW
 
 
 # 2015-02-18 (Wednesday) #
 
-# _G. pallidipes_ status update meeting #
+## _G. pallidipes_ status update meeting ##
 
 - GusD
 - RobH
 - KirstinD
 
-- extracytions not working for a while with KirstinD
-- touble shooting
-- KirstinD moving forweard with extractions now
+- extractions not working for a while with KirstinD
+- trouble shooting
+- KirstinD moving forward with extractions now
 
 ------------------------------------------
 
-# 2015-02-19 (Thursday) #
+# 2015-02-21 (Saturday) #
+
+__GOALS:__
+
+- _G. f. fuscipes_ infection summaries/maps for GisellaC meeting
+- script for MariangelaB
+- $r^2$ per bin model
+
+
+
+## _G. f. fuscipes_: infection summaries ##
+
+### Converting dates to YYYY-MM-DD ###
+
+- [2014_spring_summer_from_rob.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_spring_summer_from_rob.xlsx)
+- [2014_fall_for_pandas.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_fall_for_pandas.xlsx)
 
