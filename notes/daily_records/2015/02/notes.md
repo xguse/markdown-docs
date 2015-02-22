@@ -473,9 +473,9 @@ __Goals:__
 
 __GOALS:__
 
-- _G. f. fuscipes_ infection summaries/maps for GisellaC meeting
-- script for MariangelaB
-- $r^2$ per bin model
+- `[worked on]` _G. f. fuscipes_ infection summaries/maps for GisellaC meeting
+- `[no work]` script for MariangelaB
+- `[small work]` $r^2$ per bin model
 
 
 
@@ -497,7 +497,7 @@ __GOALS:__
 ### Adding Village names to the spring/summer excel file ###
 
 
-
+- __[COMPLETED]:__ 2015-02-22
 
 
 - created python hack to use the summary sheet info to generate the Village rows  
@@ -505,9 +505,9 @@ __GOALS:__
     - summary sheets:  
     [2014_full_surveyreport_20140820/summary survey data.xlsx](file:///home/gus/Dropbox/uganda_data/2014_Collection_Sheets_Spring-Summer/2014_full_surveyreport_20140820/summary\ survey\ data.xlsx) 
 
-#### ALERT: errors detected in fly name code combinations ####
+### ALERT: errors detected in fly name code combinations ###
 
-- during this process i detected instances where the fly number code combinations (`OLW-14 038`) were __NOT__ correct!
+- during this process i detected instances where the fly number code combinations (example: `OLW-14 038`) were __NOT__ correct!
 - the following IDs illustrate this:
     - `OLO-14 033` is Olobo
     - `OLO-14 034` is Olobo
@@ -515,3 +515,54 @@ __GOALS:__
     - `OLW-14 036` is Olwi
     - `OLW-14 037` is Olobo
     - `OLW-14 038` is Olobo
+- additionally, the `Dissection Data-Kole` sheet has __ALL__ fly IDs starting `KO` regardless of the source village.
+
+- __RECOMEND _NOT_ DEPENDING ON FLY ID FOR VILLAGE SOURCE!__
+
+
+
+------------------------------------------
+
+# 2015-02-22 (Sunday) #
+
+__GOALS:__
+
+- `[worked on]` _G. f. fuscipes_ infection summaries/maps for GisellaC meeting
+- `[none]` script for MariangelaB
+- `[none]` $r^2$ per bin model
+
+
+
+## _G. f. fuscipes_: infection summaries ##
+
+### HDF5 import and data cleaning ###
+
+- standardized the spreadsheet column titles by hand to allow import and correct dataframe referencing
+
+- file: [2015-02-16_g_f_fuscipes_pandas_import.ipynb](file:///home/gus/Dropbox/common/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb)
+
+- `recode_villages(df, map_func=map_func)`:
+    - renaming villages to letter codes
+    - __[degenerate names discovered]__ and accommodated in  
+    [uganda_village_id_map.csv](file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/names/uganda_village_id_map.csv) by mapping the letter code to more than one long form:
+        - AKAYODEBE vs AKAYO-DEBE
+
+    - corrected misspellings of 
+        - "Orubakulemi" from "Orubakulem"
+        - "JIAKO" from "JAIKO"
+
+- `recode_positives(df)`:
+    - recode `prob`, `midgut`, `sal.gland` as `0` or `1`.
+    - __[NOTE]__ this will change to a trivalent state (class `Tristate`) soon
+
+- `recode_tenerals(df)`
+    - implemented but needs conversion to `Tristate`
+
+- `recode_dead(df)`
+    - implemented but needs conversion to `Tristate`
+
+- `add_infection_state_col(df)`
+    - implemented but failing to actually alter the dataframe
+
+- `spartan.utils.misc.Tristate`
+    - implements three state logic that _mostly_ supports normal boolean arithmetic (just ignoring the `None` state)
