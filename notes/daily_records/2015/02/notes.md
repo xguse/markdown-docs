@@ -566,3 +566,33 @@ __GOALS:__
 
 - `spartan.utils.misc.Tristate`
     - implements three state logic that _mostly_ supports normal boolean arithmetic (just ignoring the `None` state)
+
+
+# 2015-02-23 (Monday) #
+
+__GOALS:__
+
+- `[ ]` _G. f. fuscipes_ infection summaries/maps for GisellaC meeting
+- `[ ]` script for MariangelaB
+- `[ ]` $r^2$ per bin model
+
+
+
+## _G. f. fuscipes_: infection summaries ##
+
+### HDF5 import and data cleaning ###
+
+- `spartan.utils.misc.Tristate`
+    - I found an existing "Tribool" class on github and forked it:  
+    [https://github.com/xguse/python_tribool](https://github.com/xguse/python_tribool)
+    - it did not support boolean arithmetic but was much more sophisticated in all other ways.
+    - I added support for boolean addition but will also add *, -, and / before writing the tests and submitting a pull request to upstream.
+    - I am now using `Tribool` instead of `Tristate`
+
+- running into serious hashable issues `df.midgut.unique()` throws `__nonezero__`'s `ValueError`.
+    - possible solutions:
+        - override `__new__` might allow me to mimic the "always the same mem address" behavior of `True` etc?
+        - Look into implementation of Factories in Python
+        - perhaps a hint in behavior/class code for `np.NaN`?
+        - __[best bet]__ use `enum` class
+- looking for more fertile ground to cover while I think
