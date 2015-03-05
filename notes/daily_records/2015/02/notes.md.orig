@@ -565,6 +565,9 @@ __GOALS:__
     - implemented but failing to actually alter the dataframe
 
 - `spartan.utils.misc.Tristate`
+<<<<<<< HEAD
+    - implements three state logic that _mostly_ supports normal boolean arithmetic (just ignoring the `None` state)
+=======
     - implements three state logic that _mostly_ supports normal boolean arithmetic (just ignoring the `None` state)
 
 
@@ -596,3 +599,4 @@ __GOALS:__
         - perhaps a hint in behavior/class code for `np.NaN`?
         - __[best bet]__ use `enum` class
 - looking for more fertile ground to cover while I think
+>>>>>>> feature/report/tsetse_RO1_progress_wad
