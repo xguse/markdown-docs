@@ -53,3 +53,19 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 1. Collection protocol
 1. Database/sample tracking efforts
 1. Collection numbers
+
+
+# 2015-03-06 (Friday) #
+
+## ddrad58 ##
+
+- worked on scaled Beta dist learning of $r^2$ distributions
+- calculated and sent back Hardy-Weinberg equilibrium FDRs to AndreaG
+
+## RobertO's MicroSat ##
+
+- must re-build map stuff
+
+### Villages for leg extraction ###
+
+- see project notes: [roberts_microsats.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.md)
