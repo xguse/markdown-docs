@@ -21,6 +21,11 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 ------------------------------------------
 
+<!-- ################################################################## -->
+\newpage
+<!-- ################################################################## -->
+
+
 # Contig proximity graph #
 
 ## 2015-03-10 (Tuesday) ##
@@ -29,7 +34,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 ### Calculate interchromosomal LD with `vcftools` ###
 
-#### Attempt 1 [FAILED] ####
+#### Attempt 1 [FAILED: bug in v0.1.12b] ####
 
 
 \ \
@@ -110,7 +115,7 @@ Gus
 
 - said its a bug and they will fix
 
-#### Attempt 2 [RUNNING] ####
+#### Attempt 2 [FAILED: ran out of space] ####
 \ \
 
 I installed [vcftools_0.1.12a](file:///home/gus/remote_mounts/louise/scripts/installs/install_vcftools_0.1.12a.sh) and it began without complaint.
@@ -129,12 +134,45 @@ vcftools --vcf $VCF  --out $OUT_PREFIX --interchrom-geno-r2
 
 __- -OUTPUT- -__
 
-...running...
+- Ran out of disk space.
+
+
+------------------------------------------
+
+
+<!-- ################################################################## -->
+\newpage
+<!-- ################################################################## -->
+
+## 2015-03-11 (Wednesday) ##
+
+### Calculate interchromosomal LD with `vcftools` ###
+
+#### Attempt 3 [?] ####
+
+- attempting to use `fastscratch` to allow for extra space.
+
+\ \
+__- -INPUT- -__
+
+```bash
+FAST_SCRATCH=/fastscratch/wd238
+SNP_DIR="/home2/wd238/data/genomes/glossina_fuscipes/annotations/SNPs"
+VCF="${SNP_DIR}/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf"
+OUT_PREFIX="${FAST_SCRATCH}/vcftools_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf"
+
+mkdir -p ${FAST_SCRATCH}/vcftools_out/
+
+module load vcftools/0.1.12a
+vcftools --vcf $VCF  --out $OUT_PREFIX --interchrom-geno-r2 
 
 
 
 ------------------------------------------
 
+<!-- ################################################################## -->
+\newpage 
+<!-- ####################################################################################### -->
 
 # Linkage disequilibrium thresholds for SNP-pairs #
 
@@ -149,3 +187,34 @@ $$((x_i-0.5) \cdot 0.999) + 0.5)$$
     - I am pretty sure it does
 - p-values will be obtained for each $r^2$ as: $1 - \mathrm{CDF}(x_i)$ 
 - see [2015-02-27_overview_of_LD_work_in_Gff.ipynb](http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-02-27_overview_of_LD_work_in_Gff.ipynb) for extra info.
+
+
+
+------------------------------------------
+
+<!-- ################################################################## -->
+\newpage
+<!-- ################################################################## -->
+
+# Dating the North/South population split #
+
+## Converting the BAMS to NEXSUS for BEAST ##
+
+- using PGDSpider2 to convert to NEXUS
+- BAM location: `/scratch/ag674/sample_mappedSC`
+- SPID file: [bam_to_nex_for_BEAST.spid](file:///home/gus/remote_mounts/louise/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid)
+- BAMS to use:
+    - `find /scratch/ag674/sample_mappedSC -name \* | grep -P "\d\.sorted" > $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.bam_list.txt`
+    - [bam_to_nex_for_BEAST.bam_list.txt](file:///home/gus/remote_mounts/louise/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.bam_list.txt)
+- ref for bam: [Glossina-fuscipes-IAEA_SCAFFOLDS_GfusI1.fa](file:///home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/assemblies/GfusI1/Glossina-fuscipes-IAEA_SCAFFOLDS_GfusI1.fa)
+
+### 2015-03-11 (Wednesday) ###
+
+#### Attempt 1 ####
+
+```bash
+module load PGDSpider/2.0.8.0 samtools-bcftools-htslib/1.0
+
+PGDSpider2-cli.sh -inputfile /scratch/ag674/sample_mappedSC/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
+
+```

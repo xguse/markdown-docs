@@ -41,6 +41,10 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 > - This means all samples recorded as OD ideally belong to OCA and those recorded as OCA belong to OD
 
 
+
+------------------------------------------
+
+
 # 2015-03-05 (Thursday) #
 
 ## _Glossina_ meeting with Kenya folks ##
@@ -53,6 +57,10 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 1. Collection protocol
 1. Database/sample tracking efforts
 1. Collection numbers
+
+
+
+------------------------------------------
 
 
 # 2015-03-06 (Friday) #
@@ -69,3 +77,26 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 ### Villages for leg extraction ###
 
 - see project notes: [roberts_microsats.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.md)
+
+
+------------------------------------------
+
+
+# 2015-03-11 (Wednesday) #
+
+## ddrad58 ##
+
+- see respective project's notebook
+
+## RobertO's MicroSat  ##
+
+- see respective project's notebook
+
+
+## Pandas import of collection sheets ##
+
+- added explicit date recoding with minor value enforcement/control
+    - [g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb](file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb)
+
+
+
