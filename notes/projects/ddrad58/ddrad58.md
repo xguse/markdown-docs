@@ -17,6 +17,28 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 ...
 
 
+------------------------------------------
+
+\newpage
+
+# Tasks #
+
+## BEAST ##
+    
+- `[2015-03-12]` conversation with Aris
+- `[wont do]` write up conversation with Aris for GisellaC and get clearance to proceed.
+    - meeting with GisellaC and Aris tomorrow at 11
+- `[!]` Convert BAMs to NEXSUS
+    - waiting to hear back from admins about getting permissions to AndreaG's BAMs
+- `[ ]` BEAST configuration
+- `[ ]` attempt BEAST run
+
+## Linkage disequilibrium thresholds for SNP-pairs ##
+
+- `[2015-03-12]` set up and yield models
+- `[2015-03-12]` take model and return parameters
+- `[2015-03-12]` take parameters and df and set value for each SNP-pair's probability ($1-\mathrm{CDF}$)
+- `[2015-03-12]` take df and set value for each SNP-pair's BH corrected probability
 
 
 ------------------------------------------
@@ -195,7 +217,6 @@ $$((x_i-0.5) \cdot 0.999) + 0.5)$$
 <!-- ################################################################## -->
 \newpage
 <!-- ################################################################## -->
-
 # Dating the North/South population split #
 
 ## Converting the BAMS to NEXSUS for BEAST ##
@@ -210,11 +231,74 @@ $$((x_i-0.5) \cdot 0.999) + 0.5)$$
 
 ### 2015-03-11 (Wednesday) ###
 
-#### Attempt 1 ####
+- stymied by permissions issues with the bams. 
+- see tomorrow
+
+### 2015-03-12 (Thursday) ###
+
+#### Attempt 1 [FAILED: write permissions] ####
 
 ```bash
 module load PGDSpider/2.0.8.0 samtools-bcftools-htslib/1.0
 
-PGDSpider2-cli.sh -inputfile /scratch/ag674/sample_mappedSC/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
+java -Xmx2048m -Xms512m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
 
 ```
+
+\ \
+
+__NOTES:__
+
+- `PGDSpider` seems to write a bunch of temporary files in the same dir as the inputfile.
+- this breaks because I only have READ access to the data dir
+- proceeding with copying the BAMs to a place I have write access to and trying again
+
+
+#### Attempt 2 [FAILED: memory limit] ####
+
+```bash
+$ java -Xmx2048m -Xms512m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
+
+-[  output   ]-
+INFO  16:27:47 - load PGDSpider configuration from: /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml
+initialize convert process...
+read input file...
+INFO  16:28:04 - Run samtools/bcftools...
+INFO  16:28:33 - [bam_sort_core] merging from 3 files...
+ERROR 16:30:24 - not enough memory. To increase the allowed memory see help.
+read input file done.
+write output file...
+write output file done.
+```
+
+\ \
+
+__NOTES:__
+
+- `PGDSpider` ran out of mem. 
+- I am going to bump up the mem and try again.
+
+
+#### Attempt 3 [?] ####
+
+```bash
+$ java -Xmx16384m -Xms16000m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
+
+-[  output   ]-
+INFO  16:27:47 - load PGDSpider configuration from: /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml
+initialize convert process...
+read input file...
+INFO  16:28:04 - Run samtools/bcftools...
+INFO  16:28:33 - [bam_sort_core] merging from 3 files...
+ERROR 16:30:24 - not enough memory. To increase the allowed memory see help.
+read input file done.
+write output file...
+write output file done.
+```
+
+\ \
+
+__NOTES:__
+
+- `PGDSpider` ran out of mem. 
+- I am going to bump up the mem and try again.

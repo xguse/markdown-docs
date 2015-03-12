@@ -76,7 +76,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 ### Villages for leg extraction ###
 
-- see project notes: [roberts_microsats.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.md)
+- see project notes: [ddrad58.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.md)
 
 
 ------------------------------------------
@@ -86,17 +86,58 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 ## ddrad58 ##
 
-- see respective project's notebook
+- see project notes: [ddrad58.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.md)
 
 ## RobertO's MicroSat  ##
 
-- see respective project's notebook
+- see project notes: [roberts_microsats.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.md)
 
 
 ## Pandas import of collection sheets ##
 
 - added explicit date recoding with minor value enforcement/control
     - [g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb](file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb)
+
+
+
+
+------------------------------------------
+
+# 2015-03-12 (Thursday) #
+
+## ddrad58 ##
+### BEAST ###
+    
+- `[2015-03-12]` conversation with Aris
+- `[wont do]` write up conversation with Aris for GisellaC and get clearance to proceed.
+    - meeting with GisellaC and Aris tomorrow at 11
+- `[!]` Convert BAMs to NEXSUS
+    - waiting to hear back from admins about getting permissions to AndreaG's BAMs
+- `[ ]` BEAST configuration
+- `[ ]` attempt BEAST run
+
+### Linkage disequilibrium thresholds for SNP-pairs ###
+
+- `[2015-03-12]` set up and yield models
+- `[2015-03-12]` take model and return parameters
+- `[2015-03-12]` take parameters and df and set value for each SNP-pair's probability ($1-\mathrm{CDF}$)
+- `[2015-03-12]` take df and set value for each SNP-pair's BH corrected probability
+
+
+
+## RobertO's MicroSat ##
+
+- `[ ]` Get 3 more villages' samples ready for legs and extraction
+
+
+
+## Positive recovery ##
+
+- `[ ]` tell GisellaC and KirstinD how many dissections to expect in next weeks
+- `[2015-03-12]` start project notebook
+    - file at: [positives_recovery.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/positives_recovery/positives_recovery.md)
+
+
 
 
 

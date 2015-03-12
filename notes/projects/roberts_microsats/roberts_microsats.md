@@ -18,6 +18,15 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 
 
+------------------------------------------
+
+\newpage
+
+# Tasks #
+
+- `[ ]` Get 3 more villages' samples ready for legs and extraction
+
+
 
 ------------------------------------------
 
