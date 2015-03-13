@@ -104,7 +104,6 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 ------------------------------------------
 
 # 2015-03-12 (Thursday) #
-
 ## ddrad58 ##
 ### BEAST ###
     
@@ -136,6 +135,35 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 - `[ ]` tell GisellaC and KirstinD how many dissections to expect in next weeks
 - `[2015-03-12]` start project notebook
     - file at: [positives_recovery.md](file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/positives_recovery/positives_recovery.md)
+
+
+
+------------------------------------------
+
+# 2015-03-13 (Friday) #
+
+## ddrad58 ##
+### BEAST ###
+
+- `[ ]` meeting with GisellaC and Aris at 11
+- `[!]` Convert BAMs to NEXSUS
+    - `[2015-03-12]` waiting to hear back from admins about getting permissions to AndreaG's BAMs
+- `[ ]` BEAST configuration
+- `[ ]` attempt BEAST run
+
+### Linkage disequilibrium thresholds for SNP-pairs ###
+
+- `[ ]` see if it make since to deal with the bins that wont __MAP__ correctly
+    - `[ ]` examine the MCMCs of a few and see if they converged and are therefore possibly useful to us
+
+## RobertO's MicroSat ##
+
+- `[ ]` Get 3 more villages' samples ready for legs and extraction
+
+## Positive recovery ##
+
+- `[ ]` tell GisellaC and KirstinD how many dissections to expect in next weeks
+
 
 
 

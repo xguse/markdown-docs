@@ -24,16 +24,30 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 # Tasks #
 
 ## BEAST ##
-    
+### --To DO-- ###
+
+-
+
+
+
+### --Completed-- ###
+
+- `[wont do]` Convert BAMs to NEXSUS
+    - waiting to hear back from admins about getting permissions to AndreaG's BAMs
+- `[wont do]` BEAST configuration
+- `[wont do]` attempt BEAST run
+- `[2015-03-13]` meeting with GisellaC and Aris 2015-03-13 at 11
 - `[2015-03-12]` conversation with Aris
 - `[wont do]` write up conversation with Aris for GisellaC and get clearance to proceed.
-    - meeting with GisellaC and Aris tomorrow at 11
-- `[!]` Convert BAMs to NEXSUS
-    - waiting to hear back from admins about getting permissions to AndreaG's BAMs
-- `[ ]` BEAST configuration
-- `[ ]` attempt BEAST run
+    
+
 
 ## Linkage disequilibrium thresholds for SNP-pairs ##
+### --To Do-- ###
+
+- `[ ]` 
+
+### --Completed-- ###
 
 - `[2015-03-12]` set up and yield models
 - `[2015-03-12]` take model and return parameters
@@ -187,7 +201,7 @@ mkdir -p ${FAST_SCRATCH}/vcftools_out/
 
 module load vcftools/0.1.12a
 vcftools --vcf $VCF  --out $OUT_PREFIX --interchrom-geno-r2 
-
+```
 
 
 ------------------------------------------
@@ -197,8 +211,8 @@ vcftools --vcf $VCF  --out $OUT_PREFIX --interchrom-geno-r2
 <!-- ####################################################################################### -->
 
 # Linkage disequilibrium thresholds for SNP-pairs #
-
-## 2015-03-10 (Tuesday) [Status] ##
+## General ##
+### 2015-03-10 (Tuesday) [Status] ###
 
 - Decided its best to use the Beta distribution on data binned by distance and scaled thusly:
 
@@ -210,6 +224,21 @@ $$((x_i-0.5) \cdot 0.999) + 0.5)$$
 - p-values will be obtained for each $r^2$ as: $1 - \mathrm{CDF}(x_i)$ 
 - see [2015-02-27_overview_of_LD_work_in_Gff.ipynb](http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-02-27_overview_of_LD_work_in_Gff.ipynb) for extra info.
 
+## Thresholds by binning: notebook ##
+
+- notebook file: [2015-03-12_LD_thresholds_via_binning.ipynb](file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-12_LD_thresholds_via_binning.ipynb)
+- script version: [2015-03-12_LD_thresholds_via_binning.py](file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-12_LD_thresholds_via_binning.py)
+
+### 2015-03-13 (Friday) ###
+
+- got the whole data set to run
+    - those bins which fail MAP go on to run MCMC
+    - had to re-write a bit to get the model object to save the MCMC runner so that we can look at the traces to asses convergence
+- running as script in IPython to view.
+- SUCCESS.  Finally.
+- saved resulting table in pickle: [ddrad58/ld_thresholds/post_MAP_calc.plk](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/ld_thresholds/post_MAP_calc.plk)
+- use above to avoid re calculating the MAPs that take HOURS.
+- started new ipython notebook file for results analysis: [2015-03-13_LD_thresholds_via_binning_RESULTS.ipynb](file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-13_LD_thresholds_via_binning_RESULTS.ipynb)
 
 
 ------------------------------------------
@@ -217,6 +246,7 @@ $$((x_i-0.5) \cdot 0.999) + 0.5)$$
 <!-- ################################################################## -->
 \newpage
 <!-- ################################################################## -->
+
 # Dating the North/South population split #
 
 ## Converting the BAMS to NEXSUS for BEAST ##
@@ -279,21 +309,23 @@ __NOTES:__
 - I am going to bump up the mem and try again.
 
 
-#### Attempt 3 [?] ####
+#### Attempt 3 [FAILED: reference file issue] ####
 
 ```bash
 $ java -Xmx16384m -Xms16000m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
 
 -[  output   ]-
-INFO  16:27:47 - load PGDSpider configuration from: /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml
+INFO  17:23:52 - load PGDSpider configuration from: /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml
 initialize convert process...
 read input file...
-INFO  16:28:04 - Run samtools/bcftools...
-INFO  16:28:33 - [bam_sort_core] merging from 3 files...
-ERROR 16:30:24 - not enough memory. To increase the allowed memory see help.
+INFO  17:24:16 - Run samtools/bcftools...
+INFO  17:24:51 - [bam_sort_core] merging from 3 files...
+INFO  17:26:38 - ...done
+ERROR 17:29:37 - reference file does not contain *!
 read input file done.
 write output file...
 write output file done.
+
 ```
 
 \ \
@@ -302,3 +334,9 @@ __NOTES:__
 
 - `PGDSpider` ran out of mem. 
 - I am going to bump up the mem and try again.
+
+
+### 2015-03-13 (Friday) ###
+
+- ABANDONING THIS AND LETTING ARIS TRY TO START FROM SCRATCH via PYRAD.
+- thank GAWD.
