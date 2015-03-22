@@ -20,8 +20,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 ## Sequences Used ##
 
 ___Glossina fuscipes fuscipes:___
-All putative peptides annotated for _G. f. fuscipes_ in the GfusI1.1 gene-build were obtained from [VectorBase](link_address) __{{CITE_ME}}__.
-
+All putative peptides annotated for _G. f. fuscipes_ in the GfusI1.1 gene-build were obtained from [VectorBase](link_address) [@Giraldo-Calderon2014]
 
 ___Other:___
 The sequences used to compare the _G. f. fuscipes_ peptides against well known/annotated sequences were obtained from UNIPROT __{{CITE_ME}}__ (`blastp`) and PFAM __{{CITE_ME}}__ (`hmmscan`) as required by [ARGOT2](link_address) __{{CITE_ME}}__.

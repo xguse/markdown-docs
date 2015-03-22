@@ -30,7 +30,7 @@ SRC = $(wildcard *.$(MEXT))
 PREFIX = $(HOME)/.pandoc
 
 ## Location of your working bibliography file
-BIB = $(SRC:.md=.bib)
+BIB = $(SRC:.md=/bibtex/mendeley_2014-10-21.bib)
 
 ## CSL stylesheet (located in the csl folder of the PREFIX directory).
 # CSL =--csl bmc-biology

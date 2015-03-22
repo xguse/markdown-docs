@@ -165,7 +165,18 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 - `[ ]` tell GisellaC and KirstinD how many dissections to expect in next weeks
 
 
+# 2015-03-17 (Tuesday) #
 
+## Samples for RNA ##
 
+| Village ID | Tissue Types | RNA-solution | Approx No of Tubes |
+| ---------- | ------------ | ------------ | :----------------: |
+| OLO        | H, Mg        | RNA-stable   |      15 - 20       |
+| GOR        | H, Mg        | RNA-stable   |         35         |
+| OD         | H            | RNA-later    |         15         |
+| OD         | Mg           | RNA-later    |         15         |
+| UWA        | H, Mg        | RNA-stable   |         40         |
+| OCA        | Mg           | RNA-later    |         6          |
+| OCA        | H            | RNA-stable   |         6          |
 
 
