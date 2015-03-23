@@ -35,28 +35,37 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 
 
 
-| District | Location | Extractor | File                                                                                                                                  |
-|----------|----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
+| District | Location | Extractor |                                                                                           File                                                                                          |
+| -------- | -------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Arua     | DUK      | Alexis    | [2015_02_24_alexis_legs_ACA_DUK_ORB.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015_02_24_alexis_legs_ACA_DUK_ORB.xlsx) |
-| Arua     | GAN      |           |                                                                                                                                       |
-| Arua     | AIN      |           |                                                                                                                                       |
-| Moyo     | LEA      |           |                                                                                                                                       |
+| Arua     | GAN      | Alexis    | [text_ref2015-03-23_30_MF_random_GAN.xls](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015-03-23_30_MF_random_GAN.xls)         |
+| Arua     | AIN      |           |                                                                                                                                                                                         |
+| Moyo     | LEA      | Alexis    |  [not enough of at least one sex]                                                                                                                                                                                       |
 | Moyo     | ORB      | Alexis    | [2015_02_24_alexis_legs_ACA_DUK_ORB.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015_02_24_alexis_legs_ACA_DUK_ORB.xlsx) |
-| Adjumani | OLO      |           |                                                                                                                                       |
-| Adjumani | OSG      |           |                                                                                                                                       |
-| Amuru    | GOR      |           |                                                                                                                                       |
-| Lamwo    | NGU      |           |                                                                                                                                       |
-| Lamwo    | LAG      |           |                                                                                                                                       |
-| Kitgum   | BOL      |           |                                                                                                                                       |
-| Kitgum   | TUM      |           |                                                                                                                                       |
-| Pader    | Kil      |           |                                                                                                                                       |
-| Pader    | OMI      |           |                                                                                                                                       |
-| Nwoya    | UWA      | Alexis    | [2015_02_24_alexis_legs_UWA.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015_02_24_alexis_legs_UWA.xlsx)         |
-| Nwoya    | TEO      |           |                                                                                                                                       |
+| Adjumani | OLO      |           |                                                                                                                                                                                         |
+| Adjumani | OSG      | Alexis    | [text_ref2015-03-23_30_MF_random_OSG.xls](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015-03-23_30_MF_random_OSG.xls)         |
+| Amuru    | GOR      | Alexis    | [text_ref2015-03-23_30_MF_random_GOR.xls](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015-03-23_30_MF_random_GOR.xls)         |
+| Lamwo    | NGO      | Robert    |                                                                                                                                                                                         |
+| Lamwo    | LAG      |           |                                                                                                                                                                                         |
+| Kitgum   | BOL      |           |                                                                                                                                                                                         |
+| Kitgum   | TUM      | Robert    |                                                                                                                                                                                         |
+| Pader    | KIL      |           |                                                                                                                                                                                         |
+| Pader    | OMI      |           |                                                                                                                                                                                         |
+| Pader    | CHU      | Robert    |                                                                                                                                                                                         |
+| Nwoya    | UWA      | Alexis    | [2015_02_24_alexis_legs_UWA.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015_02_24_alexis_legs_UWA.xlsx)                 |
+| Nwoya    | TEO      |           |                                                                                                                                                                                         |
 | Oyam     | ACA      | Alexis    | [2015_02_24_alexis_legs_ACA_DUK_ORB.xlsx](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015_02_24_alexis_legs_ACA_DUK_ORB.xlsx) |
-| Oyam     | OCA      |           |                                                                                                                                       |
-| Oyam     | OGU      |           |                                                                                                                                       |
-| Oyam     | ABO/OCL  |           |                                                                                                                                       |
-| Kole     | AKA      |           |                                                                                                                                       |
-| Kole     | OLE      |           |                                                                                                                                       |
-| Kole     | APU      |           |                                                                                                                                       |
+| Oyam     | OCA      |           |                                                                                                                                                                                         |
+| Oyam     | OGU      | Alexis    |  [not enough of at least one sex]                                                                                                                                                                                       |
+| Oyam     | ABO/OCL  |           |                                                                                                                                                                                         |
+| Kole     | AKA      |           |                                                                                                                                                                                         |
+| Kole     | OLE      |           |                                                                                                                                                                                         |
+| Kole     | APU      | Alexis    | [text_ref2015-03-23_30_MF_random_APU.xls](file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/samples_used/2015-03-23_30_MF_random_APU.xls)         |
+|          |          |           |                                                                                                                                                                                         |
+
+
+
+
+
+
+
