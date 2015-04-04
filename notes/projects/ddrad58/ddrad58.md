@@ -340,3 +340,36 @@ __NOTES:__
 
 - ABANDONING THIS AND LETTING ARIS TRY TO START FROM SCRATCH via PYRAD.
 - thank GAWD.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Meeting  #
+
+
+- Introduce Joshua and suggest a meeting
+
+
+
