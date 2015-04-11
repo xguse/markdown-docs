@@ -1,7 +1,7 @@
 ---
-title: ddrad58 paper project
+title: ddrad phase 2 project
 subtitle: Caccone PostDoc
-date: March, 2015
+date: April, 2015
 author: Gus Dunn
 documentclass: scrartcl
 classoption: letterpaper
@@ -9,11 +9,10 @@ toc: 1
 graphics: 1
 blockquote: 1
 tags: daily notes
-header-includes: 
- - \usepackage{bbding}
- - \usepackage[T1]{fontenc}
- - \usepackage{lxfonts}
 read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
+header-includes: 
+- \usepackage{fontspec}
+- \setmainfont{Linux Libertine O}
 ...
 
 
@@ -39,7 +38,7 @@ read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+f
 - `[2015-03-13]` meeting with GisellaC and Aris 2015-03-13 at 11
 - `[2015-03-12]` conversation with Aris
 - `[wont do]` write up conversation with Aris for GisellaC and get clearance to proceed.
-    
+
 
 
 ## Linkage disequilibrium thresholds for SNP-pairs ##

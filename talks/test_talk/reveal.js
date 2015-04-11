@@ -1,0 +1,1 @@
+/home/gus/src/repos/git/markdown-docs/talks/reveal.js
