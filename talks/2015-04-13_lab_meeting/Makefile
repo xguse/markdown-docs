@@ -29,8 +29,6 @@ SRC = $(wildcard *.$(MEXT))
 ## Location of Pandoc support files.
 PREFIX = $(HOME)/.pandoc
 
-## Location of your working bibliography file
-BIB = $(SRC:.md=/bibtex/mendeley_2014-10-21.bib)
 
 ## CSL stylesheet (located in the csl folder of the PREFIX directory).
 # CSL =--csl bmc-biology
@@ -42,9 +40,10 @@ TEX=$(SRC:.md=.tex)
 DOCX=$(SRC:.md=.docx)
 
 ## Set up the extensions to load for pandoc common to all invocations
-PAN_OPTS=--number-sections --highlight-style pygments
+PAN_OPTS=--highlight-style pygments
 PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
 PAN_FILTERS=--filter $(PANDOC_INTERNAL_REFS) --filter $(PANDOC_CITEPROC)
+PAN_VARS=--variable theme:moon --variable transition:slide
 
 
 # all:	$(HTML) $(PDFS)  $(TEX) $(DOCX)
@@ -57,7 +56,7 @@ docx:	clean $(DOCX)
 
 
 %.html:	%.md
-	$(PANDOC) $(PAN_OPTS) --self-contained -V theme=moon -r $(PAN_EXTENTIONS) -w html -s  $(PAN_FILTERS) -t revealjs -o $@ $<
+	$(PANDOC) $(PAN_OPTS) --self-contained $(PAN_VARS) -r $(PAN_EXTENTIONS) -w html -s  $(PAN_FILTERS) -t revealjs --slide-level 2 -o $@ $<
 
 	# pandoc 2015-04-13_lab_meeting.md --self-contained -o 2015-04-13_lab_meeting.html  -s -t revealj
 
