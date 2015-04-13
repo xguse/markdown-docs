@@ -43,7 +43,7 @@ DOCX=$(SRC:.md=.docx)
 PAN_OPTS=--highlight-style pygments
 PAN_EXTENTIONS=markdown+simple_tables+table_captions+yaml_metadata_block
 PAN_FILTERS=--filter $(PANDOC_INTERNAL_REFS) --filter $(PANDOC_CITEPROC)
-PAN_VARS=--variable theme:moon --variable transition:slide
+PAN_VARS=--variable theme:league --variable transition:slide
 
 
 # all:	$(HTML) $(PDFS)  $(TEX) $(DOCX)

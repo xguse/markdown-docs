@@ -1,6 +1,6 @@
-% Tsetse pilot ddRAD
+% Tsetse ddRAD
 % Gus
-% 2015-04-12
+% 2015-04-13
 
 
 
@@ -24,11 +24,10 @@ the co-occurrence of allele-pairs within chromosomes in a population at frequenc
 ------------------------------------------
 
 > - can't assume random assortment
-> - SNP-pairs separated by differing distances will have different thresholds to define "unexpected" values of LD
+> - SNP-pairs separated by differing distances will have different thresholds to define "interesting" values of LD
 > - The recombination rate of _G. f. fuscipes_ is not well established
-
+ 
 <div class="notes">
-
 1. distance between loci is __inversely proportional__ to the rate of recombination between syntenic loci.
 2. because of __differing recombination rates.__
 </div>
