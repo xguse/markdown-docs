@@ -2,14 +2,6 @@
 % Gus
 % 2015-04-12
 
----
-documentclass: scrartcl
-classoption: letterpaper
-graphics: 1
-blockquote: 1
-tags: daily notes
-read: "+simple_tables+table_captions+footnotes+inline_notes+fenced_code_blocks+fenced_code_attributes+fancy_lists+definition_lists+superscript+subscript+tex_math_dollars"
-...
 
 
 
