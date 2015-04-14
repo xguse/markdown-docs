@@ -382,7 +382,7 @@ Contig length (ALL SNP-pairs):
 
 ------------------------------------------
 
-Contig length (0.01 SNP-pairs):
+Contig length ( 0.01 SNP-pairs):
 
 <img src="figures/contigs_filter.png" style="width:600px">
 
