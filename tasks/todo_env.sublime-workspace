@@ -4,6 +4,182 @@
 		"selected_items":
 		[
 			[
+				"corret",
+				"correction"
+			],
+			[
+				"alia",
+				"alias"
+			],
+			[
+				"pk",
+				"pkgver"
+			],
+			[
+				"param",
+				"parameters"
+			],
+			[
+				"extra",
+				"extraction"
+			],
+			[
+				"Mi",
+				"MicroSat"
+			],
+			[
+				"Rob",
+				"RobertO's"
+			],
+			[
+				"IN",
+				"INSTALL_CMD"
+			],
+			[
+				"IS",
+				"INSTALL_CMD"
+			],
+			[
+				"INS",
+				"INSTALL_TO"
+			],
+			[
+				"vc",
+				"vcftools_0.1.12a"
+			],
+			[
+				"lo",
+				"load"
+			],
+			[
+				"P",
+				"PACKAGE"
+			],
+			[
+				"MO",
+				"MODULE_PREFIX"
+			],
+			[
+				"ver",
+				"VERSION"
+			],
+			[
+				"XXXXx",
+				"XXXXXXXXX"
+			],
+			[
+				"vcf",
+				"vcftools_out"
+			],
+			[
+				"SNP",
+				"SNP_DIR"
+			],
+			[
+				"vill",
+				"village"
+			],
+			[
+				"cou",
+				"country"
+			],
+			[
+				"Ro",
+				"RobertO's"
+			],
+			[
+				"ddrad",
+				"ddrad58"
+			],
+			[
+				"para",
+				"parasites"
+			],
+			[
+				"gf",
+				"gf	_G. f. fuscipes_"
+			],
+			[
+				"im",
+				"import_module〔module〕"
+			],
+			[
+				"pa",
+				"path〔module〕"
+			],
+			[
+				"__",
+				"__import__"
+			],
+			[
+				"ar",
+				"args〔variable〕"
+			],
+			[
+				"pl",
+				"pl	pandoc_link"
+			],
+			[
+				"expo",
+				"exponetial"
+			],
+			[
+				"Exp",
+				"Exponential"
+			],
+			[
+				"sup",
+				"supercontig"
+			],
+			[
+				"allele",
+				"alleles"
+			],
+			[
+				"all",
+				"alleles"
+			],
+			[
+				"Tr",
+				"TriboolRef"
+			],
+			[
+				"git",
+				"github"
+			],
+			[
+				"spart",
+				"spartan"
+			],
+			[
+				"impl",
+				"implemented"
+			],
+			[
+				"reco",
+				"recode_positives"
+			],
+			[
+				"uni",
+				"unicode〔class〕"
+			],
+			[
+				"com",
+				"combinations"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"t2",
+				"t2v_map"
+			],
+			[
+				"tra",
+				"trap_numbers"
+			],
+			[
 				"BAM",
 				"BAM_LIB_PATH"
 			],
@@ -60,52 +236,177 @@
 	"buffers":
 	[
 		{
-			"file": "while_at_work.TODO",
-			"settings":
-			{
-				"buffer_size": 2700,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "now.TODO",
 			"settings":
 			{
-				"buffer_size": 1955,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/gus/.config/sublime-text-3/Packages/User/PlainTasks.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 1636,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/gus/Documents/ToDos/fam_2015-02.TODO",
-			"settings":
-			{
-				"buffer_size": 292,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/gus/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
-			"settings":
-			{
-				"buffer_size": 5126,
+				"buffer_size": 570,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
+		"last_filter": "mark",
 		"selected_items":
 		[
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"note",
+				"Notes: Inbox"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"omni",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"conf",
+				"Set Syntax: Git Config"
+			],
+			[
+				"lu",
+				"Set Syntax: Lua"
+			],
+			[
+				"ma",
+				"Set Syntax: Makefile"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"table",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"toggle t",
+				"View: Toggle Tabs"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"instal t",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"tcl",
+				"Set Syntax: Tcl"
+			],
+			[
+				"",
+				"Add some Lorem Gibson"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"term",
+				"GitGutter: Compare Against Origin"
+			],
+			[
+				"om",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"stra",
+				"Strapdown.js Markdown: Preview in a browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ipyth",
+				"Open IPython Notebook"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"open",
+				"Open IPython Notebook"
+			],
+			[
+				"git",
+				"Set Syntax: Git Config"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -123,32 +424,8 @@
 				"Set Syntax: Markdown"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"task",
-				"Tasks: New document"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"remove",
 				"Package Control: Remove Package"
-			],
-			[
-				"install ",
-				"Package Control: Install Package"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
-				"Package Control: ",
-				"Package Control: List Packages"
 			],
 			[
 				"char",
@@ -179,19 +456,7 @@
 				"Snippet: pandoc_implied_figure"
 			],
 			[
-				"colo",
-				"Colorsublime: Install Theme"
-			],
-			[
 				"col",
-				"Colorsublime: Install Theme"
-			],
-			[
-				"color",
-				"Colorsublime: Install Theme"
-			],
-			[
-				"instal",
 				"Colorsublime: Install Theme"
 			],
 			[
@@ -207,7 +472,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -226,145 +491,140 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/gus/Documents/ToDos",
-		"/home/gus/Dropbox/repos/git/markdown-docs/tasks"
-	],
 	"file_history":
 	[
-		"/home/gus/Dropbox/repos/git/markdown-docs/tasks/now.TODO",
-		"/home/gus/.config/sublime-text-3/Packages/PlainTasks/PlainTasks (Linux).sublime-settings",
-		"/home/gus/.config/sublime-text-3/Packages/User/PlainTasks.sublime-settings",
-		"/home/gus/Dropbox/repos/git/markdown-docs/tasks/todo_env.sublime-project",
-		"/home/gus/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
-		"/home/gus/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/gus/Dropbox/Notes/.brain/Inbox.note",
+		"/tmp/eb-7Fsezq/easybuild-GCC-4.7.2-20150416.143502.mNlmb_test_report.md",
+		"/home/gus/.local/lib/python2.7/site-packages/easybuild/tools/run.py",
+		"/tmp/eb-7Fsezq/easybuild-GCC-4.7.2-20150416.143502.mNlmb.log",
+		"/tmp/eb-7Fsezq/easybuild-oeMnPd.log",
+		"/home/gus/.local/easybuild/easyconfigs/e/EasyBuild/EasyBuild-2.0.0.eb",
+		"/home/gus/.local/easybuild/easyconfigs/g/GCC/GCC-4.7.2.eb",
+		"/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.OT_indvs.vcf.log",
+		"/g/GCC/GCC-4.7.2.eb",
+		"/home/gus/.local/easybuild/easyconfigs/g/GCC/GCC-4.7.2.eb ",
+		"/run/media/gus/Storage/louise/data/genomes/glossina_fuscipes/annotations/SNPs/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.recode.vcf",
+		"/home/gus/src/aur/lua-posix-git/mbuild/luaposix-release-v33.3.1/bootstrap.conf",
+		"/home/gus/src/aur/lua-posix-git/PKGBUILD",
+		"/home/gus/scripts/bootstrap_eb.py",
+		"/home/gus/.local/easybuild/easyconfigs/g/goolf/goolf-1.4.10-no-OFED.eb",
+		"/home/gus/.local/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb",
+		"/home/gus/.config/easybuild/config.cf",
+		"/home/gus/src/repos/git/markdown-docs/notes/daily_records/2015/04/notes.md",
+		"/home/gus/src/repos/git/markdown-docs/notes/projects/ddrad58/Makefile",
+		"/home/gus/src/repos/git/markdown-docs/manuscripts/Gloria-Soria/2015/ddRAD58/methods/methods.md",
+		"/run/media/gus/Storage/louise/data/genomes/glossina_fuscipes/annotations/SNPs/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.fam",
+		"/run/media/gus/Storage/louise/data/genomes/glossina_fuscipes/annotations/SNPs/plink.log",
+		"/home/gus/.pandoc/pandoc-templates/default.revealjs",
+		"/home/gus/src/repos/git/markdown-docs/talks/2015-04-13_lab_meeting/Makefile",
+		"/home/gus/src/repos/git/markdown-docs/manuscripts/Gloria-Soria/2015/ddRAD58/Results/results.md",
 		"/home/gus/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/gus/Dropbox/repos/git/markdown-docs/tasks/while_at_work_active.TODO",
-		"/home/gus/.config/sublime-text-3/Packages/User/Filter Lines.sublime-settings",
-		"/home/gus/.config/sublime-text-3/Packages/Filter Lines/Filter Lines.sublime-settings",
-		"/home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-02-05_MAD_idea.ipynb",
-		"/home/gus/Documents/ToDos/2015-02.TODO",
-		"/home/gus/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/current_months_records/Makefile",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/2015/02/notes.md",
-		"/home/gus/Dropbox/common/Mariangela/install_blacktie_dev/brew_tuxedo.sh",
-		"/home/gus/Documents/YalePostDoc/fam/catherine/health/letter_re_coverage_error/Makefile",
+		"/home/gus/src/repos/git/markdown-docs/talks/2015-04-13_lab_meeting/2015-04-13_lab_meeting.md",
+		"/home/gus/src/repos/git/markdown-docs/manuscripts/Gloria-Soria/2015/ddRAD58/scratch/Linkage_discussion.md",
+		"/home/gus/src/repos/git/markdown-docs/markdown-docs.sublime-project",
+		"/home/gus/src/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.md",
+		"/home/gus/src/repos/git/markdown-docs/notes/daily_records/current_months_records/notes.md",
+		"/home/gus/.config/sublime-text-3/Packages/User/projects/work_project_notes.sublime-project",
+		"/home/gus/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/gus/.zshrc.sh",
+		"/home/gus/.config/sublime-text-3/Packages/User/table_editor.sublime-keymap",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.html",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.md",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/projects/positives_recovery/Makefile",
 		"/home/gus/.pandoc/templates/default.latex",
-		"/home/gus/.pandoc/templates/template-letter.tex",
-		"/home/gus/Documents/YalePostDoc/fam/catherine/health/letter_re_coverage_error/WADunn_RE_Coverage_of_dependent.md",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/professional_dev/professional_dev.md",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/zimmer_workshop/zimmer_workshop.md",
-		"/home/gus/Dropbox/repos/git/markdown-docs/.git/COMMIT_EDITMSG",
-		"/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf/ld/r_tri.log",
-		"/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin.log",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/2015/01/notes.md",
-		"/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin.nosex",
-		"/home/gus/Dropbox/repos/git/spartan/testing/gps/gps_no_traces.tsv",
-		"/home/gus/Dropbox/uganda_data/data_repos/field_data/locations/gps/traps/uganda_traps_gps.csv",
-		"/home/gus/.local/bin/git_diff_meld_ops.py",
+		"/home/gus/Dropbox/uganda_data/data_repos/genome_info/assembly_info/contig_name_length.csv",
+		"/home/gus/Dropbox/repos/git/spartan/src/spartan/utils/genome_specific/GfusI1/GfusI1_0.py",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/projects/positives_recovery/positives_recovery.md",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.md",
 		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/current_months_records/notes.md",
-		"/home/gus/Dropbox/repos/git/gloria_soria_ddRAD_2015/.git/COMMIT_EDITMSG",
-		"/home/gus/Dropbox/common/ipy_notebooks/YALE/maps_stuff/2015-02-03_deduce_village_GPS_coords_from_mean_trap_coords.ipynb",
-		"/home/gus/Dropbox/repos/git/spartan/testing/gps/gps_with_traces.tsv",
-		"/home/gus/Dropbox/uganda data/2014_Collections_info_Fall/2014_Fall_village_GPS_all_traps.tsv",
-		"/home/gus/Dropbox/uganda data/GIS/2014_ALL_TRAP_GPS.tsv",
-		"/home/gus/Dropbox/uganda data/data_repos/field_data/locations/gps/traps/uganda_traps_gps.csv",
-		"/home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv",
-		"/home/gus/Dropbox/uganda data/data_repos/field_data/locations/names/village_id_map.csv",
-		"/home/gus/Dropbox/repos/git/markdown-docs/reports/tsetse_RO1_progress_wad/tsetse_RO1_progress_wad.md",
-		"/home/gus/Dropbox/repos/git/markdown-docs/reports/tsetse_RO1_progress_wad/Makefile",
-		"/home/gus/Dropbox/repos/git/markdown-docs/reports/tsetse_RO1_progress_wad/tables/district_summary_table.md",
-		"/home/gus/Dropbox/uganda data/collection_meta_data/traps_2014_gps.tsv.csv",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_kirsten_2015-01-14/gisella_kirsten_2015-01-14.md",
-		"/tmp/entropy_source.txt",
-		"/home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2014-12-26_functional_annotation_table_generator.ipynb",
-		"/home/gus/.tmux.conf",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/tmux-1.9a-goolf-1.4.10.eb",
-		"/home/gus/.config/sublime-text-3/Packages/User/Pandown.sublime-settings",
-		"/home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_andrea_2015-01-20/gisella_andrea_2015-01-20.md",
-		"/home/gus/Documents/YalePostDoc/fam/catherine/health/letter_re_coverage_error/letter_re_coverage_error.md",
-		"/home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-01-28_Plot_PLINK_results_cumulative.ipynb",
-		"/home/gus/remote_mounts/louise/src/hapflk-1.2.1/extra_scripts/hapflk-clusterplot-cairo.R",
-		"/home/gus/remote_mounts/louise/src/hapflk-1.2.1/extra_scripts/hapflk-clusterplot.R",
-		"/home/gus/remote_mounts/louise/src/hapflk-1.2.1/extra_scripts/local_trees.R",
-		"/home/gus/remote_mounts/louise/src/hapflk-1.2.1/extra_scripts/local_reynolds.py",
-		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/hapflk/1.2.1",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150125.134345.LoHnJ_test_report.md",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150125.134345.LoHnJ.log",
-		"/home/gus/.config/sublime-text-3/Packages/Pandown/Pandown.sublime-settings",
-		"/home/gus/remote_mounts/louise/src/repos/git/easybuild-easyconfigs/easybuild/easyconfigs/s/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED_no-bam.eb",
-		"/home/gus/remote_mounts/louise/.local/easybuild/build/Stacks/1.24/goolf-1.4.10-no-OFED/stacks-1.24/Makefile",
-		"/home/gus/remote_mounts/louise/.local/easybuild/build/Stacks/1.24/goolf-1.4.10-no-OFED/stacks-1.24/README",
-		"/home/gus/remote_mounts/louise/src/stacks-1.24/Makefile",
-		"/home/gus/remote_mounts/louise/.local/easybuild/build/Stacks/1.24/goolf-1.4.10-no-OFED/stacks-1.24/INSTALL",
+		"/home/gus/.config/sublime-text-3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414",
+		"/home/gus/.config/sublime-text-3/Packages/Table Editor/README.md",
+		"/home/gus/Documents/YalePostDoc/project_stuff/G_pallidipes_kenya/Nguruman_pilot_collection_trap_GPS.tsv",
+		"/home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/constants.py",
+		"/home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-13_LD_thresholds_via_binning_RESULTS.ipynb",
+		"/home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-12_LD_thresholds_via_binning.py",
+		"/home/gus/TSETSE_ARIS/Sample_GfddRAD1_005/SampleSheet.csv",
+		"/home/gus/tmp/run_blastn_test.sh",
+		"/home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-12_LD_thresholds_via_binning.ipynb",
+		"/home/gus/remote_mounts/louise/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.bam_list.txt",
+		"/home/gus/.config/sublime-text-3/Packages/SmartMarkdown/Default.sublime-keymap",
+		"/home/gus/Dropbox/uganda_data/data_repos/field_data/locations/names/uganda_village_id_map.csv",
+		"/home/gus/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/gus/.config/sublime-text-3/Packages/SmartMarkdown/SmartMarkdown.sublime-settings",
+		"/home/gus/Dropbox/repos/git/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb",
+		"/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/assemblies/GfusI1/Glossina-fuscipes-IAEA_SCAFFOLDS_GfusI1.fa",
+		"/home/gus/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.pdf",
+		"/home/gus/remote_mounts/louise/src/ABS/subversion-1.8.11-2-x86_64.pkg/.INSTALL",
+		"/home/gus/remote_mounts/louise/src/ABS/subversion-1.8.11-2-x86_64.pkg/.PKGINFO",
+		"/home/gus/remote_mounts/louise/src/repos/git/easybuild-easyconfigs/easybuild/easyconfigs/j/Java/Java-1.8.0_40.eb",
+		"/home/gus/remote_mounts/louise/src/repos/git/easybuild-easyconfigs/easybuild/easyconfigs/j/Java/Java-1.8.0_20.eb",
+		"/home/gus/remote_mounts/louise/scripts/installs/install_vcftools_0.1.11.sh",
+		"/home/gus/remote_mounts/louise/scripts/installs/install_PKG_VERSION.sh",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2.sh",
+		"/home/gus/remote_mounts/louise/src/BEASTv1.8.2/README.txt",
+		"/home/gus/remote_mounts/louise/src/subversion-1.8.11/INSTALL",
+		"/home/gus/remote_mounts/louise/scripts/installs/install_subversion_1.8.11.sh",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.sh",
+		"/home/gus/remote_mounts/louise/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST.spid",
+		"/home/gus/remote_mounts/louise/scripts/installs/install_PGDSpider_2.0.8.0.sh",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/stylesheet_PGD.xsl",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/PGD_schema.xsd",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/bin/PGDSpider2-cli.sh",
+		"/home/gus/remote_mounts/louise/.local/easybuild/software/PGDSpider/2.0.8.0/examples/Structure_Arlequin.spid",
+		"/home/gus/remote_mounts/louise/src/repos/git/easybuild-easyconfigs/easybuild/easyconfigs/j/Java/Java-1.7.0_10.eb",
+		"/home/gus/remote_mounts/louise/src/subversion-1.8.11/README",
+		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/vcftools/0.1.11.bk",
+		"/home/gus/remote_mounts/louise/src/vcftools_0.1.12a/Makefile",
+		"/home/gus/remote_mounts/louise/src/vcftools_0.1.12a/README.txt",
+		"/home/gus/remote_mounts/louise/scripts/installs/install_vcftools_0.1.12b.sh",
+		"/home/gus/remote_mounts/louise/scripts/installs/install_vcftools_0.1.12a.sh",
+		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/vcftools/0.1.11",
 		"/home/gus/remote_mounts/louise/.zshrc.sh",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/Makefile",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/easybuild_framework-1.16.1-py2.7.egg/easybuild/easybuild_config.py",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150125.131439.WLllG.log",
-		"/home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb",
-		"/home/gus/remote_mounts/louise/.zshrc",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.202959.ucRTK.log",
-		"/home/gus/.local/share/smuxi/logs/irc/freenode/xguse_.log",
-		"/home/gus/remote_mounts/louise/src/repos/git/easybuild-easyconfigs/README.rst",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.152959.LKdJr.log",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_hmmer_3.1b1.sh",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/easybuild_framework-1.16.1-py2.7.egg/easybuild/tools/robot.py",
-		"/home/gus/.config/sublime-text-3/Packages/User/markdown_completions.sublime-completions",
-		"/home/gus/.config/sublime-text-3/Packages/User/markdown_completions_biology.sublime-completions",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.111124.NvuNU.log",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/easybuild_framework-1.16.1-py2.7.egg/easybuild/tools/robot.py:232",
-		"/home/gus/remote_mounts/louise/.easybuild/config.cfg",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_easybuild_1.16.1.sh",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/SAMtools/SAMtools-0.1.19-goolf-1.4.10.eb",
-		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/htslib/1.1",
-		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/stacks/1.24",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_stacks_1.24.sh",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_sparsehash_2.0.2.sh",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_htslib_1.1.sh",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/easybuild_easyconfigs-1.16.1.0-py2.7.egg/easybuild/easyconfigs/TEMPLATE.eb",
-		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log",
-		"/home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb",
-		"/home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/goolf/goolf-1.4.10-no-OFED.eb",
-		"/home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED-DO_NOT_USE_ME.eb",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/easybuild_easyconfigs-1.16.1.0-py2.7.egg/easybuild/easyconfigs/s/Stacks/Stacks-1.03-goolf-1.4.10.eb",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/Stacks/1.03-goolf-1.4.10-no-OFED/easybuild/Stacks-1.03-goolf-1.4.10-no-OFED-easybuild-devel",
-		"/home/gus/remote_mounts/louise/.local/easybuild/modules/all/Stacks/1.03-goolf-1.4.10-no-OFED",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/SAMtools/1.1-goolf-1.4.10-no-OFED/easybuild/easybuild-SAMtools-1.1-20150121.233041_test_report.md",
-		"/home/gus/remote_mounts/louise/.local/easybuild/software/SAMtools/1.1-goolf-1.4.10-no-OFED/easybuild/easybuild-SAMtools-1.1-20150121.233041.log",
-		"/home/gus/remote_mounts/louise/src/easybuild/1.16.1/bootstrap_eb.py",
-		"/home/gus/remote_mounts/louise/src/samtools-bcftools-htslib-1.0_x64-linux/00README.txt",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_htslibll_VERSION.sh",
-		"/home/gus/remote_mounts/louise/src/repos/git/samtools/README",
-		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/bpp/2.2.0",
-		"/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/egglib_helpers/2015.01.12",
-		"/home/gus/Dropbox/repos/git/markdown-docs/manuscripts/Gloria-Soria/2015/ddRAD58/methods/methods.md",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/Kirsten-2015-01-08/Kirsten-2015-01-08.md",
-		"/home/gus/.config/sublime-text-3/Packages/User/pandoc_species_G_f_fuscipes.sublime-snippet",
-		"/home/gus/.config/sublime-text-3/Packages/User/pandoc_species_Glossina_fuscipes_fuscipes.sublime-snippet",
-		"/home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/Makefile",
-		"/home/gus/.config/sublime-text-3/Packages/User/markdown_heading.sublime-snippet",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/padded_room/general_storming/general_storming.md",
-		"/home/gus/Dropbox/uganda data/2014_Collection_Sheets_Spring-Summer/2014_full_surveyreport_20140820/trap_gps_coords.tsv",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/pop_gen_bioinfo/pop_gen_bioinfo.md",
-		"/home/gus/.config/sublime-text-3/Packages/User/pandoc_rough_check_box.sublime-snippet",
-		"/home/gus/Dropbox/common/ipy_notebooks/YALE/maps_stuff/2015-01-16_convert_fall2014_trap_gps_village_names.ipynb",
-		"/home/gus/Downloads/Jackson1933.bib",
-		"/home/gus/.config/sublime-text-3/Packages/User/MultiMarkdown.sublime-settings",
-		"/home/gus/.config/sublime-text-3/Cache/Restructured Text (RST) Snippets/Comments.tmPreferences.cache",
-		"/home/gus/Documents/GRACE_BATCH_MRB.sh",
-		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/2014/12/notes.md",
-		"/home/gus/remote_mounts/louise/src/phylip-3.696/src/Makefile.unx",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_phylip_3.696.sh",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_bpp_2.2.0.sh",
-		"/home/gus/remote_mounts/louise/scripts/installs/install_egglib_2.1.9.sh"
+		"/usr/lib/python3.4/importlib/__init__.py",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/moving-to-nikola.md",
+		"/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2015-02-16_g_f_fuscipes_pandas_import.py",
+		"/home/gus/Dropbox/uganda_data/data_repos/field_data/locations/gps/traps/uganda_traps_gps.csv",
+		"/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/traps_to_villages.py",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/2015/02/notes.md",
+		"/home/gus/remote_mounts/louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb",
+		"/home/gus/remote_mounts/louise/src/repos/git/easybuild-easyconfigs/easybuild/easyconfigs/v/VCFtools/VCFtools-0.1.12-goolf-1.4.10-no-OFED-Perl-5.16.3.eb",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/2015/02/notes.html",
+		"/home/gus/.local/bin/my_work_apps.sh",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/new_post-pandoc.md",
+		"/home/gus/Dropbox/repos/git/markdown-docs/notes/daily_records/current_months_records/Makefile",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2011/12/08/sinixsters-cloaked-spaceship-hypothesis.wp",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/testing-pandoc.rst",
+		"/home/gus/.virtualenvs/nikola/lib/python2.7/site-packages/nikola/plugins/compile/pandoc.py",
+		"/home/gus/Dropbox/repos/git/mtl_new/conf.py",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2007/07/19/the-central-dogma-of-molecular-biology.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2007/06/12/pluripotent-stem-cells-on-demand.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2009/10/02/huffington-post-claims-to-have-cure-to-cancer.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2009/10/14/baldwins-these-are-not-negotiable.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2011/12/08/evolution-and-gravity-theory-fact-law-or-why-ron-paul-and-other-politicians-must-stop-crying-theory.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2011/12/08/sinixsters-cloaked-spaceship-hypothesis.meta",
+		"/home/gus/Dropbox/repos/git/movingthelamppost/new_site/conf.py",
+		"/home/gus/Dropbox/repos/git/movingthelamppost/posts/moving-to-nikola.rst",
+		"/home/gus/Dropbox/repos/git/movingthelamppost/plugins/__init__.py",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2012/02/19/google-is-still-better-than-most-of-corporate-america.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/05/06/simple-python-fastq-parser.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/06/01/sgt-john-mccary-tribute-to-the-fallen.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/05/02/researching-a-scientific-topic.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2013/04/10/now-blogging-at-movingthelamppost-com.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2012/04/01/344.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2012/02/19/google-is-still-better-than-most-of-corporate-america.",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/05/10/setting-your-pythonpath-environment-variable-linuxunixosx.wp",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/05/10/setting-your-pythonpath-environment-variable-linuxunixosx.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/12/02/simple-sliding-window-iterator-in-python.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/05/11/a-biologists-mothers-day-musical-tribute.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/2010/09/03/sciplore-mind-mapping-for-academic-writing.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/posts/12.meta",
+		"/home/gus/Dropbox/repos/git/mtl_new/wordpress_export/content/conf.py"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -378,6 +638,67 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/home/gus/.local/easybuild",
+			"local",
+			"Something went wrong during the installation",
+			"stage0",
+			"module",
+			"path",
+			"distance_VS_r2_all",
+			"\\s+",
+			"e(\\d)",
+			"[s](\\d)",
+			"[es](\\d)",
+			" +",
+			"=",
+			"out_pickle",
+			"jpg",
+			"l.jpg",
+			"dag",
+			"###\n",
+			"scratch",
+			"tab",
+			"^(\\d+)/(\\d+)/(\\d+)$",
+			"## ",
+			"(^## )",
+			"pando",
+			"theme",
+			"compilers",
+			"pandoc",
+			"compilers",
+			"POSTs",
+			"PROJec",
+			"source",
+			"http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-02-27_overview_of_LD_work_in_Gff.ipynb",
+			"-",
+			"exponetial",
+			"easyconfig",
+			"sudo",
+			"vim",
+			"random",
+			"except (\\w+),",
+			"am_i_true_or_false",
+			"int(x) == 0",
+			"int(x) == 1",
+			"int(x) == 0",
+			"Tribool\\((\\w+)\\)",
+			"dead",
+			"^([ \\w-]+) +(\\d+)$",
+			" +",
+			"^([ \\w-]+) +(\\d+)$",
+			" +",
+			"Trap",
+			"^([ \\w-]+) +(\\d+)$",
+			"Trap",
+			"^([ \\w-]+) +(\\d+)$",
+			"^(\\w+) +(\\d+)$",
+			"-",
+			"th",
+			"-\\d+$",
+			"/14",
+			"20/07/\\d+",
+			"^(\\d+)/(\\d+)/(\\d+)$",
+			"/14",
 			"  ",
 			"Header",
 			"--para",
@@ -444,39 +765,51 @@
 			"figLAB",
 			"_Inputs:_",
 			" - .+",
-			" - Canon UFR2 driver with support for LBP, iR and MF series printers.",
-			" - .+",
-			"rank",
-			"=.+\\n",
-			"ubun",
-			"MD5",
-			"authentication",
-			"--filter $(PANDOC_INTERNAL_REFS)",
-			"_has",
-			"PATH",
-			"python",
-			"volume",
-			"align_tx",
-			"HOME",
-			"white",
-			"	",
-			"scope",
-			"side bar",
-			"side",
-			"chara",
-			"length",
-			"0 =",
-			".tsv",
-			"(.)\\n",
-			"$.",
-			"^(.)"
+			" - Canon UFR2 driver with support for LBP, iR and MF series printers."
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"",
+			"\\n",
+			"\\1",
+			"-\\1",
+			"\\1",
+			"\\t",
+			"-",
+			"scratch2",
+			"2014/\\2/\\1",
+			"\\\\newpage\\n\\n\\1",
+			"\\\\newpage\\n\\1",
+			"",
+			" ",
+			"exponential",
+			"except \\1 as",
+			"recode_func",
+			"x.startswith('0')",
+			"x.startswith('1')",
+			"\\1",
+			"teneral",
+			"\\2,\\1",
+			" ",
+			"",
+			"\\2,\\1",
+			" ",
+			"",
+			"\\2,\\1",
+			"",
+			"\\2,\\1",
+			"/",
+			"",
+			"-14",
+			"14",
+			"/2014",
+			"20/07/2014",
+			"\\3/\\2/1",
+			"/2014",
 			"    ",
 			"\\t",
 			"",
@@ -532,61 +865,30 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "while_at_work.TODO",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2700,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								274,
-								274
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "now.TODO",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1955,
+						"buffer_size": 570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								25
+								445,
+								445
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"color_scheme": "Packages/User/plain_tasks_stuff/tasks-solarized-light_gus.hidden-tmTheme",
+							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -594,101 +896,13 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/gus/.config/sublime-text-3/Packages/User/PlainTasks.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1636,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1348,
-								1348
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/gus/Documents/ToDos/fam_2015-02.TODO",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 292,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								292,
-								292
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/gus/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5126,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								925,
-								925
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -719,21 +933,27 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 360.0
+		"height": 403.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"project": "todo_env.sublime-project",
+	"output.jotter":
+	{
+		"height": 148.0
+	},
+	"pinned_build_system": "Make",
+	"project": "todo_env.sublime-workspace",
 	"replace":
 	{
-		"height": 58.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -742,6 +962,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -750,6 +971,7 @@
 	"select_symbol":
 	{
 		"height": 52.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -767,7 +989,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 170.0,
+	"side_bar_width": 128.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

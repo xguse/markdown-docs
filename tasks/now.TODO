@@ -1,27 +1,22 @@
- ☐ test @high @now @next 
+General:
+
+    Admin:
+     ☐ do damn biosafety training: @critical
+         Laboratory Chemical & Biological Safety
+
+    Alexis:
+     ☐ Find (PHYSICALLY) low tube number OGUs
+     ☐ Find (PHYSICALLY) LEA 'whole' box(s)
+     ☐ Generate one village and confirm tubes @critical
+     ☐ Generate two more villages and confirm for next week 
+
+---- ✄ -----------------------
+
+Projects:
+
+    ddRAD58 (LD):
+     ☐ run vcftools filter on populations @today
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ update location conversion file with Kitgum-lamwo-pader codes @high @started(15-02-16 11:38) @done (15-02-16 11:47) @lasted(0:09) @project(General Data)
-  seems to be done already
- ✔ implement non-overlapping bins of ~10bp @today @started(15-02-12 11:19) @toggle(15-02-12 17:13) @toggle(15-02-13 14:06) @toggle(15-02-13 14:22) @toggle(15-02-13 14:45) @done (15-02-13 17:08) @lasted(8:33) @project(MAD idea / Dev)
-  completed functions to
-  ~ update df with `distance_bin` and `mad_z`
-  ~ plot mad_z by bins
- ✔ record notes @sitrep @started(15-02-13 14:25) @done (15-02-13 14:37) @lasted(0:12) @project(G. pallidipes / Gus)
-  ~ primers
-  ~ leg extractions
-  ~ summary tables
- ✘ spreadsheet: lab source as column not separate tables @today @cancelled (15-02-13 14:06) @project(G. pallidipes / Rob)
- ✔ use pandas to get Gisella something more like what she said she wanted @started(15-02-12 16:02) @toggle(15-02-12 16:44) @toggle(15-02-13 08:23) @today @done (15-02-13 14:05) @lasted(6:24) @project(G. pallidipes / Gus)
- ✔ test item @done (15-02-13 08:22) @project(G. pallidipes)
-  @started(15-02-13 08:22)
-  @toggle(15-02-13 08:22)
-  @toggle(15-02-13 08:22)
- ✔ start ipython page @started(15-02-12 16:02)  @done (15-02-12 16:44) @lasted(0:42) @project(G. pallidipes / Gus)
- ✔ transcribe meeting notes @today @high @started(15-02-12 15:02) @done (15-02-12 16:00) @lasted(0:58) @project(G. pallidipes / Gus)
- ✔ meet with Gisella @due(15-02-12 14:00) @today @done (15-02-12 14:47) @project(Rob work / Both)
- ✔ Find something for rob to do today @today  @done (15-02-12 14:46) @project(Rob work / Gus)
- ✔ write snp ID collector based on z-score value @today @started(15-02-12 11:19) @done (15-02-12 11:54) @lasted(0:35) @project(MAD idea / Dev)
-  this is actually already present due to the use of pandas dataframes
- ✔ debrief on progress so far @today @done (15-02-12 11:04) @project(Rob work / Both)
+ ✔ email meetign summary @critical  @done (15-04-17 11:49) @project(General / From Yesterday)

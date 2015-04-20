@@ -246,6 +246,41 @@ $$((x_i-0.5) \cdot 0.999) + 0.5)$$
 \newpage
 <!-- ################################################################## -->
 
+
+
+## Investigate LD bin-data pattern ##
+
+![Distance vs $r^2$ overall ](/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/manuscript/figures/ld/distance_VS_r2_all.pdf)
+
+### Bin-data membership quantity ###
+
+__Is the reason for the bizarre data shape due to loss of signal to noise as shorter contigs are eliminated from data pool?__
+
+![Distance vs avg $r^2$, contigs and $q$ for bins 150-10000 ](/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/manuscript/figures/ld/distance_VS_avgR2_spperbin_contigsperbin_q_b150-to-b10000.pdf)
+
+![Distance vs avg $r^2$, contigs and $q$ for bins 150-20000 ](/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/manuscript/figures/ld/distance_VS_avgR2_spperbin_contigsperbin_q_b150-to-b20000.pdf)
+
+### Bin-data pattern of individual populations  ###
+
+__Is the reason for the bizarre data shape due to strange behavior in a specific population?__
+
+#### 2015-04-15 (Wednesday) ####
+
+- installing vcftools_0.1.12b on `jupiter` bc `louise` is down for work.
+
+#### 2015-04-16 (Thursday) ####
+
+__[VCF filtering]:__
+
+```shell
+
+IN_SNPS=/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf
+
+vcftools --vcf  --keep $PROJECTSTUFF/g_f_fucipes_uganda/ddrad58/SNP_data/vcf/OT_indvs.txt --out $PROJECTSTUFF/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05._indiv --recode --recode-INFO-all 
+
+```
+
+
 # Dating the North/South population split #
 
 ## Converting the BAMS to NEXSUS for BEAST ##
