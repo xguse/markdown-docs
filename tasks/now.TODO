@@ -1,22 +1,38 @@
 General:
+	Admin:
 
-    Admin:
-     ☐ do damn biosafety training: @critical
-         Laboratory Chemical & Biological Safety
-
-    Alexis:
-     ☐ Find (PHYSICALLY) low tube number OGUs
-     ☐ Find (PHYSICALLY) LEA 'whole' box(s)
-     ☐ Generate one village and confirm tubes @critical
-     ☐ Generate two more villages and confirm for next week 
+	Alexis:
+	 ☐ Find (PHYSICALLY) low tube number OGUs
+	 ☐ Find (PHYSICALLY) LEA 'whole' box(s)
+	 ☐ Generate two more villages and confirm for next week
 
 ---- ✄ -----------------------
 
-Projects:
+For Gisella:
+ ☐ write up about new ddRAD experiments @high  @due( 2015-04-28)
+ ☐ send list of confirmed fly-bodies for Aksoy from one site each of the pop-clusters @high @due( 2015-04-27)
 
-    ddRAD58 (LD):
-     ☐ run vcftools filter on populations @today
+Projects:
+	ddRAD58 (LD):
+		population-based LD:
+		 ☐ generate comparable figures from each population
+			 ☐ write the script to make the figs @due(2015-04-23) @NOW
+		 ☐ Add figs to notebook
+	 repeat-masking:
+		 ☐ run repeatmasker -> BED -> bedtools (crop-out) -> how many SNPs did we lose? @low
+
+
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ email meetign summary @critical  @done (15-04-17 11:49) @project(General / From Yesterday)
+	✔ send off IDP @critical @done (15-04-23 15:28) @project(General / Admin)
+	✔ edit the ddRAD58 MS as per her request @today @due( 2015-04-23) @done (15-04-23 16:11) @project(For Gisella)
+ ✔ run vcftools filter on populations @today @done (15-04-22 16:49) @project(Projects / ddRAD58 (LD))
+ ✔ run vcftools to get LD for each population (running on `louise`) @done (15-04-22 16:50) @project(Projects / ddRAD58 (LD))
+ ✔ do damn biosafety training: @critical @done (15-04-22 12:06) @project(General / Admin)
+ ✔ finish the IDP signing with PNG stuff @done (15-04-22 12:05) @project(General / Admin)
+ ✔ Part II training @done (15-04-22 12:04) @project(General / Admin)
+ ✔ Biosafety Part I @done (15-04-21 17:40) @project(General / Admin)
+ ✔ 2015-04-21 ☐ Generate one village and confirm tubes @critical @done (15-04-21 17:40) @project(General)
+ ✔ email meetign summary  (15-04-17 11:49) / From Yesterday) @critical @done @project(General
+

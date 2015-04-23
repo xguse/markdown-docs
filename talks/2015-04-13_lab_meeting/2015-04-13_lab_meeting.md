@@ -201,6 +201,9 @@ __$r^2$ distributions when $d$ is LARGE:__
 </div>
 
 
+# Brief Update #
+
+
 
 # Bayesian LD thresholding #
 
@@ -223,7 +226,7 @@ How do we build a Bayesian model?!
 What does the data tell us about how our model should look?
 
 - Data is bounded between $0$ and $1$
-- Probability not $N()$
+- Probably not $N()$
 - Continuous
 - Needs to accommodate two peaks
 
@@ -265,23 +268,20 @@ $$((x_i - 0.5)\cdot \theta) + 0.5$$
 
 ------------------------------------------
 
-1. What kind of probability distribution would you use if you wanted to <font color="#BA8800">__GENERATE__</font> your data?
-
-> - Beta
-
-------------------------------------------
-
-2. What are the parameters that the distribution needs to describe itself?
-
->- Beta: <font color="#BA8800">$\alpha$</font> and <font color="#BA8800">$\beta$</font>
->- both can take any positive value.
-
+>1. What kind of probability distribution would you use if you wanted to <font color="#BA8800">__GENERATE__</font> your data?
+    - _Beta_
 
 ------------------------------------------
 
-3. What kinds of distributions could be used to <font color="#BA8800">__randomly__</font> vary the choice of values to feed into your model's parameters?
+>2. What are the parameters that the distribution needs to describe itself?
+    - _Beta: <font color="#BA8800">$\alpha$</font> and <font color="#BA8800">$\beta$</font>_
+    - _both can take any positive value._
 
-> - [We have data](#2/13) so we can inform our <font color="#BA8800">prior</font> expectations of the parameter's behavior
+
+------------------------------------------
+
+>3. What kinds of distributions could be used to <font color="#BA8800">__randomly__</font> vary the choice of values to feed into your model's parameters?
+    - _[We have data](#2/13) so we can inform our <font color="#BA8800">prior</font> expectations of the parameter's behavior_
 
 <div class="notes">
 - but we know what our data look like so we dont have to consider ALL values in the Natural set
@@ -304,11 +304,14 @@ $$((x_i - 0.5)\cdot \theta) + 0.5$$
 ------------------------------------------
 
 
-Now for the fun part!
+Now for the fun part:
 
-<img src="http://38.media.tumblr.com/977eaad30d77ab9716e122a75a10bb3b/tumblr_n18crbyFY51rrtza4o9_500.gif" style="width:600px">
 
-> - more <font color="#BA8800">MATH</font> about how this was implemented!!!
+------------------------------------------
+
+more _<font color="#BA8800">MATH</font>_ and __<font color="#BA8800">CODE</font>__ about how this was implemented!!!
+
+<img src="http://38.media.tumblr.com/977eaad30d77ab9716e122a75a10bb3b/tumblr_n18crbyFY51rrtza4o9_500.gif" style="width:750px">
 
 ------------------------------------------
 

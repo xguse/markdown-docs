@@ -23,6 +23,7 @@ header-includes:
 # Tasks #
 
 ## BEAST ##
+
 ### --To DO-- ###
 
 -
@@ -42,6 +43,7 @@ header-includes:
 
 
 ## Linkage disequilibrium thresholds for SNP-pairs ##
+
 ### --To Do-- ###
 
 - `[ ]` 
@@ -121,6 +123,7 @@ VCFtools - v0.1.12b
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
+
         --vcf /long/path/to/snps.vcf
         --max-alleles 2
         --min-alleles 2
@@ -210,8 +213,11 @@ vcftools --vcf $VCF  --out $OUT_PREFIX --interchrom-geno-r2
 <!-- ####################################################################################### -->
 
 # Linkage disequilibrium thresholds for SNP-pairs #
+
 ## General ##
+
 ### 2015-03-10 (Tuesday) [Status] ###
+
 
 - Decided its best to use the Beta distribution on data binned by distance and scaled thusly:
 
@@ -278,6 +284,61 @@ IN_SNPS=/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotation
 
 vcftools --vcf  --keep $PROJECTSTUFF/g_f_fucipes_uganda/ddrad58/SNP_data/vcf/OT_indvs.txt --out $PROJECTSTUFF/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05._indiv --recode --recode-INFO-all 
 
+```
+#### 2015-04-22 (Wednesday) ####
+
+__[VCF filtering]:__
+
+```shell
+\#!/bin/zsh 
+\# /home2/wd238/data/projects/ddrad58/population_VCFs/split_pop_vcf.sh
+
+INDIVS=$HOME/data/genomes/glossina_fuscipes/annotations/SNPs/vcftools_out/ddrad58_populations/individuals
+GFFANNOTATIONS=$HOME/data/genomes/glossina_fuscipes/annotations
+
+IN_SNPS=$GFFANNOTATIONS/SNPs/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf
+
+OT_LIST=$INDIVS/OT_indvs.txt
+MS_LIST=$INDIVS/MS_indvs.txt
+NB_LIST=$INDIVS/NB_indvs.txt
+KG_LIST=$INDIVS/KG_indvs.txt
+
+OT_PREFIX=$INDIVS/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.OT_indiv
+MS_PREFIX=$INDIVS/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.MS_indiv
+NB_PREFIX=$INDIVS/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.NB_indiv
+KG_PREFIX=$INDIVS/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.KG_indiv
+
+vcftools --vcf $IN_SNPS --keep $INDIVS/OT_indvs.txt --out $OT_PREFIX --recode --recode-INFO-all
+vcftools --vcf $IN_SNPS --keep $INDIVS/MS_indvs.txt --out $MS_PREFIX --recode --recode-INFO-all
+vcftools --vcf $IN_SNPS --keep $INDIVS/NB_indvs.txt --out $NB_PREFIX --recode --recode-INFO-all
+vcftools --vcf $IN_SNPS --keep $INDIVS/KG_indvs.txt --out $KG_PREFIX --recode --recode-INFO-all
+```
+
+__[VCFtools LD calculation]:__
+
+```shell
+qI8
+
+md load parallel
+md load vcftools/0.1.12a
+
+
+parallel vcftools --vcf {} --out {.} --geno-r2 ::: $(cat vcf_manifest.txt)
+
+```
+
+- completed without error reported. (2015-04-23)
+
+#### 2015-04-23 (Thursday) ####
+
+- rewrote the processing and save to pickle code as [vcftools_table_to_pandas_pickle.process_my_ld](file:///home/gus/src/repos/git/gloria_soria_ddRAD_2015/src/gs_ddRAD2015/scripts/vcftools_table_to_pandas_pickle.py)
+- still debugging
+
+```shell
+LD_PATH=$HOME/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/vcftools_out/ddrad58_populations/individuals/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.KG_indiv.geno.ld
+OUT_PATH=$HOME/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/vcftools_out/ddrad58_populations/individuals/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.KG_indiv.geno.ld.pkl
+
+process_my_ld --ld-prog vcftools --distance-bin 50 $LD_PATH $OUT_PATH
 ```
 
 
