@@ -341,6 +341,22 @@ OUT_PATH=$HOME/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/S
 process_my_ld --ld-prog vcftools --distance-bin 50 $LD_PATH $OUT_PATH
 ```
 
+#### 2015-04-24 (Friday) ####
+
+- I think that I finished debugging the `process_my_ld` script.
+- running KG to completion just to be sure
+- full run will be started before I leave with:
+
+```
+LD_PATH_START="/home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/annotations/SNPs/vcftools_out/ddrad58_populations/individuals/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05."
+LD_PATH_END="_indiv.geno.ld"
+
+
+parallel --dry-run process_my_ld --ld-prog vcftools --distance-bin 50 $LD_PATH_START{}$LD_PATH_END $LD_PATH_START{}$LD_PATH_END.pkl ::: KG MS NB OT
+```
+
+- running now 2015-04-24 17:42
+
 
 # Dating the North/South population split #
 
