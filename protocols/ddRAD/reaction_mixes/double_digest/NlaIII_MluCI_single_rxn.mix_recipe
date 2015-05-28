@@ -1,0 +1,9 @@
+reagent            | amount | amount_unit | starting_conc | starting_conc_unit
+NlaIII             | 0.2    | ul          | pass          | pass              
+MluCI              | 0.2    | ul          | pass          | pass              
+NEB buffer 4       | 5      | ul          | 10            | X                 
+BSA                | 0.5    | ul          | 100           | X                 
+water              | 0.1    | ul          | None          | None              
+DNA sample (~1 ug) | 44     | ul          | pass          | pass              
+
+

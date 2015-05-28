@@ -1,0 +1,5 @@
+reagent             | amount | amount_unit | starting_conc | starting_conc_unit
+annealed P2 adapter | 1      | ul          | ?             | ?                 
+NEB reaction buffer | 5      | ul          | 10            | X                 
+T4 ligase           | 0.5    | ul          | ?             | ?                 
+water               | 2.5    | ul          | None          | None              

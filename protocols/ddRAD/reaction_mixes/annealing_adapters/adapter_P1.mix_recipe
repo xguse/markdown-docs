@@ -1,0 +1,5 @@
+| reagent          | group_as         | amount | amount_unit | starting_conc | starting_conc_unit | deps                       |
+| P1.1             | adapter_P1       | 1      | ul          | 8.21          | uM                 | None                       |
+| P1.2             | adapter_P1       | 1      | ul          | 8.21          | uM                 | None                       |
+| annealing buffer | annealing_buffer | 1      | ul          | 10            | X                  | annealing_buffer_stock_10X |
+| water            | -                | 7      | ul          | None          | None               | None                       |

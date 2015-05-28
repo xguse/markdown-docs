@@ -1,0 +1,102 @@
+email with sample tables attached: "FW: Greetings from New Haven" 2015-05-01
+
+files in above email:
+
+- Arua tsetse samples in box 1 ()
+- Arua tsetse samples in box 2 ()
+- Arua tsetse samples in box 3 ()
+- Arua tsetse samples in box 4 ()
+- Arua tsetse samples in box 5 ()
+- Arua tsetse samples in box 7 ()
+- Arua tsetse samples in box 8 ()
+- Arua and tororo positive tsetse samples in box 11 ()
+
+Boxes:
+
+- Dokolo #1:
+    - date: 2010-03-16
+    - material: legs and wings
+    - loc-code: UGT
+    - number: ~60
+- Arua - Uganda \ dead flies:
+    - date: 2012-11-[12-14]
+    - material: dead
+    - loc-code: AOAD
+    - number: ~20
+- Arua Uganda box 1:
+    - date: 2013-02-[5-7]
+    - material: carcass
+    - loc-code: see doc file
+    - number: 104
+- Arua Uganda box 5:
+    - date: no paper
+    - material: no paper
+    - loc-code: no paper
+    - number: ~100
+- Arua Uganda box 4:
+    - date: 2013-02-[8-11]
+    - material: carcass
+    - loc-code: see doc file
+    - number: ~100
+- Arua Uganda box 2:
+    - date: 2013-02-[13-15]
+    - material: carcass
+    - loc-code: see doc
+    - number: ~100
+- Arua Uganda box 7:
+    - date: 2012-11-[12-14]
+    - material: carcass
+    - loc-code: see file
+    - number: ~100
+- Arua Uganda box 9:
+    - date: 2013-04-[..13..]
+    - material: carcass
+    - loc-code: [TPNL,TNTL,TMPL,..]
+    - number: ~80
+- Arua Uganda box 8:
+    - date: 2012-11-[15,15]
+    - material: carcass
+    - loc-code: see file
+    - number: ~100
+- Arua Uganda box 3:
+    - date: 2013-02-[11-13]
+    - material: carcass
+    - loc-code: see file
+    - number: ~100
+- Dokolo #2:
+    - date: 2010-03-[16,17]
+    - material: wings and legs
+    - loc-code: UGT
+    - number: ~40
+- Arua Kaberamido Uganda #1:
+    - date: 2009-03-24
+    - material: dead
+    - loc-code: UNET
+    - number: ~50
+- "box no 4":
+    - date: 2013-02-09
+    - material: carcass OR dead
+    - loc-code: [AOAL,AYBL,more?]
+    - number: ~30
+- Arua Uganda:
+    - date: 2013-02-[7-9]
+    - material: dead
+    - loc-code: [AYBD,AODD,AOAD] see paper
+    - number: ~50
+- Arua Kaberamido Uganda #2:
+    - date: 2009-03-24
+    - material: dead
+    - loc-code: [UNET,more?]
+    - number: ~20
+    - comment: envelope 2 paper info sheet in box
+- envelope three #1 \ Dokolo dead flies:
+    - date: 2010-03-[16-30]
+    - material: dead
+    - loc-code: [?]
+    - number: ~80
+- envelope three #2 \ Dokolo dead flies:
+    - date: 2010-03-[16-30]
+    - material: dead
+    - loc-code: [?]
+    - number: ~40
+    - comment: paper info sheet inside

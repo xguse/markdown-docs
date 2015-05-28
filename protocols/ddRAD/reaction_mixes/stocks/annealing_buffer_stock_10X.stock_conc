@@ -1,0 +1,4 @@
+reagent         | conc | conc_unit | stock_to_working_factor | PubChemID 
+Tris HCl [pH 8] | 100  | mM        | 10                      | 93573     
+NaCl            | 500  | mM        | 10                      | 5234      
+EDTA            | 10   | mM        | 10                      | 6049      

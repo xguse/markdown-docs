@@ -1,0 +1,6 @@
+reagent          | amount | amount_unit | starting_conc | starting_conc_unit
+P2.1             | 11     | ul          | 18.44         | uM                
+P2.2             | 11     | ul          | 18.44         | uM                
+annealing buffer | 5.5    | ul          | 10            | X                 
+water            | 27.5   | ul          | None          | None              
+

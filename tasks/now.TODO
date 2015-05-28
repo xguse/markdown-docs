@@ -1,34 +1,119 @@
 General:
+
 	Admin:
+		☐	send notes to meeting mates @critical @today @created(15-05-08 14:21)
+
+	Email:
 
 	Alexis:
-		☐ Find (PHYSICALLY) low tube number OGUs
-		☐ Find (PHYSICALLY) LEA 'whole' box(s)
-		☐ Generate two more villages and confirm for next week
+		☐	Find (PHYSICALLY) low tube number OGUs
+		☐	Find (PHYSICALLY) LEA 'whole' box(s)
+		☐	Generate two more villages and confirm for next week 
 
 	FlyDB:
-		2014_spring_summer_from_rob:
-			☐	confirm the trap numbers in the Adjumani sheet match the tubes
-			☐	establish which loc-codes should go to each trap
-			☐	FIX THE FILE
+		2014_spring_summer_from_rob: @2
+			☐	confirm the trap: numbers in the adjumani sheet match the tubes @high
+			☐	establish which loc-codes should go to each trap @high
+			☐	FIX THE FILE @high
+
 ---- ✄ -----------------------
 
 For Gisella:
-	☐ write up about new ddRAD experiments @high  @due( 2015-04-28)
-	☐ send list of confirmed fly-bodies for Aksoy from one site each of the pop-clusters @high @due( 2015-04-27) @today
+	☐	finish population LD figures @today @created(15-05-07 11:00)
+	☐	pick time to meet Gisella next week @today @created(15-05-07 11:01) #WAITING
+
+
+
+rxn_planner:
+	
+	code work:
+		☐	write reagent registry @soon @created(15-05-05 14:36)
+		☐	write recipe registry @soon @created(15-05-05 14:36) 
+		☐	model recipe dependencies @created(15-05-06 16:52) @soon
+		☐	write logic that populates reagents into the reagent registry @created(15-05-06 17:12) @soon
+
+		Questions for classes:
+			
+			Reagents:
+				☐	what recipes also use you?
+				☐	what do i need to know about you to calculate dilutions/concentrations?
+				☐	
+
+			Recipes:
+				☐	what reagents do you need?
+				☐	what recipes have to be made before you bc you depend on them?
+				☐	how much of reagent-X do I need if I am going to make enough of you for N reactions?
+				☐	what are the starting and final concentration values for reagent-X?
+				☐	what is your total volume for a single rxn?
+
+	features:
+		☐	Confirm sub reaction concentrations match expected listed conc after infered dilution from previous step
 
 Projects:
-	ddRAD58 (LD):
-		population-based LD:
-			☐ generate comparable figures from each population
-			☐ Add figs to notebook
-	 repeat-masking:
-			☐ run repeatmasker -> BED -> bedtools (crop-out) -> how many SNPs did we lose? @low
 
+	ddRAD58 (LD):
+
+		Robert:
+
+		population-based LD:
+			☐	write func/command to make LD_figs @today @created(15-05-07 13:19) @critical
+			☐	generate comparable figures from each population @today
+			☐	Add figs to notebook
+	 repeat-masking:
+			☐	run repeatmasker -> BED -> bedtools (crop-out) -> how many SNPs did we lose? @low
+
+	ddRADphase two:
+		
+		Plan timeline:
+
+			List steps/units:
+				☐	Extract 12 files
+				☐	Test digestion rxn concentrations (pretty sure only need single fly for this)
+					☐	2 single digestions
+					☐	1 double digest
+				☐	Annealing the adapters
+				☐	Real double digest (12 flies)
+				☐	Adapter ligations (12)
+				☐	PCR amplification of ligations (12)
+				☐	Pooling for size selection
+				☐	BluePippen size selection and BioAnalyzer
+
+		General:
+			☐	document the indexes to avoid @created(15-05-12 11:24)
+			☐	read page 6/17 of the attached pdf from the YCGA email @created(15-05-12 11:25) @today
+				Index numbers 17, 24, and 26 are reserved.
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+	✔	Decide on place to put the new freezer @today @created(15-05-12 10:02) @done (15-05-12 15:12) @project(For Gisella)
+		REMEMBER THAT YOU CANT REALLY WORK ON THE WEEKEND.
+	✔	Talk to Josh/Dan about coordinating lane sharing @critical @today @done (15-05-12 11:23) @project(Projects / ddRADphase two / General)
+	✔	Email facility about which barcode/index combos will allow us to jump in on the most exome seq runs  @today  @done (15-05-12 10:57) @project(Projects / ddRADphase two / General)
+	✔	finish step duration prediction @today @created(15-05-09 13:31) @done (15-05-12 10:03) @project(Projects / ddRADphase two / Plan timeline)
+	✔	start working out time to pick up freezer from GisellaC @critical @today @created(15-05-08 14:22) @done (15-05-12 10:02) @project(General / Admin)
+	✔	re-print protocol @today @created(15-05-09 11:59)  @done (15-05-09 12:13) @project(Projects / ddRADphase two / Plan timeline)
+	✔	Order the steps @today @created(15-05-09 12:13) @done (15-05-09 12:13) @project(Projects / ddRADphase two / Plan timeline)
+	✔	solve how to label reagents generically to allow "what reactions require N when N may be exist as different kinds/concentrations" @created(15-05-06 16:51) @today  @done (15-05-06 17:11) @project(rxn_planner / code work)
+		solved by adding `group_as` column and having user do it
+	✔	changed bin name to chrysopoeia @done (15-05-06 13:56) @project(rxn_planner / code work)
+	✔	validation structure  @done (15-05-06 13:55) @project(rxn_planner / code work)
+	✔	initial validation for config file @done (15-05-06 13:55) @project(rxn_planner / code work)
+	✔	send RobertO updated Village list @today @created(15-05-05 14:36)  @done (15-05-05 15:29) @project(Projects / ddRAD58 (LD) / Robert)
+	✔	find new freezer for Krafsur extractions @today @done (15-05-05 14:28) @project(General / Admin)
+	✔	ask about where to store the Krafsur Gpd extractions? (what freezer bc -40 getting emptied) @today @done (15-05-05 14:28) @project(For Gisella)
+	✔	respond to [Re: Transcriptome gff data for Hongyu] @today  @done (15-05-05 10:00) @project(General / Email)
+	✔	send RobertO two more villages. @today @done (15-05-05 09:22) @project(Projects / ddRAD58 (LD) / Robert)
+		ask hime which ones
+	✔	write up about new ddRAD experiments @high  @due( 2015-04-28)  @done (15-04-30 17:18) @project(For Gisella)
+	✔	record all reaction solutions as text tables @done (15-04-30 17:18) @project(For Gisella)
+	✔	send list of confirmed fly-bodies for Aksoy from one site each of the pop-clusters:  @high @due( 2015-04-27) @today @done (15-04-28 16:43) @project(For Gisella)
+	✔	deliver @done (15-04-28 16:43) @project(For Gisella)
+	✔	confirm 10 M/F @done (15-04-28 16:43) @project(For Gisella)
+	✔	Choose one village from South, North, West @high @done (15-04-28 16:43) @project(For Gisella)
+		N - AKA
+		S - BU (bulk?)
+		W - AIN or DUK
 	✔	write the script to make the figs @due(2015-04-23) @today @done (15-04-24 17:43) @project(Projects / ddRAD58 (LD) / population-based LD)
 	✔	run the script @today @done (15-04-24 17:43) @project(Projects / ddRAD58 (LD) / population-based LD)
 	✔ Replace OLO22-14 and OLO174-14 @critical @done (15-04-24 11:52) @project(General / Alexis)

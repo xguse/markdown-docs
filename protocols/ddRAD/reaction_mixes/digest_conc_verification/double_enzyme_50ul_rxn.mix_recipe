@@ -1,0 +1,9 @@
+reagent            | amount | amount_unit | starting_conc | starting_conc_unit 
+digestion enzyme 1 | 0.2    | ul          | 2             | U                  
+digestion enzyme 2 | 0.2    | ul          | 2             | U                  
+NEB buffer 4       | 5      | ul          | 10            | X                  
+BSA                | 0.5    | ul          | 100           | X                  
+water              | 0.1    | ul          | None          | None               
+DNA sample         | 44     | ul          | None          | None               
+
+

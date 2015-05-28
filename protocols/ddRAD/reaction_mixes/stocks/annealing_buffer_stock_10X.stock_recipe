@@ -1,0 +1,5 @@
+| reagent         | group_as | amount | amount_unit | starting_conc | starting_conc_unit | PubChemID | deps |
+| Tris HCl [pH 8] | tris_8   | 1000   | ul          | 1             | M                  | 93573     | None |
+| NaCl            | -        | 1000   | ul          | 5             | M                  | 5234      | None |
+| EDTA            | -        | 200    | ul          | 0.5           | M                  | 6049      | None |
+| water           | -        | 7800   | ul          | None          | None               | 962       | None |
