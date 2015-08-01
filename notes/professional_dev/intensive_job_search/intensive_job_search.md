@@ -102,7 +102,7 @@ _Decreasing order of preference:_
 
 
 - why are you leaving academia:
-    - spend time on the negative of academia or _the POSITIVE of industry_
+    - don't spend time on the negative of academia but _the POSITIVE of industry_
     - talk about the things you are going toward
 
 ## During the interview ##
