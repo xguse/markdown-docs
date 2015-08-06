@@ -14,17 +14,12 @@ header-includes:
 - \setmainfont{Linux Libertine O}
 ...
 
-# Linkage measurements #
-<!-- ~~~~~~~~ {.bash}
-plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
---allow-extra-chr \
---r gz with-freqs dprime \
---out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r_none_freqs_dprime
-~~~~~~~~~~~~~~~~~~~ -->
+<!-- # Linkage measurements #
 
 Plink version 1.9 [@Chang2015] was used to calculate pairwise linkage disequilibrium (LD) as $r$ for all SNP-pairs located on common supercontigs.
 The `--allow-extra-chr` option was required to handle the number of supercontigs.
 Unless stated otherwise, all subsequent analysis pertaining to LD used $r^2$.
+ -->
 
 # LD-based filtering of SNP-pairs #
 
@@ -55,7 +50,7 @@ For each set of binned $r^2$ values, the SNP-pairs deemed worthy of further inve
 
 The Beta distribution is bounded on the non-inclusive interval between 0 and 1.
 However, there are data in each bin that may have been assigned values of exactly 0 or 1.
-It is likely that these values are not truly 0 or 1 in the discrete binary since that a coin-flip is _either_ heads or tails.
+It is likely that these values are not truly 0 or 1 in the discrete binary sense that a coin-flip is _either_ heads or tails.
 Therefore, the all data for each bin were scaled according to the following scheme 
 
 $$((x_i - 0.5)\cdot \theta) + 0.5$$
@@ -74,6 +69,12 @@ The values of $\alpha$ and $\beta$ were modeled with separate Uniform prior dist
 This model topology was used to create pyMC "model" objects and initialized with the $r^2$ data from each bin.
 The parameters of each Beta distribution were then estimated by _maximum a posteriori_ (MAP) and used to calculate the $1-\mathrm{CDF}$ for each SNP-pair in each bin [@Jones2001scipy;@VanDerWalt2011].
 The $1-\mathrm{CDF}$ values were then BH corrected by bin and filtered with a threshold of $(1-CDF)_{BH} \le 0.01$ using statsmodels [@Benjamini1995].
+
+# Code availability #
+
+The code used to run this and other parts of the analyses described in this manuscript may be found on github at the following project address.
+
+[https://github.com/CacconeLabYale/gloria_soria_ddRAD_2015](https://github.com/CacconeLabYale/gloria_soria_ddRAD_2015)
 
 
 <div id="fig_betamod">
