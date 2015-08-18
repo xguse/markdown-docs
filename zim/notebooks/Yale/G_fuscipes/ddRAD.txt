@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-18T13:06:15-04:00
+
+====== ddRAD ======
+Created Tuesday 18 August 2015
+
+===== Tasks =====
+[ ] email the core about my data @email [d: 2015-08-18] !
+[ ] finish @pyRAD conda package and install on @louise [d: 2015-08-19] !
+

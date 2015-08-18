@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-18T14:45:23-04:00
+
+====== 2015-08-18 ======
+Created 2015-08-18 (Tuesday)
+
+
+**If nothing else, today I am going to:**
+[*] //Get my task organizing and recording system established.// 
+
+**I am going to do this by**
+[*] //installing ZIM//
+[ ] //learning ZIM//
+[*] //customizing ZIM//
+
+**If I do this and only this, today will be a good day.**

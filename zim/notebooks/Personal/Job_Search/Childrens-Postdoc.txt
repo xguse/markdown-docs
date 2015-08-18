@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-18T13:07:41-04:00
+
+====== Childrens-Postdoc ======
+Created Tuesday 18 August 2015
+
+===== Tasks: =====
+[ ] confirm date of visit [d: 2015-08-20] @email !!
+[ ] prepare talk 
+	[ ] how long should the talk should be [d: 2015-08-20] @email  !!

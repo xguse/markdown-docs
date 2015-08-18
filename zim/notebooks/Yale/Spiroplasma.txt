@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-18T11:43:42-04:00
+
+====== Spiroplasma ======
+Created Tuesday 18 August 2015
+
+===== Tasks: =====
+[ ] [[./M;F_statistically_significant.txt|M:F statistically significant?]] @aksoy [d: 2015-08-19] ! 
+[ ] [[./Find_flies_for_testing.txt|Find flies for testing]] @aksoy [d: 2015-08-19] !
