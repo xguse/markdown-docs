@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-18T11:43:42-04:00
+
+====== Spiroplasma ======
+Created Tuesday 18 August 2015
+
+[ ] M:F statistically significant?
+[ ] Find flies for testing

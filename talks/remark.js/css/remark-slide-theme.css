@@ -19,6 +19,12 @@ h1, h2, h3 {
 }
 li p { line-height: 1.25em; }
 .red { color: #fa0000; }
+.accent1 { color: #0189B5; }
+.accent2 { color: #79A736; }
+.accent3 { color: #E53B27; }
+.accent4 { color: #18BC9C; }
+.accent5 { color: #F0027F; }
+.accent6 { color: #BA8800; }
 .large { font-size: 2em; }
 a, a > code {
   color: rgb(249, 38, 114);
