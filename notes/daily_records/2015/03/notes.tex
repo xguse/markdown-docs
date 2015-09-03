@@ -1,0 +1,387 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Daily Records},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Daily Records\\\vspace{0.5em}{\large Caccone PostDoc}}
+\author{Gus Dunn}
+\date{March, 2015}
+\usepackage{bbding}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+% blockquote
+\usepackage{xcolor}
+\definecolor{greyborder}{RGB}{221,221,221}
+\definecolor{greytext}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=greyborder,skipabove=\parskip]{blockquote}
+\renewenvironment{quote}{\begin{blockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax\color{greytext}\ignorespaces}{\unskip\unskip\endlist\end{blockquote}}
+
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-03-04 (Wednesday)}\label{wednesday}
+
+\subsection{Robert's MicroSat Project}\label{roberts-microsat-project}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  add new december excel data
+  {[}\href{file:///home/gus/Dropbox/uganda_data/2014_Dec_new/DEC_2014_survey.xls}{DEC\_2014\_survey.xls}{]}
+  to
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[} {]}}
+    \href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/gps/traps/uganda_traps_gps.csv}{uganda\_traps\_gps.csv}
+  \item
+    \texttt{{[}DONE{]}}
+    \href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/names/uganda_village_id_map.csv}{uganda\_village\_id\_map.csv}
+  \end{itemize}
+\item
+  \texttt{{[} {]}} re-generate
+  \href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/gps/villages/uganda_villages_gps.csv}{uganda\_villages\_gps.csv}
+  with\\\href{file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/maps_stuff/2015-02-03_deduce_village_GPS_coords_from_mean_trap_coords.ipynb}{2015-02-03\_deduce\_village\_GPS\_coords\_from\_mean\_trap\_coords.ipynb}
+\item
+  \texttt{{[} {]}} create new signed tag for the git repo
+\end{itemize}
+
+\subsubsection{\textbf{{[}ERRORS{]}} in collection
+sheets}\label{errors-in-collection-sheets}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{file:///home/gus/Dropbox/uganda_data/2014_Dec_new/DEC_2014_survey_for_pandas.xlsx}{DEC\_2014\_survey\_for\_pandas.xlsx}
+\end{itemize}
+
+\begin{quote}
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Samples for the two villages of Odworo and Ocala were interchanged
+\item
+  This means all samples recorded as OD ideally belong to OCA and those
+  recorded as OCA belong to OD
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-03-05 (Thursday)}\label{thursday}
+
+\subsection{\emph{Glossina} meeting with Kenya
+folks}\label{glossina-meeting-with-kenya-folks}
+
+\subsubsection{My talk topics}\label{my-talk-topics}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Interest in Uganda
+\item
+  Methods
+\item
+  Collection protocol
+\item
+  Database/sample tracking efforts
+\item
+  Collection numbers
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-03-06 (Friday)}\label{friday}
+
+\subsection{ddrad58}\label{ddrad58}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  worked on scaled Beta dist learning of \(r^2\) distributions
+\item
+  calculated and sent back Hardy-Weinberg equilibrium FDRs to AndreaG
+\end{itemize}
+
+\subsection{RobertO's MicroSat}\label{robertos-microsat}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  must re-build map stuff
+\end{itemize}
+
+\subsubsection{Villages for leg
+extraction}\label{villages-for-leg-extraction}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see project notes:
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.md}{ddrad58.md}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-03-11 (Wednesday)}\label{wednesday-1}
+
+\subsection{ddrad58}\label{ddrad58-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see project notes:
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/ddrad58/ddrad58.md}{ddrad58.md}
+\end{itemize}
+
+\subsection{RobertO's MicroSat}\label{robertos-microsat-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see project notes:
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/roberts_microsats/roberts_microsats.md}{roberts\_microsats.md}
+\end{itemize}
+
+\subsection{Pandas import of collection
+sheets}\label{pandas-import-of-collection-sheets}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  added explicit date recoding with minor value enforcement/control
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \href{file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb}{g\_f\_fuscipes\_general/2015-02-16\_g\_f\_fuscipes\_pandas\_import.ipynb}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-03-12 (Thursday)}\label{thursday-1}
+
+\subsection{ddrad58}\label{ddrad58-2}
+
+\subsubsection{BEAST}\label{beast}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}2015-03-12{]}} conversation with Aris
+\item
+  \texttt{{[}wont do{]}} write up conversation with Aris for GisellaC
+  and get clearance to proceed.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    meeting with GisellaC and Aris tomorrow at 11
+  \end{itemize}
+\item
+  \texttt{{[}!{]}} Convert BAMs to NEXSUS
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    waiting to hear back from admins about getting permissions to
+    AndreaG's BAMs
+  \end{itemize}
+\item
+  \texttt{{[} {]}} BEAST configuration
+\item
+  \texttt{{[} {]}} attempt BEAST run
+\end{itemize}
+
+\subsubsection{Linkage disequilibrium thresholds for
+SNP-pairs}\label{linkage-disequilibrium-thresholds-for-snp-pairs}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}2015-03-12{]}} set up and yield models
+\item
+  \texttt{{[}2015-03-12{]}} take model and return parameters
+\item
+  \texttt{{[}2015-03-12{]}} take parameters and df and set value for
+  each SNP-pair's probability (\(1-\mathrm{CDF}\))
+\item
+  \texttt{{[}2015-03-12{]}} take df and set value for each SNP-pair's BH
+  corrected probability
+\end{itemize}
+
+\subsection{RobertO's MicroSat}\label{robertos-microsat-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} Get 3 more villages' samples ready for legs and
+  extraction
+\end{itemize}
+
+\subsection{Positive recovery}\label{positive-recovery}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} tell GisellaC and KirstinD how many dissections to
+  expect in next weeks
+\item
+  \texttt{{[}2015-03-12{]}} start project notebook
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    file at:
+    \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/positives_recovery/positives_recovery.md}{positives\_recovery.md}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-03-13 (Friday)}\label{friday-1}
+
+\subsection{ddrad58}\label{ddrad58-3}
+
+\subsubsection{BEAST}\label{beast-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} meeting with GisellaC and Aris at 11
+\item
+  \texttt{{[}!{]}} Convert BAMs to NEXSUS
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}2015-03-12{]}} waiting to hear back from admins about
+    getting permissions to AndreaG's BAMs
+  \end{itemize}
+\item
+  \texttt{{[} {]}} BEAST configuration
+\item
+  \texttt{{[} {]}} attempt BEAST run
+\end{itemize}
+
+\subsubsection{Linkage disequilibrium thresholds for
+SNP-pairs}\label{linkage-disequilibrium-thresholds-for-snp-pairs-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} see if it make since to deal with the bins that wont
+  \textbf{MAP} correctly
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[} {]}} examine the MCMCs of a few and see if they
+    converged and are therefore possibly useful to us
+  \end{itemize}
+\end{itemize}
+
+\subsection{RobertO's MicroSat}\label{robertos-microsat-3}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} Get 3 more villages' samples ready for legs and
+  extraction
+\end{itemize}
+
+\subsection{Positive recovery}\label{positive-recovery-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} tell GisellaC and KirstinD how many dissections to
+  expect in next weeks
+\end{itemize}
+
+\section{2015-03-17 (Tuesday)}\label{tuesday}
+
+\subsection{Samples for RNA}\label{samples-for-rna}
+
+\begin{longtable}[c]{@{}lllc@{}}
+\toprule
+Village ID & Tissue Types & RNA-solution & Approx No of
+Tubes\tabularnewline
+\midrule
+\endhead
+OLO & H, Mg & RNA-stable & 15 - 20\tabularnewline
+GOR & H, Mg & RNA-stable & 35\tabularnewline
+OD & H & RNA-later & 15\tabularnewline
+OD & Mg & RNA-later & 15\tabularnewline
+UWA & H, Mg & RNA-stable & 40\tabularnewline
+OCA & Mg & RNA-later & 6\tabularnewline
+OCA & H & RNA-stable & 6\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{document}

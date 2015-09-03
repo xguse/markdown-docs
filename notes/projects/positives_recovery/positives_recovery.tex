@@ -1,0 +1,142 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Positives recovery project},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Positives recovery project\\\vspace{0.5em}{\large Caccone PostDoc}}
+\author{Gus Dunn}
+\date{March, 2015}
+\usepackage{bbding}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+% blockquote
+\usepackage{xcolor}
+\definecolor{greyborder}{RGB}{221,221,221}
+\definecolor{greytext}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=greyborder,skipabove=\parskip]{blockquote}
+\renewenvironment{quote}{\begin{blockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax\color{greytext}\ignorespaces}{\unskip\unskip\endlist\end{blockquote}}
+
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\newpage
+
+\section{Tasks}\label{tasks}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} tell GisellaC and KirstinD how many dissections to
+  expect in next weeks
+\item
+  \texttt{{[}2015-03-12{]}} start project notebook
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    file at:
+    \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/projects/positives_recovery/positives_recovery.md}{positives\_recovery.md}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{Dissections}\label{dissections}
+
+\subsection{2015-03-13 (Friday)}\label{friday}
+
+\begin{longtable}[c]{@{}lrrrrrrrrrrrrr@{}}
+\toprule
+Village & ACA & AKA & AKY & & AMI & & & OCA & OCU & & & OD &
+All\tabularnewline
+\midrule
+\endhead
+infection\_state & False & False & False & & False & & True & False &
+False & & True & False &\tabularnewline
+Dead & True & True & False & True & False & True & False & True & False
+& True & False & True &\tabularnewline
+2014-12-15 & 18 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 &
+140\tabularnewline
+2014-12-16 & 49 & 46 & 0 & 0 & 0 & 0 & 0 & 29 & 0 & 0 & 0 & 16 &
+266\tabularnewline
+2014-12-17 & 91 & 31 & 0 & 0 & 0 & 0 & 0 & 45 & 0 & 0 & 0 & 12 &
+317\tabularnewline
+2014-12-18 & 53 & 14 & 0 & 0 & 0 & 0 & 0 & 27 & 0 & 0 & 0 & 3 &
+200\tabularnewline
+2014-12-20 & 0 & 0 & 8 & 5 & 0 & 0 & 0 & 0 & 69 & 112 & 4 & 0 &
+198\tabularnewline
+2014-12-21 & 0 & 0 & 8 & 4 & 10 & 6 & 1 & 0 & 122 & 67 & 3 & 0 &
+221\tabularnewline
+2014-12-22 & 0 & 0 & 3 & 3 & 15 & 11 & 0 & 0 & 107 & 40 & 11 & 0 &
+190\tabularnewline
+2014-12-23 & 0 & 0 & 0 & 0 & 20 & 5 & 0 & 0 & 50 & 10 & 4 & 0 &
+89\tabularnewline
+All & 211 & 91 & 19 & 12 & 45 & 22 & 1 & 102 & 348 & 229 & 22 & 31 &
+1621\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{document}

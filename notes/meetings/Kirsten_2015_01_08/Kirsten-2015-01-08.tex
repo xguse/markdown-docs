@@ -1,0 +1,162 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus, Kirstin},
+            pdftitle={Status of Positive Recovery from Dead Flies},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Status of Positive Recovery from Dead Flies}
+\author{Gus, Kirstin}
+\date{2015-01-08 (Thursday)}
+\usepackage{bbding}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Discussed}\label{discussed}
+
+\subsection{Change in pooling}\label{change-in-pooling}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Pooling was abandoned for the reaction and moved to the gel/detection
+  stage
+\item
+  PCR done on individuals
+\item
+  pooled PCR results run on gel for examination
+\item
+  This is probably good as Serap mentioned she did not like the pooled
+  idea bc of low DNA abundance
+\end{itemize}
+
+\subsection{Results}\label{results}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  2 plates tested (\textasciitilde{}200 individuals)
+\item
+  Plate 1:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{Village:} AKA
+  \item
+    \textbf{Results:} no positives detected
+  \end{itemize}
+\item
+  Plate 2:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{Village:} Mix of the high infection villages
+  \item
+    \textbf{Results:} no positives detected
+  \end{itemize}
+\end{itemize}
+
+\subsection{Observations}\label{observations}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Control rxns with \textbf{FLY} primers show expected results
+\item
+  In control rxn with 100 ng of DNA extracted from known positive flies,
+  she \textbf{still} can barely see the band when using the
+  \textbf{TRYP} primers
+\item
+  It is possible that some \textbf{false negatives} exist in these data
+\item
+  Further supports abandoning the pooled PCR rxns for individual rxns
+\end{itemize}
+
+\section{Current/future plans}\label{currentfuture-plans}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  she plans to repeat at least a subset of the rxns using the first rxn
+  as template
+\item
+  I feel that it would be interesting to see the results of this but
+  fear that it may introduce \textbf{false positives} if not confirmed
+  with more stringent conditions.
+\item
+  such confirmation however is cheap in both time and cost so I think
+  its definitely worth doing.
+\item
+  more plates are on deck for screening as well
+\end{itemize}
+
+\subsection{Estimated time to
+completion}\label{estimated-time-to-completion}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  two weeks depending on facility load
+\end{itemize}
+
+\end{document}

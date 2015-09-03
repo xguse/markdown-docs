@@ -1,0 +1,222 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus, Gisella, Andrea},
+            pdftitle={Status of dead positives recovery},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Status of dead positives recovery\\\vspace{0.5em}{\large Meeting notes}}
+\author{Gus, Gisella, Andrea}
+\date{2015-02-04 (Wednesday)}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Overview of Discussed}\label{overview-of-discussed}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Andrea's write up of current results
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \emph{need to be collated into one doc}
+  \end{itemize}
+\item
+  Status of LD analysis and how to choose cut-off
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    results of discussion with Mark
+  \item
+    success in generating expected behavior of mean LD behavior vs
+    distance
+  \item
+    Gus's proposed idea to identify ``outlier'' snp pairs (\emph{see
+    section below})
+  \end{itemize}
+\item
+  First figure should have a map of population locations as a panel
+\item
+  Structure of paper \emph{(\textbf{mostly} unchanged since last
+  meeting)}
+\item
+  plans for future
+\end{itemize}
+
+\section{Current structure of paper}\label{current-structure-of-paper}
+
+\emph{~\textbf{mostly} unchanged since last meeting}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Development of the base SNP set
+\item
+  Linkage Analysis
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{(new)} linkage-based grouping of contigs by physical
+    proximity
+  \end{enumerate}
+\item
+  Functional Annotation of filtered SNPs
+\item
+  Discussion
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    establish the ability to do this scale of work in \emph{G. f.
+    fuscipes}
+  \item
+    limits of the dataset as it now stands
+  \item
+    Never-the-less, hypotheses can be formulated and here they
+    are\ldots{}
+  \item
+    \textbf{(new)} provides more information pertaining to the physical
+    proximity of the supercontigs
+  \end{itemize}
+\end{enumerate}
+
+\section{Gus's proposal to identify LD ``outlier''
+snp-pairs}\label{guss-proposal-to-identify-ld-outlier-snp-pairs}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  for each group of SNPs \(x\) bp apart: collect \(r^2\) from
+  \(\pm \sim5\) bp distance window around \(x\):
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    across genome
+  \item
+    across scaffold
+  \end{enumerate}
+\item
+  calculate modified z-score (based on \emph{median absolute deviation}
+  rather than standard deviation: \textbf{MAD is more robust than SD for
+  HTS-type data})
+\item
+  flag any SNP-pair with \(z \geq 3.5\)
+\item
+  possibly randomize data and calculate FDR to evaluate performance.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    perhaps vary the window-size from step 1 to use FDR to chose
+    window-size that minimizes FDR.
+  \end{enumerate}
+\end{enumerate}
+
+\section{Current/future plans}\label{currentfuture-plans}
+
+\textbf{Gisella:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} email Washington group about methods of Seq prep and
+  analysis
+\item
+  \texttt{{[}X{]}} email Aksoy group about linkage status of \emph{G. m.
+  morsitans}
+\end{itemize}
+
+\textbf{Gus and Andrea:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} add methods in ``final'' style to growing document
+\item
+  \texttt{{[} {]}} place document in shared location
+\end{itemize}
+
+\textbf{Gus:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} add LD methods and results to document
+\item
+  \texttt{{[} {]}} generate population-location map with zoom out to all
+  Uganda
+\item
+  \texttt{{[}-waiting-{]}} upon decision of which near-by genes are
+  ``interesting'' send summary of info known about them to Aksoy group
+  for ideas.
+\end{itemize}
+
+\end{document}

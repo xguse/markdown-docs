@@ -1,0 +1,161 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{fourier}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus, Andrea},
+            pdftitle={Preliminary LD results and VCF contents of master VCF file},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Preliminary LD results and VCF contents of master VCF file}
+\author{Gus, Andrea}
+\date{2015-01-05}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Summary}\label{summary}
+
+\subsection{Discussed}\label{discussed}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  about half the SNP LD comparisons for \texttt{scaffold0} had one of
+  the SNPs with MAF of 0.
+\item
+  Andrea thought she filtered these out but SOME seem to still be there
+  ovbiously.
+\item
+  tracked one down in the VCF file
+  (\texttt{tsetseFINAL\_14Oct2014\_f2\_53.recode.renamed\_scaffolds.vcf}).
+  See also the \emph{``Example VCF line''}.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    ref was \texttt{C} alt was \texttt{A} but not a single individual
+    had the alt allele.
+  \item
+    this should not be in this file.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Resolution}\label{resolution}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  I collected a few lines from the VCF into a test file to send to
+  Andrea
+\item
+  Andrea will send this file along with a question to the developers
+  (\texttt{VCFtools}? \texttt{PLINK}?) with the options she used for the
+  filter to get an explanation.
+\end{itemize}
+
+\subsection{Follow up}\label{follow-up}
+
+2015-01-05
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Andrea got back to me and it turns out that the
+  \texttt{-\/-min-allele}/\texttt{-\/-max-allele} filter settings apply
+  not to individuals' genotype but to the definition of the SNP at large
+  and \texttt{Scaffold0-23159-C/A} WAS multi-allelic in the original
+  data set.
+\item
+  To filter snps that have no CURRENT individuals representing the alt
+  allele other settings should be used and some but not all of her
+  analyses will need to be re-run.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \emph{correct filter:} \texttt{-\/-maf 0.00001}
+  \end{itemize}
+\item
+  I can/will run the filter with the new settings on my version of the
+  file myself.
+\end{itemize}
+
+\section{Example VCF line}\label{example-vcf-line}
+
+\begin{verbatim}
+Scaffold0   23159   .   C   A   15.5    .   .   GT:PL:DP:SP:GQ  0/0:0,108,255:36:0:99   \
+0/0:0,54,255:18:0:72    0/0:0,48,255:16:0:66    0/0:0,102,255:34:0:99   \
+0/0:0,255,255:121:0:99  0/0:0,90,255:30:0:99    0/0:0,253,255:84:0:99   \
+0/0:0,48,255:16:0:66    0/0:0,126,255:42:0:99   0/0:0,132,255:44:0:99   \
+0/0:0,36,255:12:0:54    0/0:0,72,255:24:0:90    0/0:0,151,255:50:0:99   \
+0/0:0,220,255:75:0:99   0/0:0,255,255:163:0:99  0/0:0,120,255:40:0:99   \
+0/0:0,108,255:36:0:99   0/0:0,169,255:56:0:99   0/0:0,255,255:97:0:99   \
+0/0:0,208,255:69:0:99   0/0:0,157,255:52:0:99   0/0:0,169,255:56:0:99   \
+0/0:0,57,255:19:0:75    0/0:0,48,255:16:0:66    0/0:0,87,255:29:0:99    \
+0/0:0,60,255:20:0:78    0/0:0,81,255:27:0:99    0/0:0,217,255:72:0:99   \
+0/0:0,54,255:18:0:72    0/0:0,205,255:68:0:99   0/0:0,144,255:48:0:99   \
+0/0:0,255,255:97:0:99   0/0:0,90,255:30:0:99    0/0:0,205,255:68:0:99   \
+0/0:0,48,255:16:0:66    0/0:0,96,255:32:0:99    0/0:0,54,255:18:0:72    \
+0/0:0,54,255:18:0:72    0/0:0,255,255:86:0:99   0/0:0,255,255:116:0:99  \
+0/0:0,108,255:36:0:99   0/0:0,126,255:42:0:99   0/0:0,114,255:38:0:99   \
+0/0:0,160,255:53:0:99   0/0:0,81,255:27:0:99    0/0:0,48,255:16:0:66    \
+0/0:0,172,255:57:0:99   0/0:0,141,255:47:0:99   0/0:0,126,255:42:0:99   \
+0/0:0,163,255:54:0:99   0/0:0,126,255:42:0:99   0/0:0,51,255:17:0:69    \
+0/0:0,151,255:50:0:99
+\end{verbatim}
+
+\end{document}

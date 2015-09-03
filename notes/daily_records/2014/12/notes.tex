@@ -1,0 +1,379 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{concmath}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={Daily Records},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Daily Records\\\vspace{0.5em}{\large Caccone PostDoc}}
+\date{December, 2014}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{2014-12-19}\label{section}
+
+\subsection{Argot2 batch size
+reduction:}\label{argot2-batch-size-reduction}
+
+\begin{verbatim}
+tags = [argot2, ddRAD58, python, spartan]
+\end{verbatim}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  dumping the whole proteome on the online server seems to have broken
+  it.
+\item
+  I believe I will need to split the input up into around 3000 proteins
+  per submission
+\item
+  this will need some python code (maybe added to \texttt{spartan}?)
+\end{itemize}
+
+\subsubsection{Problems:}\label{problems}
+
+\begin{verbatim}
+tags = [python, pip, virtualenvwrapper, py279, admin]
+\end{verbatim}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  cant run ipython notebook bc of py279 from py278 issues.
+\item
+  must reinstall most/all python dependencies.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2014-12-21}\label{section-1}
+
+\subsection{Argot2 batch size
+reduction:}\label{argot2-batch-size-reduction-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see 2014-12-19
+\item
+  finished updating \texttt{py279} \texttt{python} requirements
+\item
+  \texttt{ipython} seems to work again
+\end{itemize}
+
+\subsubsection{Completed:}\label{completed}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  writing filter functions for \texttt{blast} and \texttt{hmmer}
+  outputs:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{spartan/src/spartan/utils/blast/output.py}:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \texttt{filter\_for\_argot(path, protein\_names)}
+    \end{itemize}
+  \item
+    \texttt{spartan/src/spartan/utils/hmmer/output.py}:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \texttt{filter\_for\_argot(path, protein\_names)}
+    \end{itemize}
+  \end{itemize}
+\item
+  created \texttt{sublime text 3} snippet to make new
+  \texttt{ipython notebook} file with meta info and template.
+\item
+  wrote and tested split up logic:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{spartan/src/spartan/utils/misc.py}:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \texttt{split\_stream(stream, divisor)}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Problems:}\label{problems-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  coding the split up logic
+\end{itemize}
+
+\subsection{Working on:}\label{working-on}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  split \texttt{blastp} and \texttt{hmmer} outputs by protein
+  (\textasciitilde{}3000 per group)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2014-12-22 (Monday)}\label{monday}
+
+\subsection{Argot2 batch size
+reduction:}\label{argot2-batch-size-reduction-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see 2014-12-21
+\item
+  finished splitting
+\item
+  files were zipped
+\item
+  file pairs were submitted to Argot2
+\end{itemize}
+
+\subsubsection{Files:}\label{files}
+
+\begin{verbatim}
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.0.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.1.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.2.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.3.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.4.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.5.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.6.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.7.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.8.hmmscan.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.9.hmmscan.zip
+
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.0.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.1.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.2.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.3.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.4.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.5.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.6.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.7.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.8.blastp.zip
+    Glossina-fuscipes-IAEA_PEPTIDES_GfusI1.union.9.blastp.zip
+\end{verbatim}
+
+\subsubsection{Next:}\label{next}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Collect the resulting analysis files into single repository.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2014-12-23 (Tuesday)}\label{tuesday}
+
+\subsection{Meeting with Dan}\label{meeting-with-dan}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/dan-2014-12-23/dan-2014-12-23.md}{markdown-docs/notes/meetings/dan-2014-12-23/dan-2014-12-23.md}
+\end{itemize}
+
+\subsection{Argot2 batch size
+reduction:}\label{argot2-batch-size-reduction-3}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see 2014-12-22
+\item
+  \href{http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2014-12-23_create_argot2_functional_annotation_db_GfusI1.1_prerelease.ipynb}{2014-12-23\_create\_argot2\_functional\_annotation\_db\_GfusI1.1\_prerelease.ipynb}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2014-12-24 (Wednesday)}\label{wednesday}
+
+\subsection{Argot batch size
+reduction}\label{argot-batch-size-reduction}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see 2014-12-23
+\end{itemize}
+
+\subsubsection{Storing in \texttt{Python}-friendly format
+(\texttt{pandas.HDFStore})}\label{storing-in-python-friendly-format-pandas.hdfstore}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  had to install \texttt{pytables}
+\item
+  test work well and data is stored
+\item
+  documentation:
+  \href{http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2014-12-24_store_argot2_functional_annotation_db_GfusI1.1_prerelease_as_HDF5.ipynb}{2014-12-24\_store\_argot2\_functional\_annotation\_db\_GfusI1.1\_prerelease\_as\_HDF5.ipynb}
+\end{itemize}
+
+\subsubsection{File location}\label{file-location}
+
+\begin{verbatim}
+louise/data/genomes/glossina_fuscipes/annotations/ \
+functional/GfusI1.1_pre/argot2_out/argot_functional_annotations_ts150.h5
+\end{verbatim}
+
+\subsubsection{PROJECT COMPLETED}\label{project-completed}
+
+``Argot batch size reduction'' project is now considered completed.
+
+\subsection{Installing \texttt{PyTables}}\label{installing-pytables}
+
+\textbf{First attempt failed due to cryptic or at \emph{least} slightly
+misleading error about \texttt{numpy} and \texttt{numexpr}:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{pip} \NormalTok{install git+https://github.com/PyTables/PyTables.git@v.3.1.1#egg=tables}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Tried installing \texttt{numexpr} directly with:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{pip} \NormalTok{install numexpr}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Tried \texttt{PyTables} again:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{pip} \NormalTok{install git+https://github.com/PyTables/PyTables.git@v.3.1.1#egg=tables}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{T: Functional Annotations of genes near SNPs of
+interest}\label{t-functional-annotations-of-genes-near-snps-of-interest}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Project start.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2014-12-26 (Friday)}\label{friday}
+
+\subsection{T: Functional Annotations of genes near SNPs of
+interest}\label{t-functional-annotations-of-genes-near-snps-of-interest-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}\_{]}} write code to create table of functional annotation
+  info, given gene-names and annotation database.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}\_{]}} draft in ipython notebook
+  \item
+    \texttt{{[}\_{]}} copy to \texttt{spartan}
+  \end{itemize}
+\item
+  \texttt{{[}\_{]}} write methods for the functional annotation paper
+  section
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Gus Dunn" />
+  <title>Pandoc Notes</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #cccccc; background-color: #303030; }
+code > span.kw { color: #f0dfaf; }
+code > span.dt { color: #dfdfbf; }
+code > span.dv { color: #dcdccc; }
+code > span.bn { color: #dca3a3; }
+code > span.fl { color: #c0bed1; }
+code > span.ch { color: #dca3a3; }
+code > span.st { color: #cc9393; }
+code > span.co { color: #7f9f7f; }
+code > span.ot { color: #efef8f; }
+code > span.al { color: #ffcfaf; }
+code > span.fu { color: #efef8f; }
+code > span.er { color: #c3bf9f; }
+  </style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Pandoc Notes</h1>
+<h2 class="author">Gus Dunn</h2>
+</div>
+<div id="TOC">
+1
+</div>
+<h1 id="code-syntax-highlighting"><span class="header-section-number">1</span> Code syntax highlighting</h1>
+<h2 id="basic-example-from-johnmacfarlane.net"><span class="header-section-number">1.1</span> Basic example from <a href="http://johnmacfarlane.net">johnmacfarlane.net</a></h2>
+<p>Source: <a href="http://johnmacfarlane.net/pandoc/demo/example18f.html">johnmacfarlane.net/pandoc/demo/example18f.html</a></p>
+<blockquote>
+<p>Here’s what a delimited code block looks like:</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">-- | Inefficient quicksort in haskell.</span>
+<span class="ot">qsort ::</span> (<span class="dt">Enum</span> a) <span class="ot">=&gt;</span> [a] <span class="ot">-&gt;</span> [a]
+qsort []     <span class="fu">=</span> []
+qsort (x<span class="fu">:</span>xs) <span class="fu">=</span> qsort (filter (<span class="fu">&lt;</span> x) xs) <span class="fu">++</span> [x] <span class="fu">++</span>
+              qsort (filter (<span class="fu">&gt;=</span> x) xs) </code></pre>
+<p>Here’s some python, with numbered lines (specify {.python .numberLines}):</p>
+<table class="sourceCode python numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="sourceCode"><pre><code class="sourceCode python"><span class="kw">class</span> FSM(<span class="dt">object</span>):
+
+<span class="co">&quot;&quot;&quot;This is a Finite State Machine (FSM).</span>
+<span class="co">&quot;&quot;&quot;</span>
+
+<span class="kw">def</span> <span class="ot">__init__</span>(<span class="ot">self</span>, initial_state, memory=<span class="ot">None</span>):
+
+   <span class="co">&quot;&quot;&quot;This creates the FSM. You set the initial state here. The &quot;memory&quot;</span>
+<span class="co">   attribute is any object that you want to pass along to the action</span>
+<span class="co">   functions. It is not used by the FSM. For parsing you would typically</span>
+<span class="co">   pass a list to be used as a stack. &quot;&quot;&quot;</span>
+
+   <span class="co"># Map (input_symbol, current_state) --&gt; (action, next_state).</span>
+   <span class="ot">self</span>.state_transitions = {}
+   <span class="co"># Map (current_state) --&gt; (action, next_state).</span>
+   <span class="ot">self</span>.state_transitions_any = {}
+   <span class="ot">self</span>.default_transition = <span class="ot">None</span>
+   ...</code></pre></td></tr></table>
+</blockquote>
+<h2 id="highlighting-languagesstyles-available"><span class="header-section-number">1.2</span> Highlighting languages/styles available</h2>
+<ul>
+<li>based on excerpts from <code>Highlighting.hs</code> on MacFarlane’s github repo: <a href="https://github.com/jgm/pandoc-highlight/blob/master/Text/Pandoc/Highlighting.hs"><code>jgm/pandoc-highlight</code></a></li>
+</ul>
+<h3 id="languages"><span class="header-section-number">1.2.1</span> Languages</h3>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">
+<span class="fu">...</span>
+
+<span class="ot">langsList ::</span> [(<span class="dt">String</span>, <span class="dt">String</span>)]
+langsList <span class="fu">=</span>    [(<span class="st">&quot;ada&quot;</span>,<span class="st">&quot;Ada&quot;</span>)
+               ,(<span class="st">&quot;java&quot;</span>,<span class="st">&quot;Java&quot;</span>)
+               ,(<span class="st">&quot;prolog&quot;</span>,<span class="st">&quot;Prolog&quot;</span>)
+               ,(<span class="st">&quot;python&quot;</span>,<span class="st">&quot;Python&quot;</span>)
+               ,(<span class="st">&quot;gnuassembler&quot;</span>,<span class="st">&quot;Assembler&quot;</span>)
+               ,(<span class="st">&quot;commonlisp&quot;</span>,<span class="st">&quot;Lisp&quot;</span>)
+               ,(<span class="st">&quot;r&quot;</span>,<span class="st">&quot;R&quot;</span>)
+               ,(<span class="st">&quot;awk&quot;</span>,<span class="st">&quot;Awk&quot;</span>)
+               ,(<span class="st">&quot;bash&quot;</span>,<span class="st">&quot;bash&quot;</span>)
+               ,(<span class="st">&quot;makefile&quot;</span>,<span class="st">&quot;make&quot;</span>)
+               ,(<span class="st">&quot;c&quot;</span>,<span class="st">&quot;C&quot;</span>)
+               ,(<span class="st">&quot;matlab&quot;</span>,<span class="st">&quot;Matlab&quot;</span>)
+               ,(<span class="st">&quot;ruby&quot;</span>,<span class="st">&quot;Ruby&quot;</span>)
+               ,(<span class="st">&quot;cpp&quot;</span>,<span class="st">&quot;C++&quot;</span>)
+               ,(<span class="st">&quot;ocaml&quot;</span>,<span class="st">&quot;Caml&quot;</span>)
+               ,(<span class="st">&quot;modula2&quot;</span>,<span class="st">&quot;Modula-2&quot;</span>)
+               ,(<span class="st">&quot;sql&quot;</span>,<span class="st">&quot;SQL&quot;</span>)
+               ,(<span class="st">&quot;eiffel&quot;</span>,<span class="st">&quot;Eiffel&quot;</span>)
+               ,(<span class="st">&quot;tcl&quot;</span>,<span class="st">&quot;tcl&quot;</span>)
+               ,(<span class="st">&quot;erlang&quot;</span>,<span class="st">&quot;erlang&quot;</span>)
+               ,(<span class="st">&quot;verilog&quot;</span>,<span class="st">&quot;Verilog&quot;</span>)
+               ,(<span class="st">&quot;fortran&quot;</span>,<span class="st">&quot;Fortran&quot;</span>)
+               ,(<span class="st">&quot;vhdl&quot;</span>,<span class="st">&quot;VHDL&quot;</span>)
+               ,(<span class="st">&quot;pascal&quot;</span>,<span class="st">&quot;Pascal&quot;</span>)
+               ,(<span class="st">&quot;perl&quot;</span>,<span class="st">&quot;Perl&quot;</span>)
+               ,(<span class="st">&quot;xml&quot;</span>,<span class="st">&quot;XML&quot;</span>)
+               ,(<span class="st">&quot;haskell&quot;</span>,<span class="st">&quot;Haskell&quot;</span>)
+               ,(<span class="st">&quot;php&quot;</span>,<span class="st">&quot;PHP&quot;</span>)
+               ,(<span class="st">&quot;xslt&quot;</span>,<span class="st">&quot;XSLT&quot;</span>)
+               ,(<span class="st">&quot;html&quot;</span>,<span class="st">&quot;HTML&quot;</span>)
+               ]
+
+<span class="fu">...</span></code></pre>
+<h3 id="styles"><span class="header-section-number">1.2.2</span> Styles</h3>
+<p>Looks like only these?</p>
+<ul>
+<li>pygments</li>
+<li>espresso</li>
+<li>zenburn</li>
+<li>tango</li>
+<li>kate</li>
+<li>monochrom</li>
+<li>haddock</li>
+</ul>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">
+<span class="kw">module</span> <span class="dt">Text.Pandoc.Highlighting</span> ( languages
+                                , languagesByExtension
+                                , highlight
+                                , formatLaTeXInline
+                                , formatLaTeXBlock
+                                , styleToLaTeX
+                                , formatHtmlInline
+                                , formatHtmlBlock
+                                , styleToCss
+                                , pygments
+                                , espresso
+                                , zenburn
+                                , tango
+                                , kate
+                                , monochrome
+                                , haddock
+                                , <span class="dt">Style</span>
+                                , fromListingsLanguage
+                                , toListingsLanguage
+                                ) <span class="kw">where</span></code></pre>
+<h3 id="highlighting-kate"><span class="header-section-number">1.2.3</span> <code>highlighting-kate</code></h3>
+<p>Actually it looks like any highlighting style supported by <a href="http://kate-editor.org/">Kate</a> (<em>as long as you have it installed properly?</em>) should be supported.</p>
+<p>From <a href="https://benjeffrey.com/pandoc-syntax-highlighting-css">benjeffrey.com</a>:</p>
+<blockquote>
+<p><strong>The highlighting-kate Package</strong></p>
+</blockquote>
+<blockquote>
+<p>Unless you dig into Pandoc’s Haddock documentation, you won’t find much information on the internet telling you what the generated markup classes (.kw, .co, .ot, etc.) mean, or how you can customize them.</p>
+</blockquote>
+<blockquote>
+<p>It turns out that Pandoc relies on another one of John Macfarlane’s creations in order to mark up code syntax, the highlighting-kate package,</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><em>a syntax highlighting library with support for nearly one hundred languages. The syntax parsers are automatically generated from Kate syntax descriptions (http://kate-editor.org/), so any syntax supported by Kate can be added.</em></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-highlighting-kate package description</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>So it turns out that the syntax tokens are based on definitions provided by the KDE text editor, Kate.</p>
+</blockquote>
+<h3 id="pygments-styles-for-highlighting"><span class="header-section-number">1.2.4</span> <code>Pygments</code> styles for highlighting</h3>
+<p>For this you will need to write a filter that sends every code block to <code>pygments</code> and makes sure the result ends up in the document.</p>
+<h2 id="invoking-the-highlighting-kate-styles"><span class="header-section-number">1.3</span> Invoking the <code>highlighting-kate</code> styles</h2>
+<p>You add <code>--highlight-style &lt;style-name&gt;</code> to the command line or in your <code>Makefile</code>.</p>
+<div class="references">
+
+</div>
+</body>
+</html>

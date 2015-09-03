@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Gus, Gisella, Andrea" />
+  <title>Status of dead positives recovery</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  
+  
+</head>
+<body>
+<div id="header">
+<h1 class="title">Status of dead positives recovery</h1>
+<h1 class="subtitle">Meeting notes</h1>
+<h2 class="author">Gus, Gisella, Andrea</h2>
+<h3 class="date">2015-02-04 (Wednesday)</h3>
+</div>
+<div id="TOC">
+1
+</div>
+<h1 id="overview-of-discussed"><span class="header-section-number">1</span> Overview of Discussed</h1>
+<ul>
+<li>Andrea’s write up of current results
+<ul>
+<li><em>need to be collated into one doc</em></li>
+</ul></li>
+<li>Status of LD analysis and how to choose cut-off
+<ul>
+<li>results of discussion with Mark</li>
+<li>success in generating expected behavior of mean LD behavior vs distance</li>
+<li>Gus’s proposed idea to identify “outlier” snp pairs (<em>see section below</em>)</li>
+</ul></li>
+<li>First figure should have a map of population locations as a panel</li>
+<li>Structure of paper <em>(<strong>mostly</strong> unchanged since last meeting)</em></li>
+<li>plans for future</li>
+</ul>
+<h1 id="current-structure-of-paper"><span class="header-section-number">2</span> Current structure of paper</h1>
+<p><em> <strong>mostly</strong> unchanged since last meeting</em>:</p>
+<ol style="list-style-type: decimal">
+<li>Development of the base SNP set</li>
+<li>Linkage Analysis
+<ol style="list-style-type: lower-alpha">
+<li><strong>(new)</strong> linkage-based grouping of contigs by physical proximity</li>
+</ol></li>
+<li>Functional Annotation of filtered SNPs</li>
+<li>Discussion
+<ul>
+<li>establish the ability to do this scale of work in <em>G. f. fuscipes</em></li>
+<li>limits of the dataset as it now stands</li>
+<li>Never-the-less, hypotheses can be formulated and here they are…</li>
+<li><strong>(new)</strong> provides more information pertaining to the physical proximity of the supercontigs</li>
+</ul></li>
+</ol>
+<h1 id="guss-proposal-to-identify-ld-outlier-snp-pairs"><span class="header-section-number">3</span> Gus’s proposal to identify LD “outlier” snp-pairs</h1>
+<ol style="list-style-type: decimal">
+<li>for each group of SNPs <span class="math"><em>x</em></span> bp apart: collect <span class="math"><em>r</em><sup>2</sup></span> from <span class="math"> ±  ∼ 5</span> bp distance window around <span class="math"><em>x</em></span>:
+<ol style="list-style-type: lower-alpha">
+<li>across genome</li>
+<li>across scaffold</li>
+</ol></li>
+<li>calculate modified z-score (based on <em>median absolute deviation</em> rather than standard deviation: <strong>MAD is more robust than SD for HTS-type data</strong>)</li>
+<li>flag any SNP-pair with <span class="math"><em>z</em> ≥ 3.5</span></li>
+<li>possibly randomize data and calculate FDR to evaluate performance.
+<ol style="list-style-type: lower-alpha">
+<li>perhaps vary the window-size from step 1 to use FDR to chose window-size that minimizes FDR.</li>
+</ol></li>
+</ol>
+<h1 id="currentfuture-plans"><span class="header-section-number">4</span> Current/future plans</h1>
+<p><strong>Gisella:</strong></p>
+<ul>
+<li><code>[X]</code> email Washington group about methods of Seq prep and analysis</li>
+<li><code>[X]</code> email Aksoy group about linkage status of <em>G. m. morsitans</em></li>
+</ul>
+<p><strong>Gus and Andrea:</strong></p>
+<ul>
+<li><code>[ ]</code> add methods in “final” style to growing document</li>
+<li><code>[ ]</code> place document in shared location</li>
+</ul>
+<p><strong>Gus:</strong></p>
+<ul>
+<li><code>[ ]</code> add LD methods and results to document</li>
+<li><code>[ ]</code> generate population-location map with zoom out to all Uganda</li>
+<li><code>[-waiting-]</code> upon decision of which near-by genes are “interesting” send summary of info known about them to Aksoy group for ideas.</li>
+</ul>
+<div class="references">
+
+</div>
+</body>
+</html>

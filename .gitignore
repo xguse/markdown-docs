@@ -1,15 +1,15 @@
 .idea
 
 # binary figure files that are produced by builds.
-*.png
-*.jpeg
-*.jpg
-*.tif
-*.tiff
+# *.png
+# *.jpeg
+# *.jpg
+# *.tif
+# *.tiff
 
 
 # Finished 'print outs'
-*.html
-*.tex
-*.docx
-*.pdf
+# *.html
+# *.tex
+# *.docx
+# *.pdf

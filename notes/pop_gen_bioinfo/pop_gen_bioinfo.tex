@@ -1,0 +1,225 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Notes on Bioinformatics for Population Genetics},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Notes on Bioinformatics for Population Genetics}
+\author{Gus Dunn}
+\date{2014-12-30}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Convert VCF files to PLINK
+format}\label{convert-vcf-files-to-plink-format}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \url{http://vcftools.sourceforge.net/documentation.html\#plink}
+\end{itemize}
+
+From the link above:
+
+\begin{quote}
+VCFtools can convert VCF files into formats convenient for use in other
+programs. One such example is the ability to convert into PLINK format.
+The following function will output the variants in .ped and .map files.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+    \KeywordTok{vcftools} \NormalTok{--vcf input_data.vcf --plink --chr 1 --out output_in_plink}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Imputation}\label{imputation}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Nature Reviews Genetics 11, 499-511 (July 2010):
+  \href{http://www.nature.com/nrg/journal/v11/n7/box/nrg2796_BX1.html}{Box
+  1 \textbar{} How genotype imputation works}
+\end{itemize}
+
+\section{VCF phased vs non-phased}\label{vcf-phased-vs-non-phased}
+
+\begin{verbatim}
+tags = [VCF, phased, ]
+\end{verbatim}
+
+\subsection{Web snippets}\label{web-snippets}
+
+\begin{itemize}
+\item
+  as far as I know, the main reason to use allele phasing information is
+  to increase the correctness of the haplotypes and haplotype blocks
+  inferred from them
+  \href{https://www.biostars.org/p/5298/}{{[}source{]}}.
+\item
+  Phased data are ordered along one chromosome and so from these data
+  you know the haplotype. Unphased data are simply the genotypes without
+  regard to which one of the pair of chromosomes holds that allele.
+  \href{https://www.biostars.org/p/7846/}{{[}source{]}}
+\item
+  The ability to distinguish which alleles belong to which chromosome is
+  important when considering how genes are inherited. Generally, a
+  parent passes one of the two copies of each chromosome on to their
+  offspring. While the two chromosomes might both contribute genetic
+  information via a process called recombination, the genes received by
+  a child are typically ``linked'' and inherited together since they are
+  located on the same chromosome.
+
+  To determine which genes of yours are linked together (and therefore
+  likely to be inherited together by your child), it is first necessary
+  to figure out which alleles (indicated by the variant SNPs) exist
+  together on the same chromosome. This process has been termed
+  ``phasing'' in the bioinformatics world.
+  \href{link_addresshttp://www.chromosomechronicles.com/2009/09/08/phasing-determining-which-snps-are-inherited-together/}{{[}source{]}}
+\item
+  \url{http://blogs.discovermagazine.com/gnxp/2007/01/basic-concepts-linkage-disequilibrium/\#.VKK7BAMAQ}
+\end{itemize}
+
+\section{Glossary}\label{glossary}
+
+\begin{description}
+\item[imputation]
+\(\mapsto\) in genetics, imputation refers to the statistical inference
+of unobserved genotypes. \emph{It is achieved by using known haplotypes
+in a population}, for instance from the HapMap or the 1000 Genomes
+Project in humans, thereby allowing to test initially-untyped genetic
+variants for association with a trait of interest. Genotype imputation
+hence helps tremendously in narrowing-down the location of probably
+causal variants in genome-wide association studies.
+\href{http://en.wikipedia.org/wiki/Imputation_(genetics)}{Wikipedia}
+\item[haplotype]
+\(\mapsto\) a collection of specific alleles (particular DNA sequences)
+in a cluster of tightly-linked genes on a chromosome that are likely to
+be inherited together. \emph{Put in simple words, haplotype is the group
+of genes that a progeny inherits from one parent.}
+\href{link_addresshttp://en.wikipedia.org/wiki/Haplotype}{Wikipedia}
+
+\(\mapsto\) A second meaning of the term is a set of single-nucleotide
+polymorphisms (SNPs) on a single chromatid of a chromosome pair that are
+associated statistically. It is thought that these associations, and the
+identification of a few alleles of a haplotype sequence, can
+unambiguously identify all other polymorphic sites in its region.
+\href{link_addresshttp://en.wikipedia.org/wiki/Haplotype}{Wikipedia}
+
+\(\mapsto\) haplotype is a contraction for haploid genotypes.
+\href{link_addresshttp://en.wikipedia.org/wiki/Haplotype}{Wikipedia}
+\item[linkage disequilibrium]
+\(\mapsto\) the occurrence of some combinations of alleles or genetic
+markers in a population more often or less often than would be expected
+from a random formation of haplotypes from alleles based on their
+frequencies. It is a second order phenomenon derived from linkage, which
+is the presence of two or more loci on a chromosome with limited
+recombination between them. The amount of linkage disequilibrium depends
+on the difference between observed allelic frequencies and those
+expected from a homogenous, randomly distributed model. Populations
+where combinations of alleles or genotypes can be found in the expected
+proportions are said to be in linkage equilibrium.
+\href{http://en.wikipedia.org/wiki/Linkage_disequilibrium}{Wikipedia}
+\item[linkage group]
+\(\mapsto\) in genetics, all of the genes on a single chromosome. They
+are inherited as a group; that is, during cell division they act and
+move as a unit rather than independently. The existence of linkage
+groups is the reason some traits do not comply with Mendel's law of
+independent assortment (recombination of genes and the traits they
+control); \emph{i.e.}, the principle applies only if genes are located
+on different chromosomes. Variation in the gene composition of a
+chromosome can occur when a chromosome breaks, and the sections join
+with the partner chromosome if it has broken in the same places. This
+exchange of genes between chromosomes, called crossing over, usually
+occurs during meiosis, when the total number of chromosomes is halved.
+\href{http://www.britannica.com/EBchecked/topic/342478/linkage-group}{Encyclopedia
+Britannica}
+
+\(\mapsto\) A pair or set of genes on a chromosome that tend to be
+transmitted together.
+\href{http://www.thefreedictionary.com/linkage+group}{American Heritage®
+Dictionary of the English Language}
+\end{description}
+
+\end{document}

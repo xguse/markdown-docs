@@ -1,0 +1,207 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={GusD, GisellaC, RobH},
+            pdftitle={G. pallidipes sample database summary and extractions},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{\emph{G. pallidipes} sample database summary and extractions}
+\author{GusD, GisellaC, RobH}
+\date{2015-02-12 (Thursday)}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+% blockquote
+
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Overview of discussed}\label{overview-of-discussed}
+
+\subsection{Message to Eliot}\label{message-to-eliot}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  email asking about:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    GEO COORDINATES for ambiguous location names
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      include pictures of samples/boxes
+    \end{itemize}
+  \item
+    Samples/boxes listed on the PDF manifest but missing once shipment
+    received
+  \end{itemize}
+\item
+  Drafted by \textbf{{[}Rob{]}} and sent to Gisella
+\item
+  Passed on to destination by \textbf{{[}Gisella{]}}
+\end{itemize}
+
+\subsection{Sample catalog summaries}\label{sample-catalog-summaries}
+
+\subsubsection{Next iteration}\label{next-iteration}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  data types:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    location
+  \item
+    symbols when present (\emph{I assume you mean location symbol?})
+  \item
+    number of individuals
+  \item
+    date range
+  \item
+    is tissue?
+  \item
+    is extraction?
+  \item
+    analysis status
+  \end{itemize}
+\item
+  will be done in \texttt{python} for increased flexibility by
+  \textbf{{[}Gus{]}}
+\end{itemize}
+
+\subsubsection{Cold-room/freezer
+samples}\label{cold-roomfreezer-samples}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{Important Note:} extracted samples from freezer are sourced
+  from cold-room tissues
+\item
+  read Johnson Ouma paper for:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    protocol starting points
+  \item
+    MicroSats
+  \item
+    mDNA
+  \end{itemize}
+\item
+  First Steps for \textbf{{[}Rob{]}}:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    shadow Kirsten to learn extractions
+  \item
+    take 5 samples with legs for extraction
+  \item
+    test extractions with PCR:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      ITS if available or can use \emph{G. f. fuscipes} primers
+
+      \begin{itemize}
+      \itemsep1pt\parskip0pt\parsep0pt
+      \item
+        find out if this will work
+      \end{itemize}
+    \item
+      MicroSat primers from Ouma paper or otherwise \textbf{{[}being
+      obtained by Kirstin{]}}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Nonsensical/ambiguous location
+names}\label{nonsensicalambiguous-location-names}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{{[}Rob{]}} will locate and bring to \textbf{{[}Gisella{]}} for
+  help
+\end{itemize}
+
+\subsection{Questions for Gisella}\label{questions-for-gisella}
+
+\subsubsection{Which extraction kit for
+legs?}\label{which-extraction-kit-for-legs}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Same as for midguts
+\item
+  Kirstin is trouble shooting it currently for legs
+\end{itemize}
+
+\end{document}

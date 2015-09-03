@@ -1,0 +1,152 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{fourier}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Morning checklist},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\title{Morning checklist}
+\author{Gus Dunn}
+\date{2014-12-26}
+
+\begin{document}
+\maketitle
+
+\section{Morning Checklist (with info
+requests)}\label{morning-checklist-with-info-requests}
+
+\begin{itemize}
+\item
+  \texttt{{[}\textasciitilde{}0730{]}} Liam breakfast
+\item
+  \texttt{{[}\textasciitilde{}0815{]}} Brush Liam's teeth
+\item
+  \texttt{{[}????{]}} Catie bottle
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    amount: :??:
+  \item
+    timing: :??:
+  \item
+    notes: :??:
+  \end{itemize}
+\item
+  \texttt{{[}\textasciitilde{}0810{]}} Catie nap (\emph{about 1:15 after
+  she wakes up for the morning})
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Liam gets independent activity (ipad, or similar?)
+  \item
+    change her diaper
+  \item
+    wrap her
+  \item
+    rock her with pucky
+  \item
+    nap her in swing with
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      music
+    \item
+      rocking
+    \item
+      white noise
+    \item
+      blanket
+    \end{itemize}
+  \item
+    \texttt{{[}?{]}} cry it in effect the whole time or after the first
+    pucky loss?
+  \item
+    approximate sleep time is {[}\emph{\textasciitilde{}2 hours?}{]}
+  \end{itemize}
+\item
+  \texttt{{[}\textasciitilde{}1000?{]}} Liam Snack
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    notes: :??:
+  \end{itemize}
+\item
+  \texttt{{[}\textasciitilde{}1230?{]}} Liam Lunch
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    amount: :??:
+  \item
+    timing: :??:
+  \end{itemize}
+\item
+  \texttt{{[}\textasciitilde{}1230?{]}} Liam Nap
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}?{]}} still old routine or is there a new one similar to
+    the night time one?
+  \item
+    Catie in bouncy if not napping
+  \item
+    approx sleep time is \emph{2h}
+  \end{itemize}
+\end{itemize}
+
+\end{document}

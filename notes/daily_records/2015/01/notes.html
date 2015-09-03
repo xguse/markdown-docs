@@ -1,0 +1,1278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Gus Dunn" />
+  <title>Daily Records</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  
+  
+  
+</head>
+<body>
+<div id="header">
+<h1 class="title">Daily Records</h1>
+<h1 class="subtitle">Caccone PostDoc</h1>
+<h2 class="author">Gus Dunn</h2>
+<h3 class="date">January, 2015</h3>
+</div>
+<div id="TOC">
+1
+</div>
+<hr />
+<h1 id="friday"><span class="header-section-number">1</span> 2015-01-02 (Friday)</h1>
+<h2 id="writing-methods"><span class="header-section-number">1.1</span> Writing Methods</h2>
+<ul>
+<li><code>[x]</code> Functional Annotations
+<ul>
+<li>done-ish at 2015-01-02 08:58</li>
+</ul></li>
+<li><code>[ ]</code> Linkage
+<ul>
+<li><strong>STILL NEED TO DO THIS ANALYSIS…</strong></li>
+</ul></li>
+</ul>
+<h2 id="linkage-analysis"><span class="header-section-number">1.2</span> Linkage Analysis</h2>
+<ul>
+<li>Still not understanding how you can calculate LD without phased data but it <strong>seems</strong> like many programs claim to…</li>
+</ul>
+<h3 id="plink"><span class="header-section-number">1.2.1</span> PLINK</h3>
+<ul>
+<li><a href="https://www.cog-genomics.org/plink2/ld">v1.90 user manual: LD section</a></li>
+<li><code>[x]</code> create the files needed from the master VCF file (tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf)
+<ul>
+<li>looks like <code>plink</code> now reads VCF (<code>v1.90</code>): will try this first.</li>
+</ul></li>
+<li><code>[x]</code> split data into smaller pieces to parallelize the <code>plink</code> analysis.
+<ul>
+<li>looks like the <code>--parallel</code> flag will allow <code>plink</code> to take care of this.</li>
+</ul></li>
+<li><code>[x]</code> start run(s) on <code>louise</code>.</li>
+<li><code>[ ]</code> <em>try running a <code>--blocks</code> PLINK analysis for haplotype blocks to see if its useful?</em></li>
+</ul>
+<p><strong>plink commands run and kept:</strong></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">plink</span> --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-extra-chr \
+    <span class="kw">--r</span> gz with-freqs  \
+    <span class="kw">--out</span> plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf\
+    <span class="kw">/ld/r_none_freqs</span>
+
+<span class="kw">plink</span> --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-extra-chr \
+    <span class="kw">--r</span> gz in-phase with-freqs  \
+    <span class="kw">--out</span> plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf\
+    <span class="kw">/ld/r_none_phase_freqs</span>
+
+<span class="kw">plink</span> --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-extra-chr \
+    <span class="kw">--r</span> triangle gz  \
+    <span class="kw">--out</span> plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf\
+    <span class="kw">/ld/r_tri</span></code></pre>
+<h3 id="plot-plink-results"><span class="header-section-number">1.2.2</span> Plot PLINK results</h3>
+<ul>
+<li><code>[x]</code> create <code>ipython</code> notebook file
+<ul>
+<li><a href="http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb">YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb</a></li>
+<li>[2015-01-13]: <a href="http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-01-05_Plot_PLINK_results.ipynb">YALE/ddrad58/2015-01-05_Plot_PLINK_results.ipynb</a></li>
+</ul></li>
+<li><code>[ ]</code> write code to plot</li>
+</ul>
+<h2 id="todo-for-gisella"><span class="header-section-number">1.3</span> TODO for Gisella</h2>
+<ul>
+<li><code>[ ]</code> re-read grant bit about bioinformatics and think about how to use Hongyu Zhao.</li>
+</ul>
+<hr />
+<h1 id="saturday"><span class="header-section-number">2</span> 2015-01-03 (Saturday)</h1>
+<h2 id="linkage-analysis-1"><span class="header-section-number">2.1</span> Linkage Analysis</h2>
+<h3 id="plot-plink-results-1"><span class="header-section-number">2.1.1</span> Plot PLINK results</h3>
+<ul>
+<li><code>[x]</code> <strong>WHAT</strong> should be plotted?
+<ul>
+<li><code>[x]</code> what <em>exactly is</em> the <span class="math"><em>r</em></span> value telling us?
+<ul>
+<li><code>[x]</code> does it already take into account the distance?
+<ul>
+<li>according to <a href="http://en.wikipedia.org/wiki/Linkage_disequilibrium#Definition">Wikipedia</a>, <span class="math"><em>r</em></span> is simply the correlation coefficient between pairs of loci: <br /><span class="math">$$r=\frac{D}{\sqrt{p_1p_2q_1q_2}}$$</span><br /></li>
+</ul></li>
+</ul></li>
+<li>It seems like plotting <span class="math">$\frac{r}{l_{a} - l_{b}}$</span> (<span class="math"><em>r</em></span> divided by distance) <strong>is</strong> warranted where:
+<ul>
+<li><span class="math"><em>l</em><sub><em>a</em></sub></span> is location of SNP<span class="math"><em></em><sub><em>a</em></sub></span></li>
+<li><span class="math"><em>l</em><sub><em>b</em></sub></span> is location of SNP<span class="math"><em></em><sub><em>b</em></sub></span></li>
+</ul></li>
+</ul></li>
+<li><code>[ ]</code> write code to plot</li>
+</ul>
+<h4 id="questions-for-andrea"><span class="header-section-number">2.1.1.1</span> Questions for Andrea</h4>
+<ul>
+<li>Some MAFs are zero which causes the LD (<span class="math"><em>r</em></span>) to fail. <a href="http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb#LD-as-r-for-Scaffold0:">link</a></li>
+</ul>
+<hr />
+<h1 id="monday"><span class="header-section-number">3</span> 2015-01-05 (Monday)</h1>
+<h2 id="linkage-analysis-2"><span class="header-section-number">3.1</span> Linkage Analysis</h2>
+<h3 id="plot-plink-results-2"><span class="header-section-number">3.1.1</span> Plot PLINK results</h3>
+<ul>
+<li>met with Andrea after showing her what I had and specifically the MAF = 0 for about half the <code>scaffold0</code> comparisons.
+<ul>
+<li><strong>(see meeting notes for more details)</strong></li>
+</ul></li>
+</ul>
+<h3 id="re-filter-original-vcf"><span class="header-section-number">3.1.2</span> Re-Filter original VCF</h3>
+<ul>
+<li>the incorrect (<code>--min-allele</code>/<code>--max-allele</code>) filter was used to generate: <code>tsetseFINAL_14Oct2014_f2_53.recode.vcf</code></li>
+<li>the correct filter is <code>--maf</code>.</li>
+<li>I am doing it myself with MAF = 0.05 (see below).</li>
+<li><strong>retained only 47.7% sites</strong></li>
+<li><strong>I will be re-running my PLINK LD analysis just in case.</strong></li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wd238</span> at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ <span class="kw">vcftools</span> \
+    <span class="kw">--vcf</span> tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf \
+    <span class="kw">--maf</span> 0.05 \
+    <span class="kw">--out</span> tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05 \
+    <span class="kw">--recode</span>
+
+<span class="kw">VCFtools</span> - v0.1.12b
+<span class="kw">(C)</span> <span class="kw">Adam</span> Auton and Anthony Marcketta 2009
+
+<span class="kw">Parameters</span> as interpreted:
+    <span class="kw">--vcf</span> tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf
+    <span class="kw">--maf</span> 0.05
+    <span class="kw">--out</span> tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05
+    <span class="kw">--recode</span>
+
+<span class="kw">After</span> filtering, kept 53 out of 53 Individuals
+<span class="kw">Outputting</span> VCF file...
+<span class="kw">After</span> filtering, kept 73297 out of a possible 153650 Sites
+<span class="kw">Run</span> Time = 21.00 seconds</code></pre>
+<h3 id="plink---rerun"><span class="header-section-number">3.1.3</span> PLINK - rerun</h3>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">plink</span> --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+<span class="kw">--allow-extra-chr</span> \
+<span class="kw">--r</span> gz with-freqs dprime \
+<span class="kw">--out</span> plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r_none_freqs_dprime</code></pre>
+<h2 id="recover-dead-positives"><span class="header-section-number">3.2</span> Recover dead positives</h2>
+<h3 id="dissections"><span class="header-section-number">3.2.1</span> Dissections</h3>
+<ul>
+<li>Prepped for dissections and pre-filled the worksheets</li>
+<li>but we are out of the 1.5 ml tubes that I bought for this and I will have to go get some more tomorrow morning.</li>
+</ul>
+<hr />
+<h1 id="tuesday"><span class="header-section-number">4</span> 2015-01-06 (Tuesday)</h1>
+<h2 id="linkage-analysis-3"><span class="header-section-number">4.1</span> Linkage Analysis</h2>
+<ul>
+<li>emailed Dan about looking over the results.</li>
+<li>Should probably run them by Jeff if he has time too.</li>
+</ul>
+<h3 id="plink---make-bed"><span class="header-section-number">4.1.1</span> PLINK <code>--make-bed</code></h3>
+<pre><code>wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+&gt; --allow-extra-chr \
+&gt; --maf 0.05 \
+&gt; --make-bed \
+&gt; --out tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink
+
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.log.
+48251 MB RAM detected; reserving 24125 MB for main workspace.
+--vcf: 73k variants complete.
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.bed
++
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.bim
++
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.fam
+written.
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+0 variants removed due to MAF threshold(s) (--maf/--max-maf).
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.bed +
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.bim +
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.fam ...
+done.
+</code></pre>
+<h3 id="plink---blocks"><span class="header-section-number">4.1.2</span> PLINK <code>--blocks</code></h3>
+<ul>
+<li>running with <code>--blocks</code> option to look at estimated haplotype blocks</li>
+</ul>
+<pre><code>wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+&gt; --allow-extra-chr \
+&gt; --blocks no-pheno-req no-small-max-span \
+&gt; --out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan
+
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.log.
+48251 MB RAM detected; reserving 24125 MB for main workspace.
+--vcf: 73k variants complete.
+
+...
+
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\ 
+    /ld/blocks_nophenoreq_nosmallmaxspan.nosex
+.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--blocks: 8040 haploblocks written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.blocks
+.
+Extra block details written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.blocks.det
+.
+Longest span: 199.985kb.
+</code></pre>
+<h3 id="plot-plink-results-3"><span class="header-section-number">4.1.3</span> Plot PLINK results</h3>
+<ul>
+<li>cleaned up a few things</li>
+<li>added residual plots following the regplots</li>
+</ul>
+<h2 id="recover-dead-positives-1"><span class="header-section-number">4.2</span> Recover dead positives</h2>
+<ul>
+<li>need to meet with Kirsten (emailed her to schedule a time)
+<ul>
+<li>subject: “<em>Short meeting to talk about the dead positives screen?</em>”</li>
+</ul></li>
+</ul>
+<h3 id="dissections-1"><span class="header-section-number">4.2.1</span> Dissections</h3>
+<ul>
+<li>getting more:
+<ul>
+<li>tubes</li>
+<li>PBS</li>
+<li>Pens</li>
+</ul></li>
+<li>need to get receipt(s) from Kirsten regarding the dissection dish order
+<ul>
+<li>emailed with subject: “<em>did you ever send me the receipt(s) for the stuff you ordered for the dissections over the internet?</em>”</li>
+</ul></li>
+</ul>
+<h2 id="bonizzoni-et-al-insecticide-resistance"><span class="header-section-number">4.3</span> Bonizzoni <em>et al</em>: Insecticide Resistance</h2>
+<ul>
+<li>I am SUPER late on this!</li>
+</ul>
+<hr />
+<h1 id="wednesday"><span class="header-section-number">5</span> 2015-01-07 (Wednesday)</h1>
+<h2 id="bonizzoni-et-al-insecticide-resistance-1"><span class="header-section-number">5.1</span> Bonizzoni <em>et al</em>: Insecticide Resistance</h2>
+<p><strong>Status:</strong> COMPLETE</p>
+<ul>
+<li>finished reviewing the main text</li>
+<li>emailed it to her</li>
+<li>will not be going over the legends or figs</li>
+</ul>
+<h2 id="meeting-with-serap-aksoy"><span class="header-section-number">5.2</span> Meeting with Serap Aksoy</h2>
+<p><strong>Time:</strong> 10:00 AM to 11:30AM</p>
+<h3 id="discussed"><span class="header-section-number">5.2.1</span> Discussed</h3>
+<ul>
+<li>how to log Iowa tsetse samples</li>
+<li>student to do much f the logging after a spreadsheet is devised</li>
+<li>location of the other RNA midguts
+<ul>
+<li>she said she thought they didnt get any but then thought she remembered that Brian tried extracting RNA from at least a few infected midguts with no success.</li>
+<li>**She said she needs the carcasses of the infected flies too which I did not remember (<strong>I need to bring this up with Gisella bc this is a major reduction of our expected infected material…</strong>).
+<ul>
+<li><em>this doesn’t really make sense anyway since i dont think we preserved the bodies for RNA.</em></li>
+</ul></li>
+</ul></li>
+<li>having me send an ad or two for a postdoc position for her lab to my friends</li>
+</ul>
+<h3 id="action-items"><span class="header-section-number">5.2.2</span> Action items</h3>
+<p><strong>Status:</strong> IN PROGRESS</p>
+<ul>
+<li><code>[x]</code> create simple excel sheet to track Iowa samples
+<ul>
+<li><code>[x]</code> email sheet to Brian and Serap
+<ul>
+<li>subject: <em>Spreadsheet to record Iowa sample materials</em></li>
+</ul></li>
+<li><strong>NOTE:</strong> sheet is a google sheet named <a href="https://docs.google.com/spreadsheets/d/1SeoKnRQ0djB1xjyVGQy-NikNFTzQ-wL-hXCwUZAoNqw/edit?usp=sharing">Iowa_tsetse_material_inventory</a></li>
+</ul></li>
+<li><code>[x]</code> locate extra RNA midguts in our freezers
+<ul>
+<li><code>[x]</code> email Aksoy, Brian, Michelle to schedule pickup
+<ul>
+<li>subject: <em>Many more midguts and heads for RNA</em></li>
+</ul></li>
+</ul></li>
+<li><code>[ ]</code> send feelers and ads to friends about postdoc position in her lab</li>
+<li><code>[ ]</code> contact Gisella about Serap wanting the carcasses…</li>
+</ul>
+<h2 id="meeting-with-andrea"><span class="header-section-number">5.3</span> Meeting with Andrea</h2>
+<h3 id="discussed-1"><span class="header-section-number">5.3.1</span> Discussed</h3>
+<ul>
+<li>problem re-running the figure generation R script</li>
+<li>couldn’t open the PNG writer bc no X11 on the cluster and <code>ssh -Y</code> wasn’t working even though it did last time…</li>
+<li>I added some code to the R script to specify `png(type=“cairo”)</li>
+<li>waiting to hear the outcome
+<ul>
+<li><em>program ran but output was not what was expected: many more graphs than last time</em></li>
+<li>I expect user error</li>
+</ul></li>
+</ul>
+<h2 id="recover-dead-positives-2"><span class="header-section-number">5.4</span> Recover dead positives</h2>
+<ul>
+<li>Meeting with Kirstin tomorrow at 1 or 2 PM</li>
+</ul>
+<hr />
+<h1 id="thursday"><span class="header-section-number">6</span> 2015-01-08 (Thursday)</h1>
+<h2 id="admin-stuff"><span class="header-section-number">6.1</span> Admin stuff</h2>
+<h3 id="seraps-postdoc-advertisement"><span class="header-section-number">6.1.1</span> Serap’s postdoc advertisement</h3>
+<ul>
+<li>posted to facebook</li>
+</ul>
+<h3 id="lab-meetings"><span class="header-section-number">6.1.2</span> Lab meetings</h3>
+<ul>
+<li>email from Jeff:
+<ul>
+<li>subject: <em>lab meetings</em></li>
+<li>body:</li>
+</ul>
+<blockquote>
+<p>Gus,</p>
+</blockquote>
+<blockquote>
+<p>Any lab meetings set up? We should grab Aris and Yiota who might give a joint one. Then also the new Anthropology guy, Eduardo Fernandez-Duque.</p>
+</blockquote>
+<blockquote>
+<p>Jeff</p>
+</blockquote></li>
+<li>doodle poll:
+<ul>
+<li><a href="http://doodle.com/hc4r8gdi6wnse425">link</a> sent to <code>pc_labs</code></li>
+<li>not certain if Maggie is on that list yet</li>
+<li>emailed Carol for her email in case not
+<ul>
+<li>She <strong>WAS</strong> on the list when I sent the link</li>
+<li>Carol replied with current list: recorded below</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="current-pc_labs-list"><span class="header-section-number">6.1.3</span> Current <code>pc_labs</code> list</h3>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#separator-CACCONE#</span>
+<span class="kw">adalgisa.caccone@yale.edu</span>
+<span class="kw">carol.mariani@yale.edu</span>
+<span class="kw">danielle.edwards@yale.edu</span>
+<span class="kw">nphavill@fs.fed.us</span>
+<span class="kw">jrichardson@providence.edu</span>
+<span class="kw">giovanna.carpi@yale.edu</span>
+<span class="kw">katharine.walter@yale.edu</span>
+<span class="kw">gus.dunn@yale.edu</span>
+
+<span class="co">#separator-POWELL#</span>
+<span class="kw">jeffrey.powell@yale.edu</span>
+<span class="kw">kirstin.dion@yale.edu</span>
+<span class="kw">andrea.gloria-soria@yale.edu</span>
+<span class="kw">b.evans@yale.edu</span>
+<span class="kw">joshua.richardson@yale.edu</span>
+
+<span class="co">#separator-TEMP-ROTATION-UNDERGRAD#</span>
+<span class="kw">christian.hernandez@yale.edu</span>
+<span class="kw">elaine.guevara@yale.edu</span>
+<span class="kw">andres.valdivieso@yale.edu</span>
+<span class="kw">mkcorley@gmail.com</span>
+<span class="kw">alexis.halyard@yale.edu</span>
+<span class="kw">pkotsakiozi@hotmail.com</span>
+<span class="kw">aristeidis.parmakelis@yale.edu</span></code></pre>
+<h2 id="recover-dead-positives-3"><span class="header-section-number">6.2</span> Recover dead positives</h2>
+<h3 id="meeting-with-kirstin"><span class="header-section-number">6.2.1</span> Meeting with Kirstin</h3>
+<ul>
+<li>see: <a href="file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/Kirsten-2015-01-08/Kirsten-2015-01-08.md">Kirsten-2015-01-08.md</a></li>
+<li>sent above for confirmation or amendment to Kirstin
+<ul>
+<li>She approves</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="friday-1"><span class="header-section-number">7</span> 2015-01-09 (Friday)</h1>
+<h2 id="sarah-licensing-exam"><span class="header-section-number">7.1</span> Sarah Licensing Exam</h2>
+<ul>
+<li>I was taking care of the kids all morning</li>
+</ul>
+<h2 id="new-project-brainstorming"><span class="header-section-number">7.2</span> New project brainstorming</h2>
+<h2 id="plink-fst"><span class="header-section-number">7.3</span> PLINK: Fst</h2>
+<ul>
+<li>defining population ID file for:
+<ul>
+<li><code>tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf</code></li>
+<li><code>tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf.popdef</code></li>
+</ul></li>
+</ul>
+<pre><code>plink --bfile tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink \
+--allow-extra-chr \
+--within tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf.popdef \
+--fst \
+--out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/fst/out</code></pre>
+<ul>
+<li>This keeps giving me errors:</li>
+</ul>
+<pre><code>Warning: No samples named in --within file remain in the current analysis.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+Error: --fst requires at least two nonempty clusters.
+</code></pre>
+<hr />
+<h1 id="saturday-1"><span class="header-section-number">8</span> 2015-01-10 (Saturday)</h1>
+<h2 id="plink-fst-1"><span class="header-section-number">8.1</span> PLINK: Fst</h2>
+<ul>
+<li>Still getting errors</li>
+<li>looks like its bc there is no sex info attached to the samples</li>
+<li>looking for other was to do this stuff: found EggLib-py</li>
+</ul>
+<h2 id="install-egglib"><span class="header-section-number">8.2</span> Install EggLib</h2>
+<ul>
+<li>installation needs <code>bio++</code></li>
+<li>see tomorrow</li>
+</ul>
+<h2 id="install-bio-bpp"><span class="header-section-number">8.3</span> Install <code>Bio++</code> (<code>bpp</code>)</h2>
+<ul>
+<li>install script (<a href="http://biopp.univ-montp2.fr/Download/bpp-setup.sh">bpp-setup.sh</a>) obtained from <a href="http://biopp.univ-montp2.fr/wiki/index.php/Installation">bio++ website</a>.
+<ul>
+<li>altered install script to fit system (<code>louise</code>) and renamed <a href="/home/gus/remote_mounts/louise/scripts/installs/install_bpp_2.2.0.sh">install_bpp_2.2.0.sh</a>.</li>
+</ul></li>
+<li>see tomorrow</li>
+</ul>
+<hr />
+<h1 id="sunday"><span class="header-section-number">9</span> 2015-01-11 (Sunday)</h1>
+<h2 id="install-egglib-1"><span class="header-section-number">9.1</span> Install EggLib</h2>
+<ul>
+<li>finished <code>bio++</code>install</li>
+<li>installing other things (actually may just module-ize versions already installed on <code>louise</code>:
+<ul>
+<li><code>[x]</code> gsl (already installed)</li>
+<li><code>[x]</code> clustalw (linked to <code>louise/~MAIN_APPS/clustalw/clustalw-2.0.12-linux-i686-libcppstatic</code>)</li>
+<li><code>[x]</code> muscle</li>
+<li><code>[x]</code> paml</li>
+<li><code>[x]</code> phyml</li>
+<li><code>[x]</code> primer3</li>
+<li><code>[x]</code> phylip</li>
+</ul></li>
+</ul>
+<h2 id="install-bio-bpp-1"><span class="header-section-number">9.2</span> Install <code>Bio++</code> (<code>bpp</code>)</h2>
+<ul>
+<li>had to ammend the install script to include the <code>bpp</code> install location in <code>$PATH</code> so it can use itself to install/build parts of itself</li>
+<li>as far as I can tell the only things that fail to install now are the GUI-based stuff that needs Qt. As I am using this on th cluster I dont need/want these so I am going to proceed as if this succeeded.</li>
+</ul>
+<hr />
+<h1 id="monday-1"><span class="header-section-number">10</span> 2015-01-12 (Monday)</h1>
+<h2 id="install-egglib-2"><span class="header-section-number">10.1</span> Install EggLib</h2>
+<ul>
+<li>finished installing external helper programs:
+<ul>
+<li>clustalw</li>
+<li>phylip</li>
+</ul></li>
+<li>made a <code>modules</code> file for the whole group: <code>egglib_helpers</code></li>
+</ul>
+<h2 id="install-bio-bpp-2"><span class="header-section-number">10.2</span> Install <code>Bio++</code> (<code>bpp</code>)</h2>
+<ul>
+<li>forgot to write a <code>modules</code> file for this.</li>
+<li>doing it now</li>
+</ul>
+<hr />
+<h1 id="tuesday-1"><span class="header-section-number">11</span> 2015-01-13 (Tuesday)</h1>
+<h2 id="recover-dead-positives-4"><span class="header-section-number">11.1</span> Recover dead positives</h2>
+<ul>
+<li>meeting</li>
+<li>see meeting notes <a href="file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_kirsten_2015-01-14/gisella_kirsten_2015-01-14.md">gisella_kirsten_2015-01-14.md</a></li>
+</ul>
+<h2 id="maps-stuff"><span class="header-section-number">11.2</span> Maps stuff</h2>
+<ul>
+<li>Need to update our Northern Uganda map with the latest Village location data</li>
+<li><code>Spartan.utils.maps.gps</code>
+<ul>
+<li>coding the functions to take all trap GPS coords for a village and return one GPS coord set for each that represents the central tendency for simplified plotting</li>
+</ul></li>
+</ul>
+<h2 id="tsetsesampledb"><span class="header-section-number">11.3</span> TsetseSampleDB</h2>
+<ul>
+<li>adding names/village codes to the list of village-to-code map (<a href="file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv">village_id_map.csv</a>)</li>
+</ul>
+<h2 id="helping-aris"><span class="header-section-number">11.4</span> Helping Aris</h2>
+<ul>
+<li>getting <code>mpirun mrbayes</code> to run on <code>grace</code></li>
+<li>took ~ 1 hour.</li>
+</ul>
+<hr />
+<h1 id="thursday-1"><span class="header-section-number">12</span> 2015-01-15 (Thursday)</h1>
+<h2 id="science-fair"><span class="header-section-number">12.1</span> Science Fair</h2>
+<ul>
+<li>8 to 12:30</li>
+</ul>
+<h2 id="meeting-about-kenya-tsetse"><span class="header-section-number">12.2</span> Meeting about Kenya Tsetse</h2>
+<p>Members:</p>
+<ul>
+<li>Gisella</li>
+<li>Serap</li>
+<li>Michelle</li>
+<li>Brian</li>
+<li>Gus</li>
+</ul>
+<p>Notes (bad bc they were taken with my phone):</p>
+<ul>
+<li>Gpd samples</li>
+<li>DNA samples</li>
+<li>What column data will be needed for this Gpd Kenya collection</li>
+<li>Re-circulate collection template excel and protocol etc</li>
+</ul>
+<hr />
+<h1 id="friday-2"><span class="header-section-number">13</span> 2015-01-16 (Friday)</h1>
+<h2 id="collection-spreadsheet-review"><span class="header-section-number">13.1</span> Collection Spreadsheet review</h2>
+<ul>
+<li>point is to make sure we can use this for the Kenya “simpler”</li>
+<li>after speaking with Gisella, I am going to add a few of the “simpler” column heading to the normal collection spreadsheet and write a bunch of notes explaining that not everything needs to be filled in for everything.</li>
+<li>collection spreadsheet: <a href="file:///home/gus/Dropbox/uganda%20data/collection_sheet_templates/Example_collection_template_kenya.xls">Example_collection_template_kenya.xls</a>
+<ul>
+<li><strong>status:</strong> finished</li>
+</ul></li>
+<li>summary spreadsheet: <a href="file:///home/gus/Dropbox/uganda%20data/collection_sheet_templates/Example_summary_template_kenya.xls">Example_summary_template_kenya.xls</a>
+<ul>
+<li><strong>status:</strong> in progress</li>
+</ul></li>
+</ul>
+<h3 id="email-explanation"><span class="header-section-number">13.1.1</span> Email explanation</h3>
+<p><strong>Subject:</strong></p>
+<p><strong>Body:</strong></p>
+<h2 id="updating-maps-current-trap-locations"><span class="header-section-number">13.2</span> Updating maps: current trap locations</h2>
+<ul>
+<li>created new spreadsheet:<a href="file:///home/gus/Dropbox/uganda%20data/collection_meta_data/meta_data.ods">collection_meta_data/meta_data.ods</a> to store current state of stuff like the village-to-symbol map, etc.</li>
+<li><code>[</code> <code>]</code> collecting trap GPS data to file: <a href="file://CREATE_ME">TsetseCheckout/data/village_id_map.csv</a></li>
+<li><code>[</code> <code>]</code> collecting all village-to-symbol maps that I have to <a href="file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv">meta_data.ods</a></li>
+</ul>
+<h3 id="spartan-dev-gps-stuff"><span class="header-section-number">13.2.1</span> <code>spartan</code> dev: GPS stuff</h3>
+<ul>
+<li>pycharm and ipython</li>
+</ul>
+<h2 id="phone-for-dan"><span class="header-section-number">13.3</span> Phone for Dan</h2>
+<p>I emailed Dan the following:</p>
+<blockquote>
+<p><strong>Subject:</strong> Phone call for you</p>
+<p><strong>Body:</strong> Just fielded a call for you from Karan(Karen?) Peart from the Yale Public affairs and communications office.</p>
+<p>She would like you to call her back at your earliest convenience (432-1326).</p>
+<p>Gus</p>
+</blockquote>
+<hr />
+<h1 id="sunday-1"><span class="header-section-number">14</span> 2015-01-18 (Sunday)</h1>
+<h2 id="sarah-is-sick"><span class="header-section-number">14.1</span> Sarah is sick</h2>
+<ul>
+<li>short day: 10am to 1:45pm</li>
+</ul>
+<h2 id="updating-maps-current-trap-locations-1"><span class="header-section-number">14.2</span> Updating maps: current trap locations</h2>
+<ul>
+<li>ipython: <a href="file:///home/gus/Dropbox/common/ipy_notebooks/YALE/maps_stuff/2015-01-16_convert_fall2014_trap_gps_village_names.ipynb">2015-01-16_convert_fall2014_trap_gps_village_names.ipynb</a></li>
+</ul>
+<h3 id="spartan-dev-gps-stuff-1"><span class="header-section-number">14.2.1</span> <code>spartan</code> dev: GPS stuff</h3>
+<ul>
+<li>working on teaching <code>GPSCoordTree</code> how to get mean coordinates</li>
+</ul>
+<hr />
+<h1 id="monday-2"><span class="header-section-number">15</span> 2015-01-19 (Monday)</h1>
+<h2 id="andrea-quick-chat"><span class="header-section-number">15.1</span> Andrea: quick chat</h2>
+<ul>
+<li>wants to re-run the ddRAD pipeline since I(we) found some issues with at least one of the command line runs’ options.</li>
+<li>I agree</li>
+<li><code>[</code> <code>]</code> #todo: I am installing <a href="http://creskolab.uoregon.edu/stacks/">Stacks 1.24</a> for her on <code>louise</code> and trying to set up the web-based analysis part</li>
+<li>should not change TOO much about the results and will end up being MUCH more replicatable due to the use of publicly accessible data from vectorbase.</li>
+<li>we can continue to work with the current data until the new set is done and just adjust the work to accommodate the new stuff at the end.</li>
+</ul>
+<h2 id="updating-maps-current-trap-locations-2"><span class="header-section-number">15.2</span> Updating maps: current trap locations</h2>
+<h3 id="spartan-dev-gps-stuff-2"><span class="header-section-number">15.2.1</span> <code>spartan</code> dev: GPS stuff</h3>
+<ul>
+<li>working on teaching <code>GPSCoordTree</code> how to get mean coordinates</li>
+</ul>
+<h2 id="install-stacks"><span class="header-section-number">15.3</span> Install Stacks</h2>
+<ul>
+<li><a href="http://creskolab.uoregon.edu/stacks/manual/#install">installation guide</a></li>
+</ul>
+<h2 id="collection-spreadsheet-review-1"><span class="header-section-number">15.4</span> Collection Spreadsheet review</h2>
+<ul>
+<li><p>adding explanation text to the <a href="file:///home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md">fly_collection_basic.md</a> document.</p></li>
+<li><strong>STATUS:</strong>
+<ul>
+<li>having issues getting validation and drop-down lists to carry over into “empty” rows</li>
+<li>plan to fix it by copying a template row into like 1000 rows</li>
+<li>still need to execute the above tomorrow bc computer is acting a fool and I have to go home to sick Sarah and Liam.</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="tuesday-2"><span class="header-section-number">16</span> 2015-01-20 (Tuesday)</h1>
+<h2 id="sarah-still-sick"><span class="header-section-number">16.1</span> Sarah still sick</h2>
+<ul>
+<li>stayed home to help with particularly crazy morning</li>
+</ul>
+<h2 id="meeting-with-gisella-and-andrea-ddrad-paper"><span class="header-section-number">16.2</span> Meeting with Gisella and Andrea: ddRAD paper</h2>
+<ul>
+<li>Met at 10:30 AM</li>
+<li>summarized in <a href="file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_andrea_2015-01-20/gisella_andrea_2015-01-20.md">gisella_andrea_2015-01-20.md</a>.</li>
+</ul>
+<h2 id="ddrad-todos"><span class="header-section-number">16.3</span> ddRAD todos</h2>
+<ul>
+<li><code>[in progress]</code> read Mark’s tryp paper for the LD stuff</li>
+<li><code>[¤]</code> email Mark to have a short sit-down to go over my results and ask about his work</li>
+</ul>
+<h2 id="install-stacks-1"><span class="header-section-number">16.4</span> Install Stacks</h2>
+<ul>
+<li><a href="http://creskolab.uoregon.edu/stacks/manual/#install">installation guide</a></li>
+</ul>
+<h3 id="prerequisites"><span class="header-section-number">16.4.1</span> Prerequisites</h3>
+<p><strong>Visualization:</strong></p>
+<ul>
+<li><code>[ ]</code> DB2 Pear Module: <a href="http://pear.php.net/package/MDB2/" class="uri">http://pear.php.net/package/MDB2/</a></li>
+<li><code>[ ]</code> MDB2 MySQL driver: <a href="http://pear.php.net/package/MDB2_Driver_mysql/" class="uri">http://pear.php.net/package/MDB2_Driver_mysql/</a></li>
+<li><code>[ ]</code> PHP</li>
+<li><code>[ ]</code> MySQL</li>
+<li><code>[ ]</code> Perl DBI module installed with the MySQL driver <a href="http://search.cpan.org/dist/DBD-mysql/">CPAN/dist/DBD-mysql/</a></li>
+</ul>
+<p><strong>Spreadsheet export:</strong></p>
+<ul>
+<li><code>[ ]</code> Perl module: <a href="http://search.cpan.org/~jmcnamara/Spreadsheet-WriteExcel-2.37/"><code>Spreadsheet::WriteExcel</code></a></li>
+</ul>
+<p><strong>Performance improvement:</strong></p>
+<ul>
+<li><code>[X]</code> <code>samtools</code> for reading BAM files (already installed)</li>
+<li><code>[ ]</code> Google’s <code>SparseHash</code> class to lower memory usage <a href="http://code.google.com/p/sparsehash/" class="uri">http://code.google.com/p/sparsehash/</a></li>
+</ul>
+<h3 id="stacks"><span class="header-section-number">16.4.2</span> Stacks</h3>
+<p><strong>INSTALLATION PROBLEMS NOTES:</strong></p>
+<ul>
+<li>Having issues getting the samtools includes and libs configured for the <code>./configure</code> command.</li>
+<li>plan to build on <code>jupiter</code> using the ARCH ABS and copy the include/lib directories to <code>louise</code></li>
+</ul>
+<p><strong>download location:</strong></p>
+<ul>
+<li><p>status: <em><code>in progress</code></em></p></li>
+<li><p>downloaded <a href="http://creskolab.uoregon.edu/stacks/source/stacks-1.24.tar.gz">stacks-1.24.tar.gz</a> to <code>gus@louise/src</code>.</p></li>
+</ul>
+<p><strong>install script:</strong></p>
+<ul>
+<li><p>status: <em><code>in progress</code></em></p></li>
+<li><p><a href="file:///home/gus/remote_mounts/louise/scripts/installs/install_XXXXXXX"><code>gus@louise/scripts/installs/install_XXXX</code></a></p></li>
+</ul>
+<p><strong>module file:</strong></p>
+<ul>
+<li><p>status: <em><code>in progress</code></em></p></li>
+<li><p><a href="/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/XXXXX/XXXXX"><code>gus@louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/XXXXX/XXXXX</code></a></p></li>
+</ul>
+<p><strong>software root:</strong></p>
+<ul>
+<li><p>status: <em><code>in progress</code></em></p></li>
+<li><p><a href="/home/gus/remote_mounts/louise/.local/easybuild/software/XXXXX/XXXXX"><code>gus@louise/home/gus/remote_mounts/louise/.local/easybuild/software/XXXXX/XXXXX</code></a></p></li>
+</ul>
+<h2 id="install-sparsehash"><span class="header-section-number">16.5</span> Install <code>SparseHash</code></h2>
+<p><strong>download location:</strong></p>
+<ul>
+<li><p>status: <em><code>complete</code></em></p></li>
+<li><p>downloaded <a href="https://sparsehash.googlecode.com/files/sparsehash-2.0.2.tar.gz">sparsehash-2.0.2.tar.gz</a> to <code>gus@louise/src</code>.</p></li>
+</ul>
+<p><strong>install script:</strong></p>
+<ul>
+<li><p>status: <em><code>written and run</code></em></p></li>
+<li><p><a href="file:///home/gus/remote_mounts/louise/scripts/installs/install_sparsehash_2.0.2.sh"><code>gus@louise/scripts/installs/install_sparsehash_2.0.2.sh</code></a></p></li>
+</ul>
+<p><strong>module file:</strong></p>
+<ul>
+<li><p>status: <em><code>complete but not tested</code></em></p></li>
+<li><p><a href="/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/sparsehash/2.0.2"><code>gus@louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/sparsehash/2.0.2</code></a></p></li>
+</ul>
+<p><strong>software root:</strong></p>
+<ul>
+<li><p>status: <em><code>installed</code></em></p></li>
+<li><p><a href="/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2"><code>gus@louise/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2</code></a></p></li>
+</ul>
+<hr />
+<h1 id="wednesday-1"><span class="header-section-number">17</span> 2015-01-21 (Wednesday)</h1>
+<h2 id="family-still-very-sick"><span class="header-section-number">17.1</span> Family still VERY sick</h2>
+<ul>
+<li>stayed home with Liam while Sarah took Clementine and herself to the doctor</li>
+<li>got to work at 12:30</li>
+<li>had to go home so Sarah could sleep bc Clem was not letting her</li>
+<li>went home at 1:30</li>
+<li>came back at 3:30</li>
+<li>home again at 6:00</li>
+<li>work again at 8:30</li>
+</ul>
+<h2 id="manual-install-of-samtoolshtslib"><span class="header-section-number">17.2</span> Manual install of Samtools/htslib</h2>
+<h3 id="htslib-built-with-arch-abs-on-jupiter"><span class="header-section-number">17.2.1</span> <code>htslib</code> (built with Arch ABS on <code>jupiter</code>)</h3>
+<p>ABANDONING THIS METHOD FOR NOW. TOO MANY PROBLEMS WITH INTEGRATING CERTAIN <code>INCLUDE</code> AND <code>LIB</code> DIRECTRIES WHEN COMPILING ACCROSS DEPENDENCIES. TRYING <code>EASYBUILD</code> AND ITS <em>TOOLCHAIN</em> PARADIGM FOR NOW.</p>
+<p><strong>ABS build:</strong></p>
+<pre><code>cd /home/gus/remote_mounts/louise/src/ABS/
+tar -xf htslib.tar.gz
+cd htslib
+makepkg</code></pre>
+<p><strong>Install script:</strong></p>
+<ul>
+<li><a href="file:///home/gus/remote_mounts/louise/scripts/installs/install_htslib_1.1.sh"><code>gus@louise/scripts/installs/install_htslib_1.1.sh</code></a></li>
+</ul>
+<h2 id="easybuild-installs"><span class="header-section-number">17.3</span> EasyBuild installs</h2>
+<h3 id="easybuild-1.16.1"><span class="header-section-number">17.3.1</span> EasyBuild 1.16.1</h3>
+<p><strong>Install script:</strong></p>
+<ul>
+<li><a href="file:///home/gus/remote_mounts/louise/scripts/installs/install_easybuild_1.16.1.sh"><code>gus@louise/scripts/installs/install_easybuild_1.16.1.sh</code></a></li>
+</ul>
+<h3 id="install-samtools-1.1"><span class="header-section-number">17.3.2</span> Install <code>samtools-1.1</code></h3>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wd238</span> at compute-21-15 in ~ (py278) 
+$ <span class="kw">md</span> load EasyBuild/1.16.1
+
+<span class="kw">wd238</span> at compute-21-15 in ~ (py278) 
+$ <span class="kw">eb</span> SAMtools-1.1-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+
+<span class="kw">...</span></code></pre>
+<ul>
+<li>this will be installing the whole toolchain and all <code>samtools</code> dependencies so it was executed in a <code>screen</code>.</li>
+<li>I am going home to sleep while this works <code>[2015-01-21 21:33]</code>.</li>
+<li>emailing Andrea first to let her know its not gonna be ready when I told her.</li>
+</ul>
+<p><strong>STATUS: <code>[2015-01-22 07:52]</code></strong></p>
+<ul>
+<li>Build seems to have <strong>SUCCEEDED</strong></li>
+</ul>
+<hr />
+<h1 id="thursday-2"><span class="header-section-number">18</span> 2015-01-22 (Thursday)</h1>
+<h2 id="collection-documentation-files"><span class="header-section-number">18.1</span> Collection documentation files</h2>
+<ul>
+<li>fixed/kludged the collection template to keep cell-notes and verification by including “dummy” entries up to 500.
+<ul>
+<li>collection template: <a href="file:///home/gus/Dropbox/uganda%20data/collection_sheet_templates/Example_collection_template_kenya.xlsx">Example_collection_template_kenya.xlsx</a></li>
+<li>summary template: <a href="file:///home/gus/Dropbox/uganda%20data/collection_sheet_templates/Example_summary_template_kenya.xlsx">Example_summary_template_kenya.xlsx</a></li>
+</ul></li>
+<li><p>amended and committed v0.2.1 of <a href="file:///home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md">fly_collection_basic.md</a> to the repo with custom message:</p>
+<blockquote>
+<p>“protocols/fly_collection_basic/fly_collection_basic.md commited at version: v0.2.1”</p>
+</blockquote></li>
+</ul>
+<h2 id="easybuild-installs-1"><span class="header-section-number">18.2</span> EasyBuild installs</h2>
+<h3 id="install-gsl-1.16"><span class="header-section-number">18.2.1</span> Install <code>GSL-1.16</code></h3>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278) 
+$ eb GSL-1.16-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot</code></pre>
+<p><strong>STATUS:</strong></p>
+<pre class="shell"><code>== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/GSL/1.16-goolf-1.4.10-no-OFED/\
+    easybuild/easybuild-GSL-1.16-20150122.075231.log
+== Build succeeded for 1 out of 1</code></pre>
+<h3 id="install-sparsehash-2.0.2"><span class="header-section-number">18.2.2</span> Install <code>sparsehash-2.0.2</code></h3>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278)
+eb google-sparsehash-2.0.2-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot</code></pre>
+<p><strong>STATUS:</strong></p>
+<pre class="shell"><code>== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/google-sparsehash/ \
+    2.0.2-goolf-1.4.10-no-OFED/easybuild/ \
+    easybuild-google-sparsehash-2.0.2-20150122.080547.log
+== Build succeeded for 1 out of 1</code></pre>
+<h3 id="install-stacks-1.03"><span class="header-section-number">18.2.3</span> Install <code>Stacks-1.03</code></h3>
+<p><strong>NOTE:</strong> this is not for use per se but to generate the <code>config</code> and <code>module</code> files so that I can modify them for the latest version of <code>Stacks</code> and install <em>THAT</em> version.</p>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278) 
+$ eb Stacks-1.03-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot</code></pre>
+<p><strong>STATUS:</strong></p>
+<pre class="shell"><code>== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/Stacks/ \
+    1.03-goolf-1.4.10-no-OFED/easybuild/ \
+    easybuild-Stacks-1.03-20150122.081337.log
+== Build succeeded for 1 out of 1</code></pre>
+<h3 id="install-stacks-1.24"><span class="header-section-number">18.2.4</span> Install <code>Stacks-1.24</code></h3>
+<p><strong>easyconfig file:</strong></p>
+<ul>
+<li>altered the one generated when building <code>Stacks-1.03</code>
+<ul>
+<li><a href="file:///home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb">gus@louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb</a></li>
+</ul></li>
+<li><a href="file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb">gus@louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb</a></li>
+</ul>
+<h4 id="attempt-01"><span class="header-section-number">18.2.4.1</span> Attempt 01</h4>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278)
+eb Stacks-1.24-goolf-1.4.10-no-OFED.eb --try-toolchain=goolf,1.4.10-no-OFED --robot</code></pre>
+<p><strong>STATUS:</strong> FAILED</p>
+<ul>
+<li>couldn’t find <code>Stacks-1.24-goolf-1.4.10-no-OFED.eb</code></li>
+<li>basically expected.</li>
+</ul>
+<h4 id="attempt-02"><span class="header-section-number">18.2.4.2</span> Attempt 02</h4>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278)
+eb $HOME/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb \
+    --try-toolchain=goolf,1.4.10-no-OFED --robot</code></pre>
+<p><strong>STATUS:</strong> FAILED</p>
+<ul>
+<li>error log: <a href="file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log">gus@louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log</a></li>
+<li>looks like it cant find <code>sparsehash</code> for the linking</li>
+<li>will add <code>samtools</code> and <code>sparsehash</code> to the <code>easyconfig</code> file as dependencies and or build dependencies.</li>
+</ul>
+<h4 id="attempt-03"><span class="header-section-number">18.2.4.3</span> Attempt 03</h4>
+<ul>
+<li>added the below to the <code>easyconfig</code> file:
+<ul>
+<li><code>builddependencies = [('SAMtools', '1.1'), ('google-sparsehash', '2.0.2')]</code></li>
+</ul></li>
+</ul>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278)
+eb $HOME/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb \
+    --try-toolchain=goolf,1.4.10-no-OFED --robot
+
+== temporary log file in case of crash /tmp/easybuild-0T7khn/easybuild-O8eCl9.log
+ERROR: EasyBuild crashed with an error \
+    (at easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/\
+    easybuild_framework-1.16.1-py2.7.egg/easybuild/tools/robot.py:232 in \
+    resolve_dependencies): Irresolvable dependencies encountered: \
+    SAMtools/1.1-goolf-1.4.10-no-OFED, google-sparsehash/2.0.2-goolf-1.4.10-no-OFED
+</code></pre>
+<p><strong>STATUS:</strong> FAILED</p>
+<ul>
+<li>error log: <a href="file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log">gus@louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log</a></li>
+</ul>
+<h4 id="irc-session-with-authordevs"><span class="header-section-number">18.2.4.4</span> IRC session with author/devs</h4>
+<ul>
+<li>one problem was that I dont need to keep using <code>--try-toolchain=goolf,1.4.10-no-OFED</code> since the local easyconfig (<code>Stacks-1.24-goolf-1.4.10-no-OFED.eb</code>) being passed to <code>eb</code> already defines the toolchain.</li>
+<li>the build still fails however</li>
+</ul>
+<h3 id="install-zlib-1.2.8"><span class="header-section-number">18.2.5</span> Install <code>zlib-1.2.8</code></h3>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>this is because things seem to need it when building <code>stacks-1.24</code>?</li>
+<li>doesn’t seem like this was the case?</li>
+</ul>
+<pre class="shell"><code>wd238 at compute-21-15 in ~ (py278) 
+$ eb zlib-1.2.8-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot</code></pre>
+<p><strong>STATUS:</strong> SUCCESSFUL</p>
+<pre class="shell"><code>== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/zlib/\
+    1.2.8-goolf-1.4.10-no-OFED/easybuild/\
+    easybuild-zlib-1.2.8-20150122.115448.log
+== Build succeeded for 1 out of 1</code></pre>
+<hr />
+<h1 id="friday-3"><span class="header-section-number">19</span> 2015-01-23 (Friday)</h1>
+<h2 id="meeting-with-alexis"><span class="header-section-number">19.1</span> Meeting with Alexis</h2>
+<ul>
+<li>10:00 to 12:20</li>
+<li>talked about overall project and helped her come up with stuff to talk about for 2 minutes next Tuesday.</li>
+<li>Gisella was supposed to be here but double booked the time so will meet with Alexis individually.</li>
+<li>Gave Alexis my email and asked her to email me so that i would get hers</li>
+<li>so far [17:00] has not emailed me.</li>
+</ul>
+<h2 id="easybuild-installs-2"><span class="header-section-number">19.2</span> EasyBuild installs</h2>
+<ul>
+<li>forked and cloned <a href="https://github.com/xguse/easybuild-easyconfigs">easybuild-easyconfigs</a> git repo</li>
+</ul>
+<h2 id="doc-appointment"><span class="header-section-number">19.3</span> Doc appointment</h2>
+<ul>
+<li>left desk around 14:00 and got back around 15:20</li>
+</ul>
+<hr />
+<h1 id="saturday-2"><span class="header-section-number">20</span> 2015-01-24 (Saturday)</h1>
+<h2 id="sarah-sprainedbroke-her-ankle"><span class="header-section-number">20.1</span> Sarah sprained/broke? her ankle</h2>
+<ul>
+<li>Sarah slipped while trying to shovel snow (?! WHY ?!)</li>
+<li>had to go back home soon after arrival</li>
+</ul>
+<hr />
+<h1 id="sunday-2"><span class="header-section-number">21</span> 2015-01-25 (Sunday)</h1>
+<h2 id="easybuild-installs-3"><span class="header-section-number">21.1</span> EasyBuild installs</h2>
+<ul>
+<li>adding new forked git-repo of easyconfigs to <code>easybuild</code> through environment variables in my <a href="file:///home/gus/remote_mounts/louise/.zshrc">gus@louise/.zshrc</a>.</li>
+<li><code>make check</code> failing was caused by the easyconfig file setting <code>runtest='check'</code>.
+<ul>
+<li>I removed this</li>
+</ul></li>
+<li><p>install still fails but seems to try to repeat itself and fails the SECOND TIME?</p>
+<ul>
+<li><pre><code>...
+== building and installing Stacks/1.24-goolf-1.4.10-no-OFED...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== FAILED: Installation ended unsuccessfully...
+...</code></pre></li>
+</ul></li>
+<li>checking the logs seems to suggest that the BAM include files are still not working
+<ul>
+<li>testing by removing the reqs from the configure script
+<ul>
+<li>NO sparsehash and NO bam: <strong>SUCCEEDS</strong></li>
+<li>YES sparsehash and NO bam: <strong>SUCCEEDS</strong></li>
+<li>NO sparsehash and YES bam: <strong>FAILS</strong></li>
+</ul></li>
+</ul></li>
+<li><strong>TO TRY TOMORROW:</strong>
+<ul>
+<li>‘clone’ environment from one of the “test_reports” in <a href="file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/">failure_logs</a> and try to run <code>./configure; make; make install;</code> manually.</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="monday-3"><span class="header-section-number">22</span> 2015-01-26 (Monday)</h1>
+<h2 id="carl-zimmer-writing-workshop"><span class="header-section-number">22.1</span> Carl Zimmer Writing Workshop</h2>
+<ul>
+<li>10:00 to 12:00</li>
+<li>Notes made in notebook to be transfered here when I have time (blizzard approaching)</li>
+</ul>
+<hr />
+<h1 id="tuesday-3"><span class="header-section-number">23</span> 2015-01-27 (Tuesday)</h1>
+<h2 id="snow-pocalypse"><span class="header-section-number">23.1</span> SNOW-pocalypse</h2>
+<ul>
+<li>was told to stay home by Yale</li>
+<li>came in by mistake but left soon after realizing</li>
+</ul>
+<hr />
+<h1 id="wednesday-2"><span class="header-section-number">24</span> 2015-01-28 (Wednesday)</h1>
+<h2 id="easybuild-installs-4"><span class="header-section-number">24.1</span> EasyBuild installs</h2>
+<h3 id="stacks-1"><span class="header-section-number">24.1.1</span> Stacks</h3>
+<h4 id="stacks-no-bam"><span class="header-section-number">24.1.1.1</span> Stacks no BAM</h4>
+<ul>
+<li>testing to make sure it works</li>
+<li>abandoning this bc we decided that we dont need to run this step over right now</li>
+</ul>
+<h4 id="stacks-yes-bam"><span class="header-section-number">24.1.1.2</span> Stacks yes BAM</h4>
+<ul>
+<li>still not building correctly</li>
+</ul>
+<h2 id="tmux"><span class="header-section-number">24.2</span> tmux</h2>
+<ul>
+<li>starting point <a href="https://github.com/fgeorgatos/easybuild.experimental/blob/539bd104d158c9f41b45d60115f6bf1b7155e11e/contrib/pkgsrc/20141219/t/tmux-1.9a-goolf-1.4.10.eb">easyconfig</a></li>
+<li>abandoning this for now</li>
+<li>simply not crucial</li>
+</ul>
+<h2 id="ddrad-stuff"><span class="header-section-number">24.3</span> ddRAD stuff</h2>
+<ul>
+<li><code>[X]</code> email Mark about Tryp LD analysis in his paper
+<ul>
+<li><code>[X]</code> follow up with him on this “Re: Short meeting to chat about genomic scale LD analysis?”</li>
+</ul></li>
+<li><code>[X]</code> read Tryp paper for same</li>
+<li><code>[X]</code> install latest <code>Stacks</code> version on <code>louise</code> and make runable by Andrea</li>
+<li><code>[X]</code> return <code>hapFLK</code> script to original code and copy altered version to new name
+<ul>
+<li><code>[X]</code> let Andrea know (<em>acknowledged</em>)</li>
+</ul></li>
+<li><code>[ip]</code> Generate descriptive statistics and figures of the LD results as a whole rather than by contig where possible</li>
+</ul>
+<hr />
+<h1 id="thursday-3"><span class="header-section-number">25</span> 2015-01-29 (Thursday)</h1>
+<h2 id="ddrad-stuff-1"><span class="header-section-number">25.1</span> ddRAD stuff</h2>
+<ul>
+<li><code>[ip]</code> Generate descriptive statistics and figures of the LD results as a whole rather than by contig where possible</li>
+<li><a href="file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-01-28_Plot_PLINK_results_cumulative.ipynb">2015-01-28_Plot_PLINK_results_cumulative.ipynb</a></li>
+</ul>
+<h2 id="roberts-stuff"><span class="header-section-number">25.2</span> Robert’s stuff</h2>
+<ul>
+<li><code>[-ip-]</code> Pick out 26 flies (13 M, 13 F) from each area we want to look at for Robert’s work in March
+<ul>
+<li>sent first set to Kirstin and Alexis
+<ul>
+<li>13 M/13 F from Oyam/Kole trip in 2014-07 (see Table )</li>
+</ul></li>
+</ul></li>
+<li><code>[ ]</code> make sure we have an updated map with all the villages from <em>Spring and Summer 2014</em></li>
+<li><code>[X]</code> Meet with Gisella to pick out which locations Robert’s data will come from while looking at the updated map.
+<ul>
+<li><code>[ ]</code> she told me to pick the areas and give her a table/report on which and why. The issues to consider are:
+<ul>
+<li>wide representation of population areas in the North</li>
+<li>allows temporal comparisons as well</li>
+</ul></li>
+</ul></li>
+</ul>
+<table>
+<caption>Samples given to Alexis for DNA extraction from a single leg. </caption>
+<thead>
+<tr class="header">
+<th align="center">Collection Date</th>
+<th align="center">Species</th>
+<th align="center">Sex</th>
+<th align="center">Teneral</th>
+<th align="center">Village</th>
+<th align="center">Fly</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OD</td>
+<td align="center">017</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">031</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">039</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">045</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">052</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">056</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">062</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">068</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">092</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">ACA</td>
+<td align="center">120</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OD</td>
+<td align="center">137</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">F</td>
+<td align="center">NT</td>
+<td align="center">OD</td>
+<td align="center">149</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OD</td>
+<td align="center">020</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">022</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">025</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">026</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-15</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">035</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">049</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">AKA</td>
+<td align="center">063</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">095</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">ACA</td>
+<td align="center">116</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">ACA</td>
+<td align="center">125</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">ACA</td>
+<td align="center">129</td>
+</tr>
+<tr class="odd">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OCA</td>
+<td align="center">146</td>
+</tr>
+<tr class="even">
+<td align="center">2014-07-16</td>
+<td align="center"><em>G. f. fuscipes</em></td>
+<td align="center">M</td>
+<td align="center">NT</td>
+<td align="center">OD</td>
+<td align="center">155</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rob-h-jobs"><span class="header-section-number">25.3</span> Rob H Jobs</h2>
+<h3 id="iowa-samples"><span class="header-section-number">25.3.1</span> Iowa samples</h3>
+<ul>
+<li><code>[X]</code> catalog the boxes that we got here at <strong>ESC</strong>.</li>
+<li><code>[X]</code> email Gisella about getting Rob over to <strong>EPH</strong> to start on their samples.</li>
+</ul>
+<h3 id="g.-f.-fuscipes-samples-2014"><span class="header-section-number">25.3.2</span> <em>G. f. fuscipes</em> samples 2014</h3>
+<ul>
+<li><code>[X]</code> organize boxes of <em>carcass</em> and <em>midgut</em> samples from 2014-03 to 2014-08 in Gisella freezer by month.</li>
+<li><code>[-ip-]</code> standardize the collection spreadsheets to prepare for automated import to <code>TsetseSampleDB</code>.</li>
+</ul>
+<h2 id="updating-maps-current-trap-locations-3"><span class="header-section-number">25.4</span> Updating maps: current trap locations</h2>
+<h3 id="spartan-dev-gps-stuff-3"><span class="header-section-number">25.4.1</span> <code>spartan</code> dev: GPS stuff</h3>
+<ul>
+<li><code>[-ip-]</code> teaching <code>GPSCoordTree</code> how to get mean coordinates
+<ul>
+<li><code>[X]</code> make <code>GPSCoord</code> hashable</li>
+<li><code>[-ip-]</code> fix <code>GPSCoordTree._add_levels()</code>: getting an empty list somewhere o something that is causing a <code>None</code> to be returned.</li>
+</ul></li>
+<li>still not fixed but trying a new tactic
+<ul>
+<li>converting <code>GPSCoordTree</code> to use autovivification trick with an extra key at each node that holds links to all <code>gps_objs</code> found below it.</li>
+<li>see <a href="http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2014-12-26_functional_annotation_table_generator.ipynb">2014-12-26_functional_annotation_table_generator.ipynb</a> for example of autovivfication method.</li>
+</ul></li>
+</ul>
+<div class="references">
+
+</div>
+</body>
+</html>

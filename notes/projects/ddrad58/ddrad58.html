@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Gus Dunn" />
+  <title>ddrad phase 2 project</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  
+  
+</head>
+<body>
+<div id="header">
+<h1 class="title">ddrad phase 2 project</h1>
+<h1 class="subtitle">Caccone PostDoc</h1>
+<h2 class="author">Gus Dunn</h2>
+<h3 class="date">April, 2015</h3>
+</div>
+<div id="TOC">
+1
+</div>
+<hr />
+<p></p>
+<h1 id="tasks"><span class="header-section-number">1</span> 1: Tasks</h1>
+<h2 id="beast"><span class="header-section-number">1.1</span> 1.1: BEAST</h2>
+<h3 id="to-do"><span class="header-section-number">1.1.1</span> 1.1.1: –To DO–</h3>
+<ul>
+<li></li>
+</ul>
+<h3 id="completed"><span class="header-section-number">1.1.2</span> 1.1.2: –Completed–</h3>
+<ul>
+<li><code>[wont do]</code> Convert BAMs to NEXSUS
+<ul>
+<li>waiting to hear back from admins about getting permissions to AndreaG’s BAMs</li>
+</ul></li>
+<li><code>[wont do]</code> BEAST configuration</li>
+<li><code>[wont do]</code> attempt BEAST run</li>
+<li><code>[2015-03-13]</code> meeting with GisellaC and Aris 2015-03-13 at 11</li>
+<li><code>[2015-03-12]</code> conversation with Aris</li>
+<li><code>[wont do]</code> write up conversation with Aris for GisellaC and get clearance to proceed.</li>
+</ul>
+<h2 id="linkage-disequilibrium-thresholds-for-snp-pairs"><span class="header-section-number">1.2</span> 1.2: Linkage disequilibrium thresholds for SNP-pairs</h2>
+<h3 id="to-do-1"><span class="header-section-number">1.2.1</span> 1.2.1: –To Do–</h3>
+<ul>
+<li><code>[ ]</code></li>
+</ul>
+<h3 id="completed-1"><span class="header-section-number">1.2.2</span> 1.2.2: –Completed–</h3>
+<ul>
+<li><code>[2015-03-12]</code> set up and yield models</li>
+<li><code>[2015-03-12]</code> take model and return parameters</li>
+<li><code>[2015-03-12]</code> take parameters and df and set value for each SNP-pair’s probability (<span class="math">1 − <em>C</em><em>D</em><em>F</em></span>)</li>
+<li><code>[2015-03-12]</code> take df and set value for each SNP-pair’s BH corrected probability</li>
+</ul>
+<hr />
+<!-- ################################################################## -->
+<p><!-- ################################################################## --></p>
+<h1 id="contig-proximity-graph"><span class="header-section-number">2</span> 2: Contig proximity graph</h1>
+<h2 id="tuesday"><span class="header-section-number">2.1</span> 2.1: 2015-03-10 (Tuesday)</h2>
+<ul>
+<li>calculate LD only between <strong>INTER-</strong> contig SNPS <strong>[Conversation with JoshM]</strong></li>
+</ul>
+<h3 id="calculate-interchromosomal-ld-with-vcftools"><span class="header-section-number">2.1.1</span> 2.1.1: Calculate interchromosomal LD with <code>vcftools</code></h3>
+<h4 id="attempt-1-failed-bug-in-v0.1.12b"><span class="header-section-number">2.1.1.1</span> 2.1.1.1: Attempt 1 [FAILED: bug in v0.1.12b]</h4>
+<p> <br /><strong>- -INPUT- -</strong></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">SNP_DIR=</span><span class="st">&quot;/home2/wd238/data/genomes/glossina_fuscipes/annotations/SNPs&quot;</span>
+
+<span class="ot">VCF=</span><span class="st">&quot;</span><span class="ot">${SNP_DIR}</span><span class="st">/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf&quot;</span>
+
+<span class="ot">OUT_PREFIX=</span><span class="st">&quot;</span><span class="ot">${SNP_DIR}</span><span class="st">/vcftools_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf&quot;</span>
+
+<span class="kw">mkdir</span> -p <span class="ot">${SNP_DIR}</span>/vcftools_out/
+
+<span class="kw">vcftools</span> --vcf <span class="ot">$VCF</span>  --out <span class="ot">$OUT_PREFIX</span> --interchrom-geno-r2</code></pre>
+<p><strong>- -OUTPUT- -</strong></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">VCFtools</span> - v0.1.12b
+<span class="kw">(C)</span> <span class="kw">Adam</span> Auton and Anthony Marcketta 2009
+
+<span class="kw">Parameters</span> as interpreted:
+        <span class="kw">--vcf</span> /home2/wd238/data/genomes/glossina_fuscipes/annotations/SNPs/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf
+        <span class="kw">--max-alleles</span> 2
+        <span class="kw">--min-alleles</span> 2
+        <span class="kw">--interchrom-geno-r2</span>
+        <span class="kw">--out</span> /home2/wd238/data/genomes/glossina_fuscipes/annotations/SNPs/vcftools_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf
+
+<span class="kw">After</span> filtering, kept 53 out of 53 Individuals
+<span class="kw">Outputting</span> Interchromosomal Pairwise Genotype LD (bi-allelic only)
+<span class="kw">Error</span>: Require phased haplotypes for r^2 calculation (use --phased)</code></pre>
+<h5 id="email-to-vcftools-help"><span class="header-section-number">2.1.1.1.1</span> 2.1.1.1.1: Email to vcftools-help</h5>
+<p>I have recently tried to run the following command</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">vcftools</span> --vcf <span class="ot">$VCF</span>  --out <span class="ot">$OUT_PREFIX</span> --interchrom-geno-r2</code></pre>
+<p>and was answered with the following error/output</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">VCFtools</span> - v0.1.12b
+<span class="kw">(C)</span> <span class="kw">Adam</span> Auton and Anthony Marcketta 2009
+
+<span class="kw">Parameters</span> as interpreted:
+        <span class="kw">--vcf</span> /long/path/to/snps.vcf
+        <span class="kw">--max-alleles</span> 2
+        <span class="kw">--min-alleles</span> 2
+        <span class="kw">--interchrom-geno-r2</span>
+        <span class="kw">--out</span> /long/path/to/out/snps.vcf
+
+<span class="kw">After</span> filtering, kept 53 out of 53 Individuals
+<span class="kw">Outputting</span> Interchromosomal Pairwise Genotype LD (bi-allelic only)
+<span class="kw">Error</span>: Require phased haplotypes for r^2 calculation (use --phased)</code></pre>
+<p>I was under the impression from the docs that these options (<code>--geno-r2</code> and <code>--interchrom-geno-r2</code>) only require phased data for <code>D</code> and <code>D'</code> metrics:</p>
+<blockquote>
+<p><code>--geno-r2</code></p>
+<p>Calculates the squared correlation coefficient between genotypes encoded as 0, 1 and 2 to represent the number of non-reference alleles in each individual. This is the same as the LD measure reported by PLINK. The D and D’ statistics are only available for phased genotypes. The output file has the suffix “.geno.ld”.</p>
+</blockquote>
+<p>Can anyone spot what is going wrong for me or am I confused?</p>
+<p>Thanks,</p>
+<p>Gus</p>
+<h5 id="response-email-to-vcftools-help"><span class="header-section-number">2.1.1.1.2</span> 2.1.1.1.2: [RESPONSE] Email to vcftools-help</h5>
+<ul>
+<li>said its a bug and they will fix</li>
+</ul>
+<h4 id="attempt-2-failed-ran-out-of-space"><span class="header-section-number">2.1.1.2</span> 2.1.1.2: Attempt 2 [FAILED: ran out of space]</h4>
+<p> <br /> I installed <a href="file:///home/gus/remote_mounts/louise/scripts/installs/install_vcftools_0.1.12a.sh">vcftools_0.1.12a</a> and it began without complaint.</p>
+<p><strong>- -INPUT- -</strong></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">SNP_DIR=</span><span class="st">&quot;/home2/wd238/data/genomes/glossina_fuscipes/annotations/SNPs&quot;</span>
+<span class="ot">VCF=</span><span class="st">&quot;</span><span class="ot">${SNP_DIR}</span><span class="st">/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf&quot;</span>
+<span class="ot">OUT_PREFIX=</span><span class="st">&quot;</span><span class="ot">${SNP_DIR}</span><span class="st">/vcftools_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf&quot;</span>
+
+<span class="kw">mkdir</span> -p <span class="ot">${SNP_DIR}</span>/vcftools_out/
+
+<span class="kw">module</span> load vcftools/0.1.12a
+<span class="kw">vcftools</span> --vcf <span class="ot">$VCF</span>  --out <span class="ot">$OUT_PREFIX</span> --interchrom-geno-r2</code></pre>
+<p><strong>- -OUTPUT- -</strong></p>
+<ul>
+<li>Ran out of disk space.</li>
+</ul>
+<hr />
+<!-- ################################################################## -->
+<p><!-- ################################################################## --></p>
+<h2 id="wednesday"><span class="header-section-number">2.2</span> 2.2: 2015-03-11 (Wednesday)</h2>
+<h3 id="calculate-interchromosomal-ld-with-vcftools-1"><span class="header-section-number">2.2.1</span> 2.2.1: Calculate interchromosomal LD with <code>vcftools</code></h3>
+<h4 id="attempt-3"><span class="header-section-number">2.2.1.1</span> 2.2.1.1: Attempt 3 [?]</h4>
+<ul>
+<li>attempting to use <code>fastscratch</code> to allow for extra space.</li>
+</ul>
+<p> <br /><strong>- -INPUT- -</strong></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">FAST_SCRATCH=</span>/fastscratch/wd238
+<span class="ot">SNP_DIR=</span><span class="st">&quot;/home2/wd238/data/genomes/glossina_fuscipes/annotations/SNPs&quot;</span>
+<span class="ot">VCF=</span><span class="st">&quot;</span><span class="ot">${SNP_DIR}</span><span class="st">/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf&quot;</span>
+<span class="ot">OUT_PREFIX=</span><span class="st">&quot;</span><span class="ot">${FAST_SCRATCH}</span><span class="st">/vcftools_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf&quot;</span>
+
+<span class="kw">mkdir</span> -p <span class="ot">${FAST_SCRATCH}</span>/vcftools_out/
+
+<span class="kw">module</span> load vcftools/0.1.12a
+<span class="kw">vcftools</span> --vcf <span class="ot">$VCF</span>  --out <span class="ot">$OUT_PREFIX</span> --interchrom-geno-r2 </code></pre>
+<hr />
+<!-- ################################################################## -->
+<p><!-- ####################################################################################### --></p>
+<h1 id="linkage-disequilibrium-thresholds-for-snp-pairs-1"><span class="header-section-number">3</span> 3: Linkage disequilibrium thresholds for SNP-pairs</h1>
+<h2 id="general"><span class="header-section-number">3.1</span> 3.1: General</h2>
+<h3 id="tuesday-status"><span class="header-section-number">3.1.1</span> 3.1.1: 2015-03-10 (Tuesday) [Status]</h3>
+<ul>
+<li>Decided its best to use the Beta distribution on data binned by distance and scaled thusly:</li>
+</ul>
+<p><br /><span class="math">((<em>x</em><sub><em>i</em></sub> − 0.5) ⋅ 0.999) + 0.5)</span><br /></p>
+<ul>
+<li>So far the MAP estimation is coming out VERY close to the MCMC results, so I think I will simply use that since it is <strong>MUCH</strong> faster.</li>
+<li><code>[ ]</code> does multiple testing correction need to be done?
+<ul>
+<li>I am pretty sure it does</li>
+</ul></li>
+<li>p-values will be obtained for each <span class="math"><em>r</em><sup>2</sup></span> as: <span class="math">1 − <em>C</em><em>D</em><em>F</em>(<em>x</em><sub><em>i</em></sub>)</span></li>
+<li>see <a href="http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-02-27_overview_of_LD_work_in_Gff.ipynb">2015-02-27_overview_of_LD_work_in_Gff.ipynb</a> for extra info.</li>
+</ul>
+<h2 id="thresholds-by-binning-notebook"><span class="header-section-number">3.2</span> 3.2: Thresholds by binning: notebook</h2>
+<ul>
+<li>notebook file: <a href="file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-12_LD_thresholds_via_binning.ipynb">2015-03-12_LD_thresholds_via_binning.ipynb</a></li>
+<li>script version: <a href="file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-12_LD_thresholds_via_binning.py">2015-03-12_LD_thresholds_via_binning.py</a></li>
+</ul>
+<h3 id="friday"><span class="header-section-number">3.2.1</span> 3.2.1: 2015-03-13 (Friday)</h3>
+<ul>
+<li>got the whole data set to run
+<ul>
+<li>those bins which fail MAP go on to run MCMC</li>
+<li>had to re-write a bit to get the model object to save the MCMC runner so that we can look at the traces to asses convergence</li>
+</ul></li>
+<li>running as script in IPython to view.</li>
+<li>SUCCESS. Finally.</li>
+<li>saved resulting table in pickle: <a href="file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/ld_thresholds/post_MAP_calc.plk">ddrad58/ld_thresholds/post_MAP_calc.plk</a></li>
+<li>use above to avoid re calculating the MAPs that take HOURS.</li>
+<li>started new ipython notebook file for results analysis: <a href="file:///home/gus/Dropbox/repos/git/ipy_notebooks/YALE/ddrad58/2015-03-13_LD_thresholds_via_binning_RESULTS.ipynb">2015-03-13_LD_thresholds_via_binning_RESULTS.ipynb</a></li>
+</ul>
+<hr />
+<!-- ################################################################## -->
+<p><!-- ################################################################## --></p>
+<h2 id="investigate-ld-bin-data-pattern"><span class="header-section-number">3.3</span> 3.3: Investigate LD bin-data pattern</h2>
+<div class="figure">
+<embed src="/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/manuscript/figures/ld/distance_VS_r2_all.pdf" /><p class="caption">Distance vs <span class="math"><em>r</em><sup>2</sup></span> overall</p>
+</div>
+<h3 id="bin-data-membership-quantity"><span class="header-section-number">3.3.1</span> 3.3.1: Bin-data membership quantity</h3>
+<p><strong>Is the reason for the bizarre data shape due to loss of signal to noise as shorter contigs are eliminated from data pool?</strong></p>
+<div class="figure">
+<embed src="/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/manuscript/figures/ld/distance_VS_avgR2_spperbin_contigsperbin_q_b150-to-b10000.pdf" /><p class="caption">Distance vs avg <span class="math"><em>r</em><sup>2</sup></span>, contigs and <span class="math"><em>q</em></span> for bins 150-10000</p>
+</div>
+<div class="figure">
+<embed src="/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/ddrad58/manuscript/figures/ld/distance_VS_avgR2_spperbin_contigsperbin_q_b150-to-b20000.pdf" /><p class="caption">Distance vs avg <span class="math"><em>r</em><sup>2</sup></span>, contigs and <span class="math"><em>q</em></span> for bins 150-20000</p>
+</div>
+<h3 id="bin-data-pattern-of-individual-populations"><span class="header-section-number">3.3.2</span> 3.3.2: Bin-data pattern of individual populations</h3>
+<h1 id="dating-the-northsouth-population-split"><span class="header-section-number">4</span> 4: Dating the North/South population split</h1>
+<h2 id="converting-the-bams-to-nexsus-for-beast"><span class="header-section-number">4.1</span> 4.1: Converting the BAMS to NEXSUS for BEAST</h2>
+<ul>
+<li>using PGDSpider2 to convert to NEXUS</li>
+<li>BAM location: <code>/scratch/ag674/sample_mappedSC</code></li>
+<li>SPID file: <a href="file:///home/gus/remote_mounts/louise/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid">bam_to_nex_for_BEAST.spid</a></li>
+<li>BAMS to use:
+<ul>
+<li><code>find /scratch/ag674/sample_mappedSC -name \* | grep -P &quot;\d\.sorted&quot; &gt; $HOME/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.bam_list.txt</code></li>
+<li><a href="file:///home/gus/remote_mounts/louise/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.bam_list.txt">bam_to_nex_for_BEAST.bam_list.txt</a></li>
+</ul></li>
+<li>ref for bam: <a href="file:///home/gus/remote_mounts/louise/data/genomes/glossina_fuscipes/assemblies/GfusI1/Glossina-fuscipes-IAEA_SCAFFOLDS_GfusI1.fa">Glossina-fuscipes-IAEA_SCAFFOLDS_GfusI1.fa</a></li>
+</ul>
+<h3 id="wednesday-1"><span class="header-section-number">4.1.1</span> 4.1.1: 2015-03-11 (Wednesday)</h3>
+<ul>
+<li>stymied by permissions issues with the bams.</li>
+<li>see tomorrow</li>
+</ul>
+<h3 id="thursday"><span class="header-section-number">4.1.2</span> 4.1.2: 2015-03-12 (Thursday)</h3>
+<h4 id="attempt-1-failed-write-permissions"><span class="header-section-number">4.1.2.1</span> 4.1.2.1: Attempt 1 [FAILED: write permissions]</h4>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">module</span> load PGDSpider/2.0.8.0 samtools-bcftools-htslib/1.0
+
+<span class="kw">java</span> -Xmx2048m -Xms512m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid <span class="ot">$HOME</span>/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid</code></pre>
+<p> <br /> <strong>NOTES:</strong></p>
+<ul>
+<li><code>PGDSpider</code> seems to write a bunch of temporary files in the same dir as the inputfile.</li>
+<li>this breaks because I only have READ access to the data dir</li>
+<li>proceeding with copying the BAMs to a place I have write access to and trying again</li>
+</ul>
+<h4 id="attempt-2-failed-memory-limit"><span class="header-section-number">4.1.2.2</span> 4.1.2.2: Attempt 2 [FAILED: memory limit]</h4>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">java</span> -Xmx2048m -Xms512m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid <span class="ot">$HOME</span>/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
+
+<span class="kw">-</span>[  output   ]-
+<span class="kw">INFO</span>  16:27:47 - load PGDSpider configuration from: /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml
+<span class="kw">initialize</span> convert process...
+<span class="kw">read</span> <span class="ot">input</span> <span class="ot">file</span>...
+<span class="kw">INFO</span>  16:28:04 - Run samtools/bcftools...
+<span class="kw">INFO</span>  16:28:33 - [bam_sort_core] merging from 3 files...
+<span class="kw">ERROR</span> 16:30:24 - not enough memory. To increase the allowed memory see help.
+<span class="kw">read</span> <span class="ot">input</span> <span class="ot">file</span> <span class="ot">done</span>.
+<span class="kw">write</span> output file...
+<span class="kw">write</span> output file done.</code></pre>
+<p> <br /> <strong>NOTES:</strong></p>
+<ul>
+<li><code>PGDSpider</code> ran out of mem.</li>
+<li>I am going to bump up the mem and try again.</li>
+</ul>
+<h4 id="attempt-3-failed-reference-file-issue"><span class="header-section-number">4.1.2.3</span> 4.1.2.3: Attempt 3 [FAILED: reference file issue]</h4>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">java</span> -Xmx16384m -Xms16000m -jar /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/PGDSpider2-cli.jar -inputfile /fastscratch/wd238/beast_run/BAMs/KG_10030.sorted.bam -inputformat BAM -outputfile /fastscratch/wd238/beast_run/KG_10030.sorted.bam.nex -outputformat NEXSUS -spid <span class="ot">$HOME</span>/data/projects/ddrad58/PGDSpider_files/bam_to_nex_for_BEAST/bam_to_nex_for_BEAST.spid
+
+<span class="kw">-</span>[  output   ]-
+<span class="kw">INFO</span>  17:23:52 - load PGDSpider configuration from: /home2/wd238/.local/easybuild/software/PGDSpider/2.0.8.0/spider.conf.xml
+<span class="kw">initialize</span> convert process...
+<span class="kw">read</span> <span class="ot">input</span> <span class="ot">file</span>...
+<span class="kw">INFO</span>  17:24:16 - Run samtools/bcftools...
+<span class="kw">INFO</span>  17:24:51 - [bam_sort_core] merging from 3 files...
+<span class="kw">INFO</span>  17:26:38 - ...done
+<span class="kw">ERROR</span> 17:29:37 - reference file does not contain *!
+<span class="kw">read</span> <span class="ot">input</span> <span class="ot">file</span> <span class="ot">done</span>.
+<span class="kw">write</span> output file...
+<span class="kw">write</span> output file done.</code></pre>
+<p> <br /> <strong>NOTES:</strong></p>
+<ul>
+<li><code>PGDSpider</code> ran out of mem.</li>
+<li>I am going to bump up the mem and try again.</li>
+</ul>
+<h3 id="friday-1"><span class="header-section-number">4.1.3</span> 4.1.3: 2015-03-13 (Friday)</h3>
+<ul>
+<li>ABANDONING THIS AND LETTING ARIS TRY TO START FROM SCRATCH via PYRAD.</li>
+<li>thank GAWD.</li>
+</ul>
+<h1 id="meeting"><span class="header-section-number">5</span> 5: Meeting</h1>
+<ul>
+<li>Introduce Joshua and suggest a meeting</li>
+</ul>
+<div class="references">
+
+</div>
+</body>
+</html>

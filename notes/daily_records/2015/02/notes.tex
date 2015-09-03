@@ -1,0 +1,1208 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Daily Records},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Daily Records\\\vspace{0.5em}{\large Caccone PostDoc}}
+\author{Gus Dunn}
+\date{February, 2015}
+\usepackage{bbding}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+% blockquote
+\usepackage{xcolor}
+\definecolor{greyborder}{RGB}{221,221,221}
+\definecolor{greytext}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=greyborder,skipabove=\parskip]{blockquote}
+\renewenvironment{quote}{\begin{blockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax\color{greytext}\ignorespaces}{\unskip\unskip\endlist\end{blockquote}}
+
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-01 (Sunday)}\label{sunday}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations}
+
+\subsubsection{\texttt{spartan} dev: GPS
+stuff}\label{spartan-dev-gps-stuff}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  writing autovivification version of
+  \texttt{GPSCoordTree.\_grow\_branch}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-02 (Monday)}\label{monday}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations-1}
+
+\subsubsection{\texttt{spartan} dev: GPS
+stuff}\label{spartan-dev-gps-stuff-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  testing
+  (\href{file:///home/gus/Dropbox/repos/git/spartan/src/spartan/tests/test_utils_maps_gps.py}{test\_utils\_maps\_gps.py}):
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}x{]}} \texttt{GPSCoordTree.\_grow\_branch}
+  \item
+    \texttt{{[}x{]}} \texttt{GPSCoordTree.\_get\_subtree}
+  \item
+    \texttt{{[}x{]}} \texttt{GPSCoordTree.mean}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Creating Uganda Data Repo}\label{creating-uganda-data-repo}
+
+\begin{itemize}
+\item
+  \textbf{local location:}
+
+  \href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data}{/home/gus/Dropbox/uganda\_data/data\_repos/field\_data}
+\item
+  \textbf{github address:}
+  \url{https://github.com/CacconeLabYale/field_data.git}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-03 (Tuesday)}\label{tuesday}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  established comprehensive lists of village-ID-map and trap GPS
+  locations for Uganda:
+
+  \begin{itemize}
+  \item
+    \textbf{village-ID-map:}
+
+    \href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/names/uganda_village_id_map.csv}{field\_data/locations/names/uganda\_village\_id\_map.csv}
+  \item
+    \textbf{trap GPS coords:}
+
+    \href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/gps/traps/uganda_traps_gps.csv}{field\_data/locations/gps/traps/uganda\_traps\_gps.csv}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-04 (Wednesday)}\label{wednesday}
+
+\subsection{General ToDo}\label{general-todo}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}x{]}} email to confirm HR got my letter
+\item
+  \texttt{{[}x{]}} meet with Gisella and Andrea {[}1130{]}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}X{]}} write up notes from meeting:
+    \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_andrea_2015-02-04/gisella_andrea_2015-02-04.pdf}{gisella\_andrea\_2015-02-04.pdf}
+  \end{itemize}
+\item
+  \texttt{{[}x{]}} Talk to Ben E about the MAD idea.
+\item
+  \texttt{{[}x{]}} create git repo for this paper
+\item
+  \texttt{{[} {]}} begin development of the MAD idea
+\item
+  \texttt{{[}X{]}} install LDna and R-studio
+\item
+  \texttt{{[}X{]}} Located space to move the EPH \emph{G. pallidipes}
+  samples here to ESC with Rob
+\end{itemize}
+
+\subsection{ddRAD stuff}\label{ddrad-stuff}
+
+\subsubsection{LD: detect `outlier'
+SNP-pairs}\label{ld-detect-outlier-snp-pairs}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{I propose this method:}
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    for each distance group: collect \(r^2\) from \(\pm \sim5\) bp
+    distance window
+
+    \begin{enumerate}
+    \def\labelenumii{\alph{enumii}.}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      across genome
+    \item
+      across scaffold
+    \end{enumerate}
+  \item
+    calculate modified z-score (based on \emph{median absolute
+    deviation} rather than standard deviation: \textbf{MAD is more
+    robust than SD for HTS-type data})
+  \item
+    flag any SNP-pair with \(z \geq 3.5\)
+  \item
+    \emph{possibly randomize data and calculate FDR to evaluate
+    performance.}
+
+    \begin{enumerate}
+    \def\labelenumii{\alph{enumii}.}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      perhaps vary the window from step 1 to use FDR to chose window
+      that minimizes FDR.
+    \end{enumerate}
+  \end{enumerate}
+\item
+  \textbf{Ben E's thoughts:}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    basically: this is probably a waste of time and energy
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      other more sophisticated methods have already been applied to this
+      data with not much significance detected
+    \item
+      why do we expect this work to yield better/more results?
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Gisella's thoughts:}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    still should do it bc we will need it when we have more data
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Install LDna}\label{install-ldna}
+
+\begin{itemize}
+\item
+  github page:
+  \href{https://github.com/petrikemppainen/LDna}{github.com/petrikemppainen/LDna}
+\item
+  paper reference:
+  \url{http://onlinelibrary.wiley.com/doi/10.1111/1755-0998.12369/abstract}
+\item
+  installed \texttt{devtools} with \texttt{RStudio} gui:
+  \textbf{{[}successful{]}}
+\item
+  installed \texttt{LDna} with \texttt{devtools}:
+  \textbf{{[}successful{]}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"petrikemppainen/LDna"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    documentation:
+    \href{file:///home/gus/R/x86_64-unknown-linux-gnu-library/3.1/LDna/html/00Index.html}{LDna/html/00Index.html}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{LDna notes}\label{ldna-notes}
+
+\begin{itemize}
+\item
+  operates on:
+
+  \begin{quote}
+  Lower diagonal matrix of pairwise LD values, \(r^2\) is strongly
+  recommended
+  \end{quote}
+\item
+  the code below should generate what I want (\textbf{I think}):
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plink} \NormalTok{--vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \textbackslash{}}
+\KeywordTok{--allow-extra-chr} \NormalTok{\textbackslash{}}
+\KeywordTok{--r2} \NormalTok{bin  \textbackslash{}}
+\KeywordTok{--out} \NormalTok{plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{PLINK run for LDna}\label{plink-run-for-ldna}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  ran the command below:
+\end{itemize}
+
+\begin{verbatim}
+wd238 at compute-23-2 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278)
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+> --allow-extra-chr \
+> --r2 bin  \
+> --out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin
+\end{verbatim}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  waiting for it to finish: \textbf{{[}failed{]}}
+\end{itemize}
+
+\subsubsection{Louise Scratch Request
+Email}\label{louise-scratch-request-email}
+
+\begin{quote}
+\textbf{netid:} wd238 \textbf{group:} caccone \textbf{anticipated
+usage:}
+
+\begin{itemize}
+\item
+  \textasciitilde{} 100G
+\item
+  \textless{} 100 files \textbf{purpose of usage:}
+\item
+  running \texttt{plink} \emph{all\_v\_all} linkage disequilibrium
+  calculations on \textasciitilde{}40K SNPs
+\item
+  current attempt (documented below) gave a write failure which I think
+  may be bc of some rather large tmp files generated during the process?
+\item
+  Does bumping up against our space quota have hard/immediate
+  consequences like that?
+\end{itemize}
+
+\textbf{error log:}
+
+\begin{verbatim}
+wd238 at compute-23-2 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278)
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+> --allow-extra-chr \
+> --r2 bin  \
+> --out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin.log.
+516842 MB RAM detected; reserving 258421 MB for main workspace.
+--vcf: 73k variants complete.
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin-temporary.bed
++
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin-temporary.bim
++
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin-temporary.fam
+written.
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin.nosex
+.
+Using up to 63 threads (change this with --threads).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--r2 square bin to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r2_bin.ld.bin
+... done.
+
+Error: File write failure.
+\end{verbatim}
+\end{quote}
+
+\subsubsection{Github repo for this
+paper}\label{github-repo-for-this-paper}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  github
+  page:\\\url{https://github.com/CacconeLabYale/gloria_soria_ddRAD_2015.git}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-05 (Thursday)}\label{thursday}
+
+\subsection{Mariangela \texttt{blacktie}
+install}\label{mariangela-blacktie-install}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  turns out i did NOT send Mariangela install instructions for the
+  development branch
+\item
+  wrote quick install script for her to use and sent it
+\end{itemize}
+
+\subsection{MAD idea}\label{mad-idea}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  for each group of SNPs \(x\) bp apart: collect \(r^2\) from
+  \(\pm \sim5\) bp distance window around \(x\):
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    across genome
+  \item
+    across scaffold
+  \end{enumerate}
+\item
+  calculate modified z-score (based on \emph{median absolute deviation}
+  rather than standard deviation: \textbf{MAD is more robust than SD for
+  HTS-type data})
+\item
+  flag any SNP-pair with \(z \geq 3.5\)
+\item
+  possibly randomize data and calculate FDR to evaluate performance.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    perhaps vary the window-size from step 1 to use FDR to chose
+    window-size that minimizes FDR.
+  \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Development}\label{development}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  ipython notebook:
+  \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-02-05_MAD_idea.ipynb}{ddrad58/2015-02-05\_MAD\_idea.ipynb}
+\end{itemize}
+
+\subsection{\emph{G. pallidipes}}\label{g.-pallidipes}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Rob brought most to ESC this morning
+\item
+  doesn't expect to need my truck for the rest
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-06 (Friday)}\label{friday}
+
+\subsection{MAD idea}\label{mad-idea-1}
+
+\subsubsection{Development}\label{development-1}
+
+\begin{itemize}
+\item
+  LOTS of progress at ipython notebook:
+  \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-02-05_MAD_idea.ipynb}{ddrad58/2015-02-05\_MAD\_idea.ipynb}
+\item
+  See notes about plotting median and MAD with bootstrapped CIs near the
+  bottom of above (commit dd7fe5da5733406edeaab6ce3c25b523b94552f2)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-09 (Monday)}\label{monday-1}
+
+\textbf{Goals:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}x{]}} Zimmer Workshop
+\item
+  \texttt{{[}x{]}} Start Professional Development notebook
+\item
+  \texttt{{[}x{]}} Find out how to process health reimbursement
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[} {]}} Get them ready for mailing
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \texttt{{[}x{]}} form
+    \item
+      \texttt{{[} {]}} receipts
+    \end{itemize}
+  \item
+    \texttt{{[}X{]}} Assemble list of information I need from Sarah and
+    send it to her
+  \end{itemize}
+\item
+  \texttt{{[} {]}} Progress on MAD idea
+\item
+  \texttt{{[} {]}} Generate strategy for the week
+\item
+  \texttt{{[} {]}} Sketch out abstract for Keystone? meeting
+\item
+  \texttt{{[} {]}} find out if there is data available on tsetse control
+  by area in Uganda
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    chemicals sold
+  \item
+    etc
+  \end{itemize}
+\end{itemize}
+
+\subsection{Health reimbursement}\label{health-reimbursement}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \url{http://yalehealth.yale.edu/claims}
+\item
+  Supplemental Claim form:
+  \url{http://yalehealth.yale.edu/sites/default/files/supplemental_claims_form.pdf}
+\item
+  pharmacy claim form:
+  \url{http://yalehealth.yale.edu/sites/default/files/pharmacy_claim_form_restat_catamaran.pdf}
+\end{itemize}
+
+\subsubsection{Instructions for pharmacy
+process}\label{instructions-for-pharmacy-process}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  from website above
+\end{itemize}
+
+\begin{quote}
+Include copies of prescription receipts showing the following
+information:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Pharmacy Name, Address \& Phone Number
+\item
+  Patient Name
+\item
+  Prescription Number
+\item
+  Prescription Fill Date
+\item
+  Drug Name, Strength and NDC Code
+\item
+  Drug Quantity \& Days supply
+\item
+  Drug Cost
+\item
+  Amount Paid
+\end{itemize}
+
+Please mail the Prescription Drug Claim Form and receipts to:
+
+Restat\\Patient Reimbursement\\11900 W. Lake Park Drive\\Milwaukee, WI
+53224
+
+Claims are honored for one year from the date of service. If you haven't
+received a response to a claim within 60 days of filing, contact the
+Claims Department. You may call sooner to inquire if the claim has been
+received and is in process.
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-10 (Tuesday)}\label{tuesday-1}
+
+\textbf{Goals:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} Get pharm claim ready for mailing
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}x{]}} form
+  \item
+    \texttt{{[} {]}} receipts
+  \end{itemize}
+\item
+  \texttt{{[} {]}} Progress on MAD idea
+\item
+  \texttt{{[} {]}} Generate strategy for the week
+\item
+  \texttt{{[} {]}} Sketch out abstract for Keystone? meeting
+\item
+  \texttt{{[} {]}} find out if there is data available on tsetse control
+  by area in Uganda
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    chemicals sold
+  \item
+    etc
+  \end{itemize}
+\item
+  \texttt{{[} {]}} figure out how to download zimmer files
+\end{itemize}
+
+\subsection{Health reimbursement}\label{health-reimbursement-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  printed form
+\end{itemize}
+
+\subsection{Met with Postdoc applicant
+(Christina)}\label{met-with-postdoc-applicant-christina}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  had lunch
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-12 (Thursday)}\label{thursday-1}
+
+\subsection{Health reimbursement}\label{health-reimbursement-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Need Catherine's member ID
+\end{itemize}
+
+\subsection{MAD idea}\label{mad-idea-2}
+
+\subsubsection{Development}\label{development-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{yesterday:}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    bootstrap confidence intervals are functional
+  \item
+    modified z-score is functional
+  \item
+    used ggplot to provide nice figure showing rough progression of
+    z-scored \(r^2\) through distance between snps
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-13 (Friday)}\label{friday-1}
+
+\subsection{\emph{G. pallidipes} Sample
+catalog}\label{g.-pallidipes-sample-catalog}
+
+\subsubsection{Summary table}\label{summary-table}
+
+\begin{itemize}
+\item
+  data types:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    location
+  \item
+    symbols when present (\emph{I assume you mean location symbol?})
+  \item
+    number of individuals
+  \item
+    date range
+  \item
+    is tissue?
+  \item
+    is extraction?
+  \item
+    analysis status
+  \end{itemize}
+\item
+  will be done in \texttt{python} for increased flexibility by
+  \textbf{{[}Gus{]}}
+\item
+  notebook file:
+  \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/pallidipes_kenya/2015-02-12_sample_catalog_summary.ipynb}{2015-02-12\_sample\_catalog\_summary.ipynb}
+\item
+  Showed output to Gisella and she signed off on it after asking whether
+  I could accommodate GEO COORDS when we get them.
+\item
+  \textbf{STATUS:} \textbf{{[}completed{]}}
+\end{itemize}
+
+\subsubsection{Primers etc}\label{primers-etc}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  RobH reports that he and KirstinD found many primers etc that were
+  either designed for \emph{G. pallidipes} or shown to work with it in
+  the past.
+\item
+  testing on the primers will begin next week.
+\end{itemize}
+
+\subsubsection{Leg extractions}\label{leg-extractions}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Rob did Xymogen extractions on 5 legs
+\item
+  NanoDrop indicates absorption at 260 but peaks look weird
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    probably bc the kit leaves EVERYTHING still in solution
+  \item
+    \texttt{{[} {]}} RobH will check with KirstinD about her extraction
+    traces on \emph{G. f. fuscipes} legs
+  \end{itemize}
+\end{itemize}
+
+\subsection{MAD idea}\label{mad-idea-3}
+
+\subsubsection{Development}\label{development-3}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{{[}completed{]}:} functions to
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    update df with \texttt{distance\_bin} and \texttt{mad\_z}
+  \item
+    plot mad\_z by bins
+  \end{itemize}
+\item
+  \textbf{{[}to do{]}:}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    implement printing/saving snp-pairs that pass the z-filter
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-14 (Saturday)}\label{saturday}
+
+\subsection{MAD idea}\label{mad-idea-4}
+
+\subsubsection{Development}\label{development-4}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  implement printing/saving snp-pairs that pass the z-filter
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-16 (Monday)}\label{monday-2}
+
+\subsection{\emph{G. f. fuscipes}: infection
+summaries}\label{g.-f.-fuscipes-infection-summaries}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  ipython to get pivot table for infected flies
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    file:
+    \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb}{2015-02-16\_g\_f\_fuscipes\_pandas\_import.ipynb}
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      file of dumped pandas table of collection records for 2014 in hdf5
+      format:
+    \end{itemize}
+  \end{itemize}
+\item
+  add PCR detected fly statuses to main DB
+\end{itemize}
+
+\subsection{\emph{G. pallidipes}: MicroSat extraction
+pilot}\label{g.-pallidipes-microsat-extraction-pilot}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  RobH spoke with KirstinD about strange NanoDrop traces:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    KirstinD: hers looked the same, just used 260/280 values as
+    presented
+  \item
+    likely explanation is that the extraction kit is EXTREMELY dirty by
+    design so the spec peaks are shifted around
+  \end{itemize}
+\item
+  RobH is beginning PCRs with ITS primers (same that KirstinD is using
+  on the \emph{G. f. fuscipes}) today.
+\item
+  RobH is researching location names on the SerapA tubes (n
+  \textasciitilde{} 6) bc GisellaC is not convinced the sheet SerapA
+  included makes since.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    RobH will google first
+  \item
+    GusD will get GIS admin layers to search if google fails
+  \end{itemize}
+\item
+  \href{https://github.com/xguse/blacktie/archive/v0.2.1.2-1.tar.gz}{v0.2.1.2-1.tar.gz}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-17 (Tuesday)}\label{tuesday-2}
+
+\subsection{meeting}\label{meeting}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  escarpment Nguruman:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    GisellaC try to get samples from extremes and in the middle
+  \end{itemize}
+\item
+  \texttt{{[} {]}} GusD send most recent version of protocol to BrianW
+\end{itemize}
+
+\section{2015-02-18 (Wednesday)}\label{wednesday-1}
+
+\subsection{\emph{G. pallidipes} status update
+meeting}\label{g.-pallidipes-status-update-meeting}
+
+\begin{itemize}
+\item
+  GusD
+\item
+  RobH
+\item
+  KirstinD
+\item
+  extractions not working for a while with KirstinD
+\item
+  trouble shooting
+\item
+  KirstinD moving forward with extractions now
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-21 (Saturday)}\label{saturday-1}
+
+\textbf{GOALS:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}worked on{]}} \emph{G. f. fuscipes} infection
+  summaries/maps for GisellaC meeting
+\item
+  \texttt{{[}no work{]}} script for MariangelaB
+\item
+  \texttt{{[}small work{]}} \(r^2\) per bin model
+\end{itemize}
+
+\subsection{\emph{G. f. fuscipes}: infection
+summaries}\label{g.-f.-fuscipes-infection-summaries-1}
+
+\subsubsection{Converting dates to
+YYYY-MM-DD}\label{converting-dates-to-yyyy-mm-dd}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_spring_summer_from_rob.xlsx}{2014\_spring\_summer\_from\_rob.xlsx}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    added new function to
+    \texttt{TsetseCheckout}:\\\href{file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/utils.py}{TsetseCheckout/data/utils.py:convert\_brit\_dates\_to\_yyyy\_mm\_dd(string)}
+  \item
+    added new cell magic to ipython to send variable to
+    clipboard:\\\href{https://gist.github.com/xguse/a01780ef22cfad8adaf9}{clip\_magic.py}
+  \item
+    used new function and the cell magic to copy, change, then paste
+    back into spreadsheet.
+  \end{itemize}
+\item
+  \href{file:///home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/2014_fall_for_pandas.xlsx}{2014\_fall\_for\_pandas.xlsx}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    dates already fine
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Adding Village names to the spring/summer excel
+file}\label{adding-village-names-to-the-springsummer-excel-file}
+
+\begin{itemize}
+\item
+  \textbf{{[}COMPLETED{]}:} 2015-02-22
+\item
+  created python hack to use the summary sheet info to generate the
+  Village
+  rows\\\href{/home/gus/Documents/YalePostDoc/project_stuff/g_f_fucipes_uganda/collection_data/traps_to_villages.py}{YalePostDoc/project\_stuff/g\_f\_fucipes\_uganda/collection\_data/traps\_to\_villages.py}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    summary
+    sheets:\\\href{file:///home/gus/Dropbox/uganda_data/2014_Collection_Sheets_Spring-Summer/2014_full_surveyreport_20140820/summary\%20survey\%20data.xlsx}{2014\_full\_surveyreport\_20140820/summary
+    survey data.xlsx}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{ALERT: errors detected in fly name code
+combinations}\label{alert-errors-detected-in-fly-name-code-combinations}
+
+\begin{itemize}
+\item
+  during this process i detected instances where the fly number code
+  combinations (example: \texttt{OLW-14 038}) were \textbf{NOT} correct!
+\item
+  the following IDs illustrate this:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{OLO-14 033} is Olobo
+  \item
+    \texttt{OLO-14 034} is Olobo
+  \item
+    \texttt{OLW-14 035} is Olwi
+  \item
+    \texttt{OLW-14 036} is Olwi
+  \item
+    \texttt{OLW-14 037} is Olobo
+  \item
+    \texttt{OLW-14 038} is Olobo
+  \end{itemize}
+\item
+  additionally, the \texttt{Dissection Data-Kole} sheet has \textbf{ALL}
+  fly IDs starting \texttt{KO} regardless of the source village.
+\item
+  \textbf{RECOMEND \emph{NOT} DEPENDING ON FLY ID FOR VILLAGE SOURCE!}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-02-22 (Sunday)}\label{sunday-1}
+
+\textbf{GOALS:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}worked on{]}} \emph{G. f. fuscipes} infection
+  summaries/maps for GisellaC meeting
+\item
+  \texttt{{[}none{]}} script for MariangelaB
+\item
+  \texttt{{[}none{]}} \(r^2\) per bin model
+\end{itemize}
+
+\subsection{\emph{G. f. fuscipes}: infection
+summaries}\label{g.-f.-fuscipes-infection-summaries-2}
+
+\subsubsection{HDF5 import and data
+cleaning}\label{hdf5-import-and-data-cleaning}
+
+\begin{itemize}
+\item
+  standardized the spreadsheet column titles by hand to allow import and
+  correct dataframe referencing
+\item
+  file:
+  \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/g_f_fuscipes_general/2015-02-16_g_f_fuscipes_pandas_import.ipynb}{2015-02-16\_g\_f\_fuscipes\_pandas\_import.ipynb}
+\item
+  \texttt{recode\_villages(df, map\_func=map\_func)}:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    renaming villages to letter codes
+  \item
+    \textbf{{[}degenerate names discovered{]}} and accommodated
+    in\\\href{file:///home/gus/Dropbox/uganda_data/data_repos/field_data/locations/names/uganda_village_id_map.csv}{uganda\_village\_id\_map.csv}
+    by mapping the letter code to more than one long form:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      AKAYODEBE vs AKAYO-DEBE
+    \end{itemize}
+  \item
+    corrected misspellings of
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      ``Orubakulemi'' from ``Orubakulem''
+    \item
+      ``JIAKO'' from ``JAIKO''
+    \end{itemize}
+  \end{itemize}
+\item
+  \texttt{recode\_positives(df)}:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    recode \texttt{prob}, \texttt{midgut}, \texttt{sal.gland} as
+    \texttt{0} or \texttt{1}.
+  \item
+    \textbf{{[}NOTE{]}} this will change to a trivalent state (class
+    \texttt{Tristate}) soon
+  \end{itemize}
+\item
+  \texttt{recode\_tenerals(df)}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    implemented but needs conversion to \texttt{Tristate}
+  \end{itemize}
+\item
+  \texttt{recode\_dead(df)}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    implemented but needs conversion to \texttt{Tristate}
+  \end{itemize}
+\item
+  \texttt{add\_infection\_state\_col(df)}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    implemented but failing to actually alter the dataframe
+  \end{itemize}
+\item
+  \texttt{spartan.utils.misc.Tristate}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    implements three state logic that \emph{mostly} supports normal
+    boolean arithmetic (just ignoring the \texttt{None} state)
+  \end{itemize}
+\end{itemize}
+
+\section{2015-02-23 (Monday)}\label{monday-3}
+
+\textbf{GOALS:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} \emph{G. f. fuscipes} infection summaries/maps for
+  GisellaC meeting
+\item
+  \texttt{{[} {]}} script for MariangelaB
+\item
+  \texttt{{[} {]}} \(r^2\) per bin model
+\end{itemize}
+
+\subsection{\emph{G. f. fuscipes}: infection
+summaries}\label{g.-f.-fuscipes-infection-summaries-3}
+
+\subsubsection{HDF5 import and data
+cleaning}\label{hdf5-import-and-data-cleaning-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{spartan.utils.misc.Tristate}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    I found an existing ``Tribool'' class on github and forked
+    it:\\\url{https://github.com/xguse/python_tribool}
+  \item
+    it did not support boolean arithmetic but was much more
+    sophisticated in all other ways.
+  \item
+    I added support for boolean addition but will also add *, -, and /
+    before writing the tests and submitting a pull request to upstream.
+  \item
+    I am now using \texttt{Tribool} instead of \texttt{Tristate}
+  \end{itemize}
+\item
+  running into serious hashable issues \texttt{df.midgut.unique()}
+  throws \texttt{\_\_nonezero\_\_}'s \texttt{ValueError}.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    possible solutions:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      override \texttt{\_\_new\_\_} might allow me to mimic the ``always
+      the same mem address'' behavior of \texttt{True} etc?
+    \item
+      Look into implementation of Factories in Python
+    \item
+      perhaps a hint in behavior/class code for \texttt{np.NaN}?
+    \item
+      \textbf{{[}best bet{]}} use \texttt{enum} class
+    \end{itemize}
+  \end{itemize}
+\item
+  looking for more fertile ground to cover while I think
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,191 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{fourier}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn, Dan},
+            pdftitle={ddRAD advice},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{ddRAD advice}
+\author{Gus Dunn, Dan}
+\date{2014-12-23}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{My planning}\label{my-planning}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  balancing \emph{number of loci} vs \emph{depth of per loci coverage}:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    what is my sequencing budget?
+  \item
+    What is my question set?
+  \item
+    Because \emph{selection} \textbf{AND} \emph{population genetics} are
+    part of the project needs, shooting for conditions that favor more
+    loci with as high a sequencing coverage as we can afford is probably
+    the best route.
+  \end{itemize}
+\item
+  There are equations for choosing size selection cutoffs that take into
+  account the above considerations associated with the protocols (she
+  says)
+\item
+  I have not seen the protocols yet
+\end{itemize}
+
+\section{Andrea's data}\label{andreas-data}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  If I am to use her data in my questions:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    I need to know exactly what she did in terms of size selection
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \emph{the size selection is how you target the same loci}
+    \end{itemize}
+  \item
+    I need to determine whether the conditions she used are even
+    \emph{compatible} with the questions \textbf{I} want to ask.
+  \end{itemize}
+\end{itemize}
+
+\section{pyRAD}\label{pyrad}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  She likes/loves it compared to STACKS which was used before
+\item
+  it is pretty comprehensive in its coverage of the entire analysis
+  stack
+\item
+  Daren is great and responsive
+\item
+  I would like to volunteer to help in its development
+\end{itemize}
+
+\section{Action items}\label{action-items}
+
+\subsection{ddRAD cost info}\label{ddrad-cost-info}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}\_{]}} cost per library
+\item
+  \texttt{{[}\_{]}} cost per lane
+\item
+  \texttt{{[}\_{]}} lane capacity
+\end{enumerate}
+
+\subsection{Gisella}\label{gisella}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}\_{]}} ask about the sequencing budget
+\end{itemize}
+
+\subsection{Daren}\label{daren}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}\_{]}} email of introduction and interest
+\end{itemize}
+
+\subsection{Andrea}\label{andrea}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}\_{]}} ask for write up of protocol/size selection
+\end{itemize}
+
+\subsection{Louise}\label{louise}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}\_{]}} install \texttt{pyRAD} and dependencies
+\end{itemize}
+
+\subsection{Dan}\label{dan}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} ask to shadow some of the mentoring sessions with
+  Yiota
+\end{itemize}
+
+\end{document}

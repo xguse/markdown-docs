@@ -1,0 +1,300 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{concmath}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{48,48,48}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.94,0.87,0.69}{{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.87,0.87,0.75}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.86,0.86,0.80}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.86,0.64,0.64}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.75,0.75,0.82}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.86,0.64,0.64}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.80,0.58,0.58}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.94,0.94,0.56}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.81,0.69}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.94,0.94,0.56}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.76,0.75,0.62}{{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{{#1}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Pandoc Notes},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Pandoc Notes}
+\author{Gus Dunn}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Code syntax highlighting}\label{code-syntax-highlighting}
+
+\subsection{Basic example from
+\href{http://johnmacfarlane.net}{johnmacfarlane.net}}\label{basic-example-from-johnmacfarlane.net}
+
+Source:
+\href{http://johnmacfarlane.net/pandoc/demo/example18f.html}{johnmacfarlane.net/pandoc/demo/example18f.html}
+
+\begin{quote}
+Here's what a delimited code block looks like:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{-- | Inefficient quicksort in haskell.}
+\OtherTok{qsort ::} \NormalTok{(}\DataTypeTok{Enum} \NormalTok{a) }\OtherTok{=>} \NormalTok{[a] }\OtherTok{->} \NormalTok{[a]}
+\NormalTok{qsort []     }\FunctionTok{=} \NormalTok{[]}
+\NormalTok{qsort (x}\FunctionTok{:}\NormalTok{xs) }\FunctionTok{=} \NormalTok{qsort (filter (}\FunctionTok{<} \NormalTok{x) xs) }\FunctionTok{++} \NormalTok{[x] }\FunctionTok{++}
+              \NormalTok{qsort (filter (}\FunctionTok{>=} \NormalTok{x) xs) }
+\end{Highlighting}
+\end{Shaded}
+
+Here's some python, with numbered lines (specify \{.python
+.numberLines\}):
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\KeywordTok{class} \NormalTok{FSM(}\DataTypeTok{object}\NormalTok{):}
+
+\CommentTok{"""This is a Finite State Machine (FSM).}
+\CommentTok{"""}
+
+\KeywordTok{def} \OtherTok{__init__}\NormalTok{(}\OtherTok{self}\NormalTok{, initial_state, memory=}\OtherTok{None}\NormalTok{):}
+
+   \CommentTok{"""This creates the FSM. You set the initial state here. The "memory"}
+\CommentTok{   attribute is any object that you want to pass along to the action}
+\CommentTok{   functions. It is not used by the FSM. For parsing you would typically}
+\CommentTok{   pass a list to be used as a stack. """}
+
+   \CommentTok{# Map (input_symbol, current_state) --> (action, next_state).}
+   \OtherTok{self}\NormalTok{.state_transitions = \{\}}
+   \CommentTok{# Map (current_state) --> (action, next_state).}
+   \OtherTok{self}\NormalTok{.state_transitions_any = \{\}}
+   \OtherTok{self}\NormalTok{.default_transition = }\OtherTok{None}
+   \NormalTok{...}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\subsection{Highlighting languages/styles
+available}\label{highlighting-languagesstyles-available}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  based on excerpts from \texttt{Highlighting.hs} on MacFarlane's github
+  repo:
+  \href{https://github.com/jgm/pandoc-highlight/blob/master/Text/Pandoc/Highlighting.hs}{\texttt{jgm/pandoc-highlight}}
+\end{itemize}
+
+\subsubsection{Languages}\label{languages}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{...}
+
+\OtherTok{langsList ::} \NormalTok{[(}\DataTypeTok{String}\NormalTok{, }\DataTypeTok{String}\NormalTok{)]}
+\NormalTok{langsList }\FunctionTok{=}    \NormalTok{[(}\StringTok{"ada"}\NormalTok{,}\StringTok{"Ada"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"java"}\NormalTok{,}\StringTok{"Java"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"prolog"}\NormalTok{,}\StringTok{"Prolog"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"python"}\NormalTok{,}\StringTok{"Python"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"gnuassembler"}\NormalTok{,}\StringTok{"Assembler"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"commonlisp"}\NormalTok{,}\StringTok{"Lisp"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"r"}\NormalTok{,}\StringTok{"R"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"awk"}\NormalTok{,}\StringTok{"Awk"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"bash"}\NormalTok{,}\StringTok{"bash"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"makefile"}\NormalTok{,}\StringTok{"make"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"c"}\NormalTok{,}\StringTok{"C"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"matlab"}\NormalTok{,}\StringTok{"Matlab"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"ruby"}\NormalTok{,}\StringTok{"Ruby"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"cpp"}\NormalTok{,}\StringTok{"C++"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"ocaml"}\NormalTok{,}\StringTok{"Caml"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"modula2"}\NormalTok{,}\StringTok{"Modula-2"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"sql"}\NormalTok{,}\StringTok{"SQL"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"eiffel"}\NormalTok{,}\StringTok{"Eiffel"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"tcl"}\NormalTok{,}\StringTok{"tcl"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"erlang"}\NormalTok{,}\StringTok{"erlang"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"verilog"}\NormalTok{,}\StringTok{"Verilog"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"fortran"}\NormalTok{,}\StringTok{"Fortran"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"vhdl"}\NormalTok{,}\StringTok{"VHDL"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"pascal"}\NormalTok{,}\StringTok{"Pascal"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"perl"}\NormalTok{,}\StringTok{"Perl"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"xml"}\NormalTok{,}\StringTok{"XML"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"haskell"}\NormalTok{,}\StringTok{"Haskell"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"php"}\NormalTok{,}\StringTok{"PHP"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"xslt"}\NormalTok{,}\StringTok{"XSLT"}\NormalTok{)}
+               \NormalTok{,(}\StringTok{"html"}\NormalTok{,}\StringTok{"HTML"}\NormalTok{)}
+               \NormalTok{]}
+
+\FunctionTok{...}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Styles}\label{styles}
+
+Looks like only these?
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  pygments
+\item
+  espresso
+\item
+  zenburn
+\item
+  tango
+\item
+  kate
+\item
+  monochrom
+\item
+  haddock
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\KeywordTok{module} \DataTypeTok{Text.Pandoc.Highlighting} \NormalTok{( languages}
+                                \NormalTok{, languagesByExtension}
+                                \NormalTok{, highlight}
+                                \NormalTok{, formatLaTeXInline}
+                                \NormalTok{, formatLaTeXBlock}
+                                \NormalTok{, styleToLaTeX}
+                                \NormalTok{, formatHtmlInline}
+                                \NormalTok{, formatHtmlBlock}
+                                \NormalTok{, styleToCss}
+                                \NormalTok{, pygments}
+                                \NormalTok{, espresso}
+                                \NormalTok{, zenburn}
+                                \NormalTok{, tango}
+                                \NormalTok{, kate}
+                                \NormalTok{, monochrome}
+                                \NormalTok{, haddock}
+                                \NormalTok{, }\DataTypeTok{Style}
+                                \NormalTok{, fromListingsLanguage}
+                                \NormalTok{, toListingsLanguage}
+                                \NormalTok{) }\KeywordTok{where}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texttt{highlighting-kate}}\label{highlighting-kate}
+
+Actually it looks like any highlighting style supported by
+\href{http://kate-editor.org/}{Kate} (\emph{as long as you have it
+installed properly?}) should be supported.
+
+From
+\href{https://benjeffrey.com/pandoc-syntax-highlighting-css}{benjeffrey.com}:
+
+\begin{quote}
+\textbf{The highlighting-kate Package}
+\end{quote}
+
+\begin{quote}
+Unless you dig into Pandoc's Haddock documentation, you won't find much
+information on the internet telling you what the generated markup
+classes (.kw, .co, .ot, etc.) mean, or how you can customize them.
+\end{quote}
+
+\begin{quote}
+It turns out that Pandoc relies on another one of John Macfarlane's
+creations in order to mark up code syntax, the highlighting-kate
+package,
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+\emph{a syntax highlighting library with support for nearly one hundred
+languages. The syntax parsers are automatically generated from Kate
+syntax descriptions (http://kate-editor.org/), so any syntax supported
+by Kate can be added.}
+\end{quote}
+\end{quote}
+
+\begin{quote}
+\begin{quote}
+-highlighting-kate package description
+\end{quote}
+\end{quote}
+
+\begin{quote}
+So it turns out that the syntax tokens are based on definitions provided
+by the KDE text editor, Kate.
+\end{quote}
+
+\subsubsection{\texttt{Pygments} styles for
+highlighting}\label{pygments-styles-for-highlighting}
+
+For this you will need to write a filter that sends every code block to
+\texttt{pygments} and makes sure the result ends up in the document.
+
+\subsection{Invoking the \texttt{highlighting-kate}
+styles}\label{invoking-the-highlighting-kate-styles}
+
+You add \texttt{-\/-highlight-style \textless{}style-name\textgreater{}}
+to the command line or in your \texttt{Makefile}.
+
+\end{document}

@@ -1,0 +1,186 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus, Gisella, Andrea},
+            pdftitle={Status of dead positives recovery},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Status of dead positives recovery\\\vspace{0.5em}{\large Meeting notes}}
+\author{Gus, Gisella, Andrea}
+\date{2015-01-20 (Tuesday)}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Discussed}\label{discussed}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Methods
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    need to be collated into one doc
+  \end{itemize}
+\item
+  Status of LD analysis and how to choose cut-off
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    look at tryp paper and email Mark regarding this
+  \end{itemize}
+\item
+  Status of hapFLK (haplotype analysis) and state of results
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    email to author is sent and waiting for response
+  \item
+    contacting Noonan and/or Jeff Townsend regarding this
+  \end{itemize}
+\item
+  Structure of paper
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Development of the base SNP set
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      a process I am not clear on at the moment
+    \end{itemize}
+  \item
+    Linkage Analysis
+  \item
+    Functional Annotation of filtered SNPs
+  \item
+    Discussion
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      establish the ability to do this scale of work in \emph{G. f.
+      fuscipes}
+    \item
+      limits of the dataset as it now stands
+    \item
+      Never-the-less, hypotheses can be formulated and here they
+      are\ldots{}
+    \end{itemize}
+  \end{enumerate}
+\end{itemize}
+
+\section{Current/future plans}\label{currentfuture-plans}
+
+\textbf{Gisella:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} email Washington group about methods of Seq prep and
+  analysis
+\item
+  \texttt{{[}X{]}} email Aksoy group about linkage status of \emph{G. m.
+  morsitans}
+\end{itemize}
+
+\textbf{Andrea:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} Re-run RAD pipeline showing Gus whats going on and
+  writing up the pieces.
+\item
+  \texttt{{[}X{]}} Contact Noonan and/or Townsend regarding
+  \texttt{hapFLK} stuff
+\end{itemize}
+
+\textbf{Gus:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} email Mark about Tryp LD analysis in his paper
+\item
+  \texttt{{[} {]}} read Tryp paper for same
+\item
+  \texttt{{[} {]}} install latest \texttt{Stacks} version on
+  \texttt{louise} and make runable by Andrea
+\item
+  \texttt{{[} {]}} return \texttt{hapFLK} script to original code and
+  copy altered version to new name
+\item
+  \texttt{{[} {]}} Generate descriptive statistics and figures of the LD
+  results as a whole rather than by contig where possible
+\item
+  \texttt{{[} {]}} upon decision of which near-by genes are
+  ``interesting'' send summary of info known about them to Aksoy group
+  for ideas.
+\end{itemize}
+
+\end{document}

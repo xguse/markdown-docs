@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title.</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../css/rwd-table.css">
+    <link rel="stylesheet" href="../../css/remark-slide-theme.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/yeti/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/solarized_light.min.css">
+
+  </head>
+  <body>
+
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="../../remark.min.js"></script>
+
+    <script>
+      var slideshow = remark.create({
+          sourceUrl: 'markdown.md',
+          highlightStyle: 'solarized_light',
+          highlightLanguage: 'remark',
+          highlightLines: 'true',
+          highlightSpans: 'highlightSpans'
+        }) ;
+    </script>
+
+    <script type="text/javascript">
+        $(function() { $('table').addClass('rwd-table table-condensed'); })
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,2152 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Gus Dunn},
+            pdftitle={Daily Records},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Daily Records\\\vspace{0.5em}{\large Caccone PostDoc}}
+\author{Gus Dunn}
+\date{January, 2015}
+\usepackage{bbding}
+\usepackage[T1]{fontenc}
+\usepackage{lxfonts}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-02 (Friday)}\label{friday}
+
+\subsection{Writing Methods}\label{writing-methods}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}x{]}} Functional Annotations
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    done-ish at 2015-01-02 08:58
+  \end{itemize}
+\item
+  \texttt{{[} {]}} Linkage
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{STILL NEED TO DO THIS ANALYSIS\ldots{}}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Linkage Analysis}\label{linkage-analysis}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Still not understanding how you can calculate LD without phased data
+  but it \textbf{seems} like many programs claim to\ldots{}
+\end{itemize}
+
+\subsubsection{PLINK}\label{plink}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{https://www.cog-genomics.org/plink2/ld}{v1.90 user manual: LD
+  section}
+\item
+  \texttt{{[}x{]}} create the files needed from the master VCF file
+  (tsetseFINAL\_14Oct2014\_f2\_53.recode.renamed\_scaffolds.vcf)
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    looks like \texttt{plink} now reads VCF (\texttt{v1.90}): will try
+    this first.
+  \end{itemize}
+\item
+  \texttt{{[}x{]}} split data into smaller pieces to parallelize the
+  \texttt{plink} analysis.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    looks like the \texttt{-\/-parallel} flag will allow \texttt{plink}
+    to take care of this.
+  \end{itemize}
+\item
+  \texttt{{[}x{]}} start run(s) on \texttt{louise}.
+\item
+  \texttt{{[} {]}} \emph{try running a \texttt{-\/-blocks} PLINK
+  analysis for haplotype blocks to see if its useful?}
+\end{itemize}
+
+\textbf{plink commands run and kept:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plink} \NormalTok{--vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-extra-chr \textbackslash{}}
+    \KeywordTok{--r} \NormalTok{gz with-freqs  \textbackslash{}}
+    \KeywordTok{--out} \NormalTok{plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf\textbackslash{}}
+    \KeywordTok{/ld/r_none_freqs}
+
+\KeywordTok{plink} \NormalTok{--vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-extra-chr \textbackslash{}}
+    \KeywordTok{--r} \NormalTok{gz in-phase with-freqs  \textbackslash{}}
+    \KeywordTok{--out} \NormalTok{plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf\textbackslash{}}
+    \KeywordTok{/ld/r_none_phase_freqs}
+
+\KeywordTok{plink} \NormalTok{--vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf --allow-extra-chr \textbackslash{}}
+    \KeywordTok{--r} \NormalTok{triangle gz  \textbackslash{}}
+    \KeywordTok{--out} \NormalTok{plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf\textbackslash{}}
+    \KeywordTok{/ld/r_tri}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Plot PLINK results}\label{plot-plink-results}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}x{]}} create \texttt{ipython} notebook file
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \href{http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb}{YALE/ddrad58/2015-01-02\_Plot\_PLINK\_results.ipynb}
+  \item
+    {[}2015-01-13{]}:
+    \href{http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2015-01-05_Plot_PLINK_results.ipynb}{YALE/ddrad58/2015-01-05\_Plot\_PLINK\_results.ipynb}
+  \end{itemize}
+\item
+  \texttt{{[} {]}} write code to plot
+\end{itemize}
+
+\subsection{TODO for Gisella}\label{todo-for-gisella}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} re-read grant bit about bioinformatics and think
+  about how to use Hongyu Zhao.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-03 (Saturday)}\label{saturday}
+
+\subsection{Linkage Analysis}\label{linkage-analysis-1}
+
+\subsubsection{Plot PLINK results}\label{plot-plink-results-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}x{]}} \textbf{WHAT} should be plotted?
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}x{]}} what \emph{exactly is} the \(r\) value telling us?
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \texttt{{[}x{]}} does it already take into account the distance?
+
+      \begin{itemize}
+      \itemsep1pt\parskip0pt\parsep0pt
+      \item
+        according to
+        \href{http://en.wikipedia.org/wiki/Linkage_disequilibrium\#Definition}{Wikipedia},
+        \(r\) is simply the correlation coefficient between pairs of
+        loci: \[r=\frac{D}{\sqrt{p_1p_2q_1q_2}}\]
+      \end{itemize}
+    \end{itemize}
+  \item
+    It seems like plotting \(\frac{r}{l_{a} - l_{b}}\) (\(r\) divided by
+    distance) \textbf{is} warranted where:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \(l_{a}\) is location of SNP\(_{a}\)
+    \item
+      \(l_{b}\) is location of SNP\(_{b}\)
+    \end{itemize}
+  \end{itemize}
+\item
+  \texttt{{[} {]}} write code to plot
+\end{itemize}
+
+\paragraph{Questions for Andrea}\label{questions-for-andrea}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Some MAFs are zero which causes the LD (\(r\)) to fail.
+  \href{http://localhost:8888/jupiter/notebooks/YALE/ddrad58/2015-01-02_Plot_PLINK_results.ipynb\#LD-as-r-for-Scaffold0:}{link}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-05 (Monday)}\label{monday}
+
+\subsection{Linkage Analysis}\label{linkage-analysis-2}
+
+\subsubsection{Plot PLINK results}\label{plot-plink-results-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  met with Andrea after showing her what I had and specifically the MAF
+  = 0 for about half the \texttt{scaffold0} comparisons.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{(see meeting notes for more details)}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Re-Filter original VCF}\label{re-filter-original-vcf}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  the incorrect (\texttt{-\/-min-allele}/\texttt{-\/-max-allele}) filter
+  was used to generate:
+  \texttt{tsetseFINAL\_14Oct2014\_f2\_53.recode.vcf}
+\item
+  the correct filter is \texttt{-\/-maf}.
+\item
+  I am doing it myself with MAF = 0.05 (see below).
+\item
+  \textbf{retained only 47.7\% sites}
+\item
+  \textbf{I will be re-running my PLINK LD analysis just in case.}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{wd238} \NormalTok{at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) }
+\NormalTok{$ }\KeywordTok{vcftools} \NormalTok{\textbackslash{}}
+    \KeywordTok{--vcf} \NormalTok{tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf \textbackslash{}}
+    \KeywordTok{--maf} \NormalTok{0.05 \textbackslash{}}
+    \KeywordTok{--out} \NormalTok{tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05 \textbackslash{}}
+    \KeywordTok{--recode}
+
+\KeywordTok{VCFtools} \NormalTok{- v0.1.12b}
+\KeywordTok{(C)} \KeywordTok{Adam} \NormalTok{Auton and Anthony Marcketta 2009}
+
+\KeywordTok{Parameters} \NormalTok{as interpreted:}
+    \KeywordTok{--vcf} \NormalTok{tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.vcf}
+    \KeywordTok{--maf} \NormalTok{0.05}
+    \KeywordTok{--out} \NormalTok{tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05}
+    \KeywordTok{--recode}
+
+\KeywordTok{After} \NormalTok{filtering, kept 53 out of 53 Individuals}
+\KeywordTok{Outputting} \NormalTok{VCF file...}
+\KeywordTok{After} \NormalTok{filtering, kept 73297 out of a possible 153650 Sites}
+\KeywordTok{Run} \NormalTok{Time = 21.00 seconds}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{PLINK - rerun}\label{plink---rerun}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plink} \NormalTok{--vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \textbackslash{}}
+\KeywordTok{--allow-extra-chr} \NormalTok{\textbackslash{}}
+\KeywordTok{--r} \NormalTok{gz with-freqs dprime \textbackslash{}}
+\KeywordTok{--out} \NormalTok{plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/ld/r_none_freqs_dprime}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Recover dead positives}\label{recover-dead-positives}
+
+\subsubsection{Dissections}\label{dissections}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Prepped for dissections and pre-filled the worksheets
+\item
+  but we are out of the 1.5 ml tubes that I bought for this and I will
+  have to go get some more tomorrow morning.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-06 (Tuesday)}\label{tuesday}
+
+\subsection{Linkage Analysis}\label{linkage-analysis-3}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  emailed Dan about looking over the results.
+\item
+  Should probably run them by Jeff if he has time too.
+\end{itemize}
+
+\subsubsection{PLINK \texttt{-\/-make-bed}}\label{plink---make-bed}
+
+\begin{verbatim}
+wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+> --allow-extra-chr \
+> --maf 0.05 \
+> --make-bed \
+> --out tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink
+
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.log.
+48251 MB RAM detected; reserving 24125 MB for main workspace.
+--vcf: 73k variants complete.
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.bed
++
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.bim
++
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink-temporary.fam
+written.
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+0 variants removed due to MAF threshold(s) (--maf/--max-maf).
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.bed +
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.bim +
+tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink.fam ...
+done.
+\end{verbatim}
+
+\subsubsection{PLINK \texttt{-\/-blocks}}\label{plink---blocks}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  running with \texttt{-\/-blocks} option to look at estimated haplotype
+  blocks
+\end{itemize}
+
+\begin{verbatim}
+wd238 at compute-1-4 in ~GENOMES/glossina_fuscipes/annotations/SNPs (py278) 
+$ plink --vcf tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf \
+> --allow-extra-chr \
+> --blocks no-pheno-req no-small-max-span \
+> --out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan
+
+PLINK v1.90b2o 64-bit (25 Nov 2014)        https://www.cog-genomics.org/plink2
+(C) 2005-2014 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.log.
+48251 MB RAM detected; reserving 24125 MB for main workspace.
+--vcf: 73k variants complete.
+
+...
+
+73297 variants loaded from .bim file.
+53 people (0 males, 0 females, 53 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\ 
+    /ld/blocks_nophenoreq_nosmallmaxspan.nosex
+.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+--blocks: 8040 haploblocks written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.blocks
+.
+Extra block details written to
+plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf\
+    /ld/blocks_nophenoreq_nosmallmaxspan.blocks.det
+.
+Longest span: 199.985kb.
+\end{verbatim}
+
+\subsubsection{Plot PLINK results}\label{plot-plink-results-3}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  cleaned up a few things
+\item
+  added residual plots following the regplots
+\end{itemize}
+
+\subsection{Recover dead positives}\label{recover-dead-positives-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  need to meet with Kirsten (emailed her to schedule a time)
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    subject: ``\emph{Short meeting to talk about the dead positives
+    screen?}''
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Dissections}\label{dissections-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  getting more:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    tubes
+  \item
+    PBS
+  \item
+    Pens
+  \end{itemize}
+\item
+  need to get receipt(s) from Kirsten regarding the dissection dish
+  order
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    emailed with subject: ``\emph{did you ever send me the receipt(s)
+    for the stuff you ordered for the dissections over the internet?}''
+  \end{itemize}
+\end{itemize}
+
+\subsection{Bonizzoni \emph{et al}: Insecticide
+Resistance}\label{bonizzoni-et-al-insecticide-resistance}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  I am SUPER late on this!
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-07 (Wednesday)}\label{wednesday}
+
+\subsection{Bonizzoni \emph{et al}: Insecticide
+Resistance}\label{bonizzoni-et-al-insecticide-resistance-1}
+
+\textbf{Status:} COMPLETE
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  finished reviewing the main text
+\item
+  emailed it to her
+\item
+  will not be going over the legends or figs
+\end{itemize}
+
+\subsection{Meeting with Serap Aksoy}\label{meeting-with-serap-aksoy}
+
+\textbf{Time:} 10:00 AM to 11:30AM
+
+\subsubsection{Discussed}\label{discussed}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  how to log Iowa tsetse samples
+\item
+  student to do much f the logging after a spreadsheet is devised
+\item
+  location of the other RNA midguts
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    she said she thought they didnt get any but then thought she
+    remembered that Brian tried extracting RNA from at least a few
+    infected midguts with no success.
+  \item
+    **She said she needs the carcasses of the infected flies too which I
+    did not remember (\textbf{I need to bring this up with Gisella bc
+    this is a major reduction of our expected infected
+    material\ldots{}}).
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      \emph{this doesn't really make sense anyway since i dont think we
+      preserved the bodies for RNA.}
+    \end{itemize}
+  \end{itemize}
+\item
+  having me send an ad or two for a postdoc position for her lab to my
+  friends
+\end{itemize}
+
+\subsubsection{Action items}\label{action-items}
+
+\textbf{Status:} IN PROGRESS
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}x{]}} create simple excel sheet to track Iowa samples
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}x{]}} email sheet to Brian and Serap
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      subject: \emph{Spreadsheet to record Iowa sample materials}
+    \end{itemize}
+  \item
+    \textbf{NOTE:} sheet is a google sheet named
+    \href{https://docs.google.com/spreadsheets/d/1SeoKnRQ0djB1xjyVGQy-NikNFTzQ-wL-hXCwUZAoNqw/edit?usp=sharing}{Iowa\_tsetse\_material\_inventory}
+  \end{itemize}
+\item
+  \texttt{{[}x{]}} locate extra RNA midguts in our freezers
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}x{]}} email Aksoy, Brian, Michelle to schedule pickup
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      subject: \emph{Many more midguts and heads for RNA}
+    \end{itemize}
+  \end{itemize}
+\item
+  \texttt{{[} {]}} send feelers and ads to friends about postdoc
+  position in her lab
+\item
+  \texttt{{[} {]}} contact Gisella about Serap wanting the
+  carcasses\ldots{}
+\end{itemize}
+
+\subsection{Meeting with Andrea}\label{meeting-with-andrea}
+
+\subsubsection{Discussed}\label{discussed-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  problem re-running the figure generation R script
+\item
+  couldn't open the PNG writer bc no X11 on the cluster and
+  \texttt{ssh -Y} wasn't working even though it did last time\ldots{}
+\item
+  I added some code to the R script to specify `png(type=``cairo'')
+\item
+  waiting to hear the outcome
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \emph{program ran but output was not what was expected: many more
+    graphs than last time}
+  \item
+    I expect user error
+  \end{itemize}
+\end{itemize}
+
+\subsection{Recover dead positives}\label{recover-dead-positives-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Meeting with Kirstin tomorrow at 1 or 2 PM
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-08 (Thursday)}\label{thursday}
+
+\subsection{Admin stuff}\label{admin-stuff}
+
+\subsubsection{Serap's postdoc
+advertisement}\label{seraps-postdoc-advertisement}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  posted to facebook
+\end{itemize}
+
+\subsubsection{Lab meetings}\label{lab-meetings}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  email from Jeff:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    subject: \emph{lab meetings}
+  \item
+    body:
+  \end{itemize}
+
+  \begin{quote}
+  Gus,
+  \end{quote}
+
+  \begin{quote}
+  Any lab meetings set up? We should grab Aris and Yiota who might give
+  a joint one. Then also the new Anthropology guy, Eduardo
+  Fernandez-Duque.
+  \end{quote}
+
+  \begin{quote}
+  Jeff
+  \end{quote}
+\item
+  doodle poll:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \href{http://doodle.com/hc4r8gdi6wnse425}{link} sent to
+    \texttt{pc\_labs}
+  \item
+    not certain if Maggie is on that list yet
+  \item
+    emailed Carol for her email in case not
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      She \textbf{WAS} on the list when I sent the link
+    \item
+      Carol replied with current list: recorded below
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Current \texttt{pc\_labs}
+list}\label{current-pcux5flabs-list}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#separator-CACCONE#}
+\KeywordTok{adalgisa.caccone@yale.edu}
+\KeywordTok{carol.mariani@yale.edu}
+\KeywordTok{danielle.edwards@yale.edu}
+\KeywordTok{nphavill@fs.fed.us}
+\KeywordTok{jrichardson@providence.edu}
+\KeywordTok{giovanna.carpi@yale.edu}
+\KeywordTok{katharine.walter@yale.edu}
+\KeywordTok{gus.dunn@yale.edu}
+
+\CommentTok{#separator-POWELL#}
+\KeywordTok{jeffrey.powell@yale.edu}
+\KeywordTok{kirstin.dion@yale.edu}
+\KeywordTok{andrea.gloria-soria@yale.edu}
+\KeywordTok{b.evans@yale.edu}
+\KeywordTok{joshua.richardson@yale.edu}
+
+\CommentTok{#separator-TEMP-ROTATION-UNDERGRAD#}
+\KeywordTok{christian.hernandez@yale.edu}
+\KeywordTok{elaine.guevara@yale.edu}
+\KeywordTok{andres.valdivieso@yale.edu}
+\KeywordTok{mkcorley@gmail.com}
+\KeywordTok{alexis.halyard@yale.edu}
+\KeywordTok{pkotsakiozi@hotmail.com}
+\KeywordTok{aristeidis.parmakelis@yale.edu}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Recover dead positives}\label{recover-dead-positives-3}
+
+\subsubsection{Meeting with Kirstin}\label{meeting-with-kirstin}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  see:
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/Kirsten-2015-01-08/Kirsten-2015-01-08.md}{Kirsten-2015-01-08.md}
+\item
+  sent above for confirmation or amendment to Kirstin
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    She approves
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-09 (Friday)}\label{friday-1}
+
+\subsection{Sarah Licensing Exam}\label{sarah-licensing-exam}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  I was taking care of the kids all morning
+\end{itemize}
+
+\subsection{New project brainstorming}\label{new-project-brainstorming}
+
+\subsection{PLINK: Fst}\label{plink-fst}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  defining population ID file for:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{tsetseFINAL\_14Oct2014\_f2\_53.recode.renamed\_scaffolds.maf0\_05.vcf}
+  \item
+    \texttt{tsetseFINAL\_14Oct2014\_f2\_53.recode.renamed\_scaffolds.maf0\_05.vcf.popdef}
+  \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+plink --bfile tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.plink \
+--allow-extra-chr \
+--within tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf.popdef \
+--fst \
+--out plink_out/tsetseFINAL_14Oct2014_f2_53.recode.renamed_scaffolds.maf0_05.vcf/fst/out
+\end{verbatim}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  This keeps giving me errors:
+\end{itemize}
+
+\begin{verbatim}
+Warning: No samples named in --within file remain in the current analysis.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 53 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.965098.
+73297 variants and 53 people pass filters and QC.
+Note: No phenotypes present.
+Error: --fst requires at least two nonempty clusters.
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-10 (Saturday)}\label{saturday-1}
+
+\subsection{PLINK: Fst}\label{plink-fst-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Still getting errors
+\item
+  looks like its bc there is no sex info attached to the samples
+\item
+  looking for other was to do this stuff: found EggLib-py
+\end{itemize}
+
+\subsection{Install EggLib}\label{install-egglib}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  installation needs \texttt{bio++}
+\item
+  see tomorrow
+\end{itemize}
+
+\subsection{Install \texttt{Bio++}
+(\texttt{bpp})}\label{install-bio-bpp}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  install script
+  (\href{http://biopp.univ-montp2.fr/Download/bpp-setup.sh}{bpp-setup.sh})
+  obtained from
+  \href{http://biopp.univ-montp2.fr/wiki/index.php/Installation}{bio++
+  website}.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    altered install script to fit system (\texttt{louise}) and renamed
+    \href{/home/gus/remote_mounts/louise/scripts/installs/install_bpp_2.2.0.sh}{install\_bpp\_2.2.0.sh}.
+  \end{itemize}
+\item
+  see tomorrow
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-11 (Sunday)}\label{sunday}
+
+\subsection{Install EggLib}\label{install-egglib-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  finished \texttt{bio++}install
+\item
+  installing other things (actually may just module-ize versions already
+  installed on \texttt{louise}:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}x{]}} gsl (already installed)
+  \item
+    \texttt{{[}x{]}} clustalw (linked to
+    \texttt{louise/\textasciitilde{}MAIN\_APPS/clustalw/clustalw-2.0.12-linux-i686-libcppstatic})
+  \item
+    \texttt{{[}x{]}} muscle
+  \item
+    \texttt{{[}x{]}} paml
+  \item
+    \texttt{{[}x{]}} phyml
+  \item
+    \texttt{{[}x{]}} primer3
+  \item
+    \texttt{{[}x{]}} phylip
+  \end{itemize}
+\end{itemize}
+
+\subsection{Install \texttt{Bio++}
+(\texttt{bpp})}\label{install-bio-bpp-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  had to ammend the install script to include the \texttt{bpp} install
+  location in \texttt{\$PATH} so it can use itself to install/build
+  parts of itself
+\item
+  as far as I can tell the only things that fail to install now are the
+  GUI-based stuff that needs Qt. As I am using this on th cluster I dont
+  need/want these so I am going to proceed as if this succeeded.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-12 (Monday)}\label{monday-1}
+
+\subsection{Install EggLib}\label{install-egglib-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  finished installing external helper programs:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    clustalw
+  \item
+    phylip
+  \end{itemize}
+\item
+  made a \texttt{modules} file for the whole group:
+  \texttt{egglib\_helpers}
+\end{itemize}
+
+\subsection{Install \texttt{Bio++}
+(\texttt{bpp})}\label{install-bio-bpp-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  forgot to write a \texttt{modules} file for this.
+\item
+  doing it now
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-13 (Tuesday)}\label{tuesday-1}
+
+\subsection{Recover dead positives}\label{recover-dead-positives-4}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  meeting
+\item
+  see meeting notes
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_kirsten_2015-01-14/gisella_kirsten_2015-01-14.md}{gisella\_kirsten\_2015-01-14.md}
+\end{itemize}
+
+\subsection{Maps stuff}\label{maps-stuff}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Need to update our Northern Uganda map with the latest Village
+  location data
+\item
+  \texttt{Spartan.utils.maps.gps}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    coding the functions to take all trap GPS coords for a village and
+    return one GPS coord set for each that represents the central
+    tendency for simplified plotting
+  \end{itemize}
+\end{itemize}
+
+\subsection{TsetseSampleDB}\label{tsetsesampledb}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  adding names/village codes to the list of village-to-code map
+  (\href{file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv}{village\_id\_map.csv})
+\end{itemize}
+
+\subsection{Helping Aris}\label{helping-aris}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  getting \texttt{mpirun mrbayes} to run on \texttt{grace}
+\item
+  took \textasciitilde{} 1 hour.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-15 (Thursday)}\label{thursday-1}
+
+\subsection{Science Fair}\label{science-fair}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  8 to 12:30
+\end{itemize}
+
+\subsection{Meeting about Kenya
+Tsetse}\label{meeting-about-kenya-tsetse}
+
+Members:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Gisella
+\item
+  Serap
+\item
+  Michelle
+\item
+  Brian
+\item
+  Gus
+\end{itemize}
+
+Notes (bad bc they were taken with my phone):
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Gpd samples
+\item
+  DNA samples
+\item
+  What column data will be needed for this Gpd Kenya collection
+\item
+  Re-circulate collection template excel and protocol etc
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-16 (Friday)}\label{friday-2}
+
+\subsection{Collection Spreadsheet
+review}\label{collection-spreadsheet-review}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  point is to make sure we can use this for the Kenya ``simpler''
+\item
+  after speaking with Gisella, I am going to add a few of the
+  ``simpler'' column heading to the normal collection spreadsheet and
+  write a bunch of notes explaining that not everything needs to be
+  filled in for everything.
+\item
+  collection spreadsheet:
+  \href{file:///home/gus/Dropbox/uganda\%20data/collection_sheet_templates/Example_collection_template_kenya.xls}{Example\_collection\_template\_kenya.xls}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{status:} finished
+  \end{itemize}
+\item
+  summary spreadsheet:
+  \href{file:///home/gus/Dropbox/uganda\%20data/collection_sheet_templates/Example_summary_template_kenya.xls}{Example\_summary\_template\_kenya.xls}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \textbf{status:} in progress
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Email explanation}\label{email-explanation}
+
+\textbf{Subject:}
+
+\textbf{Body:}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  created new
+  spreadsheet:\href{file:///home/gus/Dropbox/uganda\%20data/collection_meta_data/meta_data.ods}{collection\_meta\_data/meta\_data.ods}
+  to store current state of stuff like the village-to-symbol map, etc.
+\item
+  \texttt{{[}} \texttt{{]}} collecting trap GPS data to file:
+  \href{file://CREATE_ME}{TsetseCheckout/data/village\_id\_map.csv}
+\item
+  \texttt{{[}} \texttt{{]}} collecting all village-to-symbol maps that I
+  have to
+  \href{file:///home/gus/Dropbox/repos/git/TsetseCheckout/TsetseCheckout/data/village_id_map.csv}{meta\_data.ods}
+\end{itemize}
+
+\subsubsection{\texttt{spartan} dev: GPS
+stuff}\label{spartan-dev-gps-stuff}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  pycharm and ipython
+\end{itemize}
+
+\subsection{Phone for Dan}\label{phone-for-dan}
+
+I emailed Dan the following:
+
+\begin{quote}
+\textbf{Subject:} Phone call for you
+
+\textbf{Body:} Just fielded a call for you from Karan(Karen?) Peart from
+the Yale Public affairs and communications office.
+
+She would like you to call her back at your earliest convenience
+(432-1326).
+
+Gus
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-18 (Sunday)}\label{sunday-1}
+
+\subsection{Sarah is sick}\label{sarah-is-sick}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  short day: 10am to 1:45pm
+\end{itemize}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  ipython:
+  \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/maps_stuff/2015-01-16_convert_fall2014_trap_gps_village_names.ipynb}{2015-01-16\_convert\_fall2014\_trap\_gps\_village\_names.ipynb}
+\end{itemize}
+
+\subsubsection{\texttt{spartan} dev: GPS
+stuff}\label{spartan-dev-gps-stuff-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  working on teaching \texttt{GPSCoordTree} how to get mean coordinates
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-19 (Monday)}\label{monday-2}
+
+\subsection{Andrea: quick chat}\label{andrea-quick-chat}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  wants to re-run the ddRAD pipeline since I(we) found some issues with
+  at least one of the command line runs' options.
+\item
+  I agree
+\item
+  \texttt{{[}} \texttt{{]}} \#todo: I am installing
+  \href{http://creskolab.uoregon.edu/stacks/}{Stacks 1.24} for her on
+  \texttt{louise} and trying to set up the web-based analysis part
+\item
+  should not change TOO much about the results and will end up being
+  MUCH more replicatable due to the use of publicly accessible data from
+  vectorbase.
+\item
+  we can continue to work with the current data until the new set is
+  done and just adjust the work to accommodate the new stuff at the end.
+\end{itemize}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations-2}
+
+\subsubsection{\texttt{spartan} dev: GPS
+stuff}\label{spartan-dev-gps-stuff-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  working on teaching \texttt{GPSCoordTree} how to get mean coordinates
+\end{itemize}
+
+\subsection{Install Stacks}\label{install-stacks}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{http://creskolab.uoregon.edu/stacks/manual/\#install}{installation
+  guide}
+\end{itemize}
+
+\subsection{Collection Spreadsheet
+review}\label{collection-spreadsheet-review-1}
+
+\begin{itemize}
+\item
+  adding explanation text to the
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md}{fly\_collection\_basic.md}
+  document.
+\item
+  \textbf{STATUS:}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    having issues getting validation and drop-down lists to carry over
+    into ``empty'' rows
+  \item
+    plan to fix it by copying a template row into like 1000 rows
+  \item
+    still need to execute the above tomorrow bc computer is acting a
+    fool and I have to go home to sick Sarah and Liam.
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-20 (Tuesday)}\label{tuesday-2}
+
+\subsection{Sarah still sick}\label{sarah-still-sick}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  stayed home to help with particularly crazy morning
+\end{itemize}
+
+\subsection{Meeting with Gisella and Andrea: ddRAD
+paper}\label{meeting-with-gisella-and-andrea-ddrad-paper}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Met at 10:30 AM
+\item
+  summarized in
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/notes/meetings/gisella_andrea_2015-01-20/gisella_andrea_2015-01-20.md}{gisella\_andrea\_2015-01-20.md}.
+\end{itemize}
+
+\subsection{ddRAD todos}\label{ddrad-todos}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}in progress{]}} read Mark's tryp paper for the LD stuff
+\item
+  \texttt{{[}¤{]}} email Mark to have a short sit-down to go over my
+  results and ask about his work
+\end{itemize}
+
+\subsection{Install Stacks}\label{install-stacks-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{http://creskolab.uoregon.edu/stacks/manual/\#install}{installation
+  guide}
+\end{itemize}
+
+\subsubsection{Prerequisites}\label{prerequisites}
+
+\textbf{Visualization:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} DB2 Pear Module:
+  \url{http://pear.php.net/package/MDB2/}
+\item
+  \texttt{{[} {]}} MDB2 MySQL driver:
+  \url{http://pear.php.net/package/MDB2_Driver_mysql/}
+\item
+  \texttt{{[} {]}} PHP
+\item
+  \texttt{{[} {]}} MySQL
+\item
+  \texttt{{[} {]}} Perl DBI module installed with the MySQL driver
+  \href{http://search.cpan.org/dist/DBD-mysql/}{CPAN/dist/DBD-mysql/}
+\end{itemize}
+
+\textbf{Spreadsheet export:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[} {]}} Perl module:
+  \href{http://search.cpan.org/~jmcnamara/Spreadsheet-WriteExcel-2.37/}{\texttt{Spreadsheet::WriteExcel}}
+\end{itemize}
+
+\textbf{Performance improvement:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} \texttt{samtools} for reading BAM files (already
+  installed)
+\item
+  \texttt{{[} {]}} Google's \texttt{SparseHash} class to lower memory
+  usage \url{http://code.google.com/p/sparsehash/}
+\end{itemize}
+
+\subsubsection{Stacks}\label{stacks}
+
+\textbf{INSTALLATION PROBLEMS NOTES:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Having issues getting the samtools includes and libs configured for
+  the \texttt{./configure} command.
+\item
+  plan to build on \texttt{jupiter} using the ARCH ABS and copy the
+  include/lib directories to \texttt{louise}
+\end{itemize}
+
+\textbf{download location:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{in progress}}
+\item
+  downloaded
+  \href{http://creskolab.uoregon.edu/stacks/source/stacks-1.24.tar.gz}{stacks-1.24.tar.gz}
+  to \texttt{gus@louise/src}.
+\end{itemize}
+
+\textbf{install script:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{in progress}}
+\item
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/install_XXXXXXX}{\texttt{gus@louise/scripts/installs/install\_XXXX}}
+\end{itemize}
+
+\textbf{module file:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{in progress}}
+\item
+  \href{/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/XXXXX/XXXXX}{\texttt{gus@louise/.local/environment-modules/Modules/3.2.10/my\_modulefiles/XXXXX/XXXXX}}
+\end{itemize}
+
+\textbf{software root:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{in progress}}
+\item
+  \href{/home/gus/remote_mounts/louise/.local/easybuild/software/XXXXX/XXXXX}{\texttt{gus@louise/home/gus/remote\_mounts/louise/.local/easybuild/software/XXXXX/XXXXX}}
+\end{itemize}
+
+\subsection{Install \texttt{SparseHash}}\label{install-sparsehash}
+
+\textbf{download location:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{complete}}
+\item
+  downloaded
+  \href{https://sparsehash.googlecode.com/files/sparsehash-2.0.2.tar.gz}{sparsehash-2.0.2.tar.gz}
+  to \texttt{gus@louise/src}.
+\end{itemize}
+
+\textbf{install script:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{written and run}}
+\item
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/install_sparsehash_2.0.2.sh}{\texttt{gus@louise/scripts/installs/install\_sparsehash\_2.0.2.sh}}
+\end{itemize}
+
+\textbf{module file:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{complete but not tested}}
+\item
+  \href{/home/gus/remote_mounts/louise/.local/environment-modules/Modules/3.2.10/my_modulefiles/sparsehash/2.0.2}{\texttt{gus@louise/.local/environment-modules/Modules/3.2.10/my\_modulefiles/sparsehash/2.0.2}}
+\end{itemize}
+
+\textbf{software root:}
+
+\begin{itemize}
+\item
+  status: \emph{\texttt{installed}}
+\item
+  \href{/home/gus/remote_mounts/louise/.local/easybuild/software/sparsehash/2.0.2}{\texttt{gus@louise/home/gus/remote\_mounts/louise/.local/easybuild/software/sparsehash/2.0.2}}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-21 (Wednesday)}\label{wednesday-1}
+
+\subsection{Family still VERY sick}\label{family-still-very-sick}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  stayed home with Liam while Sarah took Clementine and herself to the
+  doctor
+\item
+  got to work at 12:30
+\item
+  had to go home so Sarah could sleep bc Clem was not letting her
+\item
+  went home at 1:30
+\item
+  came back at 3:30
+\item
+  home again at 6:00
+\item
+  work again at 8:30
+\end{itemize}
+
+\subsection{Manual install of
+Samtools/htslib}\label{manual-install-of-samtoolshtslib}
+
+\subsubsection{\texttt{htslib} (built with Arch ABS on
+\texttt{jupiter})}\label{htslib-built-with-arch-abs-on-jupiter}
+
+ABANDONING THIS METHOD FOR NOW. TOO MANY PROBLEMS WITH INTEGRATING
+CERTAIN \texttt{INCLUDE} AND \texttt{LIB} DIRECTRIES WHEN COMPILING
+ACCROSS DEPENDENCIES. TRYING \texttt{EASYBUILD} AND ITS \emph{TOOLCHAIN}
+PARADIGM FOR NOW.
+
+\textbf{ABS build:}
+
+\begin{verbatim}
+cd /home/gus/remote_mounts/louise/src/ABS/
+tar -xf htslib.tar.gz
+cd htslib
+makepkg
+\end{verbatim}
+
+\textbf{Install script:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/install_htslib_1.1.sh}{\texttt{gus@louise/scripts/installs/install\_htslib\_1.1.sh}}
+\end{itemize}
+
+\subsection{EasyBuild installs}\label{easybuild-installs}
+
+\subsubsection{EasyBuild 1.16.1}\label{easybuild-1.16.1}
+
+\textbf{Install script:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/install_easybuild_1.16.1.sh}{\texttt{gus@louise/scripts/installs/install\_easybuild\_1.16.1.sh}}
+\end{itemize}
+
+\subsubsection{Install
+\texttt{samtools-1.1}}\label{install-samtools-1.1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{wd238} \NormalTok{at compute-21-15 in ~ (py278) }
+\NormalTok{$ }\KeywordTok{md} \NormalTok{load EasyBuild/1.16.1}
+
+\KeywordTok{wd238} \NormalTok{at compute-21-15 in ~ (py278) }
+\NormalTok{$ }\KeywordTok{eb} \NormalTok{SAMtools-1.1-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot}
+
+\KeywordTok{...}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  this will be installing the whole toolchain and all \texttt{samtools}
+  dependencies so it was executed in a \texttt{screen}.
+\item
+  I am going home to sleep while this works
+  \texttt{{[}2015-01-21 21:33{]}}.
+\item
+  emailing Andrea first to let her know its not gonna be ready when I
+  told her.
+\end{itemize}
+
+\textbf{STATUS: \texttt{{[}2015-01-22 07:52{]}}}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Build seems to have \textbf{SUCCEEDED}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-22 (Thursday)}\label{thursday-2}
+
+\subsection{Collection documentation
+files}\label{collection-documentation-files}
+
+\begin{itemize}
+\item
+  fixed/kludged the collection template to keep cell-notes and
+  verification by including ``dummy'' entries up to 500.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    collection template:
+    \href{file:///home/gus/Dropbox/uganda\%20data/collection_sheet_templates/Example_collection_template_kenya.xlsx}{Example\_collection\_template\_kenya.xlsx}
+  \item
+    summary template:
+    \href{file:///home/gus/Dropbox/uganda\%20data/collection_sheet_templates/Example_summary_template_kenya.xlsx}{Example\_summary\_template\_kenya.xlsx}
+  \end{itemize}
+\item
+  amended and committed v0.2.1 of
+  \href{file:///home/gus/Dropbox/repos/git/markdown-docs/protocols/fly_collection_basic/fly_collection_basic.md}{fly\_collection\_basic.md}
+  to the repo with custom message:
+
+  \begin{quote}
+  ``protocols/fly\_collection\_basic/fly\_collection\_basic.md commited
+  at version: v0.2.1''
+  \end{quote}
+\end{itemize}
+
+\subsection{EasyBuild installs}\label{easybuild-installs-1}
+
+\subsubsection{Install \texttt{GSL-1.16}}\label{install-gsl-1.16}
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278) 
+$ eb GSL-1.16-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+\end{verbatim}
+
+\textbf{STATUS:}
+
+\begin{verbatim}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/GSL/1.16-goolf-1.4.10-no-OFED/\
+    easybuild/easybuild-GSL-1.16-20150122.075231.log
+== Build succeeded for 1 out of 1
+\end{verbatim}
+
+\subsubsection{Install
+\texttt{sparsehash-2.0.2}}\label{install-sparsehash-2.0.2}
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278)
+eb google-sparsehash-2.0.2-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+\end{verbatim}
+
+\textbf{STATUS:}
+
+\begin{verbatim}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/google-sparsehash/ \
+    2.0.2-goolf-1.4.10-no-OFED/easybuild/ \
+    easybuild-google-sparsehash-2.0.2-20150122.080547.log
+== Build succeeded for 1 out of 1
+\end{verbatim}
+
+\subsubsection{Install \texttt{Stacks-1.03}}\label{install-stacks-1.03}
+
+\textbf{NOTE:} this is not for use per se but to generate the
+\texttt{config} and \texttt{module} files so that I can modify them for
+the latest version of \texttt{Stacks} and install \emph{THAT} version.
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278) 
+$ eb Stacks-1.03-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+\end{verbatim}
+
+\textbf{STATUS:}
+
+\begin{verbatim}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/Stacks/ \
+    1.03-goolf-1.4.10-no-OFED/easybuild/ \
+    easybuild-Stacks-1.03-20150122.081337.log
+== Build succeeded for 1 out of 1
+\end{verbatim}
+
+\subsubsection{Install \texttt{Stacks-1.24}}\label{install-stacks-1.24}
+
+\textbf{easyconfig file:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  altered the one generated when building \texttt{Stacks-1.03}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \href{file:///home/gus/remote_mounts/louise/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb}{gus@louise/.local/easybuild/ebfiles\_repo/Stacks/Stacks-1.03-goolf-1.4.10-no-OFED.eb}
+  \end{itemize}
+\item
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb}{gus@louise/scripts/installs/easybuild/Stacks-1.24-goolf-1.4.10-no-OFED.eb}
+\end{itemize}
+
+\paragraph{Attempt 01}\label{attempt-01}
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278)
+eb Stacks-1.24-goolf-1.4.10-no-OFED.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+\end{verbatim}
+
+\textbf{STATUS:} FAILED
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  couldn't find \texttt{Stacks-1.24-goolf-1.4.10-no-OFED.eb}
+\item
+  basically expected.
+\end{itemize}
+
+\paragraph{Attempt 02}\label{attempt-02}
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278)
+eb $HOME/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb \
+    --try-toolchain=goolf,1.4.10-no-OFED --robot
+\end{verbatim}
+
+\textbf{STATUS:} FAILED
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  error log:
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log}{gus@louise/scripts/installs/easybuild/failure\_logs/easybuild-Stacks-1.24-20150122.090021.pPmjV.log}
+\item
+  looks like it cant find \texttt{sparsehash} for the linking
+\item
+  will add \texttt{samtools} and \texttt{sparsehash} to the
+  \texttt{easyconfig} file as dependencies and or build dependencies.
+\end{itemize}
+
+\paragraph{Attempt 03}\label{attempt-03}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  added the below to the \texttt{easyconfig} file:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{builddependencies = {[}(\textquotesingle{}SAMtools\textquotesingle{}, \textquotesingle{}1.1\textquotesingle{}), (\textquotesingle{}google-sparsehash\textquotesingle{}, \textquotesingle{}2.0.2\textquotesingle{}){]}}
+  \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278)
+eb $HOME/.local/easybuild/ebfiles_repo/Stacks/Stacks-1.24-goolf-1.4.10-no-OFED.eb \
+    --try-toolchain=goolf,1.4.10-no-OFED --robot
+
+== temporary log file in case of crash /tmp/easybuild-0T7khn/easybuild-O8eCl9.log
+ERROR: EasyBuild crashed with an error \
+    (at easybuild/software/EasyBuild/1.16.1/lib/python2.7/site-packages/\
+    easybuild_framework-1.16.1-py2.7.egg/easybuild/tools/robot.py:232 in \
+    resolve_dependencies): Irresolvable dependencies encountered: \
+    SAMtools/1.1-goolf-1.4.10-no-OFED, google-sparsehash/2.0.2-goolf-1.4.10-no-OFED
+\end{verbatim}
+
+\textbf{STATUS:} FAILED
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  error log:
+  \href{file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/easybuild-O8eCl9.log}{gus@louise/scripts/installs/easybuild/failure\_logs/easybuild-O8eCl9.log}
+\end{itemize}
+
+\paragraph{IRC session with
+author/devs}\label{irc-session-with-authordevs}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  one problem was that I dont need to keep using
+  \texttt{-\/-try-toolchain=goolf,1.4.10-no-OFED} since the local
+  easyconfig (\texttt{Stacks-1.24-goolf-1.4.10-no-OFED.eb}) being passed
+  to \texttt{eb} already defines the toolchain.
+\item
+  the build still fails however
+\end{itemize}
+
+\subsubsection{Install \texttt{zlib-1.2.8}}\label{install-zlib-1.2.8}
+
+\textbf{NOTE:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  this is because things seem to need it when building
+  \texttt{stacks-1.24}?
+\item
+  doesn't seem like this was the case?
+\end{itemize}
+
+\begin{verbatim}
+wd238 at compute-21-15 in ~ (py278) 
+$ eb zlib-1.2.8-goolf-1.4.10.eb --try-toolchain=goolf,1.4.10-no-OFED --robot
+\end{verbatim}
+
+\textbf{STATUS:} SUCCESSFUL
+
+\begin{verbatim}
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file \
+    /home2/wd238/.local/easybuild/software/zlib/\
+    1.2.8-goolf-1.4.10-no-OFED/easybuild/\
+    easybuild-zlib-1.2.8-20150122.115448.log
+== Build succeeded for 1 out of 1
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-23 (Friday)}\label{friday-3}
+
+\subsection{Meeting with Alexis}\label{meeting-with-alexis}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  10:00 to 12:20
+\item
+  talked about overall project and helped her come up with stuff to talk
+  about for 2 minutes next Tuesday.
+\item
+  Gisella was supposed to be here but double booked the time so will
+  meet with Alexis individually.
+\item
+  Gave Alexis my email and asked her to email me so that i would get
+  hers
+\item
+  so far {[}17:00{]} has not emailed me.
+\end{itemize}
+
+\subsection{EasyBuild installs}\label{easybuild-installs-2}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  forked and cloned
+  \href{https://github.com/xguse/easybuild-easyconfigs}{easybuild-easyconfigs}
+  git repo
+\end{itemize}
+
+\subsection{Doc appointment}\label{doc-appointment}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  left desk around 14:00 and got back around 15:20
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-24 (Saturday)}\label{saturday-2}
+
+\subsection{Sarah sprained/broke? her
+ankle}\label{sarah-sprainedbroke-her-ankle}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Sarah slipped while trying to shovel snow (?! WHY ?!)
+\item
+  had to go back home soon after arrival
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-25 (Sunday)}\label{sunday-2}
+
+\subsection{EasyBuild installs}\label{easybuild-installs-3}
+
+\begin{itemize}
+\item
+  adding new forked git-repo of easyconfigs to \texttt{easybuild}
+  through environment variables in my
+  \href{file:///home/gus/remote_mounts/louise/.zshrc}{gus@louise/.zshrc}.
+\item
+  \texttt{make check} failing was caused by the easyconfig file setting
+  \texttt{runtest=\textquotesingle{}check\textquotesingle{}}.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    I removed this
+  \end{itemize}
+\item
+  install still fails but seems to try to repeat itself and fails the
+  SECOND TIME?
+
+  \begin{itemize}
+  \item
+\begin{verbatim}
+...
+== building and installing Stacks/1.24-goolf-1.4.10-no-OFED...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== FAILED: Installation ended unsuccessfully...
+...
+\end{verbatim}
+  \end{itemize}
+\item
+  checking the logs seems to suggest that the BAM include files are
+  still not working
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    testing by removing the reqs from the configure script
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      NO sparsehash and NO bam: \textbf{SUCCEEDS}
+    \item
+      YES sparsehash and NO bam: \textbf{SUCCEEDS}
+    \item
+      NO sparsehash and YES bam: \textbf{FAILS}
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{TO TRY TOMORROW:}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    `clone' environment from one of the ``test\_reports'' in
+    \href{file:///home/gus/remote_mounts/louise/scripts/installs/easybuild/failure_logs/}{failure\_logs}
+    and try to run \texttt{./configure; make; make install;} manually.
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-26 (Monday)}\label{monday-3}
+
+\subsection{Carl Zimmer Writing
+Workshop}\label{carl-zimmer-writing-workshop}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  10:00 to 12:00
+\item
+  Notes made in notebook to be transfered here when I have time
+  (blizzard approaching)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-27 (Tuesday)}\label{tuesday-3}
+
+\subsection{SNOW-pocalypse}\label{snow-pocalypse}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  was told to stay home by Yale
+\item
+  came in by mistake but left soon after realizing
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-28 (Wednesday)}\label{wednesday-2}
+
+\subsection{EasyBuild installs}\label{easybuild-installs-4}
+
+\subsubsection{Stacks}\label{stacks-1}
+
+\paragraph{Stacks no BAM}\label{stacks-no-bam}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  testing to make sure it works
+\item
+  abandoning this bc we decided that we dont need to run this step over
+  right now
+\end{itemize}
+
+\paragraph{Stacks yes BAM}\label{stacks-yes-bam}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  still not building correctly
+\end{itemize}
+
+\subsection{tmux}\label{tmux}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  starting point
+  \href{https://github.com/fgeorgatos/easybuild.experimental/blob/539bd104d158c9f41b45d60115f6bf1b7155e11e/contrib/pkgsrc/20141219/t/tmux-1.9a-goolf-1.4.10.eb}{easyconfig}
+\item
+  abandoning this for now
+\item
+  simply not crucial
+\end{itemize}
+
+\subsection{ddRAD stuff}\label{ddrad-stuff}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} email Mark about Tryp LD analysis in his paper
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}X{]}} follow up with him on this ``Re: Short meeting to
+    chat about genomic scale LD analysis?''
+  \end{itemize}
+\item
+  \texttt{{[}X{]}} read Tryp paper for same
+\item
+  \texttt{{[}X{]}} install latest \texttt{Stacks} version on
+  \texttt{louise} and make runable by Andrea
+\item
+  \texttt{{[}X{]}} return \texttt{hapFLK} script to original code and
+  copy altered version to new name
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}X{]}} let Andrea know (\emph{acknowledged})
+  \end{itemize}
+\item
+  \texttt{{[}ip{]}} Generate descriptive statistics and figures of the
+  LD results as a whole rather than by contig where possible
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{2015-01-29 (Thursday)}\label{thursday-3}
+
+\subsection{ddRAD stuff}\label{ddrad-stuff-1}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}ip{]}} Generate descriptive statistics and figures of the
+  LD results as a whole rather than by contig where possible
+\item
+  \href{file:///home/gus/Dropbox/common/ipy_notebooks/YALE/ddrad58/2015-01-28_Plot_PLINK_results_cumulative.ipynb}{2015-01-28\_Plot\_PLINK\_results\_cumulative.ipynb}
+\end{itemize}
+
+\subsection{Robert's stuff}\label{roberts-stuff}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}-ip-{]}} Pick out 26 flies (13 M, 13 F) from each area we
+  want to look at for Robert's work in March
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    sent first set to Kirstin and Alexis
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      13 M/13 F from Oyam/Kole trip in 2014-07 (see Table
+      \ref{2015-01-29T1})
+    \end{itemize}
+  \end{itemize}
+\item
+  \texttt{{[} {]}} make sure we have an updated map with all the
+  villages from \emph{Spring and Summer 2014}
+\item
+  \texttt{{[}X{]}} Meet with Gisella to pick out which locations
+  Robert's data will come from while looking at the updated map.
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[} {]}} she told me to pick the areas and give her a
+    table/report on which and why. The issues to consider are:
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      wide representation of population areas in the North
+    \item
+      allows temporal comparisons as well
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\begin{longtable}[c]{@{}cccccc@{}}
+\caption{Samples given to Alexis for DNA extraction from a single leg.
+\label{2015-01-29T1}}\tabularnewline
+\toprule
+Collection Date & Species & Sex & Teneral & Village & Fly\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Collection Date & Species & Sex & Teneral & Village & Fly\tabularnewline
+\midrule
+\endhead
+2014-07-15 & \emph{G. f. fuscipes} & F & NT & OD & 017\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & F & NT & OCA & 031\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & F & NT & OCA & 039\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & AKA & 045\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & AKA & 052\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & AKA & 056\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & AKA & 062\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & AKA & 068\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & OCA & 092\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & OCA & 100\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & ACA & 120\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & OD & 137\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & F & NT & OD & 149\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & M & NT & OD & 020\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & M & NT & OCA & 022\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & M & NT & OCA & 025\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & M & NT & OCA & 026\tabularnewline
+2014-07-15 & \emph{G. f. fuscipes} & M & NT & OCA & 035\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & AKA & 049\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & AKA & 063\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & OCA & 095\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & ACA & 116\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & ACA & 125\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & ACA & 129\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & OCA & 146\tabularnewline
+2014-07-16 & \emph{G. f. fuscipes} & M & NT & OD & 155\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Rob H Jobs}\label{rob-h-jobs}
+
+\subsubsection{Iowa samples}\label{iowa-samples}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} catalog the boxes that we got here at \textbf{ESC}.
+\item
+  \texttt{{[}X{]}} email Gisella about getting Rob over to \textbf{EPH}
+  to start on their samples.
+\end{itemize}
+
+\subsubsection{\emph{G. f. fuscipes} samples
+2014}\label{g.-f.-fuscipes-samples-2014}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}X{]}} organize boxes of \emph{carcass} and \emph{midgut}
+  samples from 2014-03 to 2014-08 in Gisella freezer by month.
+\item
+  \texttt{{[}-ip-{]}} standardize the collection spreadsheets to prepare
+  for automated import to \texttt{TsetseSampleDB}.
+\end{itemize}
+
+\subsection{Updating maps: current trap
+locations}\label{updating-maps-current-trap-locations-3}
+
+\subsubsection{\texttt{spartan} dev: GPS
+stuff}\label{spartan-dev-gps-stuff-3}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{{[}-ip-{]}} teaching \texttt{GPSCoordTree} how to get mean
+  coordinates
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{{[}X{]}} make \texttt{GPSCoord} hashable
+  \item
+    \texttt{{[}-ip-{]}} fix \texttt{GPSCoordTree.\_add\_levels()}:
+    getting an empty list somewhere o something that is causing a
+    \texttt{None} to be returned.
+  \end{itemize}
+\item
+  still not fixed but trying a new tactic
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    converting \texttt{GPSCoordTree} to use autovivification trick with
+    an extra key at each node that holds links to all \texttt{gps\_objs}
+    found below it.
+  \item
+    see
+    \href{http://nbviewer.ipython.org/github/xguse/ipy_notebooks/blob/master/YALE/ddrad58/2014-12-26_functional_annotation_table_generator.ipynb}{2014-12-26\_functional\_annotation\_table\_generator.ipynb}
+    for example of autovivfication method.
+  \end{itemize}
+\end{itemize}
+
+\end{document}

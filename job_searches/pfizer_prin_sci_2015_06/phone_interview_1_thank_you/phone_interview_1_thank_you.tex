@@ -1,0 +1,116 @@
+\documentclass[letterpaper]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={Phone Interview 1: follow up},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Phone Interview 1: \emph{follow up}}
+\date{2015-08-04}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
+
+% blockquote
+
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Email address}\label{email-address}
+
+Christoph.Brockel@pfizer.com
+
+\section{Letter body}\label{letter-body}
+
+Dear Dr.~Brockel:
+
+I wanted to thank you regarding our phone conversation yesterday. I
+would like to reiterate my considerable interest in this position and
+thank you for answering my questions. As I move forward with my career,
+I am passionate about returning to gene expression, but I have also
+learned that I enjoy working with population genetics. So I was pleased
+to confirm that this post would likely include projects involving both
+approaches. Additionally, I love the process of collaborating with
+colleagues, discussing their data/research goals, assisting in
+experimental design, then allowing them to see their results in a new
+light with deeper insights, and I feel very strongly that it is a
+process for which I have developed the right tools to do well.
+
+We discussed briefly my work using Bayesian methods to learn the shape
+parameters of the Beta-modeled, bin-wise, linkage disequilibrium
+distributions, but we were swiftly running out of time. I have attached
+here a more detailed description of the process in case you would like
+to see a bit more of the particulars. I have also begun to adapt some of
+my earlier code that down-sampled a set of SNPs located on the human
+chromosome 22 to apply to the \emph{Drosophila melanogaster} genetic
+reference panel data to better characterize the performance of my
+process in a more data-rich dipteran system.
+
+Finally, as I am particularly interested in this position, I would like
+to ensure that you get any information that you may find useful as you
+evaluate my candidacy and goodness-of-fit. If you would like \emph{any}
+further information/references, please do not hesitate to contact me.
+
+I look forward to hearing from you next week, and thank you again for
+taking the time to call.
+
+Yours respectfully,
+
+Gus Dunn
+
+\end{document}

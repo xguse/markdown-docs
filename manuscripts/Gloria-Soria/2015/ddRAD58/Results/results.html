@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Gus Dunn" />
+  <meta name="date" content="2014-12-29" />
+  <title>Gloria-Soria (ddRAD58)</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  
+  
+</head>
+<body>
+<div id="header">
+<h1 class="title">Gloria-Soria (ddRAD58)</h1>
+<h2 class="author">Gus Dunn</h2>
+<h3 class="date">2014-12-29</h3>
+</div>
+<div id="TOC">
+1
+</div>
+<!-- # to do #
+
+- The SNPs common to all three populations based on  infection status and ranked within the top 5% and top 10% alpha cutoff (n =10 and 43, respectively) can be find in Table X. 
+- Subsequent screening for genes putative genes under selection based on their proximity to these SNPs using a window of 1000 bp returned X genes, including genes involved in X, Y, and X (Table)
+-->
+<h1 id="linkage-disequilibrium"><span class="header-section-number">1</span> 1: Linkage disequilibrium</h1>
+<p>The mean bin-wise LD decays with physical distance to 0.2 (half of maximum value) near 708 bp and to the value of the 95th percentile value (r^2 = 0.12) near 10,570 bp of SNP-pair separation (Figure <code>ld_decay_by_physical_distance</code>). We identified SNP-pairs with outlier LD values within specific separation-bins using a custom MAP-based filter. From a total of 6,454,294 SNP-pairs considered, 24,372 (0.38%) were assigned corrected p-values &lt;= 0.01. These filtered SNP-pairs were compared against top SNPs from the selection analyses (supplemental table <code>ld_filtered_snps_interest_JOINED_ANNOS_grouped.xls</code>).</p>
+<p>One hundred twenty five genes (52 with functional annotations) were identified within 1000 bp of at least one SNP identified in <code>Top10_InfectionOverall</code> (41 genes, 18 with annotations for <code>Top05_InfectionOverall</code>). Among the most frequently occurring annotations for these genes in the biological process (BP) domain were transmembrane transport; transcription, DNA-templated; ion transport; and metabolic process. In the molecular function (MF) domain, some of the most frequently occurring terms were zinc ion binding; DNA binding; transferase activity; and oxidoreductase activity. <code>Selected_PopPairwiseMSNB_Environm</code> had no overlap with the LD filtered SNP-pairs. <code>Top10_PopPairwiseOverlap_Infection</code> and <code>Top10_PopPairwiseOverlap_Environm</code> both contained only the same two SNPs in common with the LD filtered set. This SNP-pair (r^2 = 0.9456, adjusted p-value = 0.0017, genomic coordinates = Scaffold150:138,509;404,077) is separated by 265,568 bp, and each SNP is located near annotated genes. Scaffold150:138,509 is within GFUI009292, an ortholog of huckebein; Scaffold150:404,077 is 718 bp from GFUI009351, a predicted gene with no recognized protein domains but an ortholog predicted in <em>Glossina palpalis</em>. Sixteen genes were located within 1000 bp of at least one of the 19 SNPs in <code>Selected_PopPairwiseMSOT_Environm</code> that were also in the LD filtered set. Six of these had functional annotations assigned by Argot2 including small GTPase mediated signal transduction, glycogen biosynthetic process, carbohydrate metabolic process, and dorsal/ventral axis specification in the BP domain and nucleotide binding, hydrolase activity, transferase activity, and helicase activity in the MF domain.</p>
+<div class="figure">
+<img src="../figures/ld_decay_by_physical_distance.png" alt="Linkage disequilibrium decay with physical distance. Each dot represents the mean LD for that set of binned SNP-pairs. The color of the dot illustrates the number of SNP-pairs contributing to the mean. The blue colored line is a lowess regression line of best fit. The purple colored line marks the LD value of one half the maximum while the brick colored line is the LD value at which 95% of the bins have mean LD values below this value." /><p class="caption"><strong>Linkage disequilibrium decay with physical distance</strong>. Each “dot” represents the mean LD for that set of binned SNP-pairs. The color of the dot illustrates the number of SNP-pairs contributing to the mean. The blue colored line is a lowess regression line of best fit. The purple colored line marks the LD value of one half the maximum while the brick colored line is the LD value at which 95% of the bins have mean LD values below this value.</p>
+</div>
+<div class="references">
+
+</div>
+</body>
+</html>
