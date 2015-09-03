@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2015-08-18T14:54:59-04:00
-
-====== G fuscipes ======
-Created 2015-08-18 (Tuesday)
-

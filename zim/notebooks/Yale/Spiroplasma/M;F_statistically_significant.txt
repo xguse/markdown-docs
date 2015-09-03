@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2015-08-18T13:25:43-04:00
-
-====== M;F statistically significant ======
-Created Tuesday 18 August 2015
-
